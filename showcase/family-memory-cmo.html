@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Eric Beer · A Story, Measured</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --paper:#f4efe6; --paper-2:#ebe4d7; --paper-3:#e3dacb;
+  --ink:#1d1a16; --ink-soft:#4f473f; --ink-faint:#6e655b;
+  --rule:#cfc4b2; --rule-strong:#a89983;
+  --ox:#6b1e23; --ox-tint:#efe1da;
+  --night-accent:#e3a9a6; --night-text:#e8e1d6; --night-meta:#b8ada0; --night-rule:#4a433b;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Newsreader",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --ease:cubic-bezier(.23,1,.32,1);
+  --gutter:clamp(16px,5vw,64px); --max:1240px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:clamp(17px,1.15vw,19px);line-height:1.65;overflow-x:hidden;overflow-wrap:anywhere;font-feature-settings:"onum" 1,"kern" 1}
+a{color:inherit}
+img{max-width:100%;display:block}
+h1,h2,h3{overflow-wrap:break-word}
+::selection{background:var(--ox);color:var(--paper)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.mono{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-feature-settings:normal}
+:focus-visible{outline:2px solid var(--ox);outline-offset:3px}
+
+/* draft bar */
+.draftbar{background:var(--ink);color:var(--paper)}
+.draftbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+.draftbar .mono{font-size:10.5px}
+.draftbar .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--night-accent);margin-right:8px;vertical-align:middle}
+
+/* masthead */
+.mast{position:sticky;top:0;z-index:20;background:rgba(244,239,230,.94);backdrop-filter:saturate(1.2) blur(6px);-webkit-backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--rule)}
+.mast .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px}
+.mast .name{font-family:var(--display);font-weight:500;font-size:18px;letter-spacing:-.01em;text-decoration:none;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mast .name em{font-style:italic;color:var(--ox);font-weight:400}
+.mast nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:4px 22px;min-width:0}
+.mast nav a{text-decoration:none;color:var(--ink-soft);position:relative;padding:4px 0}
+.mast nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--ox);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.mast nav a:hover{color:var(--ox)}
+.mast nav a:hover::after{transform:scaleX(1)}
+.progress{position:absolute;left:0;bottom:-1px;height:2px;background:var(--ox);width:0}
+@media (max-width:760px){.mast nav{display:none}}
+
+/* folio */
+.folio{display:flex;align-items:center;gap:14px;color:var(--ink-faint);margin-bottom:clamp(28px,4vw,48px);flex-wrap:wrap}
+.folio .n{color:var(--ox)}
+.folio .line{flex:1 1 40px;height:1px;background:var(--rule)}
+section{position:relative}
+.band{padding:clamp(72px,11vw,150px) 0}
+
+/* hero */
+.hero{padding:clamp(48px,8vw,104px) 0 clamp(64px,9vw,120px);border-bottom:1px solid var(--rule)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:end}
+.eyebrow{color:var(--ox);margin:0 0 28px;display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--ox);flex:none}
+.hero h1{font-family:var(--display);font-weight:350;font-size:clamp(46px,8.2vw,124px);line-height:.96;letter-spacing:-.035em;margin:0 0 clamp(32px,4vw,52px);font-variation-settings:"opsz" 144}
+.hero h1 em,.sec-title em{font-style:italic;color:var(--ox);font-weight:300}
+.dek{max-width:40ch}
+.dek p{margin:0 0 1.1em}
+.dek p:first-child{color:var(--ink-soft);font-size:1.06em}
+.dek p:last-child{font-family:var(--display);font-size:clamp(21px,1.9vw,27px);line-height:1.38;letter-spacing:-.01em;font-weight:380;margin-bottom:0}
+.dropcap::first-letter{font-family:var(--display);float:left;font-size:4.1em;line-height:.82;padding:.06em .1em 0 0;color:var(--ox);font-weight:400}
+
+/* ===== 3D centerpiece: a keepsake book opening, story cards rising ===== */
+.keep{margin:0}
+.k-frame{position:relative;aspect-ratio:4/5;border:1px dashed var(--rule-strong);overflow:hidden;
+  background:radial-gradient(ellipse 80% 60% at 50% 62%,var(--paper) 0,var(--paper-2) 72%),var(--paper-2);
+  display:flex;flex-direction:column;justify-content:space-between;padding:18px}
+.k-frame .corner{position:absolute;z-index:3;width:14px;height:14px;border-color:var(--ox);border-style:solid}
+.k-frame .tl{top:-1px;left:-1px;border-width:2px 0 0 2px}
+.k-frame .tr{top:-1px;right:-1px;border-width:2px 2px 0 0}
+.k-frame .bl{bottom:-1px;left:-1px;border-width:0 0 2px 2px}
+.k-frame .br{bottom:-1px;right:-1px;border-width:0 2px 2px 0}
+.k-top{display:flex;justify-content:space-between;color:var(--ink-faint);position:relative;z-index:2}
+.k-spec{border-top:1px solid var(--rule-strong);padding-top:12px;color:var(--ink-soft);font-size:10.5px;line-height:1.7;position:relative;z-index:2}
+.k-stage{position:relative;flex:1;perspective:1000px;perspective-origin:50% 22%}
+.k-stage::after{content:"";position:absolute;left:12%;right:12%;top:58%;height:22%;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(29,26,22,.30),rgba(29,26,22,.10) 60%,transparent);filter:blur(6px);z-index:0}
+.book{--w:clamp(96px,11vw,140px);--h:calc(var(--w) * 1.34);
+  position:absolute;left:50%;top:50%;width:var(--w);height:var(--h);margin-top:calc(var(--h) / -2);
+  transform-style:preserve-3d;transform:rotateX(54deg) rotateZ(-12deg);z-index:1}
+.leaf{position:absolute;inset:0;transform-origin:0 50%;transform-style:preserve-3d;transform:rotateY(var(--r,0deg))}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:0 3px 3px 0;overflow:hidden;
+  background:linear-gradient(90deg,rgba(29,26,22,.16),rgba(29,26,22,0) 20%),#f8f3ea;
+  box-shadow:inset 0 0 0 1px rgba(168,153,131,.45),0 1px 0 rgba(29,26,22,.08),0 12px 22px -10px rgba(29,26,22,.35)}
+.face.back{transform:rotateY(180deg);border-radius:3px 0 0 3px;
+  background:linear-gradient(270deg,rgba(29,26,22,.16),rgba(29,26,22,0) 20%),#f6f0e5}
+/* printed lines on a page */
+.face::before{content:"";position:absolute;left:16%;right:13%;top:34%;bottom:12%;
+  background:repeating-linear-gradient(180deg,transparent 0 6px,rgba(79,71,63,.30) 6px 7px)}
+.face .ttl{position:absolute;left:16%;top:11%;font-family:var(--display);font-style:italic;font-size:calc(var(--w) * .1);color:var(--ox);line-height:1}
+.face .pic{position:absolute;left:16%;right:13%;top:20%;height:11%;
+  background:linear-gradient(135deg,#b99f84,#8a6c55 55%,#6b4f3d);box-shadow:inset 0 0 0 2px #f8f3ea,0 0 0 1px rgba(107,30,35,.25);opacity:.75}
+.face.plain::before{top:14%}
+/* the base: back cover with its endpaper (right side, flat) */
+.base{position:absolute;inset:-3px -5px -3px 0;transform:translateZ(-2px);border-radius:0 4px 4px 0;
+  background:linear-gradient(90deg,#4f1519,#6b1e23 30%,#5a191d);box-shadow:0 16px 28px -12px rgba(29,26,22,.55)}
+.spine{position:absolute;left:-4px;top:-3px;bottom:-3px;width:8px;transform:translateZ(-1px);background:linear-gradient(90deg,#3d1013,#6b1e23,#3d1013);border-radius:3px}
+/* cover */
+.cover .face.front{border-radius:0 4px 4px 0;
+  background:radial-gradient(circle at 30% 20%,rgba(255,255,255,.10),transparent 50%),linear-gradient(90deg,#4a1418,#6b1e23 25%,#5e1a1e);
+  box-shadow:inset 0 0 0 1px rgba(227,169,166,.35),0 14px 24px -12px rgba(29,26,22,.5)}
+.cover .face.front::before{content:"";left:14%;right:14%;top:12%;bottom:12%;background:none;border:1px solid rgba(227,169,166,.55)}
+.cover .face.front .ttl{left:0;right:0;top:40%;text-align:center;color:#e3a9a6;font-size:calc(var(--w) * .13)}
+.cover .face.front .sub{position:absolute;left:0;right:0;top:56%;text-align:center;font-family:var(--mono);font-size:calc(var(--w) * .05);letter-spacing:.18em;color:rgba(227,169,166,.8);text-transform:uppercase}
+.cover .face.back{background:repeating-linear-gradient(45deg,#e3dacb 0 5px,#ebe4d7 5px 10px);
+  box-shadow:inset 0 0 0 calc(var(--w) * .05) #6b1e23,0 12px 22px -10px rgba(29,26,22,.4)}
+.cover .face.back::before{display:none}
+/* rising story cards */
+.card{position:absolute;width:calc(var(--w) * .62);aspect-ratio:4/5;padding:6% 6% 0;background:#fbf8f2;transform-style:preserve-3d;
+  box-shadow:0 1px 0 rgba(29,26,22,.08),0 6px 10px -4px rgba(29,26,22,.25),0 22px 34px -14px rgba(29,26,22,.45)}
+.card i{display:block;height:68%;background:linear-gradient(160deg,#c9b298,#957660 50%,#5f4536)}
+.card b{display:block;font-family:var(--display);font-style:italic;font-weight:400;font-size:calc(var(--w) * .075);color:var(--ink-soft);text-align:center;margin-top:6%;line-height:1}
+.card.c1{left:22%;top:4%;transform:translateZ(70px) rotateX(-54deg) rotateZ(-8deg) rotateY(-10deg)}
+.card.c1 i{background:linear-gradient(160deg,#c4a98c,#8a6a52 55%,#4f3a2c)}
+.card.c2{left:-58%;top:30%;transform:translateZ(52px) rotateX(-54deg) rotateZ(9deg) rotateY(14deg)}
+.card.c2 i{background:linear-gradient(200deg,#d4c3ab,#a38a72 50%,#6b1e23)}
+.keep figcaption{margin-top:12px;color:var(--ink-faint);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+@media (max-width:860px){.hero-grid{grid-template-columns:minmax(0,1fr)}.keep{max-width:340px;width:100%}.book{--w:clamp(92px,28vw,128px)}}
+
+/* section titles */
+.sec-title{font-family:var(--display);font-weight:350;font-size:clamp(40px,6.4vw,92px);line-height:1;letter-spacing:-.03em;margin:0 0 clamp(40px,6vw,80px)}
+
+/* convergence diagram */
+.converge{position:relative;margin:0 0 clamp(64px,9vw,120px)}
+.cv-desk{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr) minmax(0,1fr);align-items:stretch}
+.cv-threads{display:flex;flex-direction:column}
+.cv-thread{height:86px;display:flex;align-items:center;gap:14px;border-top:1px solid var(--rule);transition:color .3s var(--ease)}
+.cv-thread:last-child{border-bottom:1px solid var(--rule)}
+.cv-thread .rn{font-family:var(--display);font-style:italic;color:var(--ox);font-size:22px;width:28px;flex:none}
+.cv-thread .org{font-family:var(--display);font-size:clamp(16px,1.35vw,20px);line-height:1.2;letter-spacing:-.005em}
+.cv-thread .t{display:block;color:var(--ink-faint);margin-top:4px;font-size:10px}
+.cv-svg{width:100%;height:100%;display:block;overflow:visible}
+.cv-svg path{fill:none;stroke:var(--rule-strong);stroke-width:1.2;transition:stroke .3s var(--ease),opacity .3s var(--ease),stroke-width .3s var(--ease)}
+.cv-svg path.trunk{stroke:var(--ox);stroke-width:2.4}
+.cv-svg circle.knot{fill:var(--ox)}
+.cv-svg circle.start{fill:var(--paper);stroke:var(--ox);stroke-width:1.4}
+.cv-desk:has(.cv-thread:hover) .cv-thread{color:var(--ink-faint)}
+.cv-desk:has(.cv-thread:hover) .cv-thread:hover{color:var(--ink)}
+.cv-desk:has(.cv-thread:hover) path.thr{opacity:.25}
+.cv-desk:has(.cv-thread[data-i="0"]:hover) path.thr[data-i="0"],
+.cv-desk:has(.cv-thread[data-i="1"]:hover) path.thr[data-i="1"],
+.cv-desk:has(.cv-thread[data-i="2"]:hover) path.thr[data-i="2"],
+.cv-desk:has(.cv-thread[data-i="3"]:hover) path.thr[data-i="3"],
+.cv-desk:has(.cv-thread[data-i="4"]:hover) path.thr[data-i="4"]{opacity:1;stroke:var(--ox);stroke-width:1.8}
+.cv-target{display:flex;align-items:center}
+.cv-line{border-left:2px solid var(--ox);padding:6px 0 6px 22px}
+.cv-line .lab{color:var(--ox);margin-bottom:14px;display:block}
+.cv-line ol{list-style:none;margin:0;padding:0}
+.cv-line li{font-family:var(--display);font-size:clamp(18px,1.6vw,23px);line-height:1.25;letter-spacing:-.01em;padding:5px 0;display:flex;gap:12px;align-items:baseline}
+.cv-line li .mono{color:var(--ink-faint);font-size:10px;letter-spacing:.1em}
+.cv-mob{display:none}
+@media (max-width:900px){
+  .cv-desk{display:none}
+  .cv-mob{display:block;position:relative;padding-left:30px}
+  .cv-mob::before{content:"";position:absolute;left:8px;top:14px;bottom:0;width:1px;background:var(--rule-strong)}
+  .cv-mob .item{position:relative;padding:12px 0;border-top:1px solid var(--rule)}
+  .cv-mob .item::before{content:"";position:absolute;left:-26px;top:22px;width:9px;height:9px;border-radius:50%;border:1.4px solid var(--ox);background:var(--paper)}
+  .cv-mob .item .org{font-family:var(--display);font-size:19px;line-height:1.25}
+  .cv-mob .item .rn{font-family:var(--display);font-style:italic;color:var(--ox);margin-right:8px}
+  .cv-mob .item .t{display:block;color:var(--ink-faint);font-size:10px;margin-top:4px}
+  .cv-mob .knot{position:relative;margin-top:14px;padding-top:22px}
+  .cv-mob .knot::before{content:"";position:absolute;left:-26px;top:0;width:9px;height:9px;border-radius:50%;background:var(--ox)}
+  .cv-mob .knot::after{content:"";position:absolute;left:-22.5px;top:9px;bottom:0;width:2px;background:var(--ox)}
+  .cv-mob .cv-line{border-left:none;padding-left:0}
+}
+
+/* method steps */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:2px solid var(--ink)}
+.step{padding:28px clamp(16px,2vw,28px) 8px 0;border-right:1px solid var(--rule);padding-left:clamp(0px,1.6vw,24px)}
+.step:first-child{padding-left:0}
+.step:last-child{border-right:none}
+.step .num{font-family:var(--display);font-size:clamp(54px,6vw,88px);line-height:.9;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px var(--ox);font-weight:300;display:block;margin-bottom:18px}
+.step h3{font-family:var(--display);font-weight:450;font-size:clamp(21px,1.9vw,26px);line-height:1.15;letter-spacing:-.015em;margin:0 0 12px}
+.step p{margin:0;color:var(--ink-soft);font-size:.95em}
+@media (max-width:960px){
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .step:nth-child(2){border-right:none}
+  .step:nth-child(3){padding-left:0}
+  .step:nth-child(n+3){border-top:1px solid var(--rule);margin-top:20px}
+}
+@media (max-width:560px){
+  .steps{grid-template-columns:1fr}
+  .step{border-right:none;padding-left:0 !important;padding-right:0;display:grid;grid-template-columns:64px minmax(0,1fr);column-gap:14px}
+  .step+.step{border-top:1px solid var(--rule);margin-top:0}
+  .step .num{font-size:48px;grid-row:span 2;margin:0}
+}
+
+/* pull quote */
+.pull{margin:clamp(72px,10vw,130px) auto 0;max-width:980px;text-align:center;position:relative;padding:0 8px}
+.pull::before{content:"\201C";display:block;font-family:var(--display);font-size:clamp(90px,12vw,160px);line-height:.6;color:var(--ox);height:.45em;font-style:italic}
+.pull blockquote{margin:0;font-family:var(--display);font-style:italic;font-weight:330;font-size:clamp(28px,4.2vw,58px);line-height:1.13;letter-spacing:-.022em}
+.pull .rule{width:56px;height:2px;background:var(--ox);margin:32px auto 0}
+
+/* brief, matched (rules and type only) */
+.brief-sec{border-top:1px solid var(--rule)}
+.brief{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink);counter-reset:b}
+.brief li{counter-increment:b;display:grid;grid-template-columns:56px minmax(0,1fr) minmax(0,1.2fr);gap:clamp(16px,3.4vw,52px);padding:clamp(24px,3.2vw,40px) 0;border-bottom:1px solid var(--rule);align-items:start}
+.brief li::before{content:counter(b,decimal-leading-zero);font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--ox);padding-top:6px}
+.brief .lab{display:block;color:var(--ink-faint);margin-bottom:10px}
+.brief .ask p{margin:0;font-family:var(--display);font-weight:380;font-size:clamp(22px,2.3vw,32px);line-height:1.15;letter-spacing:-.02em}
+.brief .proof{border-left:2px solid var(--ox);padding-left:22px}
+.brief .proof .lab{color:var(--ox)}
+.brief .proof p{margin:0;color:var(--ink-soft);max-width:52ch}
+.brief li:hover .ask p{color:var(--ox)}
+.brief-note{margin:28px 0 0;max-width:62ch;color:var(--ink-soft);font-style:italic}
+@media (max-width:860px){.brief li{grid-template-columns:40px minmax(0,1fr)}.brief .proof{grid-column:2}}
+@media (max-width:480px){.brief li{grid-template-columns:minmax(0,1fr);gap:12px}.brief .proof{grid-column:auto}}
+
+/* chapters (90-day plan) */
+.chapters{background:var(--paper-2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.ch-index{display:flex;margin:0 0 clamp(40px,6vw,72px);border:1px solid var(--rule-strong);flex-wrap:wrap}
+.ch-index a{flex:1 1 0;min-width:0;text-decoration:none;padding:14px;border-right:1px solid var(--rule-strong);display:flex;flex-direction:column;gap:6px;transition:background .3s var(--ease)}
+.ch-index a:last-child{border-right:none}
+.ch-index a:hover{background:var(--ox-tint)}
+.ch-index .r{font-family:var(--display);font-style:italic;color:var(--ox);font-size:20px;line-height:1}
+.ch-index .t{font-family:var(--display);font-size:15px;line-height:1.2}
+@media (max-width:760px){.ch-index a{flex:1 1 33%;border-bottom:1px solid var(--rule-strong)}.ch-index .t{font-size:14px}}
+@media (max-width:480px){.ch-index a{flex:1 1 100%;border-right:none}}
+.chapter{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr) minmax(0,.85fr);gap:clamp(20px,4vw,64px);padding:clamp(48px,7vw,96px) 0;border-top:1px solid var(--rule-strong);scroll-margin-top:64px}
+.chapter:first-of-type{border-top:2px solid var(--ink)}
+.ch-num{font-family:var(--display);font-style:italic;font-weight:300;font-size:clamp(72px,10vw,150px);line-height:.8;color:var(--ox);letter-spacing:-.03em}
+.ch-label{color:var(--ink-faint);margin-top:18px;display:block}
+.ch-main h3{font-family:var(--display);font-weight:380;font-size:clamp(34px,4.4vw,62px);line-height:1;letter-spacing:-.03em;margin:0 0 16px}
+.ch-org{color:var(--ox);margin:0 0 24px;display:block}
+.ch-main p{margin:0 0 1em;max-width:52ch}
+.ch-main ul{margin:0;padding:0;list-style:none;max-width:52ch}
+.ch-main li{padding:8px 0 8px 22px;border-top:1px solid var(--rule);position:relative;color:var(--ink-soft)}
+.ch-main li::before{content:"";position:absolute;left:0;top:19px;width:10px;height:1px;background:var(--ox)}
+.ch-taught{align-self:end;border-left:2px solid var(--ox);padding:4px 0 4px 22px}
+.ch-taught .mono{color:var(--ink-faint);display:block;margin-bottom:12px}
+.ch-taught p{margin:0;font-family:var(--display);font-style:italic;font-size:clamp(22px,2.2vw,30px);line-height:1.22;letter-spacing:-.015em;color:var(--ink)}
+@media (max-width:960px){.chapter{grid-template-columns:minmax(0,110px) minmax(0,1fr)}.ch-taught{grid-column:2;margin-top:8px}}
+@media (max-width:560px){.chapter{grid-template-columns:1fr;gap:18px}.ch-side{display:flex;align-items:baseline;gap:16px}.ch-label{margin-top:0}.ch-taught{grid-column:auto}}
+
+/* measures (strengths list pattern) */
+.strengths .sec-title{max-width:14ch}
+.s-list{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink);counter-reset:s}
+.s-list li{counter-increment:s;display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:16px;align-items:baseline;padding:clamp(18px,2.4vw,30px) 0;border-bottom:1px solid var(--rule)}
+.s-list li::before{content:counter(s,decimal-leading-zero);font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--ox)}
+.s-list .txt{font-family:var(--display);font-weight:360;font-size:clamp(26px,3.6vw,50px);line-height:1.08;letter-spacing:-.025em;transition:color .3s var(--ease),transform .4s var(--ease);overflow-wrap:break-word}
+.s-list .tag{color:var(--ink-faint);white-space:nowrap}
+.s-list li:hover .txt{color:var(--ox);transform:translateX(6px)}
+.s-note{margin-top:18px;color:var(--ink-faint);display:flex;align-items:center;gap:10px}
+.s-note i{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ox);flex:none}
+@media (max-width:560px){.s-list li{grid-template-columns:40px minmax(0,1fr)}.s-list .tag{grid-column:2}}
+
+/* closing spread */
+.next{background:var(--ink);color:var(--paper)}
+.next .folio{color:var(--night-meta)}
+.next .folio .n{color:var(--night-accent)}
+.next .folio .line{background:var(--night-rule)}
+.next .sec-title{color:var(--paper);max-width:16ch}
+.next .sec-title em{color:var(--night-accent)}
+.next-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:start}
+.next-body p{margin:0 0 1.1em;color:var(--night-text);font-size:1.06em;max-width:46ch}
+.next-body p:first-child{font-family:var(--display);font-size:clamp(22px,2.1vw,29px);line-height:1.36;letter-spacing:-.01em;color:var(--paper)}
+.next-body p.loc{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--night-meta)}
+.cta-box{border-top:2px solid var(--night-accent);padding-top:26px}
+.cta-box>.mono{color:var(--night-meta);display:block;margin-bottom:18px}
+.btn{display:flex;justify-content:space-between;align-items:center;gap:16px;text-decoration:none;font-family:var(--display);font-size:clamp(24px,2.6vw,34px);letter-spacing:-.015em;padding:20px 22px;background:var(--paper);color:var(--ink);transition:background .3s var(--ease)}
+.btn .arr{font-family:var(--mono);font-size:18px;transition:transform .35s var(--ease)}
+.btn:hover,.btn:focus-visible{background:var(--night-accent)}
+.btn:hover .arr{transform:translateX(6px)}
+.links{margin-top:18px;display:flex;flex-direction:column;gap:2px}
+.links a{display:flex;justify-content:space-between;gap:12px;text-decoration:none;padding:13px 0;border-bottom:1px solid var(--night-rule);color:var(--night-text);overflow-wrap:anywhere;min-width:0}
+.links a:hover{color:#fff;border-color:var(--night-accent)}
+.links .mono{margin:0;color:var(--night-meta);flex:0 1 auto;max-width:40%}
+.next :focus-visible{outline-color:var(--night-accent)}
+@media (max-width:860px){.next-grid{grid-template-columns:minmax(0,1fr)}}
+
+footer{background:var(--ink);color:var(--night-meta);border-top:1px solid #3a342d}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:22px;padding-bottom:28px}
+
+/* motion: CSS only, gated */
+@media (prefers-reduced-motion:no-preference){
+  @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+  @keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+  @keyframes appear{from{opacity:0}to{opacity:1}}
+  .rv{animation:rise .8s var(--ease) both;animation-delay:var(--d,0ms)}
+  .cv-svg path{stroke-dasharray:1;animation:draw 1.6s var(--ease) .6s both}
+  .cv-svg path.trunk{animation-delay:1.7s}
+  .cv-svg circle.knot{animation:appear .5s var(--ease) 2.1s both}
+  @supports (animation-timeline:scroll()){
+    @keyframes read{from{width:0}to{width:100%}}
+    .progress{animation:read linear both;animation-timeline:scroll(root)}
+  }
+  /* the book opens once, then one page turns slowly forever */
+  @keyframes open{from{transform:rotateY(0deg)}to{transform:rotateY(var(--r))}}
+  @keyframes turn{0%,12%{transform:rotateY(-14deg)}50%,62%{transform:rotateY(-166deg)}100%{transform:rotateY(-14deg)}}
+  @keyframes drift{0%,100%{translate:0 0 0}50%{translate:0 0 14px}}
+  @keyframes cardin{from{opacity:0}to{opacity:1}}
+  .leaf.cover,.leaf.l1,.leaf.l2{animation:open 1.6s var(--ease) .5s both}
+  .leaf.flip{animation:turn 9s cubic-bezier(.65,0,.35,1) 2.4s infinite both}
+  .card{animation:cardin .8s var(--ease) both,drift 6s ease-in-out infinite}
+  .card.c1{animation-delay:1.9s,2.7s}
+  .card.c2{animation-delay:2.2s,3.6s}
+}
+</style>
+</head>
+<body>
+
+
+
+<header class="mast">
+  <div class="wrap">
+    <a class="name" href="#top">Eric Beer <em>· A story, measured</em></a>
+    <nav class="mono" aria-label="Sections">
+      <a href="#brief">The brief</a>
+      <a href="#measures">Measures</a>
+      <a href="#plan">90 days</a>
+      <a href="#next">Reply</a>
+    </nav>
+  </div>
+  <div class="progress" aria-hidden="true"></div>
+</header>
+
+<main id="top">
+
+<!-- 01 hero -->
+<section class="hero" aria-labelledby="h-hero">
+  <div class="wrap">
+    <div class="folio mono rv"><span class="n">01</span><span>For the CMO seat</span><span class="line"></span><span>Eric Beer</span></div>
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow mono rv" style="--d:60ms">A family-memory brand, a new chapter</p>
+        <h1 id="h-hero" class="rv" style="--d:120ms">The direct-response marketer who can carry <em>a brand story.</em></h1>
+        <div class="dek">
+          <p class="dropcap rv" style="--d:200ms">Twenty years paid on results. Agency of record for Harlequin Book Club and RealAge.com. Memberships for Disney Book Club. Customers for LifeLock and Norton.</p>
+          <p class="rv" style="--d:280ms">Your brand helps families keep their stories. I have spent my career turning that kind of feeling into members, and proving it with numbers every week.</p>
+        </div>
+      </div>
+      <figure class="keep rv" style="--d:240ms">
+        <div class="k-frame" role="img" aria-label="An illustrated keepsake book opening, with two story photographs rising from its pages">
+          <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+          <div class="k-top mono"><span>Plate 01</span><span>Keepsake</span></div>
+          <div class="k-stage" aria-hidden="true">
+            <div class="book">
+              <div class="spine"></div>
+              <div class="base"></div>
+              <!-- right-hand pages, still to read -->
+              <div class="leaf" style="--r:0deg"><div class="face"><span class="ttl">Chapter two</span><span class="pic"></span></div><div class="face back plain"></div></div>
+              <div class="leaf" style="--r:-4deg"><div class="face plain"></div><div class="face back plain"></div></div>
+              <!-- a page that keeps turning -->
+              <div class="leaf flip" style="--r:-14deg"><div class="face plain"></div><div class="face back"><span class="ttl">Summer</span><span class="pic"></span></div></div>
+              <!-- left-hand pages, already read -->
+              <div class="leaf l2" style="--r:-172deg"><div class="face plain"></div><div class="face back plain"></div></div>
+              <div class="leaf l1" style="--r:-176deg"><div class="face plain"></div><div class="face back"><span class="ttl">Chapter one</span><span class="pic"></span></div></div>
+              <!-- cover -->
+              <div class="leaf cover" style="--r:-179deg"><div class="face front"><span class="ttl">Our Story</span><span class="sub">Kept</span></div><div class="face back"></div></div>
+              <!-- rising story cards -->
+              <div class="card c1"><i></i><b>first letter</b></div>
+              <div class="card c2"><i></i><b>the old house</b></div>
+            </div>
+          </div>
+          <div class="k-spec mono">Stories families keep · Members you can count</div>
+        </div>
+        <figcaption class="mono"><span>Eric Beer</span><span>Pearl River, NY · Remote</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 02 pattern -->
+<section id="pattern" class="band" aria-labelledby="h-pattern">
+  <div class="wrap">
+    <div class="folio mono"><span class="n">02</span><span>The pattern</span><span class="line"></span><span>Five threads, one line</span></div>
+    <h2 id="h-pattern" class="sec-title">Emotion that <em>pays.</em></h2>
+
+    <figure class="converge" style="margin-left:0;margin-right:0" aria-label="Five past programs, from book clubs to paid social, converge into one method">
+      <div class="cv-desk">
+        <div class="cv-threads">
+          <div class="cv-thread" data-i="0"><span class="rn">I</span><span class="org">Harlequin Book Club<span class="t mono">Agency of record</span></span></div>
+          <div class="cv-thread" data-i="1"><span class="rn">II</span><span class="org">Disney Book Club<span class="t mono">Memberships</span></span></div>
+          <div class="cv-thread" data-i="2"><span class="rn">III</span><span class="org">RealAge.com · Hearst / Dr. Oz<span class="t mono">Agency of record</span></span></div>
+          <div class="cv-thread" data-i="3"><span class="rn">IV</span><span class="org">LifeLock, Norton, Credit Sesame<span class="t mono">Customers and sign-ups</span></span></div>
+          <div class="cv-thread" data-i="4"><span class="rn">V</span><span class="org">A language-learning brand<span class="t mono">Under $10M to $100M+ cap</span></span></div>
+        </div>
+        <svg class="cv-svg" viewBox="0 0 400 430" preserveAspectRatio="none" aria-hidden="true">
+          <path class="thr" data-i="0" pathLength="1" d="M0 43 C 170 43, 200 215, 330 215"/>
+          <path class="thr" data-i="1" pathLength="1" d="M0 129 C 170 129, 200 215, 330 215"/>
+          <path class="thr" data-i="2" pathLength="1" d="M0 215 C 170 215, 200 215, 330 215"/>
+          <path class="thr" data-i="3" pathLength="1" d="M0 301 C 170 301, 200 215, 330 215"/>
+          <path class="thr" data-i="4" pathLength="1" d="M0 387 C 170 387, 200 215, 330 215"/>
+          <path class="trunk" pathLength="1" d="M330 215 L 400 215"/>
+          <circle class="start" cx="0" cy="43" r="3.5"/><circle class="start" cx="0" cy="129" r="3.5"/><circle class="start" cx="0" cy="215" r="3.5"/><circle class="start" cx="0" cy="301" r="3.5"/><circle class="start" cx="0" cy="387" r="3.5"/>
+          <circle class="knot" cx="330" cy="215" r="5"/>
+        </svg>
+        <div class="cv-target">
+          <div class="cv-line">
+            <span class="lab mono">One line</span>
+            <ol>
+              <li><span class="mono">01</span>Find the feeling</li>
+              <li><span class="mono">02</span>Put a price on it</li>
+              <li><span class="mono">03</span>Scale what pays</li>
+              <li><span class="mono">04</span>Report every week</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="cv-mob">
+        <div class="item"><span class="org"><span class="rn">I</span>Harlequin Book Club</span><span class="t mono">Agency of record</span></div>
+        <div class="item"><span class="org"><span class="rn">II</span>Disney Book Club</span><span class="t mono">Memberships</span></div>
+        <div class="item"><span class="org"><span class="rn">III</span>RealAge.com · Hearst / Dr. Oz</span><span class="t mono">Agency of record</span></div>
+        <div class="item"><span class="org"><span class="rn">IV</span>LifeLock, Norton, Credit Sesame</span><span class="t mono">Customers and sign-ups</span></div>
+        <div class="item"><span class="org"><span class="rn">V</span>A language-learning brand</span><span class="t mono">Under $10M to $100M+ cap</span></div>
+        <div class="knot">
+          <div class="cv-line">
+            <span class="lab mono">One line</span>
+            <ol>
+              <li><span class="mono">01</span>Find the feeling</li>
+              <li><span class="mono">02</span>Put a price on it</li>
+              <li><span class="mono">03</span>Scale what pays</li>
+              <li><span class="mono">04</span>Report every week</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </figure>
+
+    <div class="steps">
+      <article class="step"><span class="num">01</span><h3>Find the feeling</h3><p>Book clubs and health brands sell a feeling first. I start with the promise the customer already wants to keep.</p></article>
+      <article class="step"><span class="num">02</span><h3>Put a price on it</h3><p>Every test carries a cost per customer from day one. I have been paid that way for twenty years.</p></article>
+      <article class="step"><span class="num">03</span><h3>Scale what pays</h3><p>Winners get budget through media buyers, affiliates and creators. Losers get cut fast.</p></article>
+      <article class="step"><span class="num">04</span><h3>Report every week</h3><p>One scorecard, same numbers, every week. Ownership sees what I see.</p></article>
+    </div>
+
+    <figure class="pull">
+      <blockquote>A family story is the most emotional thing a brand can sell. It deserves the best measurement too.</blockquote>
+      <div class="rule" aria-hidden="true"></div>
+    </figure>
+  </div>
+</section>
+
+<!-- 03 brief matched -->
+<section id="brief" class="band brief-sec" aria-labelledby="h-brief">
+  <div class="wrap">
+    <div class="folio mono"><span class="n">03</span><span>Your brief, matched</span><span class="line"></span><span>Eight asks, eight proofs</span></div>
+    <h2 id="h-brief" class="sec-title">You asked. <em>Here's the proof.</em></h2>
+    <ol class="brief">
+      <li>
+        <div class="ask"><span class="lab mono">You asked for</span><p>Move the brand from convenience to identity, and keep performance strong.</p></div>
+        <div class="proof"><span class="lab mono">Proof</span><p>Harlequin Book Club and Disney Book Club sell belonging and story, then ask for a membership. I ran direct response for both, as agency of record for Harlequin. I know how an emotional brand earns a response and keeps its voice.</p></div>
+      </li>
+      <li>
+        <div class="ask"><span class="lab mono">You asked for</span><p>A marketing P&amp;L run on blended ROAS, CAC and contribution margin.</p></div>
+        <div class="proof"><span class="lab mono">Proof</span><p>I have been paid per customer, per lead or per sale for more than twenty years. I founded Universal Marketing Partners, an eight-figure performance and affiliate business, and owned its P&amp;L.</p></div>
+      </li>
+      <li>
+        <div class="ask"><span class="lab mono">You asked for</span><p>Deep paid social, with modern creative.</p></div>
+        <div class="proof"><span class="lab mono">Proof</span><p>I helped scale a language-learning brand from under $10M to over $100M in market cap through paid social on Facebook. I lead that work through media buyers and creative teams.</p></div>
+      </li>
+      <li>
+        <div class="ask"><span class="lab mono">You asked for</span><p>New channels: PR, influencers, partners.</p></div>
+        <div class="proof"><span class="lab mono">Proof</span><p>I run JVC Affiliate Network, with 280+ affiliates. I built a creator-led acquisition program and a TikTok Shop storefront funnel. Across my career, my programs have generated $100M+ in affiliate commissions.</p></div>
+      </li>
+      <li>
+        <div class="ask"><span class="lab mono">You asked for</span><p>A rebuilt email and lifecycle program.</p></div>
+        <div class="proof"><span class="lab mono">Proof</span><p>Email and CRM are channels I lead in every business I run, including AffiliateSchool.ai and its 17 digital products. Lifecycle is where a membership earns its value.</p></div>
+      </li>
+      <li>
+        <div class="ask"><span class="lab mono">You asked for</span><p>Operator-level AI fluency.</p></div>
+        <div class="proof"><span class="lab mono">Proof</span><p>I have shipped 50+ apps and AI tools. I founded LeadQual.ai, which qualifies leads with AI voice agents, and BeChosen.ai. I build agents and automation myself.</p></div>
+      </li>
+      <li>
+        <div class="ask"><span class="lab mono">You asked for</span><p>A team audit, and the right in-house and agency mix.</p></div>
+        <div class="proof"><span class="lab mono">Proof</span><p>I have sat on both sides. I was agency of record for RealAge.com and Harlequin Book Club. In my own companies I lead channels through media buyers, affiliates and creators.</p></div>
+      </li>
+      <li>
+        <div class="ask"><span class="lab mono">You asked for</span><p>A synthesizer who connects with the storytelling mission.</p></div>
+        <div class="proof"><span class="lab mono">Proof</span><p>I co-wrote two books, Million Dollar Dads and Million Dollar Identity. I hosted the Performance Marketer podcast from 2019 to 2023, more than 125 episodes. I know what it takes to get a story told and kept.</p></div>
+      </li>
+    </ol>
+    <p class="brief-note">Broadcast, celebrity and home shopping are a plus in your brief. I would hold them to the same scorecard as every other channel and work closely with the partners who run them today.</p>
+  </div>
+</section>
+
+<!-- 04 measures -->
+<section id="measures" class="band strengths" aria-labelledby="h-measures" style="border-top:1px solid var(--rule)">
+  <div class="wrap">
+    <div class="folio mono"><span class="n">04</span><span>How I'd be measured</span><span class="line"></span><span>Your goals, your words</span></div>
+    <h2 id="h-measures" class="sec-title">Judge me on <em>these.</em></h2>
+    <ol class="s-list">
+      <li><span class="txt">Blended ROAS, held while the brand moves</span><span class="tag mono">Weekly</span></li>
+      <li><span class="txt">CAC and contribution margin by channel</span><span class="tag mono">Weekly</span></li>
+      <li><span class="txt">Lifetime value, modeled and growing</span><span class="tag mono">Quarterly</span></li>
+      <li><span class="txt">Conversion and trust on the new flagship site</span><span class="tag mono">Monthly</span></li>
+      <li><span class="txt">One channel scorecard and business review</span><span class="tag mono">Every week</span></li>
+    </ol>
+    <p class="s-note mono"><i aria-hidden="true"></i>The measures your brief names. Targets set with ownership in week one.</p>
+  </div>
+</section>
+
+<!-- 05 90-day plan -->
+<section id="plan" class="band chapters" aria-label="The first 90 days">
+  <div class="wrap">
+    <div class="folio mono"><span class="n">05</span><span>The first 90 days</span><span class="line"></span><span>Brand and P&amp;L together</span></div>
+    <nav class="ch-index" aria-label="The first 90 days">
+      <a href="#ch-1"><span class="r">I</span><span class="t">Listen and measure</span></a>
+      <a href="#ch-2"><span class="r">II</span><span class="t">Test the new story</span></a>
+      <a href="#ch-3"><span class="r">III</span><span class="t">Scale and harvest</span></a>
+    </nav>
+    <article class="chapter" id="ch-1">
+      <div class="ch-side"><div class="ch-num">I</div><span class="ch-label mono">Days 1 to 30</span></div>
+      <div class="ch-main"><h3>Listen and measure</h3><span class="ch-org mono">Protect the engine first</span>
+        <p>I would learn the business from the people who built it, then read every number.</p>
+        <ul>
+          <li>Time with ownership, the Head of Innovation and every team member.</li>
+          <li>Audit DR, broadcast and digital spend on blended ROAS, CAC and contribution margin.</li>
+          <li>Read customer reviews and the stories families choose to keep.</li>
+          <li>Map the team and agency mix. Recommend the email ownership model.</li>
+          <li>Weekly channel scorecard live by week four.</li>
+        </ul>
+      </div>
+      <aside class="ch-taught"><span class="mono">The rule</span><p>Change nothing that pays until the numbers are clear.</p></aside>
+    </article>
+    <article class="chapter" id="ch-2">
+      <div class="ch-side"><div class="ch-num">II</div><span class="ch-label mono">Days 31 to 60</span></div>
+      <div class="ch-main"><h3>Test the new story</h3><span class="ch-org mono">Let customers vote with money</span>
+        <p>The identity story gets written in the family historian's voice, then tested against today's best ads.</p>
+        <ul>
+          <li>Draft the brand reframe and brand standards with ownership.</li>
+          <li>New paid social creative tested against the current control, on the same scorecard.</li>
+          <li>Creator, UGC, PR and influencer pilots with clear economics.</li>
+          <li>Rebuild the core lifecycle flows.</li>
+          <li>Brief the flagship site redesign around conversion and trust.</li>
+        </ul>
+      </div>
+      <aside class="ch-taught"><span class="mono">The rule</span><p>A premium story has to win in the ad account too.</p></aside>
+    </article>
+    <article class="chapter" id="ch-3">
+      <div class="ch-side"><div class="ch-num">III</div><span class="ch-label mono">Days 61 to 90</span></div>
+      <div class="ch-main"><h3>Scale and harvest</h3><span class="ch-org mono">One story across every channel</span>
+        <p>Winning messages roll out across DR, broadcast and digital, with one voice and one set of numbers.</p>
+        <ul>
+          <li>Holiday harvest-season calendar, built on what tested best.</li>
+          <li>First LTV model, shared with ownership.</li>
+          <li>Hiring plan for the gaps: design, PR, influencer, senior brand.</li>
+          <li>Next-year plan for brand and performance, in one deck.</li>
+        </ul>
+      </div>
+      <aside class="ch-taught"><span class="mono">The rule</span><p>Brand and performance answer to the same scorecard.</p></aside>
+    </article>
+  </div>
+</section>
+
+<!-- 06 reply -->
+<section id="next" class="band next" aria-labelledby="h-next">
+  <div class="wrap">
+    <div class="folio mono"><span class="n">06</span><span>Reply</span><span class="line"></span><span>The next chapter</span></div>
+    <h2 id="h-next" class="sec-title">Let's talk about <em>your story.</em></h2>
+    <div class="next-grid">
+      <div class="next-body">
+        <p>I'm looking for a CMO seat at a founder-led brand where the story matters and the numbers decide. A profitable company that helps families keep their stories is that seat.</p>
+        <p>Compensation: executive base plus upside tied to results.</p>
+        <p class="loc">Pearl River, NY · Remote US · Travel to HQ as needed</p>
+      </div>
+      <div class="cta-box">
+        <span class="mono">Eric Beer</span>
+        <a class="btn" href="mailto:ebeer@mailhaven.io">Reply to Eric <span class="arr" aria-hidden="true">→</span></a>
+        <div class="links">
+          <a href="mailto:ebeer@mailhaven.io"><span class="mono">Email</span><span>ebeer@mailhaven.io</span></a>
+          <a href="https://linkedin.com/in/ericbeer" target="_blank" rel="noopener"><span class="mono">LinkedIn</span><span>linkedin.com/in/ericbeer</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap mono"><span>Eric Beer · A story, measured</span><span>Job Showcase</span></div>
+</footer>
+</body>
+</html>

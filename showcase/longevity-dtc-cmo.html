@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Eric Beer · CMO, peptide and longevity DTC brand</title>
+<meta name="description" content="Eric Beer for Chief Marketing Officer. A performance marketer paid on results for 20 years, ready to build the full DTC growth engine for your brand.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap">
+<style>
+/* ===== TOKENS: executive operating review palette ===== */
+:root{--ink:#0e0c09;--ink-raise:#1b1815;--ink-line:#302d29;--bone:#f4f2ee;--bone-raise:#eae7e1;--bone-line:#d4d0c8;--brass:#d9b363;--brass-deep:#8a6524;--ash:#a19e9a;--ash-dim:#8a8783;--ash-deep:#5f5d59;--on-brass:#1f1a0f;--f-display:"Archivo","Inter",ui-sans-serif,system-ui,sans-serif;--f-voice:"Instrument Serif",ui-serif,Georgia,serif;--f-body:"Inter",ui-sans-serif,system-ui,sans-serif;--ease-out:cubic-bezier(.23,1,.32,1);--gutter:16px;--sec-y:96px;color-scheme:dark}
+@media (min-width:768px){:root{--gutter:48px;--sec-y:128px}}
+@media (min-width:1280px){:root{--gutter:80px;--sec-y:160px}}
+/* ===== BASE ===== */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background:var(--ink)}
+body{margin:0;background:var(--ink);color:var(--bone);font-family:var(--f-body);font-size:16px;line-height:1.6;font-feature-settings:"cv05" 1,"ss01" 1;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;overflow-wrap:anywhere;counter-reset:sec}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+a{color:inherit}
+::selection{background:var(--brass);color:var(--on-brass)}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.shell{width:100%;max-width:1520px;margin:0 auto;padding:0 var(--gutter)}
+/* ===== TYPE ROLES ===== */
+.display{font-family:var(--f-display);font-weight:500;letter-spacing:-0.03em;line-height:1.02;text-wrap:balance;overflow-wrap:break-word}
+.voice{font-family:var(--f-voice);font-weight:400;letter-spacing:-0.01em;line-height:1.14;text-wrap:balance}
+.metric{display:block;font-family:var(--f-display);font-weight:600;font-variant-numeric:tabular-nums lining-nums;letter-spacing:-0.05em;line-height:.82;overflow-wrap:anywhere}
+.eyebrow{font-family:var(--f-display);font-size:.6875rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;line-height:1.4}
+.lede{font-size:clamp(1.0625rem,1.6vw,1.375rem);line-height:1.6}
+.small{font-size:.8125rem;line-height:1.6}
+.pretty{text-wrap:pretty}
+/* ===== TONES ===== */
+.t-ink{background:var(--ink);color:var(--bone);--sub:var(--ash);--acc:var(--brass);--line:rgba(255,255,255,.12);--rule:var(--bone);--dim:var(--ash-dim)}
+.t-bone{background:var(--bone);color:var(--ink);--sub:var(--ash-deep);--acc:var(--brass-deep);--line:var(--bone-line);--rule:var(--ink);--dim:#77746f}
+.sub{color:var(--sub)}
+.acc{color:var(--acc)}
+/* ===== FILM GRAIN ===== */
+.grain{position:fixed;inset:0;z-index:45;pointer-events:none;opacity:.04;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");background-size:220px 220px}
+/* ===== RULES ===== */
+.rule{display:block;height:1px;width:100%;background:var(--rule);opacity:.16;transform-origin:left center;border:0;margin:0}
+.rule.short{max-width:9rem}
+.rule.mid{max-width:48rem}
+/* ===== SECTION MARKER ===== */
+.marker{display:flex;align-items:center;gap:12px;color:var(--sub)}
+.marker::before{counter-increment:sec;content:counter(sec,decimal-leading-zero);color:var(--acc)}
+.marker::after{content:"";order:1;width:32px;height:1px;background:var(--line);flex:none}
+.marker span{order:2}
+/* ===== DRAFT BAR ===== */
+.draft{background:var(--brass);color:var(--on-brass);font-family:var(--f-display);font-size:.75rem;font-weight:600;letter-spacing:.08em;text-align:center;padding:8px var(--gutter)}
+/* ===== TOP BAR ===== */
+.top{position:sticky;top:0;z-index:40;background:rgba(14,12,9,.9);border-bottom:1px solid rgba(255,255,255,.1);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
+.top .shell{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.brand{display:flex;align-items:baseline;gap:10px;min-width:0;text-decoration:none}
+.brand b{font-family:var(--f-display);font-weight:600;font-size:.95rem;letter-spacing:-0.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand i{display:none;font-style:normal;color:var(--ash)}
+.brand i::before{content:"";display:inline-block;width:1px;height:12px;background:rgba(255,255,255,.25);margin-right:10px;vertical-align:-1px}
+.nav{display:none;gap:28px}
+.nav a{font-size:.8125rem;color:var(--ash);text-decoration:none;transition:color 200ms}
+.nav a:hover{color:var(--bone)}
+.pill{flex:none;display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(217,179,99,.5);border-radius:999px;padding:8px 16px;font-size:.75rem;font-weight:500;color:var(--brass);text-decoration:none;transition:background 200ms var(--ease-out),color 200ms}
+.pill:hover{background:var(--brass);color:var(--on-brass)}
+@media (min-width:640px){.brand i{display:inline}}
+@media (min-width:1024px){.nav{display:flex} .top .shell{height:80px}}
+/* ===== BUTTONS ===== */
+.btns{display:flex;flex-wrap:wrap;gap:16px}
+.btn{display:inline-flex;align-items:center;gap:12px;border-radius:999px;padding:14px 28px;font-size:.875rem;font-weight:500;text-decoration:none;border:1px solid transparent;transition:background 200ms var(--ease-out),border-color 200ms,transform 160ms}
+.btn:active{transform:scale(.97)}
+.btn-fill{background:var(--brass);color:var(--on-brass)}
+.btn-fill:hover{background:#c79f4d}
+.btn-line{border-color:rgba(255,255,255,.24);color:var(--bone)}
+.btn-line:hover{border-color:rgba(244,242,238,.6)}
+.btn-ink{background:var(--ink);color:var(--bone);padding:16px 32px;font-size:.9375rem}
+.btn-ink:hover{background:var(--ink-raise)}
+.btn-ghost{border-color:var(--bone-line);color:var(--ink);padding:16px 32px;font-size:.9375rem}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn .arr{transition:transform 200ms var(--ease-out)}
+.btn:hover .arr{transform:translateX(4px)}
+/* ===== GRID ===== */
+.g{display:grid;gap:40px}
+.g>*{min-width:0}
+@media (min-width:1024px){.g{grid-template-columns:repeat(12,minmax(0,1fr));gap:64px}
+ .c4{grid-column:span 4} .c5{grid-column:span 5} .c6{grid-column:span 6}
+ .c7{grid-column:span 7} .c8{grid-column:span 8}
+ .pt{padding-top:16px}}
+.sec{position:relative;padding:var(--sec-y) 0}
+/* ===== HERO ===== */
+.hero{position:relative;overflow:hidden;padding:72px 0 64px;border-bottom:1px solid rgba(255,255,255,.12)}
+.hero::before{content:"";position:absolute;left:-20%;top:-30%;width:70rem;height:70rem;max-width:160vw;max-height:160vw;border-radius:50%;background:radial-gradient(circle at center,var(--brass) 0%,transparent 62%);opacity:.16;filter:blur(48px);pointer-events:none}
+.hero .shell{position:relative}
+.hero h1{margin-top:32px;font-size:clamp(2.6rem,7.4vw,6.5rem);font-weight:600}
+.hero h1 em{font-style:normal;color:var(--brass)}
+.hero .voice{margin-top:32px;max-width:26ch;font-size:clamp(1.4rem,3.2vw,2.5rem);line-height:1.16;color:rgba(244,242,238,.9)}
+.hero .lede{margin-top:40px;max-width:46ch;font-size:1rem;color:var(--ash)}
+.hero .btns{margin-top:44px}
+@media (min-width:768px){.hero{padding:128px 0 80px}}
+@media (min-width:1024px){.hero{padding:144px 0 96px} .hero .g{align-items:center}}
+
+/* ===== SIGNATURE: 3D ledger stack (CSS only) ===== */
+.ledger-stage{position:relative;perspective:1300px;perspective-origin:50% 30%;padding:24px 0 56px;display:flex;justify-content:center}
+.ledger{position:relative;width:100%;max-width:400px;transform-style:preserve-3d;transform:rotateX(22deg) rotateY(-20deg) rotateZ(2deg)}
+.ledger::after{content:"";position:absolute;left:8%;right:8%;bottom:-48px;height:40px;border-radius:50%;background:radial-gradient(ellipse at center,rgba(0,0,0,.65),transparent 70%);transform:translateZ(-120px) rotateX(70deg);filter:blur(8px)}
+.card{position:relative;display:block;background:linear-gradient(160deg,#211d18 0%,var(--ink-raise) 55%,#14110e 100%);border:1px solid rgba(217,179,99,.28);border-top-color:rgba(217,179,99,.6);padding:18px 20px;box-shadow:0 1px 0 rgba(255,255,255,.04) inset,0 30px 40px -18px rgba(0,0,0,.85),0 0 0 1px rgba(0,0,0,.4);transform-style:preserve-3d}
+.card + .card{margin-top:-6px}
+.card::before{content:"";position:absolute;left:0;right:0;bottom:-7px;height:7px;background:linear-gradient(to bottom,#6e5321,#2a2014);transform-origin:top;transform:rotateX(-90deg)}
+.card:nth-child(1){transform:translateZ(120px) translateY(-6px)}
+.card:nth-child(2){transform:translateZ(80px)}
+.card:nth-child(3){transform:translateZ(40px)}
+.card:nth-child(4){transform:translateZ(0)}
+.card:nth-child(5){transform:translateZ(-40px)}
+.card .row{display:flex;align-items:center;justify-content:space-between;gap:14px;min-width:0}
+.card .k{flex:none;font-family:var(--f-display);font-weight:600;font-size:clamp(1.2rem,4.2vw,1.75rem);letter-spacing:-0.04em;line-height:1;color:var(--bone);white-space:nowrap}
+.card .k .arrow{color:var(--brass);margin:0 .2em;font-weight:500}
+.card .k .was{color:var(--ash-dim)}
+.card .v{flex:1 1 auto;min-width:0;max-width:48%;text-align:right;font-size:.72rem;line-height:1.35;color:var(--ash)}
+.card.head{background:linear-gradient(150deg,#2b2419 0%,#1b1712 60%);padding:22px 20px 24px}
+.card.head .eyebrow{color:var(--brass)}
+.extrude{display:block;margin-top:10px;font-family:var(--f-display);font-weight:600;font-size:clamp(3.4rem,15vw,6rem);letter-spacing:-0.06em;line-height:.85;color:var(--bone);
+ text-shadow:1px 1px 0 #c9a456,2px 2px 0 #b8934a,3px 3px 0 #a5823f,4px 4px 0 #927035,5px 5px 0 #7e602c,6px 6px 0 #6b5124,7px 7px 0 #57421d,8px 8px 0 #433316,14px 18px 24px rgba(0,0,0,.7)}
+.card.head .cap{margin-top:12px;font-size:.8125rem;color:var(--ash)}
+.ledger-note{margin-top:4px;text-align:center;font-size:.75rem;color:var(--ash)}
+@media (max-width:520px){.ledger-stage{padding:16px 10px 48px;perspective:900px} .ledger{max-width:340px;transform:rotateX(18deg) rotateY(-12deg) rotateZ(1deg)} .card{padding:14px 14px} .card .v{font-size:.66rem} .card .k{font-size:1.2rem}}
+
+/* ===== THESIS ===== */
+.thesis h2{margin-top:40px;max-width:24ch;font-size:clamp(2.2rem,6vw,5.25rem)}
+.thesis .rule{margin-top:48px}
+.thesis .q{margin-top:40px;max-width:26ch;font-size:clamp(1.6rem,3.4vw,2.9rem);color:rgba(244,242,238,.92)}
+.symptoms{margin-top:64px;display:grid;column-gap:96px;counter-reset:sym}
+.symptoms li{display:flex;align-items:baseline;gap:20px;border-top:1px solid var(--line);padding:20px 0}
+.symptoms li::before{counter-increment:sym;content:counter(sym,decimal-leading-zero);width:24px;flex:none;font-family:var(--f-display);font-size:.6875rem;font-weight:600;letter-spacing:.22em;color:var(--acc)}
+.symptoms span{max-width:44ch;font-size:clamp(1rem,1.5vw,1.25rem);line-height:1.4}
+.thesis .turn{margin-top:80px;max-width:28ch;font-size:clamp(1.75rem,4.2vw,3.6rem);line-height:1.12}
+@media (min-width:768px){.symptoms{grid-template-columns:1fr 1fr} .thesis .turn{margin-top:112px}}
+
+/* ===== BRIEF MATCHED (built from case-grid tokens) ===== */
+.brief h2{margin-top:40px;max-width:20ch;font-size:clamp(2.1rem,5.4vw,4.5rem)}
+.brief .intro{margin-top:28px;max-width:40ch;font-size:clamp(1.25rem,2.4vw,1.9rem);line-height:1.2}
+.matches{margin-top:72px;counter-reset:mt}
+.matches>li{display:grid;gap:18px;border-top:1px solid var(--line);padding:32px 0}
+.matches>li:last-child{border-bottom:1px solid var(--line)}
+.matches .ask::before{counter-increment:mt;content:counter(mt,decimal-leading-zero);display:block;font-family:var(--f-display);font-size:.6875rem;font-weight:600;letter-spacing:.22em;color:var(--acc);margin-bottom:14px}
+.matches .ask .eyebrow{color:var(--sub)}
+.matches .ask h3{margin-top:10px;font-size:clamp(1.3rem,2.4vw,2rem)}
+.matches .proof p{font-size:1.0625rem;line-height:1.55;max-width:56ch}
+.matches .proof .tag{display:inline-block;margin-bottom:12px;padding:6px 10px;border:1px solid var(--line);font-family:var(--f-display);font-size:.6875rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--acc)}
+@media (min-width:900px){.matches>li{grid-template-columns:5fr 7fr;gap:56px;padding:40px 0}}
+
+/* ===== EVIDENCE MOMENT ===== */
+.moment{padding:var(--sec-y) 0}
+.moments>.moment:nth-child(odd){background:var(--ink);color:var(--bone);--sub:var(--ash);--acc:var(--brass);--line:rgba(255,255,255,.12);--rule:var(--bone);--dim:var(--ash-dim)}
+.moment .g{margin-top:56px;align-items:center}
+.moment .from{font-size:clamp(2.75rem,10vw,7.5rem);color:var(--dim)}
+.moment .down{display:flex;align-items:center;padding:24px 0}
+.moment .down::before{content:"";display:block;width:1px;height:40px;background:var(--line)}
+.moment .down span{margin-left:-1px;color:var(--acc);font-size:1.25rem;line-height:1}
+.moment .to{font-size:clamp(3.5rem,15vw,13rem)}
+.moment h3{margin-top:24px;font-size:clamp(1.15rem,1.9vw,1.6rem)}
+.moment .support{margin-top:16px;max-width:38ch;font-size:.9375rem;color:var(--sub)}
+.moment .pause{margin-top:96px}
+.moment .pause p{margin-top:40px;max-width:28ch;font-size:clamp(1.5rem,3.6vw,2.9rem);line-height:1.15}
+@media (min-width:768px){.moment .down::before{height:56px} .moment .down{padding:32px 0}}
+details.how{margin-top:24px;border-top:1px solid var(--line)}
+details.how summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;font-family:var(--f-display);font-size:.6875rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--sub)}
+details.how summary::-webkit-details-marker{display:none}
+details.how summary::after{content:"+";font-size:1rem;letter-spacing:0;color:var(--acc);transition:transform 200ms var(--ease-out)}
+details.how[open] summary::after{transform:rotate(45deg)}
+details.how p{padding-bottom:16px;max-width:46ch;font-size:.875rem;color:var(--sub)}
+
+/* ===== MEASURED: pillars ===== */
+.cap h2{max-width:17ch;font-size:clamp(2.1rem,5.2vw,4rem)}
+.cap .g{margin-top:48px}
+.pillars{margin-top:80px;display:grid;gap:48px 32px;counter-reset:pil}
+.pillars>div{position:relative;border-top:1px solid var(--line);padding-top:28px}
+.pillars>div::before{counter-increment:pil;content:counter(pil,decimal-leading-zero);font-family:var(--f-display);font-size:.6875rem;font-weight:600;letter-spacing:.22em;color:var(--acc)}
+.pillars>div::after{content:"";position:absolute;left:0;top:-1px;height:1px;width:0;background:var(--acc);transition:width 500ms var(--ease-out)}
+.pillars>div:hover::after{width:100%}
+.pillars h3{margin-top:20px;font-size:clamp(1.25rem,2.1vw,1.75rem)}
+.pillars ul{margin-top:20px;display:grid;gap:10px}
+.pillars li{font-size:.9375rem;line-height:1.45;color:var(--sub)}
+.cap .note{margin-top:56px;max-width:52ch;color:var(--sub)}
+@media (min-width:640px){.pillars{grid-template-columns:1fr 1fr}}
+@media (min-width:1024px){.pillars{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+/* ===== 90 DAYS: timeline ===== */
+.chap h2{max-width:18ch;font-size:clamp(2rem,4.6vw,3.6rem)}
+.chap .g{margin-top:48px}
+.timeline{margin-top:80px}
+.timeline>li{display:grid;gap:24px;border-top:1px solid var(--line);padding:32px 0}
+.timeline .when{display:flex;align-items:center;gap:16px}
+.timeline .dot{position:relative;width:10px;height:10px;flex:none;border-radius:50%;background:rgba(217,179,99,.25);transition:transform 300ms var(--ease-out)}
+.timeline .dot::after{content:"";position:absolute;inset:2px;border-radius:50%;background:var(--acc)}
+.timeline>li:hover .dot{transform:scale(1.5)}
+.timeline h3{margin-top:16px;font-size:clamp(1.25rem,2.2vw,1.75rem)}
+.timeline ul{display:grid;gap:10px}
+.timeline ul li{display:flex;gap:12px;font-size:.9375rem;color:var(--sub)}
+.timeline ul li::before{content:"";flex:none;width:5px;height:5px;margin-top:.65em;border-radius:50%;background:var(--acc)}
+.timeline ul li span{max-width:62ch}
+.chap .foot{border-top:1px solid var(--line);padding-top:24px;max-width:60ch;color:var(--sub)}
+@media (min-width:768px){.timeline>li{grid-template-columns:3fr 9fr;gap:40px;padding:40px 0} .timeline ul{padding-top:4px}}
+
+/* ===== QUESTION ===== */
+.question{padding:calc(var(--sec-y) + 16px) 0;border-top:1px solid rgba(255,255,255,.08)}
+.question .stmt{margin-top:56px;font-size:clamp(1.75rem,4.6vw,3.6rem);line-height:1.1;color:var(--sub);max-width:32ch}
+.question .beam{display:block;width:1px;height:80px;margin:56px 0;background:linear-gradient(to bottom,transparent,var(--brass),transparent)}
+.question h2{max-width:18ch;font-size:clamp(2.4rem,8.4vw,7rem);font-weight:600}
+.question .caveat{margin-top:64px;max-width:46ch;color:var(--sub)}
+@media (min-width:768px){.question .beam{height:112px;margin:80px 0}}
+
+/* ===== CONTACT / REPLY CARD ===== */
+.contact h2{margin-top:40px;max-width:16ch;font-size:clamp(2.2rem,5.6vw,4.5rem)}
+.contact .lede{margin-top:32px;max-width:52ch;color:var(--sub)}
+.contact .btns{margin-top:44px}
+.contact dl{margin-top:32px;display:grid;gap:24px}
+.contact dt{color:var(--sub)}
+.contact dd{margin-top:8px;font-size:clamp(1.0625rem,1.7vw,1.375rem);overflow-wrap:anywhere}
+.contact dd a{text-decoration:underline;text-decoration-color:var(--bone-line);text-decoration-thickness:1px;text-underline-offset:6px;transition:text-decoration-color 200ms}
+.contact dd a:hover{text-decoration-color:var(--brass-deep)}
+.contact dd .sel{user-select:all}
+.sign{margin-top:96px}
+.sign .row{margin-top:40px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:16px 40px}
+.sign .display{font-size:clamp(1.35rem,2.6vw,2.1rem)}
+.sign .slash{margin:0 12px;color:var(--acc)}
+/* ===== FOOTER ===== */
+.foot-bar{border-top:1px solid rgba(255,255,255,.1);background:var(--ink);color:var(--ash)}
+.foot-bar .shell{display:flex;flex-direction:column;gap:16px;padding-top:28px;padding-bottom:28px}
+.foot-bar .links{display:flex;flex-wrap:wrap;gap:8px 24px}
+.foot-bar a{text-decoration:none;transition:color 200ms}
+.foot-bar a:hover{color:var(--bone)}
+.foot-bar .slash{margin:0 10px;color:var(--brass)}
+@media (min-width:768px){.foot-bar .shell{flex-direction:row;align-items:center;justify-content:space-between}}
+.rail{display:none}
+/* ===== MOTION ===== */
+@media (prefers-reduced-motion:no-preference){
+ @keyframes rise{from{opacity:0;transform:translate3d(0,26px,0)} to{opacity:1;transform:none}}
+ @keyframes slide{from{transform:translate3d(0,28px,0)} to{transform:none}}
+ @keyframes draw{from{transform:scaleX(0)} to{transform:scaleX(1)}}
+ @keyframes grow{from{transform:scaleX(0)} to{transform:scaleX(1)}}
+ @keyframes drift{0%,100%{transform:rotateX(22deg) rotateY(-20deg) rotateZ(2deg) translateY(0)} 50%{transform:rotateX(17deg) rotateY(-11deg) rotateZ(1deg) translateY(-10px)}}
+ @keyframes driftSm{0%,100%{transform:rotateX(18deg) rotateY(-12deg) rotateZ(1deg)} 50%{transform:rotateX(14deg) rotateY(-6deg) rotateZ(0deg) translateY(-6px)}}
+ @keyframes stackIn{from{opacity:0;transform:translate3d(0,40px,0)} to{opacity:1;transform:none}}
+ .hero .eyebrow,.hero h1,.hero .voice,.hero .lede,.hero .btns{animation:rise 820ms var(--ease-out) both}
+ .hero h1{animation-delay:90ms} .hero .voice{animation-delay:200ms} .hero .lede{animation-delay:300ms} .hero .btns{animation-delay:380ms}
+ .ledger-stage{animation:stackIn 1100ms var(--ease-out) 420ms both}
+ .ledger{animation:drift 14s ease-in-out 1.6s infinite}
+ .rule{animation:draw 1100ms var(--ease-out) 200ms both}
+ .marker::after{transform-origin:left;animation:draw 900ms var(--ease-out) 300ms both}
+ @supports (animation-timeline:view()){
+  .rule,.marker::after{animation:draw linear both;animation-timeline:view();animation-range:entry 10% cover 35%}
+  .moment .to,.moment .from{animation:slide linear both;animation-timeline:view();animation-range:entry 0% cover 25%}
+  .rail{display:block;position:fixed;inset:0 0 auto 0;height:2px;z-index:50;background:var(--brass);transform-origin:left;pointer-events:none;animation:grow linear both;animation-timeline:scroll(root)}}
+}
+@media (prefers-reduced-motion:no-preference) and (max-width:520px){.ledger{animation:driftSm 14s ease-in-out 1.6s infinite}}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="rail" aria-hidden="true"></div>
+
+
+<header class="top">
+ <div class="shell">
+  <a class="brand" href="#top"><b>Eric Beer</b><i class="eyebrow">Performance Marketer</i></a>
+  <nav class="nav" aria-label="Sections">
+   <a href="#brief">Your brief</a>
+   <a href="#measured">How I'm measured</a>
+   <a href="#plan">First 90 days</a>
+  </nav>
+  <a class="pill" href="#contact">Talk with Eric <span aria-hidden="true">&rarr;</span></a>
+ </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="top" class="hero t-ink" aria-label="Introduction">
+ <div class="shell g">
+  <div class="c7">
+   <p class="eyebrow acc">Prepared for Chief Marketing Officer · Confidential brand</p>
+   <h1 class="display">Paid on results, so I spend <em>like an owner.</em></h1>
+   <p class="voice">For 20 years I've been paid per customer, per lead and per sale.</p>
+   <p class="lede pretty">Your brand is scaling toward $75 to 80M in peptides and longevity and needs a builder. I install the full performance engine: paid media, affiliate, influencer and creator, email and CRM. Every channel answers to the same number.</p>
+   <div class="btns">
+    <a class="btn btn-fill" href="#brief">See your brief, matched <span class="arr" aria-hidden="true">&darr;</span></a>
+    <a class="btn btn-line" href="#contact">Talk with Eric</a>
+   </div>
+  </div>
+  <aside class="c5" aria-label="The ledger">
+   <div class="ledger-stage">
+    <div class="ledger">
+     <div class="card head">
+      <p class="eyebrow">The ledger · career to date</p>
+      <span class="extrude" aria-hidden="true">$100M+</span>
+      <p class="cap">in affiliate commissions generated</p>
+     </div>
+     <div class="card"><div class="row"><span class="k"><span class="was">&lt;$10M</span><span class="arrow">&rarr;</span>$100M+</span><span class="v">language-learning brand market cap, via paid social</span></div></div>
+     <div class="card"><div class="row"><span class="k">8-figure</span><span class="v">performance and affiliate business, founded and run</span></div></div>
+     <div class="card"><div class="row"><span class="k">280+</span><span class="v">affiliates tracked in my network on Everflow</span></div></div>
+     <div class="card"><div class="row"><span class="k">50+</span><span class="v">apps and AI tools shipped</span></div></div>
+    </div>
+   </div>
+   <p class="ledger-note">Selected numbers from 20 years of performance work.</p>
+  </aside>
+ </div>
+</section>
+
+<!-- THESIS: their situation -->
+<section id="thesis" class="sec thesis t-ink" aria-label="What your brand is building">
+ <div class="shell">
+  <p class="eyebrow marker"><span>What you're building</span></p>
+  <h2 class="display">A high-margin brand building its executive team.</h2>
+  <hr class="rule mid">
+  <p class="voice q">Your posting calls this a builder role. Here is the work it lists.</p>
+  <ul class="symptoms">
+   <li><span>Run DTC growth across paid, organic, email, SMS and affiliate.</span></li>
+   <li><span>Build an affiliate program from zero with wellness creators.</span></li>
+   <li><span>Set positioning, voice, visual identity and messaging.</span></li>
+   <li><span>Own the funnel from first click to lifetime value.</span></li>
+   <li><span>Hire the team. Set up agencies and vendors.</span></li>
+   <li><span>Clear KPIs, attribution and reporting to the CEO.</span></li>
+   <li><span>Go to market on new launches with ops and product.</span></li>
+   <li><span>Stay creative inside the rules of a regulated category.</span></li>
+  </ul>
+  <p class="voice turn acc">That is a performance engine. I've built them in my own businesses.</p>
+ </div>
+</section>
+
+<!-- BRIEF MATCHED -->
+<section id="brief" class="sec brief t-bone" aria-label="Your brief, matched">
+ <div class="shell">
+  <p class="eyebrow marker"><span>Your brief, matched</span></p>
+  <h2 class="display">What you asked for, next to what I've done.</h2>
+  <p class="voice intro sub">Each line is one of your requirements, paraphrased. My proof sits beside it.</p>
+  <ol class="matches">
+   <li>
+    <div class="ask"><p class="eyebrow">You asked for</p><h3 class="display">Build an affiliate program from the ground up.</h3></div>
+    <div class="proof"><span class="tag">$100M+ via partners</span><p>I've generated more than $100M in affiliate commissions. I run JVC Affiliate Network on Everflow with 280+ affiliates tracked, and I built an 8-figure performance and affiliate business as Founder and CEO of Universal Marketing Partners.</p></div>
+   </li>
+   <li>
+    <div class="ask"><p class="eyebrow">You asked for</p><h3 class="display">Affiliate and influencer programs that drive sales.</h3></div>
+    <div class="proof"><span class="tag">Creator-led acquisition</span><p>I built a TikTok Shop storefront funnel and a creator-led acquisition program where creators are paid on what they sell. Creators, affiliates and UGC are channels I lead every day.</p></div>
+   </li>
+   <li>
+    <div class="ask"><p class="eyebrow">You asked for</p><h3 class="display">Deep performance marketing. Scale paid alongside organic.</h3></div>
+    <div class="proof"><span class="tag">Paid social at scale</span><p>Helped scale a language-learning brand from under $10M to over $100M in market cap through Facebook arbitrage. I lead paid media programs through media buyers and hold them to cost per customer.</p></div>
+   </li>
+   <li>
+    <div class="ask"><p class="eyebrow">You asked for</p><h3 class="display">Measurable growth. CAC, repeat purchase, subscriptions.</h3></div>
+    <div class="proof"><span class="tag">Members and subscribers</span><p>Agency of record for RealAge.com (Hearst / Dr. Oz) and Harlequin Book Club. Drove memberships for Disney Book Club, high volumes of customers for LifeLock and Norton Antivirus, and sign-ups for Credit Sesame.</p></div>
+   </li>
+   <li>
+    <div class="ask"><p class="eyebrow">You asked for</p><h3 class="display">Creative marketing inside a regulated category.</h3></div>
+    <div class="proof"><span class="tag">Compliance built in</span><p>Founder of LeadQual.ai, with live Medicare, Mortgage Assistance and Final Expense campaigns. I put a partner legal suite in place with TCPA and CCPA protections.</p></div>
+   </li>
+   <li>
+    <div class="ask"><p class="eyebrow">You asked for</p><h3 class="display">A data-driven culture. KPIs, attribution, reporting.</h3></div>
+    <div class="proof"><span class="tag">Paid on the numbers</span><p>When you're paid per result, tracking is the business. I track every affiliate on Everflow and designed a LeadQual pipeline for 300 to 400K records a day. I build AI agents and reporting workflows myself.</p></div>
+   </li>
+   <li>
+    <div class="ask"><p class="eyebrow">You asked for</p><h3 class="display">A builder who created a marketing function.</h3></div>
+    <div class="proof"><span class="tag">Founder, many times</span><p>I've built businesses from nothing: Universal Marketing Partners, JVC Affiliate Network, LeadQual.ai, BeChosen.ai and AffiliateSchool.ai with 17 digital products. 50+ apps and AI tools shipped.</p></div>
+   </li>
+   <li>
+    <div class="ask"><p class="eyebrow">You asked for</p><h3 class="display">Strong in analytics and in creative. A voice for the brand.</h3></div>
+    <div class="proof"><span class="tag">Authority</span><p>Host of the Performance Marketer podcast (2019 to 2023, 125+ episodes). YouTube @ericbeer, Instagram @ericbeerofficial. Co-author of Million Dollar Dads and Million Dollar Identity. Creator of the 3W Framework. Finance degree, University of Maryland.</p></div>
+   </li>
+  </ol>
+ </div>
+</section>
+
+<!-- EVIDENCE -->
+<div id="evidence" class="moments">
+ <section class="moment" aria-label="Market cap growth through paid social">
+  <div class="shell">
+   <p class="eyebrow marker"><span>Scale, proven</span></p>
+   <div class="g">
+    <div class="c8">
+     <span class="metric from">&lt;$10M</span>
+     <div class="down" aria-hidden="true"><span>&darr;</span></div>
+     <span class="metric to">$100M+</span>
+    </div>
+    <div class="c4">
+     <hr class="rule short">
+     <h3 class="display">Market cap, language-learning brand</h3>
+     <p class="support pretty">Driven by Facebook arbitrage: buying customers on paid social for less than they were worth, then scaling what worked.</p>
+     <details class="how">
+      <summary>What this is</summary>
+      <p>Market capitalization of a language-learning company, from under $10M to over $100M, during the period I drove its customer acquisition through paid social.</p>
+     </details>
+    </div>
+   </div>
+   <div class="pause">
+    <hr class="rule">
+    <p class="voice">The same discipline fits a brand scaling toward $75 to 80M.</p>
+   </div>
+  </div>
+ </section>
+</div>
+
+<!-- MEASURED -->
+<section id="measured" class="sec cap t-bone" aria-label="How I'd be measured">
+ <div class="shell">
+  <p class="eyebrow marker"><span>How I'd be measured</span></p>
+  <div class="g">
+   <h2 class="display c6">Judge me on your goals. Pay me on them too.</h2>
+   <p class="lede pretty c6 pt">Your posting names the outcomes that matter. I'd want my scorecard built from the same list, reviewed with the CEO every month.</p>
+  </div>
+  <div class="pillars">
+   <div>
+    <h3 class="display">Revenue toward $75 to 80M</h3>
+    <ul><li>DTC revenue against plan</li><li>Contribution margin by channel</li><li>New launches that hit their targets</li></ul>
+   </div>
+   <div>
+    <h3 class="display">Customer acquisition cost</h3>
+    <ul><li>Blended and by channel</li><li>Affiliate and creator share of new customers</li><li>Payback period on paid media</li></ul>
+   </div>
+   <div>
+    <h3 class="display">Repeat purchase and subscriptions</h3>
+    <ul><li>Repeat purchase rate by cohort</li><li>Subscription growth and retention</li><li>Lifetime value from email and CRM</li></ul>
+   </div>
+   <div>
+    <h3 class="display">KPIs the CEO trusts</h3>
+    <ul><li>One attribution model, agreed early</li><li>Weekly dashboard, monthly review</li><li>A marketing team that owns its numbers</li></ul>
+   </div>
+  </div>
+  <p class="small note">On compensation: executive base plus upside tied to results. It's how I've always worked.</p>
+ </div>
+</section>
+
+<!-- 90 DAYS -->
+<section id="plan" class="sec chap t-ink" aria-label="The first 90 days">
+ <div class="shell">
+  <p class="eyebrow marker"><span>The first 90 days</span></p>
+  <div class="g">
+   <h2 class="display c6">Assess, build, then scale what pays.</h2>
+   <p class="pretty sub c6 pt">Your posting asks the CMO to assess the brand first and then build the function. This is the order I'd do it in.</p>
+  </div>
+  <ol class="timeline">
+   <li>
+    <div><div class="when"><span class="dot" aria-hidden="true"></span><span class="eyebrow sub">Days 1 to 30</span></div><h3 class="display">Find the numbers</h3></div>
+    <ul>
+     <li><span>CAC, repeat rate and lifetime value by channel and by first product bought.</span></li>
+     <li><span>Set one attribution model and a weekly KPI report for the CEO.</span></li>
+     <li><span>Audit claims, copy and ad accounts with counsel so every channel scales inside the rules.</span></li>
+     <li><span>Review the brand's positioning and voice against what customers actually buy.</span></li>
+    </ul>
+   </li>
+   <li>
+    <div><div class="when"><span class="dot" aria-hidden="true"></span><span class="eyebrow sub">Days 31 to 60</span></div><h3 class="display">Build the engine</h3></div>
+    <ul>
+     <li><span>Launch the affiliate program: tracking, terms, payouts and compliance guidelines for partners.</span></li>
+     <li><span>Recruit the first wave of wellness creators from your existing relationships.</span></li>
+     <li><span>Email and SMS flows for welcome, replenishment and subscription.</span></li>
+     <li><span>Hire the first key roles and pick agencies where speed matters more than headcount.</span></li>
+    </ul>
+   </li>
+   <li>
+    <div><div class="when"><span class="dot" aria-hidden="true"></span><span class="eyebrow sub">Days 61 to 90</span></div><h3 class="display">Scale what pays</h3></div>
+    <ul>
+     <li><span>Move budget to the channels with the best payback. Cut the rest.</span></li>
+     <li><span>Build a go-to-market playbook with ops and product for the next launch.</span></li>
+     <li><span>AI workflows for creative testing, reporting and lifecycle.</span></li>
+     <li><span>A 12-month growth plan tied to the $75 to 80M goal.</span></li>
+    </ul>
+   </li>
+  </ol>
+  <p class="small foot">A plan from the outside. I'd adjust it after the first two weeks inside your numbers.</p>
+ </div>
+</section>
+
+<!-- FIT -->
+<section id="fit" class="question t-ink" aria-label="The question">
+ <div class="shell">
+  <p class="eyebrow marker"><span>The question</span></p>
+  <p class="voice stmt">You want a CMO who treats your marketing budget like their own money.</p>
+  <span class="beam" aria-hidden="true"></span>
+  <h2 class="display">Should we talk this week?</h2>
+  <p class="small caveat">I have not worked in peptides or supplements. I have built performance engines in regulated categories and for membership and subscription brands, and I'd bring that playbook to yours.</p>
+ </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="sec contact t-bone" aria-label="Reply card">
+ <div class="shell">
+  <div class="g">
+   <div class="c7">
+    <p class="eyebrow marker"><span>Reply card</span></p>
+    <h2 class="display">Let's talk about the road to $80M.</h2>
+    <p class="lede pretty">Email is fastest. I'm glad to walk your CEO through how I'd build the engine and how I'd want to be measured.</p>
+    <div class="btns">
+     <a class="btn btn-ink" href="mailto:ebeer@mailhaven.io?subject=CMO%20role%20%C2%B7%20Eric%20Beer">Email Eric <span class="arr" aria-hidden="true">&rarr;</span></a>
+     <a class="btn btn-ghost" href="https://www.linkedin.com/in/ericbeer" rel="noopener">LinkedIn</a>
+    </div>
+   </div>
+   <div class="c5 pt">
+    <hr class="rule">
+    <dl>
+     <div><dt class="eyebrow">Email</dt><dd><a class="sel" href="mailto:ebeer@mailhaven.io">ebeer@mailhaven.io</a></dd></div>
+     <div><dt class="eyebrow">LinkedIn</dt><dd><a href="https://www.linkedin.com/in/ericbeer" rel="noopener">linkedin.com/in/ericbeer</a></dd></div>
+     <div><dt class="eyebrow">Based in</dt><dd>Pearl River, NY</dd></div>
+    </dl>
+   </div>
+  </div>
+  <div class="sign">
+   <hr class="rule">
+   <div class="row">
+    <p class="display">Eric Beer<span class="slash" aria-hidden="true">/</span><span class="sub">Performance Marketer</span></p>
+    <p class="eyebrow sub">Paid on results since day one</p>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer class="foot-bar">
+ <div class="shell small">
+  <p>Eric Beer<span class="slash" aria-hidden="true">/</span>Performance Marketer</p>
+  <p class="links"><a href="mailto:ebeer@mailhaven.io">ebeer@mailhaven.io</a><a href="https://www.linkedin.com/in/ericbeer" rel="noopener">LinkedIn</a><span>Prepared for one role</span></p>
+ </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Eric Beer · New Verticals, Launched</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--night:#04070d;--line:rgba(255,255,255,.13);--line-2:rgba(255,255,255,.22);--cream:#e8d1cb;--ink:#15131b;--text:#f2f5fb;--soft:rgba(224,232,245,.76);--faint:rgba(232,238,250,.42);--glow:#ffb46a;
+--body:'Inter',-apple-system,'Helvetica Neue',Arial,sans-serif;--lbl:'Chakra Petch','Inter',sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--night);color:var(--text);font-family:var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--cream);outline-offset:3px}
+.lbl{font-family:var(--lbl);font-weight:700;font-size:11px;letter-spacing:1.3px;text-transform:uppercase}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:max(16px,4vw)}
+.stage{position:relative;min-height:min(100svh,980px);display:flex;flex-direction:column;overflow:hidden;border-bottom:1px solid var(--line);
+ background:radial-gradient(ellipse 60% 45% at 50% 78%,rgba(255,180,106,.22),transparent 70%),radial-gradient(ellipse 90% 60% at 50% 120%,rgba(143,182,255,.12),transparent 70%),linear-gradient(#03060c,#0a1226 70%,#04070d)}
+.stage::before{content:"";position:absolute;inset:18px;border:1px solid var(--line);pointer-events:none}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:40px max(32px,4vw) 0;position:relative;z-index:2}
+.mark b{display:block;font-family:var(--lbl);font-size:20px;letter-spacing:4.5px}
+.mark small{display:block;margin-top:4px;color:var(--faint);font-family:var(--lbl);font-size:10px;letter-spacing:1.8px}
+.pills{display:flex;gap:10px}
+.pill{height:40px;display:inline-flex;align-items:center;padding:0 18px;text-decoration:none}
+.pill.glass{background:rgba(255,255,255,.06)}
+.pill.cream{background:var(--cream);color:var(--ink);clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%)}
+.body{flex:1;display:grid;grid-template-columns:220px minmax(0,1fr);gap:24px;align-items:center;padding:32px max(32px,4vw) 40px;position:relative;z-index:2}
+.rail{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.rail button{all:unset;cursor:pointer;display:flex;gap:10px;padding:7px 0;color:rgba(232,238,250,.4)}
+.rail button:hover,.rail button[aria-current="true"]{color:#eef2fa}
+.rail button[aria-current="true"] .n{color:var(--glow)}
+.hero{max-width:760px}
+.kicker{color:var(--glow);margin-bottom:16px}
+h1{margin:0;font-weight:800;font-size:clamp(34px,6vw,76px);line-height:1;letter-spacing:.5px;text-transform:uppercase;text-wrap:balance}
+.blurb{margin:20px 0 0;max-width:58ch;font-size:clamp(16px,1.4vw,19px);line-height:1.62;color:var(--soft)}
+.proofline{margin-top:16px;color:rgba(232,238,250,.6)}
+.proofline b{color:var(--cream)}
+.swap{transition:opacity .35s ease,transform .35s ease}
+.out .swap{opacity:0;transform:translateY(8px)}
+.dock{display:flex;justify-content:space-between;gap:12px;padding:16px max(32px,4vw) 34px;color:var(--faint);position:relative;z-index:2;border-top:1px solid var(--line);margin-inline:18px}
+.dock a{color:#dfe5f0;text-decoration:none}
+section.sec{padding-block:clamp(64px,9vw,120px);border-bottom:1px solid var(--line)}
+.eyebrow{display:flex;justify-content:space-between;gap:12px;color:var(--faint);padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:clamp(32px,5vw,56px)}
+.eyebrow .on{color:var(--glow)}
+.big{margin:0;font-weight:800;font-size:clamp(32px,5vw,72px);line-height:1;letter-spacing:-.02em;text-transform:uppercase;text-wrap:balance;max-width:16ch}
+.big em{font-style:normal;color:var(--glow)}
+.lead{margin:24px 0 0;max-width:62ch;font-size:clamp(17px,1.5vw,20px);line-height:1.6;color:var(--soft)}
+.stats{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-block:1px solid var(--line-2)}
+.stats li{padding:24px 20px;border-right:1px solid var(--line);min-width:0}
+.stats li:first-child{padding-left:0}.stats li:last-child{border-right:0}
+.stats .v{display:block;font-weight:800;font-size:clamp(30px,3.6vw,50px);letter-spacing:-.03em;line-height:1}
+.stats .k{display:block;margin-top:10px;color:var(--soft);font-size:15px;line-height:1.45}
+.steps{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.step{padding:26px 24px 28px;border:1px solid var(--line-2);background:rgba(255,255,255,.025);min-width:0}
+.step .lbl{color:var(--glow)}
+.step h3{margin:16px 0 10px;font-size:clamp(24px,2.2vw,30px);font-weight:800;text-transform:uppercase}
+.step p{margin:0;color:var(--soft);font-size:16px;line-height:1.6}
+.role{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,64px)}
+.quote{margin:0;font-weight:700;font-size:clamp(24px,2.8vw,38px);line-height:1.18;border-left:2px solid var(--glow);padding-left:24px}
+.quote span{display:block;margin-top:16px;font-weight:400;font-size:clamp(16px,1.3vw,18px);line-height:1.6;color:var(--soft)}
+dl{margin:0;border-top:1px solid var(--line-2)}
+dl div{padding:14px 0;border-bottom:1px solid var(--line)}
+dt{font-weight:700}dd{margin:4px 0 0;color:var(--soft);font-size:14.5px;line-height:1.5}
+.contact{text-align:center}
+.contact .big{margin-inline:auto}
+.contact .lead{margin-inline:auto}
+.row{margin-top:32px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.mail{display:flex;border:1px solid var(--line-2)}
+.mail span{padding:0 18px;display:flex;align-items:center;font-family:var(--lbl);font-weight:600;letter-spacing:.06em;user-select:all}
+.mail button{height:50px;padding:0 20px;border:0;background:var(--cream);color:var(--ink);cursor:pointer}
+.ghost{height:52px;display:inline-flex;align-items:center;padding:0 22px;border:1px solid var(--line-2);text-decoration:none}
+.status{min-height:1.4em;color:var(--faint);margin-top:12px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-block:20px 30px;color:var(--faint)}
+@media (max-width:860px){.body{grid-template-columns:1fr}.rail{flex-direction:row;overflow-x:auto;gap:18px}.rail button{white-space:nowrap}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stats li{padding-left:0}.steps,.role{grid-template-columns:1fr}.pill.glass{display:none}}
+@media (max-width:520px){.stats{grid-template-columns:1fr}.stats li{border-right:0;border-top:1px solid var(--line)}.dock{flex-direction:column}.mail{width:100%;justify-content:space-between}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="stage">
+  <header class="top">
+    <div class="mark"><b>ERIC BEER</b><small>GM · EMERGING VERTICALS</small></div>
+    <div class="pills lbl">
+      <a class="pill glass" href="https://www.linkedin.com/in/ericbeer" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="pill cream" href="#contact">Contact</a>
+    </div>
+  </header>
+  <div class="body">
+    <ol class="rail lbl" aria-label="The problems in this role"><li><button type="button"><span class="n">01</span><span>Launch</span></button></li><li><button type="button"><span class="n">02</span><span>Insurance</span></button></li><li><button type="button"><span class="n">03</span><span>Mortgage</span></button></li><li><button type="button"><span class="n">04</span><span>Partners</span></button></li><li><button type="button"><span class="n">05</span><span>Compliance</span></button></li><li><button type="button"><span class="n">06</span><span>Economics</span></button></li></ol>
+    <div class="hero" id="hero" aria-live="polite">
+      <div class="kicker lbl swap" id="k"></div>
+      <h1 class="swap" id="h"></h1>
+      <p class="blurb swap" id="p"></p>
+      <div class="proofline lbl swap" id="f"></div>
+    </div>
+  </div>
+  <div class="dock lbl"><span>General Manager · Credible</span><a href="#contact">Talk with me →</a></div>
+</div>
+<main>
+  <section class="sec"><div class="wrap">
+    <div class="eyebrow lbl"><span>Proof</span><span class="on">Insurance · Credit · Marketplaces</span></div>
+    <h2 class="big">Marketplace verticals, <em>from zero to revenue.</em></h2>
+    <p class="lead">Credible is adding auto insurance, banking, credit cards and mortgage. I&#x27;ve built acquisition and partner economics in each of those categories.</p>
+    <ul class="stats"><li><span class="v">$100M+</span><span class="k">Affiliate commissions generated across my career</span></li><li><span class="v">8-figure</span><span class="k">Performance and affiliate business built at Universal Marketing Partners</span></li><li><span class="v">200+</span><span class="k">Companies on my outreach list across 11 verticals</span></li><li><span class="v">300–400K</span><span class="k">Records a day in a LeadQual.ai routing plan</span></li></ul>
+  </div></section>
+  <section class="sec"><div class="wrap">
+    <div class="eyebrow lbl"><span>How I'd start</span><span class="on">First 90 days</span></div>
+    <h2 class="big">Rank the verticals. <em>Launch the winners first.</em></h2>
+    <ol class="steps"><li class="step"><span class="lbl">Step 1 · Learn</span><h3>Model</h3><p>Learn each vertical&#x27;s unit economics, partner contracts and the team. Model revenue per visitor by vertical.</p></li><li class="step"><span class="lbl">Step 2 · Prioritize</span><h3>Rank</h3><p>Rank auto insurance, banking, cards and mortgage by margin, speed to revenue and partner readiness.</p></li><li class="step"><span class="lbl">Step 3 · Launch</span><h3>Scale</h3><p>Launch the first vertical with signed partners and consent built in, then repeat the playbook.</p></li></ol>
+  </div></section>
+  <section class="sec"><div class="wrap">
+    <div class="eyebrow lbl"><span>The role I play</span><span class="on">Background</span></div>
+    <div class="role">
+      <p class="quote">I&#x27;m not a media buyer, and I won&#x27;t pretend to be one.<span>I work with media buyers and their teams to get traffic and distribution. My job is building the engine: the offer, the partner economics, the tracking and the playbook a team can run, all on a performance basis.</span></p>
+      <dl>
+        <div><dt>Universal Marketing Partners</dt><dd>Founder &amp; CEO · 8-figure performance and affiliate business</dd></div>
+        <div><dt>LeadQual.ai</dt><dd>Founder · AI lead qualification and routing; Medicare, Mortgage Assistance, Final Expense</dd></div>
+        <div><dt>BeChosen.ai &amp; Scout</dt><dd>Founder · AI job platform across 8 ATS platforms; product strategy and pricing</dd></div>
+        <div><dt>Performance Marketer</dt><dd>Founder · AffiliateSchool.ai, newsletter, podcast (125+ episodes, 2019–2023)</dd></div>
+        <div><dt>JVC Affiliate Network</dt><dd>Operator · Everflow, 280+ affiliates tracked</dd></div>
+        <div><dt>University of Maryland</dt><dd>Finance, 1999 · scholarship baseball, NCAA Division I</dd></div>
+      </dl>
+    </div>
+  </div></section>
+  <section class="sec contact" id="contact"><div class="wrap">
+    <div class="eyebrow lbl"><span>Contact</span><span class="on">New York metro · Remote</span></div>
+    <h2 class="big">Let's talk about <em>Credible's next verticals.</em></h2>
+    <p class="lead">If you&#x27;re building new verticals in insurance and lending, I&#x27;d like to hear where each one stands today.</p>
+    <div class="row">
+      <div class="mail"><span id="em">eric@performancemarketer.io</span><button type="button" class="lbl" id="cp">Copy</button></div>
+      <a class="ghost lbl" href="https://www.linkedin.com/in/ericbeer" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+    <p class="status lbl" id="st" role="status"></p>
+  </div></section>
+</main>
+<footer><div class="wrap lbl"><span>Eric Beer</span><span>Prepared for Credible</span></div></footer>
+<script>
+(function(){
+var CH=[{"k": "Problem 01 · New verticals", "h": "Launched like a founder", "p": "I've started and run businesses across lead generation, education and AI products. Taking a new vertical from strategy to revenue is the job I've done for twenty years.", "f": "<b>Repeat founder</b> · lead gen · education · AI"}, {"k": "Problem 02 · Auto insurance and more", "h": "Insurance leads that close", "p": "I run live Medicare and Final Expense campaigns with AI voice qualification and warm transfer at LeadQual.ai. I know how insurance marketplaces make money.", "f": "<b>Medicare · Final Expense</b> · live campaigns"}, {"k": "Problem 03 · Mortgage and credit", "h": "Credit customers at scale", "p": "I drove customers for Credit Sesame and LifeLock and run Mortgage Assistance campaigns today. Credit and mortgage shoppers are an audience I've acquired for years.", "f": "<b>Credit Sesame · LifeLock · Mortgage Assistance</b>"}, {"k": "Problem 04 · Lender and carrier partners", "h": "Partnerships on paper", "p": "I wrote the publisher, advertiser and broker agreements and insertion orders at LeadQual.ai, and negotiated counter-redlines with partners.", "f": "<b>Agreements · IOs · redlines</b>"}, {"k": "Problem 05 · Regulated growth", "h": "Consent built in", "p": "Every new vertical is new regulatory exposure. My agreements carry TCPA/CCPA, TrustedForm and PEWC protections from day one.", "f": "<b>TCPA · CCPA · TrustedForm · PEWC</b>"}, {"k": "Problem 06 · Marketplace economics", "h": "Both sides win", "p": "I designed LeadQual.ai's model with a defined revenue split and broker economics, so consumers get matched and partners keep buying.", "f": "<b>Revenue split</b> by design"}];
+var hero=document.getElementById('hero'),btns=[].slice.call(document.querySelectorAll('.rail button')),cur=-1,t;
+function show(i,instant){if(i===cur)return;cur=i;btns.forEach(function(b,j){b.setAttribute('aria-current',j===i?'true':'false')});
+ var c=CH[i];function put(){document.getElementById('k').textContent=c.k;document.getElementById('h').textContent=c.h;document.getElementById('p').textContent=c.p;document.getElementById('f').innerHTML=c.f;hero.classList.remove('out')}
+ if(instant){put();return}hero.classList.add('out');clearTimeout(t);t=setTimeout(put,300)}
+btns.forEach(function(b,j){b.addEventListener('click',function(){show(j)})});
+show(0,true);
+var cp=document.getElementById('cp'),st=document.getElementById('st'),em=document.getElementById('em');
+cp.addEventListener('click',function(){function fail(){var r=document.createRange();r.selectNodeContents(em);var s=getSelection();s.removeAllRanges();s.addRange(r);st.textContent='Selected. Press Ctrl+C or Cmd+C'}
+ try{navigator.clipboard.writeText(em.textContent).then(function(){st.textContent='Email copied'},fail)}catch(e){fail()}});
+})();
+</script>
+</body>
+</html>

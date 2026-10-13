@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Eric Beer | The Home Turf Issue</title>
+<meta name="description" content="Eric Beer for CMO, customer acquisition: 20 years selling courses, coaching, memberships and education on performance terms.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,900;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+--paper:#f6f3eb; --paper-warm:#f2ece0; --paper-blush:#f5e4d8;
+--ink:#221811; --ink-soft:#4b4038; --line:#d3cdc3;
+--accent:#862726; --accent-deep:#651818; --accent-on-dark:#de958e;
+--display:"Fraunces",Georgia,serif; --body:"Newsreader",Georgia,serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+--ease:cubic-bezier(.23,1,.32,1); --wrap:1400px;
+--h:rgba(34,24,17,.15); --h2:rgba(34,24,17,.12); --h3:rgba(34,24,17,.1); --fa:rgba(134,39,38,.4); --fb:rgba(134,39,38,.6); --pd:rgba(246,243,235,.62);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.7 var(--body);overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+@media(min-width:640px){.wrap{padding:0 32px}}
+.mono{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase}
+.mono.sm{font-size:10px}
+.acc{color:var(--accent)} .b{font-weight:600}
+.soft{color:var(--ink-soft)}
+.display{font-family:var(--display);font-optical-sizing:auto;letter-spacing:-.02em;text-wrap:balance}
+.grain{background-image:radial-gradient(rgba(34,24,17,.035) 1px,transparent 1px);background-size:22px 22px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;font:600 11px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border:1px solid var(--ink);transition:background-color .2s,color .2s,transform .15s}
+.btn-solid{background:var(--ink);color:var(--paper)}
+.btn-solid:hover{background:var(--accent);border-color:var(--accent)}
+.btn-line{color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--paper)}
+.tag{display:inline-block;border:1px solid rgba(34,24,17,.25);padding:4px 11px;font:400 10px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.dash-list li{display:flex;gap:12px;align-items:flex-start;font-size:15px;margin-top:8px}
+.dash-list li::before{content:"";flex:0 0 16px;height:1px;margin-top:13px;background:var(--accent)}
+.draft{background:var(--accent-deep);color:var(--paper);text-align:center;padding:8px 16px;font:600 10px/1.5 var(--mono);letter-spacing:.2em;text-transform:uppercase}
+.mast{position:sticky;top:0;z-index:50;background:rgba(244,239,229,.96);border-bottom:1px solid var(--h2)}
+.mast-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px;position:relative}
+.wordmark{font:600 19px/1 var(--display);letter-spacing:-.01em;text-decoration:none}
+.wordmark span,.dot{color:var(--accent)}
+.mast-links{display:none;gap:22px}
+.mast-links a{font:400 10.5px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:var(--ink-soft)}
+.mast-links a b{font-weight:400;color:var(--accent);margin-right:4px}
+.mast-links a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.mast-contact{display:none;border:1px solid var(--ink);padding:7px 15px;font:400 10.5px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;text-decoration:none}
+.mast-contact:hover{background:var(--ink);color:var(--paper)}
+.toc summary{list-style:none;cursor:pointer;border:1px solid rgba(34,24,17,.3);padding:8px 12px;font:600 10px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase}
+.toc summary::-webkit-details-marker{display:none}
+.toc ol{position:absolute;left:0;right:0;top:100%;background:var(--paper);border-bottom:2px solid var(--ink);padding:8px 20px 20px}
+.toc li a{display:flex;gap:16px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--h2);text-decoration:none;font:600 26px/1.1 var(--display)}
+.toc li a b{font:400 11px/1 var(--mono);color:var(--accent);letter-spacing:.2em}
+.progress{height:2px;background:rgba(34,24,17,.05)}
+.progress i{display:block;height:100%;width:100%;background:var(--accent);transform-origin:left;transform:scaleX(0)}
+@media(min-width:640px){.mast-contact{display:inline-block}}
+@media(min-width:1024px){.mast-links{display:flex}.toc{display:none}}
+.rail{display:none}
+@media(min-width:1280px){
+.rail{display:flex;flex-direction:column;align-items:center;gap:2px;position:fixed;left:0;top:50%;transform:translateY(-50%);z-index:40;background:#f4efe5;border:1px solid var(--h);border-left:0;padding:14px 6px 14px 8px}
+.rail a{display:flex;flex-direction:column;align-items:center;gap:4px;padding:4px 0;text-decoration:none;font:400 9px/1 var(--mono);letter-spacing:.2em;color:var(--ink-soft);writing-mode:vertical-rl}
+.rail a::after{content:"";width:1px;height:12px;background:rgba(34,24,17,.2)}
+}
+.figcap{margin-top:10px;font:400 10px/1.6 var(--mono);letter-spacing:.08em;color:var(--ink-soft)}
+.figcap b{color:var(--accent);letter-spacing:.18em;text-transform:uppercase}
+.dept{padding:80px 0;position:relative}
+.dept.warm{background:rgba(242,236,224,.65)}
+.dept.dark{background:var(--ink);color:var(--paper)}
+@media(min-width:640px){.dept{padding:112px 0}}
+.dh{margin-bottom:56px}
+.dh-row{display:flex;align-items:baseline;gap:16px;border-bottom:2px solid currentColor;padding-bottom:12px}
+.dh-row .fill{flex:1;height:1px;background:currentColor;opacity:.1}
+.dh-body{display:flex;gap:32px;align-items:flex-start;margin-top:32px}
+.numeral{display:none;font:900 9rem/.75 var(--display);color:transparent;-webkit-text-stroke:1.5px rgba(134,39,38,.55);user-select:none}
+.dh-title{font-weight:600;font-size:clamp(2.25rem,5vw,3.75rem);line-height:1.02}
+.dh-lede{margin-top:20px;max-width:42rem;font-size:19px;line-height:1.6;color:var(--ink-soft)}
+.dark .dh-row .mono{color:rgba(246,243,235,.8)}
+.dark .dh-lede{color:rgba(246,243,235,.78)}
+.dark .numeral{-webkit-text-stroke-color:rgba(222,149,142,.55)}
+@media(min-width:1024px){.numeral{display:block}}
+.g12{display:grid;gap:48px}
+.g12>*,.dh-body>*{min-width:0}
+@media(min-width:1024px){.g12{grid-template-columns:repeat(12,minmax(0,1fr));gap:32px}}
+.cover{position:relative;overflow:hidden;padding-top:32px}
+.cover .grain{position:absolute;inset:0;opacity:.6;pointer-events:none}
+.cover-mast{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;border-bottom:2px solid var(--ink);padding-bottom:12px;position:relative}
+.cover-mast .t{font:900 clamp(1.4rem,3vw,1.9rem)/1.1 var(--display);letter-spacing:-.02em;margin-top:4px}
+.cover-loc{display:none}
+@media(min-width:640px){.cover-loc{display:block}}
+.cover-grid{position:relative;padding:40px 0 56px}
+.eyebrow{display:flex;align-items:center;gap:12px;font-weight:600;letter-spacing:.28em}
+.eyebrow::before{content:"*";font:700 22px/1 var(--display);color:var(--accent);margin-top:6px}
+.cover-name{margin-top:16px;font-weight:900;font-size:clamp(3.4rem,16vw,9.6rem);line-height:.86;letter-spacing:-.03em;overflow-wrap:anywhere}
+.coverline{margin-top:28px;border-left:2px solid var(--accent);padding-left:20px}
+.coverline p.display{margin-top:8px;font-style:italic;font-weight:500;font-size:clamp(1.5rem,3.2vw,2rem);line-height:1.25;max-width:34rem}
+.cover-intro{margin-top:28px;max-width:36rem;color:var(--ink-soft)}
+.ctas{margin-top:40px;display:flex;flex-wrap:wrap;gap:14px}
+.stats{margin-top:48px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--h);border-bottom:1px solid var(--h)}
+.stats div{padding:16px 10px 16px 14px;border-left:1px solid var(--h)}
+.stats div:first-child{border-left:0;padding-left:0}
+.stats .v{font:900 clamp(1.3rem,5vw,1.9rem)/1 var(--display);color:var(--accent)}
+.stats .l{margin-top:6px;font:400 9px/1.4 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
+@media(min-width:1024px){.cover-text{grid-column:span 7}.cover-photo{grid-column:span 5;align-self:center}}
+.ticker{background:var(--ink);color:var(--paper);overflow:hidden;padding:12px 0;border-top:1px solid var(--h)}
+.ticker-track{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 32px;padding:0 20px}
+.ticker-track span{font:400 11px/1.4 var(--mono);letter-spacing:.25em;text-transform:uppercase;white-space:nowrap}
+.ticker-track span::after{content:"\2726";color:var(--accent-on-dark);margin-left:32px}
+.ticker-track .dup{display:none}
+.stage{--bw:min(300px,64vw);--bh:calc(var(--bw) * 1.32);--t:22px;position:relative;display:grid;place-items:center;padding:40px 0 24px;perspective:1500px;perspective-origin:50% 40%}
+.stage::after{content:"";position:absolute;left:18%;right:18%;bottom:6px;height:22px;background:radial-gradient(ellipse at center,rgba(34,24,17,.28),transparent 70%);filter:blur(4px)}
+.issue3d{position:relative;width:var(--bw);height:var(--bh);transform-style:preserve-3d;transform:rotateX(8deg) rotateY(-26deg) rotateZ(1deg)}
+.issue3d .f{position:absolute;backface-visibility:hidden}
+.i-front{inset:0;transform:translateZ(calc(var(--t) / 2));background:var(--paper);border:1px solid rgba(34,24,17,.35);padding:7% 8%;display:flex;flex-direction:column;overflow:hidden}
+.i-front::before{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(255,255,255,.35) 0%,transparent 38%,transparent 70%,rgba(34,24,17,.08) 100%);pointer-events:none}
+.i-back{inset:0;transform:translateZ(calc(var(--t) / -2)) rotateY(180deg);background:var(--ink)}
+.i-edge{top:0;height:100%;width:var(--t);left:calc(100% - var(--t) / 2);transform:rotateY(90deg);background:repeating-linear-gradient(90deg,#efe8da 0 1px,#d9d0bf 1px 2px,#f6f1e6 2px 3px)}
+.i-spine{top:0;height:100%;width:var(--t);left:calc(var(--t) / -2);transform:rotateY(-90deg);background:var(--accent);display:grid;place-items:center}
+.i-spine span{writing-mode:vertical-rl;transform:rotate(180deg);font:600 8px/1 var(--mono);letter-spacing:.3em;color:var(--paper);text-transform:uppercase}
+.i-top,.i-bot{left:0;width:100%;height:var(--t);background:repeating-linear-gradient(0deg,#efe8da 0 1px,#d9d0bf 1px 2px,#f6f1e6 2px 3px)}
+.i-top{top:calc(var(--t) / -2);transform:rotateX(90deg)}
+.i-bot{bottom:calc(var(--t) / -2);transform:rotateX(-90deg)}
+.c-mast{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--ink);padding-bottom:5px}
+.c-mast b{font:900 calc(var(--bw) * .1)/1 var(--display);letter-spacing:-.03em}
+.c-mast b i{font-style:normal;color:var(--accent)}
+.c-mast span{font:400 6.5px/1.3 var(--mono);letter-spacing:.16em;text-transform:uppercase;text-align:right;color:var(--ink-soft)}
+.c-kick{margin-top:8%;font:600 7px/1 var(--mono);letter-spacing:.24em;text-transform:uppercase;color:var(--accent)}
+.c-title{margin-top:4%;font:900 calc(var(--bw) * .135)/.9 var(--display);letter-spacing:-.035em}
+.c-title em{font-style:italic;font-weight:500;color:var(--accent)}
+.c-lines{margin-top:auto;display:grid;gap:7px}
+.c-lines p{border-top:1px solid rgba(34,24,17,.25);padding-top:5px;font:500 calc(var(--bw) * .043)/1.2 var(--display)}
+.c-lines p small{display:block;font:400 6px/1.3 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:2px}
+.c-foot{margin-top:8%;display:flex;justify-content:space-between;align-items:flex-end}
+.c-bar{width:34%;height:22px;background:repeating-linear-gradient(90deg,var(--ink) 0 1px,transparent 1px 3px,var(--ink) 3px 5px,transparent 5px 6px)}
+.c-foot span{font:400 6px/1.3 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
+.c-ribbon{position:absolute;top:30%;right:-26%;transform:rotate(38deg);background:var(--accent);color:var(--paper);font:600 6.5px/1 var(--mono);letter-spacing:.24em;text-transform:uppercase;padding:6px 40px}
+.back-issue{position:absolute;inset:0;border:1px solid rgba(34,24,17,.3);padding:8%;display:flex;flex-direction:column;justify-content:space-between}
+.bi-1{transform:translateZ(-34px) translateX(-16%) rotateZ(-6deg);background:var(--paper-blush)}
+.bi-2{transform:translateZ(-64px) translateX(-30%) rotateZ(-11deg);background:var(--paper-warm)}
+.back-issue b{font:900 calc(var(--bw) * .085)/1 var(--display);letter-spacing:-.03em;color:rgba(34,24,17,.55)}
+.back-issue span{font:400 6.5px/1.3 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:rgba(34,24,17,.5)}
+@media(min-width:1024px){.stage{--bw:min(330px,26vw)}}
+.story p.body{margin-bottom:24px;max-width:42rem;font-size:19px;line-height:1.65}
+.story p.body:first-child::first-letter{float:left;margin:6px 12px 0 0;font:900 4.6rem/.8 var(--display);color:var(--accent)}
+.aside{border-left:2px solid var(--accent);background:rgba(242,236,224,.8);padding:24px}
+.aside li{display:flex;gap:12px;align-items:flex-start;margin-top:12px;font-size:15px;line-height:1.45}
+.aside li::before{content:"";flex:0 0 4px;height:4px;margin-top:9px;background:var(--accent)}
+.aside .note{margin-top:24px;padding-top:16px;border-top:1px solid var(--h3);font:400 10px/1.7 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+@media(min-width:1024px){.story .main{grid-column:1 / span 7}.story .side{grid-column:9 / span 4}.aside{position:sticky;top:96px}}
+.ledger{border-top:1px solid var(--h)}
+.cap{border-bottom:1px solid var(--h)}
+.cap summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:16px;padding:24px 0}
+.cap summary::-webkit-details-marker{display:none}
+.cap .ix{font:400 12px/1 var(--mono);color:var(--accent)}
+.cap .nm{flex:1;font:600 clamp(1.4rem,3.4vw,2.25rem)/1.15 var(--display);letter-spacing:-.02em;transition:color .2s}
+.cap summary:hover .nm,.cap[open] .nm{color:var(--accent)}
+.cap .pl{flex:0 0 36px;height:36px;display:grid;place-items:center;border:1px solid rgba(34,24,17,.25);font:300 22px/1 var(--display);transition:transform .3s var(--ease),background-color .2s}
+.cap[open] .pl{transform:rotate(45deg);background:var(--accent);border-color:var(--accent);color:var(--paper)}
+.cap-body{display:grid;gap:24px;padding:0 0 32px}
+.proof{border-left:2px solid var(--fb);padding-left:20px}
+.proof p.q{margin-top:8px;font-style:italic}
+@media(min-width:640px){.cap summary{gap:32px}.cap-body{padding-left:56px}}
+@media(min-width:1024px){.cap-body{grid-template-columns:1fr 1fr;gap:48px}}
+.measures{display:grid;gap:0;border-top:2px solid var(--ink)}
+.ms{display:grid;gap:10px;padding:28px 0;border-bottom:1px solid var(--h)}
+.ms .k{font:400 11px/1 var(--mono);color:var(--accent);letter-spacing:.2em}
+.ms h3{font:600 clamp(1.4rem,3vw,1.9rem)/1.15 var(--display);letter-spacing:-.02em}
+.ms p{font-size:16px;line-height:1.6;color:var(--ink-soft)}
+@media(min-width:768px){.ms{grid-template-columns:60px minmax(0,5fr) minmax(0,7fr);gap:24px;align-items:baseline}}
+.statblock{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:24px 0;text-align:center}
+.statblock .v{font:900 clamp(2.4rem,7vw,4rem)/1 var(--display);letter-spacing:-.03em;color:var(--accent)}
+.matters{margin-top:32px;border-left:2px solid var(--accent);background:rgba(245,228,216,.6);padding:24px}
+.matters p.display{margin-top:12px;font:italic 500 1.3rem/1.4 var(--display)}
+@media(min-width:1024px){.m-l{grid-column:span 8}.m-r{grid-column:10 / span 3}.m-r .sticky{position:sticky;top:110px}}
+.dark .acc{color:var(--accent-on-dark)}
+.tl{position:relative}
+.tl::before{content:"";position:absolute;top:0;bottom:0;left:8px;width:1px;background:rgba(246,243,235,.2)}
+.tl-item{position:relative;padding-left:44px;margin-bottom:56px}
+.tl-item:last-child{margin-bottom:0}
+.tl-item::before{content:"";position:absolute;left:0;top:8px;width:17px;height:17px;border-radius:50%;border:2px solid var(--paper);background:var(--accent-on-dark);box-shadow:inset 0 0 0 3px var(--ink)}
+.tl-org{margin-top:8px;font:600 clamp(1.6rem,3vw,1.9rem)/1.15 var(--display);letter-spacing:-.02em}
+.tl-role{margin-top:4px;font-style:italic;font-size:18px;color:rgba(246,243,235,.88)}
+.tl-item .ov{color:rgba(246,243,235,.82)}
+.tl-item .dash-list li{color:rgba(246,243,235,.88)}
+.tl-item .dash-list li::before{background:var(--accent-on-dark)}
+.tl-grid{display:grid;gap:24px}
+@media(min-width:640px){.tl::before{left:9px}.tl-item{padding-left:56px}}
+@media(min-width:1024px){.tl-grid{grid-template-columns:5fr 7fr;gap:48px}}
+.problems li{display:flex;gap:20px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--h)}
+.problems li:first-child{border-top:1px solid var(--h)}
+.problems .ix{font:400 11px/1 var(--mono);color:var(--accent);flex:0 0 auto}
+.problems .p{font:500 clamp(1.15rem,2.4vw,1.45rem)/1.35 var(--display)}
+.pull{border-top:2px solid var(--ink);padding-top:24px}
+.pull blockquote{margin:12px 0 0;font:italic 500 clamp(1.5rem,3.4vw,2.4rem)/1.2 var(--display);letter-spacing:-.01em;text-wrap:balance}
+.targets{margin-top:32px}
+.targets li{padding:12px 0;border-bottom:1px solid var(--h2);font:600 18px/1.3 var(--display)}
+.targets li span{display:block;margin-top:4px;font:400 15px/1.5 var(--body);color:var(--ink-soft)}
+@media(min-width:1024px){.fit-l{grid-column:span 6}.fit-r{grid-column:8 / span 5}}
+.back{position:relative;overflow:hidden}
+.back .grain{position:absolute;inset:0;opacity:.2;pointer-events:none;background-image:radial-gradient(rgba(246,243,235,.08) 1px,transparent 1px)}
+.back-h{margin-top:48px;font-weight:600;font-size:clamp(2.4rem,7.4vw,6rem);line-height:.98;max-width:16ch}
+.back-msg{margin-top:32px;max-width:42rem;font-size:19px;color:rgba(246,243,235,.82)}
+.back-mail{display:inline-block;margin-top:40px;font:600 clamp(1.2rem,4vw,2.25rem)/1.25 var(--display);letter-spacing:-.01em;text-decoration:underline;text-decoration-color:var(--accent-on-dark);text-decoration-thickness:4px;text-underline-offset:10px;overflow-wrap:anywhere}
+.cledger{margin-top:64px;display:grid;gap:1px;background:rgba(246,243,235,.2);border:1px solid rgba(246,243,235,.2)}
+.cledger div{background:var(--ink);padding:24px}
+.cledger a,.cledger span.v{display:block;margin-top:10px;font-size:18px;text-decoration:none;overflow-wrap:anywhere}
+.cledger a:hover{color:var(--accent-on-dark);text-decoration:underline}
+@media(min-width:640px){.cledger{grid-template-columns:repeat(3,1fr)}}
+.colophon{background:var(--ink);color:var(--pd);border-top:1px solid rgba(246,243,235,.15);padding:32px 0}
+.colophon .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.colophon .dot{color:var(--accent-on-dark)}
+@media (prefers-reduced-motion:no-preference){
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.rise{animation:rise .6s var(--ease) both}
+.d1{animation-delay:.06s}.d2{animation-delay:.14s}.d3{animation-delay:.22s}.d4{animation-delay:.3s}.d5{animation-delay:.38s}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ticker-track{flex-wrap:nowrap;justify-content:flex-start;width:max-content;padding:0;animation:marquee 28s linear infinite}
+.ticker-track .dup{display:inline}
+.ticker:hover .ticker-track{animation-play-state:paused}
+@keyframes sway{0%,100%{transform:rotateX(8deg) rotateY(-30deg) rotateZ(1deg)}50%{transform:rotateX(5deg) rotateY(-16deg) rotateZ(-1deg)}}
+.issue3d{animation:sway 9s ease-in-out infinite}
+.stage:hover .issue3d{animation-play-state:paused}
+@supports (animation-timeline:scroll()){
+@keyframes fill{to{transform:scaleX(1)}}
+.progress i{animation:fill linear both;animation-timeline:scroll(root)}
+}
+}
+</style>
+</head>
+<body>
+<header class="mast">
+<div class="wrap mast-row">
+<a class="wordmark" href="#cover">Eric Beer<span>.</span></a>
+<nav class="mast-links" aria-label="Departments">
+<a href="#story"><b>02</b>Home turf</a>
+<a href="#brief"><b>03</b>Your brief</a>
+<a href="#measures"><b>04</b>Measures</a>
+<a href="#plan"><b>05</b>90 days</a>
+<a href="#fit"><b>06</b>Fit</a>
+</nav>
+<div style="display:flex;align-items:center;gap:10px">
+<a class="mast-contact" href="#contact">Reply card</a>
+<details class="toc">
+<summary>Contents</summary>
+<ol>
+<li><a href="#story"><b>02</b>Home turf</a></li>
+<li><a href="#brief"><b>03</b>Your brief</a></li>
+<li><a href="#measures"><b>04</b>Measures</a></li>
+<li><a href="#plan"><b>05</b>90 days</a></li>
+<li><a href="#fit"><b>06</b>Fit</a></li>
+<li><a href="#contact"><b>07</b>Reply card</a></li>
+</ol>
+</details>
+</div>
+</div>
+<div class="progress" aria-hidden="true"><i></i></div>
+</header>
+<nav class="rail" aria-label="Issue folio">
+<a href="#cover">01</a><a href="#story">02</a><a href="#brief">03</a><a href="#measures">04</a><a href="#plan">05</a><a href="#fit">06</a><a href="#contact">07</a>
+</nav>
+<main>
+<section class="cover" id="cover">
+<div class="grain" aria-hidden="true"></div>
+<div class="wrap">
+<div class="cover-mast rise">
+<div>
+<p class="mono sm acc">Job Showcase · CMO, Customer Acquisition · 2026</p>
+<p class="t">The Home Turf Issue</p>
+</div>
+<p class="mono sm soft cover-loc">Remote, US · Central hours</p>
+</div>
+<div class="cover-grid g12">
+<div class="cover-text">
+<p class="mono acc eyebrow rise d1">Performance marketer, 20+ years</p>
+<h1 class="display cover-name rise d2">ERIC<br>BEER<span class="dot">.</span></h1>
+<div class="coverline rise d3">
+<p class="mono sm soft">Cover line</p>
+<p class="display">Info products, coaches and education are my home turf.</p>
+</div>
+<p class="cover-intro rise d4">I have spent 20 years selling courses, coaching, memberships and education with performance marketing, always paid on results. I built my own education ecosystem, and I teach this work in public. Your brief reads like my resume.</p>
+<div class="ctas rise d5">
+<a class="btn btn-solid" href="#brief">Your brief, matched <span aria-hidden="true">&darr;</span></a>
+<a class="btn btn-line" href="#contact">Reply card <span aria-hidden="true">&nearr;</span></a>
+</div>
+<div class="stats rise d5">
+<div><p class="v">$100M+</p><p class="l">Affiliate commissions generated</p></div>
+<div><p class="v">20+</p><p class="l">Years paid on results</p></div>
+<div><p class="v">125+</p><p class="l">Podcast episodes hosted</p></div>
+</div>
+</div>
+<figure class="cover-photo rise d3">
+<div class="stage" role="img" aria-label="A printed magazine issue titled Courses, Coaching, Members, tilted in 3D with two back issues behind it">
+<div class="issue3d">
+<div class="f back-issue bi-2" aria-hidden="true"><b>Performance Marketer Weekly</b><span>Back issue · newsletter</span></div>
+<div class="f back-issue bi-1" aria-hidden="true"><b>AffiliateSchool.ai</b><span>Back issue · 17 digital products</span></div>
+<div class="f i-back" aria-hidden="true"></div>
+<div class="f i-top" aria-hidden="true"></div>
+<div class="f i-bot" aria-hidden="true"></div>
+<div class="f i-spine" aria-hidden="true"><span>The Home Turf Issue</span></div>
+<div class="f i-edge" aria-hidden="true"></div>
+<div class="f i-front" aria-hidden="true">
+<div class="c-mast"><b>Beer<i>.</i></b><span>Vol. 20<br>Paid on results</span></div>
+<p class="c-kick">The education issue</p>
+<p class="c-title">Courses. Coaching. <em>Members.</em></p>
+<div class="c-lines">
+<p><small>Inside</small>Book clubs, language learning and memberships</p>
+<p><small>Feature</small>$100M+ in affiliate commissions</p>
+<p><small>Plan</small>The first 90 days, page 05</p>
+</div>
+<div class="c-foot"><span class="c-bar"></span><span>Remote · US</span></div>
+<span class="c-ribbon">Home turf</span>
+</div>
+</div>
+</div>
+<figcaption class="figcap"><b>Fig. 01, </b>This issue, with two of the back issues I built myself.</figcaption>
+</figure>
+</div>
+</div>
+<div class="ticker" aria-label="What this issue covers">
+<div class="ticker-track">
+<span>Courses</span><span>Coaching</span><span>Memberships</span><span>Certification</span><span>Webinars and VSLs</span><span>Affiliates and JVs</span><span>Creators and UGC</span><span>Paid on results</span>
+<span class="dup" aria-hidden="true">Courses</span><span class="dup" aria-hidden="true">Coaching</span><span class="dup" aria-hidden="true">Memberships</span><span class="dup" aria-hidden="true">Certification</span><span class="dup" aria-hidden="true">Webinars and VSLs</span><span class="dup" aria-hidden="true">Affiliates and JVs</span><span class="dup" aria-hidden="true">Creators and UGC</span><span class="dup" aria-hidden="true">Paid on results</span>
+</div>
+</div>
+</section>
+<section class="dept story" id="story">
+<div class="wrap">
+<div class="dh">
+<div class="dh-row"><span class="mono acc b">Department 02</span><span class="fill"></span><span class="mono soft">Home turf</span></div>
+<div class="dh-body"><span class="numeral" aria-hidden="true">02</span><h2 class="display dh-title">I have sold education on results for 20 years.</h2></div>
+</div>
+<div class="g12">
+<div class="main">
+<p class="body">My career runs through membership and education offers. I was agency of record for RealAge.com (Hearst and Dr. Oz) and Harlequin Book Club. I drove memberships for Disney Book Club. I helped scale a language-learning brand from under $10M to over $100M in market cap with Facebook arbitrage. Every one of those was a paid-on-results deal.</p>
+<p class="body">Then I built my own. AffiliateSchool.ai is an education ecosystem with 17 digital products, a 7-stage capstone simulation, a 12-module Skool community and a 5-level partner commission structure. I wrote the frameworks it teaches: the 3W Framework (What, Who, Where) and Find, Contact, Activate, Scale.</p>
+<p class="body">I also know what it means to grow a brand led by an author. I co-wrote Million Dollar Dads and Million Dollar Identity, hosted the Performance Marketer podcast for 125+ episodes, and teach affiliate programs, lead gen and performance growth on YouTube. Your company sells in a format I build and sell myself.</p>
+</div>
+<div class="side">
+<aside class="aside">
+<p class="mono sm acc b">Currently</p>
+<ul>
+<li>Founder, AffiliateSchool.ai education ecosystem</li>
+<li>Running JVC Affiliate Network, 280+ affiliates</li>
+<li>Founder, LeadQual.ai, with a TCPA and CCPA compliance suite</li>
+<li>Founder, BeChosen.ai and Scout, with a creator-led acquisition program</li>
+<li>Shipped 50+ apps and AI tools; I build AI agents and automation</li>
+</ul>
+<p class="note">Every figure on this page comes from Eric's own record. No client results are estimated.</p>
+</aside>
+</div>
+</div>
+</div>
+</section>
+<section class="dept warm" id="brief">
+<div class="wrap">
+<div class="dh">
+<div class="dh-row"><span class="mono acc b">Department 03</span><span class="fill"></span><span class="mono soft">Your brief</span></div>
+<div class="dh-body"><span class="numeral" aria-hidden="true">03</span><div><h2 class="display dh-title">Your brief, matched.</h2><p class="dh-lede">Nine lines from your posting, each set beside the work that answers it. Open any row for the proof.</p></div></div>
+</div>
+<div class="ledger">
+<details class="cap" open>
+<summary><span class="ix">01</span><span class="nm">Paid, high-ROI acquisition for courses, coaching and certification</span><span class="pl" aria-hidden="true">+</span></summary>
+<div class="cap-body">
+<div><p class="mono sm acc b">Your words</p><p style="margin-top:8px">Prioritize growth in the eLearning, training, coaching and certification business through paid ads and high-ROI direct-to-consumer acquisition.</p></div>
+<div class="proof"><p class="mono sm acc b">The proof</p><p class="q">Agency of record for RealAge.com and Harlequin Book Club. Drove memberships for Disney Book Club. Scaled a language-learning brand from under $10M to over $100M in market cap via Facebook arbitrage.</p><p class="mono sm soft" style="margin-top:12px">Client work, direct response</p></div>
+</div>
+</details>
+<details class="cap">
+<summary><span class="ix">02</span><span class="nm">A track record in online education and memberships</span><span class="pl" aria-hidden="true">+</span></summary>
+<div class="cap-body">
+<div><p class="mono sm acc b">Your words</p><p style="margin-top:8px">Long tenure in direct-to-consumer online education, membership communities, or performance marketing agencies serving those clients.</p></div>
+<div class="proof"><p class="mono sm acc b">The proof</p><p class="q">20+ years as a performance marketer working with info products, coaches and DTC brands. I also built my own: AffiliateSchool.ai, with 17 digital products, a 7-stage capstone simulation and a 12-module Skool community.</p><p class="mono sm soft" style="margin-top:12px">Agency and founder side</p></div>
+</div>
+</details>
+<details class="cap">
+<summary><span class="ix">03</span><span class="nm">Online sales funnels, webinar launches and high-ticket programs</span><span class="pl" aria-hidden="true">+</span></summary>
+<div class="cap-body">
+<div><p class="mono sm acc b">Your words</p><p style="margin-top:8px">Own online sales funnels and webinar-driven launches, converting prospects into high-ticket programs (about $2,500 entry, $20K to $40K lifetime value through upsells).</p></div>
+<div class="proof"><p class="mono sm acc b">The proof</p><p class="q">I design and sell a full education offer ladder at AffiliateSchool.ai: digital products, a capstone simulation, a community and a 5-level partner commission structure.</p><p class="mono sm soft" style="margin-top:12px">AffiliateSchool.ai</p></div>
+</div>
+</details>
+<details class="cap">
+<summary><span class="ix">04</span><span class="nm">Growth from about $20MM to $50MM+</span><span class="pl" aria-hidden="true">+</span></summary>
+<div class="cap-body">
+<div><p class="mono sm acc b">Your words</p><p style="margin-top:8px">Drive growth of the two operating companies from about $20MM to $50MM+.</p></div>
+<div class="proof"><p class="mono sm acc b">The proof</p><p class="q">Built Universal Marketing Partners, an 8-figure performance and affiliate business, as Founder and CEO. Helped scale a language-learning brand from under $10M to over $100M in market cap.</p><p class="mono sm soft" style="margin-top:12px">Universal Marketing Partners, client work</p></div>
+</div>
+</details>
+<details class="cap">
+<summary><span class="ix">05</span><span class="nm">Budgets and ROI, run on data</span><span class="pl" aria-hidden="true">+</span></summary>
+<div class="cap-body">
+<div><p class="mono sm acc b">Your words</p><p style="margin-top:8px">Manage budgets and ROI using data and analytics.</p></div>
+<div class="proof"><p class="mono sm acc b">The proof</p><p class="q">20+ years always paid on results, including in my own businesses. When pay depends on return, every budget line has to earn its place.</p><p class="mono sm soft" style="margin-top:12px">How I have worked</p></div>
+</div>
+</details>
+<details class="cap">
+<summary><span class="ix">06</span><span class="nm">Suppliers, partners and affiliates</span><span class="pl" aria-hidden="true">+</span></summary>
+<div class="cap-body">
+<div><p class="mono sm acc b">Your words</p><p style="margin-top:8px">Manage suppliers, partners, affiliates and in-house or integrated marketing teams.</p></div>
+<div class="proof"><p class="mono sm acc b">The proof</p><p class="q">$100M+ in affiliate commissions generated. I run JVC Affiliate Network with 280+ affiliates and designed a 5-level partner commission structure.</p><p class="mono sm soft" style="margin-top:12px">JVC Affiliate Network, AffiliateSchool.ai</p></div>
+</div>
+</details>
+<details class="cap">
+<summary><span class="ix">07</span><span class="nm">A hands-on CMO beside the CEO and COO</span><span class="pl" aria-hidden="true">+</span></summary>
+<div class="cap-body">
+<div><p class="mono sm acc b">Your words</p><p style="margin-top:8px">Report to and partner with the CEO and COO. Lead a team of roughly 8 to 10+ marketing and sales professionals.</p></div>
+<div class="proof"><p class="mono sm acc b">The proof</p><p class="q">Founder and CEO of Universal Marketing Partners. I lead channels through media buyers, affiliates and creators, and hold each one to its number.</p><p class="mono sm soft" style="margin-top:12px">Founder role, how I work</p></div>
+</div>
+</details>
+<details class="cap">
+<summary><span class="ix">08</span><span class="nm">The lead-generation and funnel product</span><span class="pl" aria-hidden="true">+</span></summary>
+<div class="cap-body">
+<div><p class="mono sm acc b">Your words</p><p style="margin-top:8px">Oversee the SaaS lead-generation and funnel products.</p></div>
+<div class="proof"><p class="mono sm acc b">The proof</p><p class="q">Founded LeadQual.ai, an AI voice-agent platform that qualifies and routes leads, with a TCPA and CCPA compliance suite. I have shipped 50+ apps and AI tools.</p><p class="mono sm soft" style="margin-top:12px">LeadQual.ai</p></div>
+</div>
+</details>
+<details class="cap">
+<summary><span class="ix">09</span><span class="nm">Working with a bestselling author and speaker</span><span class="pl" aria-hidden="true">+</span></summary>
+<div class="cap-body">
+<div><p class="mono sm acc b">Your words</p><p style="margin-top:8px">A company led by a CEO who is a bestselling author and speaker.</p></div>
+<div class="proof"><p class="mono sm acc b">The proof</p><p class="q">Co-author of Million Dollar Dads and Million Dollar Identity. Performance Marketer podcast host, 2019 to 2023, 125+ episodes. I teach on YouTube @ericbeer.</p><p class="mono sm soft" style="margin-top:12px">Authority channels</p></div>
+</div>
+</details>
+</div>
+</div>
+</section>
+<section class="dept" id="measures">
+<div class="wrap">
+<div class="dh">
+<div class="dh-row"><span class="mono acc b">Department 04</span><span class="fill"></span><span class="mono soft">Measures</span></div>
+<div class="dh-body"><span class="numeral" aria-hidden="true">04</span><div><h2 class="display dh-title">How I'd be measured.</h2><p class="dh-lede">Your goal is to grow from about $20MM to $50MM+. These are the numbers I would put on the board in week one and report to the CEO and COO every week after.</p></div></div>
+</div>
+<div class="g12">
+<div class="m-l">
+<div class="measures">
+<div class="ms"><span class="k">M1</span><h3>ROAS by channel and blended</h3><p>Every dollar of paid spend tied to first-purchase revenue and to 90-day revenue, so we scale what pays back.</p></div>
+<div class="ms"><span class="k">M2</span><h3>Cost per new member</h3><p>Acquisition cost for each new member or student, split by channel, offer and partner.</p></div>
+<div class="ms"><span class="k">M3</span><h3>Net membership growth</h3><p>New members minus churn, tracked monthly, with retention by cohort and by entry offer.</p></div>
+<div class="ms"><span class="k">M4</span><h3>Revenue per webinar registrant</h3><p>Show rate, offer rate and sales per registrant for every launch and evergreen webinar or VSL.</p></div>
+<div class="ms"><span class="k">M5</span><h3>Partner share of new revenue</h3><p>The part of new revenue that comes from affiliates, JV authors and creators, paid only when they produce.</p></div>
+<div class="ms"><span class="k">M6</span><h3>Ascension to high-ticket</h3><p>How many entry buyers move into the higher-ticket programs, and the lifetime value that follows.</p></div>
+</div>
+</div>
+<div class="m-r">
+<div class="sticky">
+<div class="statblock"><p class="v">On results</p><p class="mono sm soft" style="margin-top:8px">How I have been paid for 20 years</p></div>
+<div class="matters"><p class="mono sm acc b">Compensation</p><p class="display">Executive base plus upside tied to results.</p></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="dept dark" id="plan">
+<div class="wrap">
+<div class="dh">
+<div class="dh-row"><span class="mono b">Department 05</span><span class="fill"></span><span class="mono">90 days</span></div>
+<div class="dh-body"><span class="numeral" aria-hidden="true">05</span><div><h2 class="display dh-title">The first 90 days.</h2><p class="dh-lede">A plan for a course, coaching and membership business. Audit first, then build the engines, then scale what the numbers back.</p></div></div>
+</div>
+<ol class="tl">
+<li class="tl-item">
+<div class="tl-grid">
+<div>
+<p class="mono acc">Days 1 to 30</p>
+<h3 class="tl-org">Audit the offer and the funnel</h3>
+<p class="tl-role">Find where the money leaks.</p>
+</div>
+<div>
+<p class="ov">Map every path from first click to high-ticket enrollment, with real numbers at each step.</p>
+<ul class="dash-list" style="margin-top:12px">
+<li>Offer and funnel audit: entry offers, price points, upsells and the ascension path</li>
+<li>Channel review with the team: ROAS, cost per member and payback by source</li>
+<li>Membership churn by cohort; first fixes to onboarding and the first 30 days</li>
+<li>Lead sourcing and consent review for compliance</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="tl-item">
+<div class="tl-grid">
+<div>
+<p class="mono acc">Days 31 to 60</p>
+<h3 class="tl-org">Build the engines</h3>
+<p class="tl-role">Webinars, email and partners.</p>
+</div>
+<div>
+<p class="ov">Stand up the assets and programs that compound, with a test plan for each.</p>
+<ul class="dash-list" style="margin-top:12px">
+<li>Webinar and VSL refresh, with new email sequences for registrants, no-shows and buyers</li>
+<li>Affiliate and JV partner program with other authors and coaches, with clear tiers and payouts</li>
+<li>Creator and UGC program for paid social creative and organic reach</li>
+<li>AI content workflow to raise creative and copy velocity for the team</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="tl-item">
+<div class="tl-grid">
+<div>
+<p class="mono acc">Days 61 to 90</p>
+<h3 class="tl-org">Scale what pays back</h3>
+<p class="tl-role">Put budget behind proven numbers.</p>
+</div>
+<div>
+<p class="ov">Shift spend toward the channels and partners that clear their targets, and cut what does not.</p>
+<ul class="dash-list" style="margin-top:12px">
+<li>Scale winning paid campaigns and partner launches against ROAS targets</li>
+<li>Membership retention program: milestones, community moments and win-back offers</li>
+<li>Weekly scorecard for the CEO and COO on the six measures</li>
+<li>A 12-month growth plan tied to the $50MM+ goal</li>
+</ul>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section class="dept warm" id="fit">
+<div class="wrap">
+<div class="dh">
+<div class="dh-row"><span class="mono acc b">Department 06</span><span class="fill"></span><span class="mono soft">Fit</span></div>
+<div class="dh-body"><span class="numeral" aria-hidden="true">06</span><div><h2 class="display dh-title">Problems I solve.</h2><p class="dh-lede">What an education company at this stage usually needs from its head of acquisition.</p></div></div>
+</div>
+<div class="g12">
+<div class="fit-l">
+<p class="mono sm acc b" style="margin-bottom:16px">Cover lines</p>
+<ol class="problems">
+<li><span class="ix">01</span><span class="p">Paid spend grows faster than revenue.</span></li>
+<li><span class="ix">02</span><span class="p">Webinars fill, but too few buyers move up to the high-ticket program.</span></li>
+<li><span class="ix">03</span><span class="p">Growth depends on one channel and one founder's audience.</span></li>
+<li><span class="ix">04</span><span class="p">Members join, then quietly leave.</span></li>
+<li><span class="ix">05</span><span class="p">The team can't produce creative and copy fast enough to test.</span></li>
+</ol>
+</div>
+<div class="fit-r">
+<div class="pull">
+<p class="mono sm acc b">Why this role</p>
+<blockquote>I have built this kind of business for clients and for myself. I want to scale one I believe in.</blockquote>
+</div>
+<ul class="targets">
+<li>Your CEO and COO<span>A partner who reports in numbers and owns the growth target.</span></li>
+<li>Your marketing and sales team<span>Clear goals per channel, faster tests and better tools, including AI.</span></li>
+<li>Your partners<span>A program authors and coaches want to promote, paid on what they produce.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="dept dark back" id="contact">
+<div class="grain" aria-hidden="true"></div>
+<div class="wrap" style="position:relative">
+<div class="dh-row"><span class="mono b">Department 07</span><span class="fill"></span><span class="mono">Reply card</span></div>
+<h2 class="display back-h">Let's talk about your next 90 days.</h2>
+<p class="back-msg">If this issue reads like the person you are looking for, I would welcome a conversation with you and your CEO. I work remote and keep Central Time hours. Compensation: executive base plus upside tied to results.</p>
+<a class="back-mail" href="mailto:ebeer@mailhaven.io?subject=CMO%20role%2C%20eLearning%20membership%20company">ebeer@mailhaven.io</a>
+<div class="cledger">
+<div><p class="mono sm acc b">Email</p><a href="mailto:ebeer@mailhaven.io">ebeer@mailhaven.io</a></div>
+<div><p class="mono sm acc b">LinkedIn</p><a href="https://linkedin.com/in/ericbeer" rel="noopener">linkedin.com/in/ericbeer</a></div>
+<div><p class="mono sm acc b">Availability</p><span class="v">Remote, US</span></div>
+</div>
+</div>
+</section>
+</main>
+<footer class="colophon">
+<div class="wrap mono sm">
+<span>Eric Beer<span class="dot">.</span> · The Home Turf Issue</span>
+<span>Facts from Eric's own record. Prepared for one role.</span>
+</div>
+</footer>
+</body>
+</html>
