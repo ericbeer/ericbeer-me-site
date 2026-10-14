@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Eric Beer × KREWE · VP of Digital and Ecommerce</title>
+<meta name="description" content="A lookbook-style Showcase from Eric Beer for KREWE's VP of Digital and Ecommerce role.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#10203B;
+  --navy-2:#1B2F52;
+  --brass:#C59D5F;
+  --brass-ink:#7E5F2C;
+  --blush:#F3DDD3;
+  --blush-2:#EACBBD;
+  --paper:#FDFAF8;
+  --ink:#10203B;
+  --ink-2:#3C4A63;
+  --on-navy:#F6EFE7;
+  --on-navy-2:#CBD2DE;
+  --serif:"Marcellus","Didot","Bodoni 72",Georgia,serif;
+  --sans:"Inter Tight","Helvetica Neue",Arial,sans-serif;
+  --gutter:clamp(16px,4vw,56px);
+  --max:1280px;
+  --lace:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='32' viewBox='0 0 64 32'%3E%3Cg fill='none' stroke='%23C59D5F' stroke-width='1.4'%3E%3Cpath d='M0 31.3h64M0 .7h64'/%3E%3Cpath d='M0 31 C0 14 16 14 16 4 M32 31 C32 14 16 14 16 4 M32 31 C32 14 48 14 48 4 M64 31 C64 14 48 14 48 4'/%3E%3Ccircle cx='16' cy='20' r='3.2'/%3E%3Ccircle cx='48' cy='20' r='3.2'/%3E%3Cpath d='M32 4 q-5 5 0 10 q5-5 0-10z'/%3E%3Cpath d='M0 4 q5 5 0 10 M64 4 q-5 5 0 10'/%3E%3Ccircle cx='32' cy='24' r='1.6' fill='%23C59D5F'/%3E%3C/g%3E%3C/svg%3E");
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;line-height:1.08}
+p{margin:0}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+
+/* wrought-iron lace band */
+.lace{height:32px;background:var(--lace) repeat-x center/64px 32px}
+.lace.on-navy{background-color:var(--navy)}
+.lace.on-blush{background-color:var(--blush)}
+
+/* masthead */
+.mast{background:var(--navy);color:var(--on-navy)}
+.mast .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:16px;padding-bottom:16px}
+.mast .mark{font-family:var(--serif);font-size:19px;letter-spacing:.02em}
+.mast nav{display:flex;gap:22px;flex-wrap:wrap;font-size:15px}
+.mast nav a{text-decoration:none;color:var(--on-navy-2)}
+.mast nav a:hover{color:var(--brass)}
+
+/* hero: asymmetric lookbook spread */
+.hero{background:var(--navy);color:var(--on-navy);position:relative}
+.spread{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);min-height:min(88vh,820px)}
+.spread .left{padding:clamp(40px,7vw,104px) var(--gutter) clamp(48px,6vw,88px) max(var(--gutter),calc((100vw - var(--max))/2 + var(--gutter)));display:flex;flex-direction:column;justify-content:space-between;gap:48px}
+.lockup{font-family:var(--serif);font-size:clamp(46px,8.4vw,128px);line-height:.92;letter-spacing:-.01em}
+.lockup span{display:block}
+.lockup .x{color:var(--brass);font-size:.55em;line-height:1.3;padding-left:.15em}
+.role{margin-top:22px;font-size:clamp(17px,1.5vw,20px);color:var(--on-navy-2)}
+.role b{color:var(--on-navy);font-weight:500}
+.thesis{font-family:var(--serif);font-size:clamp(24px,2.6vw,36px);line-height:1.22;max-width:22ch}
+.thesis-sub{margin-top:16px;color:var(--on-navy-2);max-width:52ch}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;text-decoration:none;font-weight:600;font-size:16px;padding:14px 22px;border:1.5px solid var(--brass)}
+.btn.solid{background:var(--brass);color:var(--navy)}
+.btn.solid:hover{background:#D8B57E}
+.btn.line{color:var(--on-navy)}
+.btn.line:hover{background:rgba(197,157,95,.14)}
+
+.spread .right{background:var(--blush);color:var(--ink);position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:56px 24px;overflow:hidden}
+.spread .right::before{content:"";position:absolute;left:0;top:0;bottom:0;width:32px;background:var(--lace) repeat-y center/32px 64px;transform:none;opacity:.9;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='64' viewBox='0 0 32 64'%3E%3Cg fill='none' stroke='%237E5F2C' stroke-width='1.3'%3E%3Cpath d='M.7 0v64M31.3 0v64'/%3E%3Cpath d='M31 0 C14 0 14 16 4 16 M31 32 C14 32 14 16 4 16 M31 32 C14 32 14 48 4 48 M31 64 C14 64 14 48 4 48'/%3E%3Ccircle cx='20' cy='16' r='3.2'/%3E%3Ccircle cx='20' cy='48' r='3.2'/%3E%3Cpath d='M4 32 q5-5 10 0 q-5 5-10 0z'/%3E%3C/g%3E%3C/svg%3E")}
+/* the frame: portrait in one lens */
+.frame{position:relative;width:min(100%,420px);aspect-ratio:2.25/1;display:flex;align-items:center;justify-content:space-between}
+.lens{width:45%;aspect-ratio:1/1.0;border-radius:48% 48% 44% 44% / 52% 52% 48% 48%;border:9px solid var(--navy);overflow:hidden;position:relative;background:var(--brass)}
+.lens img{width:100%;height:100%;object-fit:cover;transform:scale(1.12)}
+.lens.tint{background:linear-gradient(160deg,#D9B47A 0%,#B98A47 55%,#8F6630 100%)}
+.lens.tint::after{content:"";position:absolute;inset:14% 52% 52% 16%;border-radius:50%;background:rgba(255,255,255,.35);filter:blur(6px)}
+.bridge{position:absolute;left:50%;top:26%;width:14%;height:16%;transform:translateX(-50%);border:8px solid var(--navy);border-bottom:none;border-radius:60px 60px 0 0}
+.brow{position:absolute;left:-2%;right:-2%;top:6%;height:9px;background:var(--navy);border-radius:8px}
+.caption{margin-top:30px;text-align:center;font-size:15px;color:var(--ink-2);max-width:30ch}
+.caption strong{display:block;font-family:var(--serif);font-weight:400;font-size:22px;color:var(--ink)}
+
+/* section with vertical label */
+.sec{display:grid;grid-template-columns:72px minmax(0,1fr);gap:clamp(16px,3vw,40px);padding-top:clamp(64px,9vw,128px);padding-bottom:clamp(64px,9vw,128px)}
+.vlabel{writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--serif);font-size:clamp(28px,3vw,40px);color:var(--brass-ink);justify-self:center;align-self:start;white-space:nowrap;line-height:1}
+.sec-blush{background:var(--blush)}
+.sec-navy{background:var(--navy);color:var(--on-navy)}
+.sec-navy .vlabel{color:var(--brass)}
+.lede{font-family:var(--serif);font-size:clamp(28px,3.4vw,48px);line-height:1.15;max-width:24ch;margin-bottom:clamp(36px,5vw,64px)}
+
+/* what I see: editorial asymmetric grid */
+.see{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(14px,2vw,24px)}
+.see article{padding:clamp(22px,2.6vw,36px);display:flex;flex-direction:column;gap:12px}
+.see h3{font-size:clamp(22px,2vw,28px)}
+.see p{color:var(--ink-2)}
+.see .a{grid-column:1 / span 4;background:var(--navy);color:var(--on-navy);min-height:300px;justify-content:flex-end}
+.see .a p{color:var(--on-navy-2)}
+.see .a h3{font-size:clamp(28px,3vw,44px)}
+.see .b{grid-column:5 / span 2;background:var(--brass);color:var(--navy)}
+.see .b p{color:var(--navy)}
+.see .c{grid-column:1 / span 2;background:var(--blush)}
+.see .d{grid-column:3 / span 4;border:1.5px solid var(--navy)}
+.src{font-size:13px;color:var(--ink-2);margin-top:20px}
+.src a{color:var(--brass-ink)}
+
+/* the brief: three-column tag sheet */
+.brief{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1fr);gap:0;border-top:1.5px solid var(--navy)}
+.brief > div{padding:28px clamp(16px,2vw,28px) 8px 0}
+.brief > div + div{padding-left:clamp(16px,2vw,28px);border-left:1px solid rgba(16,32,59,.25)}
+.brief h3{font-size:24px;margin-bottom:14px}
+.brief ul{margin:0;padding:0 0 0 18px}
+.brief li{margin:0 0 8px}
+.brief li::marker{color:var(--brass-ink)}
+.price{font-family:var(--serif);font-size:clamp(34px,3.6vw,52px);line-height:1;margin:4px 0 10px}
+
+/* looks: requirement -> proof product cards */
+.looks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,28px)}
+.look{background:var(--paper);color:var(--ink);display:flex;flex-direction:column}
+.look:nth-child(3n+2){margin-top:56px}
+.look .swatch{aspect-ratio:4/3;padding:22px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.look .swatch .n{font-family:var(--serif);font-size:18px}
+.look .swatch h3{font-size:clamp(24px,2.2vw,30px);position:relative;z-index:1}
+.look .swatch::after{content:"";position:absolute;right:-18%;bottom:-30%;width:70%;aspect-ratio:1;border-radius:50%;border:2px solid currentColor;opacity:.22}
+.s-navy{background:var(--navy-2);color:var(--on-navy)}
+.s-brass{background:var(--brass);color:var(--navy)}
+.s-blush{background:var(--blush-2);color:var(--navy)}
+.look .body{padding:22px 22px 26px;display:grid;gap:14px}
+.look dt{font-weight:600;font-size:14px;color:var(--brass-ink)}
+.look dd{margin:2px 0 0;color:var(--ink-2);font-size:16px}
+.look dl{margin:0;display:grid;gap:14px}
+
+/* collection: 90-day plan */
+.collection{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:1.5px solid var(--navy)}
+.drop{padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:14px}
+.drop + .drop{border-left:1.5px solid var(--navy)}
+.drop:nth-child(2){background:var(--blush)}
+.drop:nth-child(3){background:var(--navy);color:var(--on-navy)}
+.drop:nth-child(3) li{color:var(--on-navy-2)}
+.drop:nth-child(3) .days{color:var(--brass)}
+.drop .days{font-weight:600;color:var(--brass-ink);font-size:15px}
+.drop h3{font-size:clamp(28px,2.8vw,38px)}
+.drop ul{margin:0;padding-left:18px;display:grid;gap:8px;color:var(--ink-2)}
+.drop li::marker{color:var(--brass)}
+
+/* meet eric */
+.meet{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,72px);align-items:center}
+.portrait{aspect-ratio:4/5;background:var(--brass);position:relative;overflow:hidden;border-radius:200px 200px 0 0}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.meet h2{font-size:clamp(36px,4.4vw,64px);margin-bottom:18px}
+.meet p{color:var(--on-navy-2);max-width:60ch;margin-bottom:14px}
+.meet p b{color:var(--on-navy);font-weight:500}
+.socials{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;padding:0;list-style:none}
+.socials a{display:inline-block;text-decoration:none;border:1px solid rgba(197,157,95,.6);padding:8px 14px;font-size:15px;color:var(--on-navy)}
+.socials a:hover{background:var(--brass);color:var(--navy)}
+
+/* contact */
+.contact{text-align:left}
+.contact h2{font-size:clamp(40px,6vw,88px);max-width:14ch;margin-bottom:24px}
+.contact p{max-width:56ch;color:var(--ink-2);margin-bottom:28px}
+.contact .btn.line{color:var(--navy)}
+.contact .btn.line:hover{background:rgba(197,157,95,.2)}
+.foot{background:var(--navy);color:var(--on-navy-2);font-size:14px}
+.foot .wrap{padding-top:22px;padding-bottom:22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* responsive */
+@media (max-width:980px){
+  .spread{grid-template-columns:1fr;min-height:0}
+  .spread .left{padding-left:var(--gutter)}
+  .spread .right{padding:56px 24px 48px 56px}
+  .looks{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .look:nth-child(3n+2){margin-top:0}
+  .look:nth-child(2n){margin-top:48px}
+  .see .a{grid-column:1 / -1}
+  .see .b{grid-column:1 / span 3}
+  .see .c{grid-column:4 / span 3}
+  .see .d{grid-column:1 / -1}
+  .brief{grid-template-columns:1fr}
+  .brief > div + div{border-left:none;border-top:1px solid rgba(16,32,59,.25);padding-left:0}
+  .collection{grid-template-columns:1fr}
+  .drop + .drop{border-left:none;border-top:1.5px solid var(--navy)}
+}
+@media (max-width:680px){
+  body{font-size:16px}
+  .sec{grid-template-columns:1fr;gap:20px}
+  .vlabel{writing-mode:horizontal-tb;transform:none;justify-self:start;font-size:26px}
+  .see{grid-template-columns:1fr}
+  .see .a,.see .b,.see .c,.see .d{grid-column:1 / -1;min-height:0}
+  .looks{grid-template-columns:1fr}
+  .look:nth-child(2n){margin-top:0}
+  .look .swatch{aspect-ratio:auto;min-height:170px;gap:28px}
+  .meet{grid-template-columns:1fr}
+  .portrait{max-width:280px}
+  .mast nav{gap:16px;font-size:14px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .lens.tint::after{animation:glint 2.4s ease-out .6s 1 both}
+  @keyframes glint{from{opacity:0;transform:translate(-30%,-20%)}to{opacity:1;transform:none}}
+}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap">
+    <span class="mark">Eric Beer</span>
+    <nav aria-label="Sections">
+      <a href="#see">KREWE today</a>
+      <a href="#looks">The looks</a>
+      <a href="#collection">90 days</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" aria-labelledby="title">
+  <div class="spread">
+    <div class="left">
+      <div>
+        <h1 id="title" class="lockup"><span>Eric Beer</span><span class="x">×</span><span>KREWE</span></h1>
+        <p class="role"><b>VP of Digital and Ecommerce</b>, a Showcase for the CEO and leadership team</p>
+      </div>
+      <div>
+        <p class="thesis">People fall for KREWE on Royal Street and Gansevoort Street. krewe.com has to sell like those stores do.</p>
+        <p class="thesis-sub">The brand is already loved in person. The job is to build a digital channel that doubles in three years, run on math the CFO trusts: contribution, CAC, payback and incrementality.</p>
+        <div class="hero-cta">
+          <a class="btn solid" href="mailto:eric@performancemarketer.io?subject=KREWE%20VP%20of%20Digital%20and%20Ecommerce">Email Eric</a>
+          <a class="btn line" href="#looks">See the looks</a>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="frame" aria-hidden="true">
+        <div class="brow"></div>
+        <div class="lens"><img src="https://yt3.googleusercontent.com/Mp7gOPpSMBFdGns7IfiIiY8Phw0AB94Ccs_SbKsMugqn9R9WNxBewG25xtxZJ8ks4znh5FBcOQ=s900" alt=""></div>
+        <div class="bridge"></div>
+        <div class="lens tint"></div>
+      </div>
+      <p class="caption"><strong>Eric Beer</strong>20+ years in performance marketing, always paid on results</p>
+    </div>
+  </div>
+</section>
+<div class="lace on-navy" role="presentation"></div>
+
+<section id="see">
+  <div class="wrap sec">
+    <h2 class="vlabel">What I see at KREWE</h2>
+    <div>
+      <p class="lede">An independent house with a point of view, three ways to buy, and a site that now has to lead.</p>
+      <div class="see">
+        <article class="a">
+          <h3>Born on a bike cart in 2013</h3>
+          <p>Stirling Barrett sold the first frames from a cart at New Orleans festivals. KREWE still makes small-batch, hand-crafted sun and optical frames in plant-based acetates and premium metals, backed by Second Chances replacement.</p>
+        </article>
+        <article class="b">
+          <h3>18 stores and a table</h3>
+          <p>Maisons du KREWE at 619 Royal and 67 Gansevoort, plus Houston, Charleston, Nashville, Dallas and more, with PATULA bistro and wine bar in the mix.</p>
+        </article>
+        <article class="c">
+          <h3>Three channels</h3>
+          <p>Online, its own stores and wholesale through 500+ retailers such as Bloomingdale's and Nordstrom. The founder once described the business as roughly thirds.</p>
+        </article>
+        <article class="d">
+          <h3>Scale, and a stack that's ready</h3>
+          <p>Third-party estimates put KREWE near $100M in revenue with about 340 people. Public tech-detection shows Shopify, Klaviyo, Attentive and Triple Whale already in place. So this role isn't about buying tools. It's about owning the P&amp;L, the team and the attribution, and growing digital 2X over three years, as the posting asks.</p>
+        </article>
+      </div>
+      <p class="src">Sources: <a href="https://www.krewe.com/pages/about">krewe.com/about</a>, <a href="https://www.glossy.co/fashion/krewe-founder-stirling-barrett-on-building-an-amazon-proof-brand/">Glossy (2017)</a>, the <a href="https://builtin.com/job/vp-digital-and-ecommerce/11603933">job posting</a>. Revenue, headcount and retailer counts are estimates from public business data.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec-blush" aria-labelledby="brief-h">
+  <div class="wrap sec">
+    <h2 class="vlabel" id="brief-h">The brief</h2>
+    <div class="brief">
+      <div>
+        <h3>What you're asking for</h3>
+        <ul>
+          <li>Own the ecommerce P&amp;L: revenue, contribution, media, tools and headcount</li>
+          <li>Run krewe.com as the flagship store: merchandising, site ops and the conversion roadmap</li>
+          <li>Direct acquisition on Meta, Google, TikTok and newer channels</li>
+          <li>Bring email, SMS, lifecycle, affiliate and influencer in-house</li>
+          <li>Build the digital team and report to the CEO</li>
+        </ul>
+      </div>
+      <div>
+        <h3>What you're offering</h3>
+        <p class="price">$180K–$225K</p>
+        <ul>
+          <li>Base salary plus annual bonus</li>
+          <li>Health, dental, vision, 401(k), parental leave</li>
+          <li>A quarterly frame allowance</li>
+          <li>Meatpacking HQ, five days in office, with regular New Orleans time</li>
+        </ul>
+      </div>
+      <div>
+        <h3>The problem to solve</h3>
+        <p>A founder-led brand with real stores and real wholesale needs digital to become its own engine: measured on contribution, trusted by finance, and true to the brand. Year one means a full team, mature paid and lifecycle programs, and attribution leadership can rely on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="lace on-blush" role="presentation"></div>
+
+<section class="sec-navy" id="looks" aria-labelledby="looks-h">
+  <div class="wrap sec">
+    <h2 class="vlabel" id="looks-h">The looks</h2>
+    <div>
+      <p class="lede">Six of your requirements, each styled with how I think and what I've done.</p>
+      <div class="looks">
+        <article class="look">
+          <div class="swatch s-brass"><span class="n">Look 1</span><h3>Own the P&amp;L and lead the team</h3></div>
+          <div class="body"><dl>
+            <dt>How I think</dt><dd>Every channel gets a contribution line, a payback window and an owner. Budget follows margin, not habit.</dd>
+            <dt>Proof</dt><dd>Founder and CEO of Universal Marketing Partners for over a decade, an 8-figure performance and affiliate business with teams of 5–10 growing to 15–20.</dd>
+          </dl></div>
+        </article>
+        <article class="look">
+          <div class="swatch s-blush"><span class="n">Look 2</span><h3>Build in-house performance and retention</h3></div>
+          <div class="body"><dl>
+            <dt>How I think</dt><dd>I lead buyers rather than push buttons. Hire for judgment, give them clean data, and make retention a revenue team, not a newsletter.</dd>
+            <dt>Proof</dt><dd>Led media buyers and teams across paid, email and SMS. Drove customers for LifeLock, Norton Antivirus and Credit Sesame, and memberships for Disney Book Club.</dd>
+          </dl></div>
+        </article>
+        <article class="look">
+          <div class="swatch s-navy"><span class="n">Look 3</span><h3>Attribution and incrementality</h3></div>
+          <div class="body"><dl>
+            <dt>How I think</dt><dd>I'm a math guy. Platform-reported ROAS is a claim; holdouts, geo tests and new-customer CAC are the evidence.</dd>
+            <dt>Proof</dt><dd>Paid on results for 20+ years. Runs JVC Affiliate Network on Everflow with 280+ affiliates tracked, where every dollar has to be attributed to get paid.</dd>
+          </dl></div>
+        </article>
+        <article class="look">
+          <div class="swatch s-blush"><span class="n">Look 4</span><h3>Affiliate and influencer, done with taste</h3></div>
+          <div class="body"><dl>
+            <dt>How I think</dt><dd>Partners are an extension of the brand. Pick fewer, better creators and pay them on what they actually drive.</dd>
+            <dt>Proof</dt><dd>$100M+ in affiliate commissions generated over my career. Built a creator-led acquisition program at BeChosen and a 5-level partner plan at AffiliateSchool.ai.</dd>
+          </dl></div>
+        </article>
+        <article class="look">
+          <div class="swatch s-navy"><span class="n">Look 5</span><h3>Premium brands, protected</h3></div>
+          <div class="body"><dl>
+            <dt>How I think</dt><dd>I haven't run a fashion house's site, and I won't pretend to. What I bring is growth that never cheapens the brand: no discount addiction, creative that looks like you.</dd>
+            <dt>Proof</dt><dd>Agency of record for RealAge.com (Hearst / Dr. Oz) and Harlequin Book Club, and scaled a language-learning product from under $10M to over $100M market cap.</dd>
+          </dl></div>
+        </article>
+        <article class="look">
+          <div class="swatch s-brass"><span class="n">Look 6</span><h3>Thrive with a founder, keep the discipline</h3></div>
+          <div class="body"><dl>
+            <dt>How I think</dt><dd>Creative leads; commerce makes it pay. I translate a founder's vision into tests, forecasts and a dashboard the room can read.</dd>
+            <dt>Proof</dt><dd>A founder myself: LeadQual.ai, BeChosen and 50+ apps and AI tools shipped. I've sat on both sides of the founder's table.</dd>
+          </dl></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="lace on-navy" role="presentation"></div>
+
+<section id="collection" aria-labelledby="col-h">
+  <div class="wrap sec">
+    <h2 class="vlabel" id="col-h">The first collection</h2>
+    <div>
+      <p class="lede">Ninety days in three looks: learn the house, set the numbers, then ship the season.</p>
+      <div class="collection">
+        <article class="drop">
+          <span class="days">Days 1–30</span>
+          <h3>The immersion</h3>
+          <ul>
+            <li>Spend the New Orleans immersion on the floor, in the studio and with wholesale</li>
+            <li>Rebuild the ecommerce P&amp;L by channel: contribution, CAC and payback by cohort</li>
+            <li>Audit Shopify, GA4, Triple Whale, Klaviyo and Attentive for data gaps</li>
+            <li>Meet every agency and partner; decide what comes in-house first</li>
+          </ul>
+        </article>
+        <article class="drop">
+          <span class="days">Days 31–60</span>
+          <h3>The fitting</h3>
+          <ul>
+            <li>Launch the first incrementality tests on Meta and branded search</li>
+            <li>Rework lifecycle flows around first purchase, optical and second pair</li>
+            <li>Ship the first conversion roadmap for krewe.com with Brand</li>
+            <li>Open hiring for the performance and retention leads</li>
+          </ul>
+        </article>
+        <article class="drop">
+          <span class="days">Days 61–90</span>
+          <h3>The runway</h3>
+          <ul>
+            <li>Present the three-year plan to 2X the channel, with the forecast behind it</li>
+            <li>Relaunch affiliate and creators on paid-on-performance terms</li>
+            <li>Tie store traffic and online demand into one weekly view with Retail</li>
+            <li>Give leadership a KPI deck they can read in five minutes</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-navy" aria-labelledby="meet-h">
+  <div class="lace on-navy" role="presentation"></div>
+  <div class="wrap sec">
+    <h2 class="vlabel">Meet Eric</h2>
+    <div class="meet">
+      <div class="portrait"><img src="https://yt3.googleusercontent.com/Mp7gOPpSMBFdGns7IfiIiY8Phw0AB94Ccs_SbKsMugqn9R9WNxBewG25xtxZJ8ks4znh5FBcOQ=s900" alt="Portrait of Eric Beer"></div>
+      <div>
+        <h2 id="meet-h">A strategist who builds</h2>
+        <p>I've spent <b>20+ years in performance marketing, always paid on results</b>. I founded Universal Marketing Partners and grew it into an 8-figure performance and affiliate business, generating <b>$100M+ in affiliate commissions</b> over my career.</p>
+        <p>Today I'm building LeadQual.ai, BeChosen and AffiliateSchool.ai, and I host the Performance Marketer podcast. I co-wrote Million Dollar Dads and Million Dollar Identity.</p>
+        <p>University of Maryland '99, finance, on a baseball scholarship, and a member of the 1993 USA Junior Olympic team. I live in Pearl River, NY, an easy trip to Gansevoort Street, and I'm glad to travel to New Orleans.</p>
+        <ul class="socials">
+          <li><a href="https://www.linkedin.com/in/ericbeer">LinkedIn</a></li>
+          <li><a href="https://www.youtube.com/@ericbeer">YouTube</a></li>
+          <li><a href="https://x.com/esb211">X</a></li>
+          <li><a href="https://www.instagram.com/ericbeerofficial">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@ericbeer">TikTok</a></li>
+          <li><a href="https://www.facebook.com/eric.beer11">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-blush" id="contact" aria-labelledby="contact-h">
+  <div class="lace on-blush" role="presentation"></div>
+  <div class="wrap sec">
+    <h2 class="vlabel">Contact</h2>
+    <div class="contact">
+      <h2 id="contact-h">Let's talk about krewe.com.</h2>
+      <p>I'd welcome a conversation about the role and how I'd run the channel in the first year.</p>
+      <div class="hero-cta">
+        <a class="btn solid" href="mailto:eric@performancemarketer.io?subject=KREWE%20VP%20of%20Digital%20and%20Ecommerce">eric@performancemarketer.io</a>
+        <a class="btn line" href="tel:+16467876282">646-787-6282</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>Eric Beer, prepared for KREWE</span>
+    <span>Pearl River, NY</span>
+  </div>
+</footer>
+</body>
+</html>

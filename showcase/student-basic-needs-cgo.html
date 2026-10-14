@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Eric Beer × Student Basic Needs Coalition · Chief Growth Officer</title>
+<meta name="description" content="Eric Beer's Showcase for the Chief Growth Officer role at the Student Basic Needs Coalition.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--lav:#EDE7FF;--peach:#FFE3D3;--ink:#2B2350;--ink-2:#4A4270;--grape:#6C4CE0;--grape-d:#5638C4;--sun:#FFC83D;--white:#FFFFFF;--mint:#BFEBD8;--pink:#FFB8C9;--max:1180px;--g:clamp(16px,4vw,40px)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--white);color:var(--ink);font-family:"Nunito",system-ui,sans-serif;font-size:18px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:var(--grape)}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--grape);outline-offset:3px;border-radius:8px}
+h1,h2,h3{font-family:"Fredoka",system-ui,sans-serif;font-weight:600;line-height:1.08;margin:0;overflow-wrap:break-word}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--g);position:relative}
+section{position:relative;overflow:hidden}
+.pad{padding:clamp(64px,9vw,112px) 0}
+.lav{background:var(--lav)}.peach{background:var(--peach)}
+h2{font-size:clamp(34px,5vw,56px);max-width:20ch;margin-bottom:clamp(14px,2vw,20px)}
+.lede{font-size:clamp(18px,1.6vw,21px);color:var(--ink-2);max-width:60ch;margin:0 0 clamp(36px,5vw,56px)}
+
+/* top bar */
+.top{padding:18px 0}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.top .me{font-family:"Fredoka",system-ui,sans-serif;font-weight:600;font-size:20px;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:10px}
+.dot{width:14px;height:14px;border-radius:50%;background:var(--grape);box-shadow:10px 0 0 var(--sun);margin-right:10px;display:inline-block}
+.top nav{display:flex;gap:18px;flex-wrap:wrap}
+.top nav a{color:var(--ink-2);text-decoration:none;font-weight:700;font-size:16px}
+.top nav a:hover{color:var(--grape)}
+
+/* hero */
+.hero{padding:clamp(28px,5vw,64px) 0 clamp(72px,10vw,120px)}
+.blob{position:absolute;pointer-events:none;z-index:0}
+.b1{width:clamp(380px,60vw,820px);aspect-ratio:1.1;background:var(--lav);border-radius:58% 42% 63% 37% / 46% 55% 45% 54%;top:-12%;right:-14%}
+.b2{width:clamp(220px,30vw,420px);aspect-ratio:1;background:var(--peach);border-radius:41% 59% 38% 62% / 57% 39% 61% 43%;bottom:-18%;left:-8%}
+.b3{width:120px;height:120px;background:var(--sun);border-radius:50% 50% 46% 54% / 60% 44% 56% 40%;top:16%;left:46%;opacity:.9}
+.hero .wrap{z-index:1}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(28px,5vw,64px);align-items:center}
+.pair{display:flex;align-items:center;flex-wrap:wrap;gap:12px;font-family:"Fredoka",system-ui,sans-serif;font-weight:600;font-size:clamp(20px,2.4vw,28px);margin:0 0 22px}
+.pair .x{width:40px;height:40px;border-radius:50%;background:var(--sun);display:inline-grid;place-items:center;font-size:22px;color:var(--ink)}
+.role{display:inline-block;background:var(--white);border:2px solid var(--ink);border-radius:999px;padding:6px 16px;font-weight:800;font-size:16px;margin-bottom:26px}
+.hero h1{font-size:clamp(40px,6.2vw,80px);font-weight:700;letter-spacing:-.01em;max-width:17ch}
+.hero p.thesis{font-size:clamp(19px,1.8vw,22px);color:var(--ink-2);max-width:48ch;margin:24px 0 32px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;min-height:54px;padding:0 26px;border-radius:999px;font-family:"Fredoka",system-ui,sans-serif;font-weight:600;font-size:18px;text-decoration:none;border:2px solid var(--ink)}
+.btn-grape{background:var(--grape);color:#fff;border-color:var(--grape)}
+.btn-grape:hover{background:var(--grape-d);border-color:var(--grape-d)}
+.btn-line{background:var(--white);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:#fff}
+.photo-wrap{position:relative;justify-self:center;width:min(100%,360px)}
+.photo-wrap::before{content:"";position:absolute;inset:-9% -12% -6% -8%;background:var(--grape);border-radius:62% 38% 55% 45% / 48% 60% 40% 52%;z-index:0}
+.photo-wrap::after{content:"";position:absolute;width:30%;aspect-ratio:1;background:var(--sun);border-radius:50%;right:-6%;bottom:-2%;z-index:2}
+.photo{position:relative;z-index:1;aspect-ratio:1;border-radius:46% 54% 50% 50% / 52% 46% 54% 48%;overflow:hidden;border:6px solid #fff}
+.photo img{width:100%;height:100%;object-fit:cover}
+.chips{list-style:none;padding:0;margin:clamp(40px,6vw,64px) 0 0;display:flex;flex-wrap:wrap;gap:12px}
+.chips li{background:#fff;border:2px solid var(--ink);border-radius:999px;padding:8px 18px;font-weight:700;font-size:16px}
+.chips b{font-family:"Fredoka",system-ui,sans-serif;font-weight:600;color:var(--grape)}
+
+/* what I see */
+.see-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.see{background:#fff;border-radius:28px;padding:30px 30px 32px;display:grid;grid-template-columns:56px minmax(0,1fr);gap:18px;align-items:start}
+.ico{width:56px;height:56px;border-radius:50%;position:relative;flex:none}
+.ico.i1{background:var(--sun)}.ico.i1::after{content:"";position:absolute;inset:16px;border-radius:50%;background:var(--ink)}
+.ico.i2{background:var(--grape)}.ico.i2::after{content:"";position:absolute;left:14px;right:14px;top:25px;height:6px;border-radius:3px;background:#fff;box-shadow:0 -10px 0 #fff,0 10px 0 #fff}
+.ico.i3{background:var(--pink)}.ico.i3::before,.ico.i3::after{content:"";position:absolute;width:18px;height:18px;border-radius:50%;background:var(--ink);top:19px}.ico.i3::before{left:10px}.ico.i3::after{right:10px}
+.ico.i4{background:var(--mint)}.ico.i4::after{content:"";position:absolute;left:17px;top:12px;width:22px;height:32px;border-radius:11px 11px 4px 4px;background:var(--ink)}
+.see h3{font-size:24px;margin-bottom:8px}
+.see p{margin:0;color:var(--ink-2)}
+.big-note{margin-top:28px;background:var(--ink);color:#fff;border-radius:28px;padding:clamp(26px,4vw,44px);font-family:"Fredoka",system-ui,sans-serif;font-weight:500;font-size:clamp(22px,2.6vw,32px);line-height:1.3}
+.big-note span{color:var(--sun)}
+.src{font-size:14px;color:var(--ink-2);margin-top:16px}
+
+/* brief */
+.brief-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.bcard{border-radius:28px;padding:30px;background:var(--lav)}
+.bcard.p{background:var(--peach)}.bcard.s{background:var(--sun)}
+.bcard h3{font-size:26px;margin-bottom:14px}
+.bcard ul{margin:0;padding-left:20px}
+.bcard li{margin-bottom:8px}
+.bcard p{margin:0}
+
+/* req */
+.req-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+@media (max-width:980px){.req-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:640px){.req-grid{grid-template-columns:1fr}}
+.req{background:#fff;border-radius:28px;overflow:hidden;display:flex;flex-direction:column}
+.req .bar{height:14px;background:var(--grape)}
+.req:nth-child(6n+2) .bar{background:var(--sun)}
+.req:nth-child(6n+3) .bar{background:var(--pink)}
+.req:nth-child(6n+4) .bar{background:var(--mint)}
+.req:nth-child(6n+5) .bar{background:var(--ink)}
+.req:nth-child(6n+6) .bar{background:#FF9B6A}
+.req .in{padding:26px 28px 30px}
+.req h3{font-size:22px;margin-bottom:14px}
+.req h4{font-family:"Nunito",system-ui,sans-serif;font-weight:800;font-size:15px;color:var(--grape);margin:14px 0 4px}
+.req p{margin:0;color:var(--ink-2);font-size:17px}
+.req .proof{color:var(--ink)}
+.req.honest{outline:3px dashed var(--grape);outline-offset:-3px}
+
+/* plan */
+.stones{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3vw,40px);position:relative;margin-top:20px}
+.stones::before{content:"";position:absolute;top:90px;left:16%;right:16%;border-top:6px dotted var(--grape);z-index:0}
+.stone{position:relative;z-index:1;text-align:center}
+.circle{width:180px;height:180px;margin:0 auto 24px;border-radius:50%;display:grid;place-items:center;font-family:"Fredoka",system-ui,sans-serif;font-weight:700;font-size:44px;color:var(--ink);border:6px solid #fff}
+.circle small{display:block;font-size:18px;font-weight:500;margin-top:-6px}
+.c1{background:var(--sun)}.c2{background:var(--pink)}.c3{background:var(--grape);color:#fff}
+.stone h3{font-size:26px;margin-bottom:10px}
+.stone ul{text-align:left;margin:0;padding:22px 24px 22px 40px;background:#fff;border-radius:28px;color:var(--ink-2);font-size:17px}
+.stone li{margin-bottom:8px}
+
+/* meet */
+.meet-grid{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:clamp(28px,5vw,64px);align-items:center}
+.meet .photo-wrap::before{background:var(--sun)}
+.meet .photo-wrap::after{background:var(--grape)}
+.meet p{color:var(--ink-2);max-width:60ch}
+.socials{list-style:none;padding:0;margin:24px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.socials a{display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:9px 18px;text-decoration:none;color:var(--ink);font-weight:800;font-size:16px;border:2px solid var(--ink)}
+.socials a::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--grape)}
+.socials a:hover{background:var(--grape);color:#fff;border-color:var(--grape)}
+.socials a:hover::before{background:var(--sun)}
+
+/* cta */
+.cta{background:var(--grape);color:#fff;text-align:center}
+.cta .b4{width:clamp(260px,40vw,520px);aspect-ratio:1;background:#7E62E8;border-radius:55% 45% 60% 40% / 44% 58% 42% 56%;top:-30%;left:-10%}
+.cta .b5{width:clamp(160px,22vw,280px);aspect-ratio:1;background:var(--sun);border-radius:48% 52% 40% 60% / 60% 44% 56% 40%;bottom:-20%;right:-4%}
+.cta .wrap{z-index:1}
+.cta h2{margin:0 auto 16px;max-width:18ch}
+.cta p{margin:0 auto 32px;max-width:52ch;font-size:20px;color:#F1ECFF}
+.cta .btns{justify-content:center}
+.cta .btn-sun{background:var(--sun);color:var(--ink);border-color:var(--sun)}
+.cta .btn-sun:hover{background:#fff;border-color:#fff}
+.cta .btn-ghost{background:transparent;color:#fff;border-color:#fff}
+.cta .btn-ghost:hover{background:#fff;color:var(--grape)}
+footer{padding:28px 0;font-size:15px;color:var(--ink-2);text-align:center}
+
+@media (max-width:900px){
+ .hero-grid,.meet-grid{grid-template-columns:1fr}
+ .hero .photo-wrap{width:min(70%,260px);grid-row:1;justify-self:start;margin-left:8%}
+ .brief-grid{grid-template-columns:1fr}
+ .stones{grid-template-columns:1fr;gap:36px}
+ .stones::before{top:40px;bottom:40px;left:50%;right:auto;border-top:0;border-left:6px dotted var(--grape)}
+ .meet .photo-wrap{width:min(70%,280px)}
+}
+@media (max-width:640px){
+ body{font-size:17px}
+ .see-grid{grid-template-columns:1fr}
+ .see{grid-template-columns:1fr;padding:26px}
+ .top nav{display:none}
+ .b3{display:none}
+ .circle{width:140px;height:140px;font-size:36px}
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+ <a class="me" href="#meet"><span class="dot" aria-hidden="true"></span>Eric Beer</a>
+ <nav aria-label="Sections"><a href="#see">What I see</a><a href="#proof">Proof</a><a href="#plan">90 days</a><a href="#contact">Contact</a></nav>
+</div></header>
+
+<main>
+<section class="hero">
+ <div class="blob b1" aria-hidden="true"></div><div class="blob b2" aria-hidden="true"></div><div class="blob b3" aria-hidden="true"></div>
+ <div class="wrap">
+  <div class="hero-grid">
+   <div>
+    <p class="pair"><span>Eric Beer</span><span class="x" aria-label="times">×</span><span>Student Basic Needs Coalition</span></p>
+    <span class="role">Chief Growth Officer · Remote, US</span>
+    <h1>From 88 campuses to 500 is a distribution problem. I solve those.</h1>
+    <p class="thesis">Navvy already works: students get screened for SNAP and Medicaid in minutes. The next chapter is a repeatable engine that signs campuses and states, turns pilots into paid partnerships, and reaches students directly, so the mission grows faster than the grant calendar.</p>
+    <div class="btns">
+     <a class="btn btn-grape" href="mailto:eric@performancemarketer.io?subject=Student%20Basic%20Needs%20Coalition%20Chief%20Growth%20Officer">Email Eric</a>
+     <a class="btn btn-line" href="#plan">See the 90-day plan</a>
+    </div>
+   </div>
+   <div class="photo-wrap"><div class="photo"><img src="https://yt3.googleusercontent.com/Mp7gOPpSMBFdGns7IfiIiY8Phw0AB94Ccs_SbKsMugqn9R9WNxBewG25xtxZJ8ks4znh5FBcOQ=s900" alt="Portrait of Eric Beer" width="900" height="900"></div></div>
+  </div>
+  <ul class="chips" aria-label="Eric at a glance">
+   <li><b>20+ years</b> paid on results</li>
+   <li><b>$100M+</b> affiliate commissions generated</li>
+   <li><b>Founder & CEO</b> of an 8-figure partner business</li>
+   <li><b>280+</b> affiliates on one network</li>
+  </ul>
+ </div>
+</section>
+
+<section class="lav pad" id="see">
+ <div class="wrap">
+  <h2>What I see at the Coalition</h2>
+  <p class="lede">A student-founded nonprofit that has proven the product and the need. Now it has to prove the growth model.</p>
+  <div class="see-grid">
+   <article class="see"><span class="ico i1" aria-hidden="true"></span><div><h3>A product that already works</h3><p>Navvy screens students for SNAP and Medicaid eligibility in under 10 minutes, backed by a peer navigator network that takes the stigma out of asking, and policy work with student and administrator advocates.</p></div></article>
+   <article class="see"><span class="ico i2" aria-hidden="true"></span><div><h3>Real reach, at real scale</h3><p>More than 43,000 students screened across all 50 states, with $109M in eligible benefits identified, per the DRK Foundation's profile.</p></div></article>
+   <article class="see"><span class="ico i3" aria-hidden="true"></span><div><h3>A partner curve that's bending</h3><p>Campus partners grew from 35 to 88. The stated goals: 500 campuses within three years, all 4,000 US campuses by 2035, and policy work with 10 states.</p></div></article>
+   <article class="see"><span class="ico i4" aria-hidden="true"></span><div><h3>Funders in, earned revenue next</h3><p>Backed by the DRK Foundation and the Gates Foundation's AI for Economic Opportunity initiative, with the Walmart Foundation and Ben &amp; Jerry's among past sponsors. This role owns the earned-revenue P&amp;L that sits alongside those grants.</p></div></article>
+  </div>
+  <div class="big-note">About 70% of the 3.3 million students eligible for SNAP aren't enrolled. <span>That gap is the growth plan.</span></div>
+  <p class="src">Sources: DRK Foundation organization profile, Third Way interview with co-founder Paige Swanstein, University of Tennessee alumni news, and the posted job description.</p>
+ </div>
+</section>
+
+<section class="pad">
+ <div class="wrap">
+  <h2>The brief, as I read it</h2>
+  <p class="lede">You're hiring the person who turns a mission with traction into a growth system with a P&amp;L.</p>
+  <div class="brief-grid">
+   <div class="bcard"><h3>What you're asking for</h3><ul><li>Growth and marketing strategy across institutional and direct-to-student channels</li><li>Go-to-market for paid offerings: pricing, packaging, pilot design</li><li>A national pipeline of campus, state and institutional partners</li><li>Own the earned-revenue P&amp;L with the COO, plus renewals and expansion</li><li>Build the growth team; report to execs, funders and the board</li></ul></div>
+   <div class="bcard p"><h3>What you're offering</h3><ul><li>$170K base, plus a 10% target bonus</li><li>Fully remote within the US</li><li>Medical: 100% for employees, 50% for dependents</li><li>Flexible PTO, 12 weeks paid parental leave</li><li>11 federal holidays, 401(k), home office stipend</li></ul></div>
+   <div class="bcard s"><h3>The problem to solve</h3><p>Every new campus today costs effort that doesn't compound. The job is to make each partner bring the next one, convert pilots into paid agreements that renew, and add a direct-to-student channel, so students reached and dollars earned both grow on purpose, not by heroics.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="peach pad" id="proof">
+ <div class="wrap">
+  <h2>Your requirements, my proof</h2>
+  <p class="lede">Where I have it, I show it. Where I don't, I say so and show what transfers.</p>
+  <div class="req-grid">
+   <article class="req"><div class="bar"></div><div class="in"><h3>7+ years of management and executive leadership</h3><h4>How I think</h4><p>A growth leader's real product is the team and the scoreboard they run on.</p><h4>Proof</h4><p class="proof">Founder &amp; CEO of Universal Marketing Partners from 2008 to about 2022, an 8-figure performance and affiliate business, leading teams from 5–10 up to 15–20.</p></div></article>
+   <article class="req"><div class="bar"></div><div class="in"><h3>Significant growth, partnerships and BD leadership</h3><h4>How I think</h4><p>Partners grow when the deal is good for them. Design the incentive and the pipeline fills itself.</p><h4>Proof</h4><p class="proof">$100M+ in affiliate commissions generated. Built JVC Affiliate Network on Everflow with 280+ affiliates tracked. Runs partnerships, publishers, creators and JV as core channels.</p></div></article>
+   <article class="req honest"><div class="bar"></div><div class="in"><h3>$500K+ ARR owned from institutional buyers</h3><h4>How I think</h4><p>Institutions buy outcomes and renew on proof. Sell the result, report it relentlessly.</p><h4>Proof</h4><p class="proof">Agency of record for RealAge.com (Hearst / Dr. Oz) and Harlequin Book Club; drove memberships for Disney Book Club and customers for LifeLock, Norton and Credit Sesame, all paid on results. Honest note: those buyers were enterprise brands, not higher-ed or government procurement. I'd lean on your campus team for procurement cycles and bring the account discipline.</p></div></article>
+   <article class="req"><div class="bar"></div><div class="in"><h3>Built teams and systems from scratch on tight resources</h3><h4>How I think</h4><p>Ship the smallest system that proves the math, then hire into what works.</p><h4>Proof</h4><p class="proof">Founded LeadQual.ai and BeChosen / Scout in 2026, and shipped 50+ apps and AI tools. My whole career has been paid on results, so lean budgets are the default, not the exception.</p></div></article>
+   <article class="req"><div class="bar"></div><div class="in"><h3>Pricing, packaging and pilot-to-paid</h3><h4>How I think</h4><p>Tiers should match how buyers already budget. A pilot needs a success metric and a renewal date on day one.</p><h4>Proof</h4><p class="proof">Designed BeChosen's membership tiers, AffiliateSchool.ai's 17 digital products, and a 5-level partner commission plan.</p></div></article>
+   <article class="req"><div class="bar"></div><div class="in"><h3>Demand gen, brand and growth marketing</h3><h4>How I think</h4><p>I'm a math guy: CPL, CPA, LTV, payback. For you, that's cost per student screened and per campus signed.</p><h4>Proof</h4><p class="proof">Scaled a language-learning product from under $10M to over $100M market cap via Facebook arbitrage. I lead media buyers rather than run the buttons myself, and I host the Performance Marketer podcast.</p></div></article>
+  </div>
+ </div>
+</section>
+
+<section class="lav pad" id="plan">
+ <div class="wrap">
+  <h2>My first 90 days, step by step</h2>
+  <p class="lede">Three stepping stones: learn the math, prove the model, then scale it toward 500 campuses.</p>
+  <div class="stones">
+   <div class="stone"><div class="circle c1"><div>30<small>days</small></div></div><h3>Listen and map</h3><ul><li>Talk with 20+ campus partners, the peer navigators and key funders</li><li>Build the growth scoreboard: cost to sign a campus, students screened per campus, benefits unlocked, renewal rate</li><li>Audit every live pilot and its path to paid</li></ul></div>
+   <div class="stone"><div class="circle c2"><div>60<small>days</small></div></div><h3>Package and prove</h3><ul><li>Ship Navvy pricing tiers by campus size and state system, with the COO</li><li>Launch a campus-to-campus referral program so partners bring partners</li><li>Run one state-system pilot and one direct-to-student creator test</li></ul></div>
+   <div class="stone"><div class="circle c3"><div>90<small>days</small></div></div><h3>Build the engine</h3><ul><li>A repeatable pipeline with targets toward 500 campuses</li><li>First growth hires and contractors in place</li><li>One board and funder dashboard: students reached, dollars unlocked, earned revenue</li></ul></div>
+  </div>
+ </div>
+</section>
+
+<section class="pad meet" id="meet">
+ <div class="wrap meet-grid">
+  <div class="photo-wrap"><div class="photo"><img src="https://yt3.googleusercontent.com/Mp7gOPpSMBFdGns7IfiIiY8Phw0AB94Ccs_SbKsMugqn9R9WNxBewG25xtxZJ8ks4znh5FBcOQ=s900" alt="Eric Beer smiling" width="900" height="900" loading="lazy"></div></div>
+  <div>
+   <h2>Meet Eric</h2>
+   <p>I'm an entrepreneur and performance marketer with 20+ years of being paid only when the results show up. I ran Universal Marketing Partners for about 14 years, generated $100M+ in affiliate commissions, and today build AI products: LeadQual.ai for compliant lead qualification and BeChosen / Scout, an AI job agent for job seekers.</p>
+   <p>I'm a strategist and builder who leads teams of buyers, partners and creators. University of Maryland '99 in finance, on a baseball scholarship, and a 1993 USA Junior Olympic team alum. I prefer remote or hybrid and I'm happy to travel to any campus.</p>
+   <ul class="socials" aria-label="Eric's social profiles">
+    <li><a href="https://www.linkedin.com/in/ericbeer">LinkedIn</a></li>
+    <li><a href="https://www.youtube.com/@ericbeer">YouTube</a></li>
+    <li><a href="https://x.com/esb211">X</a></li>
+    <li><a href="https://www.instagram.com/ericbeerofficial">Instagram</a></li>
+    <li><a href="https://www.tiktok.com/@ericbeer">TikTok</a></li>
+    <li><a href="https://www.facebook.com/eric.beer11">Facebook</a></li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section class="cta pad" id="contact">
+ <div class="blob b4" aria-hidden="true"></div><div class="blob b5" aria-hidden="true"></div>
+ <div class="wrap">
+  <h2>Let's get Navvy to the next 400 campuses</h2>
+  <p>I'd love 30 minutes to walk through the growth scoreboard and how I'd build it with you.</p>
+  <div class="btns">
+   <a class="btn btn-sun" href="mailto:eric@performancemarketer.io?subject=Student%20Basic%20Needs%20Coalition%20Chief%20Growth%20Officer">eric@performancemarketer.io</a>
+   <a class="btn btn-ghost" href="tel:+16467876282">646-787-6282</a>
+  </div>
+ </div>
+</section>
+</main>
+<footer><div class="wrap">Prepared by Eric Beer for the Student Basic Needs Coalition</div></footer>
+</body>
+</html>

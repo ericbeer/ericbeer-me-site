@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Eric Beer × Performance Click Ventures · Vice President of Marketing</title>
+<meta name="description" content="Eric Beer's Showcase for the Vice President of Marketing role at Performance Click Ventures (PCV).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B1F3A; --coral:#FF5A36; --cream:#FFF6EC; --teal:#13B5A6;
+  --navy-soft:#C9D3E2; --navy-line:#2A3F5E;
+  --pad:clamp(16px,5vw,72px);
+  --f:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--navy);color:var(--cream);font-family:var(--f);font-size:18px;line-height:1.55;overflow-x:hidden;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid currentColor;outline-offset:4px;border-radius:2px}
+h1,h2,h3,p{margin:0}
+
+/* ---------- slide frame ---------- */
+.slide{position:relative;display:flex;flex-direction:column;padding:0 var(--pad)}
+@media (min-width:900px){.slide{min-height:100vh}}
+.slide-body{flex:1;display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,9vh,110px) 0 clamp(40px,7vh,80px);max-width:1280px;width:100%;margin:0 auto}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:16px;border-top:2px solid currentColor;padding:14px 0 18px;font-size:14px;font-weight:700;max-width:1280px;width:100%;margin:0 auto}
+.bar .n{font-variant-numeric:tabular-nums;font-weight:800}
+.bar .n span{opacity:.6;font-weight:500}
+
+.s-navy{background:var(--navy);color:var(--cream)}
+.s-coral{background:var(--coral);color:var(--navy)}
+.s-cream{background:var(--cream);color:var(--navy)}
+.s-teal{background:var(--teal);color:var(--navy)}
+
+.kicker{font-size:clamp(16px,1.4vw,20px);font-weight:700;margin-bottom:clamp(18px,3vh,32px)}
+.h{font-weight:800;font-size:clamp(44px,8.2vw,128px);line-height:.92;letter-spacing:-.045em;max-width:14ch}
+.h-md{font-weight:800;font-size:clamp(38px,6vw,92px);line-height:.95;letter-spacing:-.04em;max-width:16ch}
+.lede{font-size:clamp(19px,1.7vw,24px);line-height:1.45;font-weight:500;max-width:46ch;margin-top:clamp(22px,4vh,40px)}
+
+/* ---------- 1 hero ---------- */
+.hero .slide-body{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(28px,5vw,80px);align-items:center}
+.lock{font-weight:800;font-size:clamp(22px,2.6vw,36px);letter-spacing:-.02em;line-height:1.1;display:flex;flex-wrap:wrap;gap:.3em .5em;align-items:baseline}
+.lock .x{color:var(--coral)}
+.role{display:inline-block;margin:18px 0 clamp(28px,5vh,56px);background:var(--teal);color:var(--navy);font-weight:800;font-size:clamp(15px,1.3vw,18px);padding:8px 14px;border-radius:999px}
+.hero .h{max-width:13ch}
+.hero .lede{color:var(--navy-soft)}
+.hero .lede b{color:var(--cream)}
+.face{width:clamp(200px,24vw,340px);aspect-ratio:3/4;background:var(--coral);border-radius:clamp(14px,1.6vw,24px);overflow:hidden;position:relative}
+.face img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;mix-blend-mode:normal}
+.face figcaption{position:absolute;left:0;right:0;bottom:0;background:var(--navy);color:var(--cream);font-size:14px;font-weight:700;padding:10px 14px}
+@media (max-width:760px){.hero .slide-body{grid-template-columns:1fr}.face{width:150px;grid-row:1}}
+
+/* ---------- 2 number slide ---------- */
+.big{white-space:nowrap;font-weight:800;font-size:clamp(84px,21vw,320px);line-height:.8;letter-spacing:-.06em;margin:0 0 clamp(18px,3vh,30px)}
+.big-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,48px);margin-top:clamp(36px,7vh,80px);border-top:2px solid currentColor;padding-top:20px}
+.big-row b{display:block;font-weight:800;font-size:clamp(40px,5vw,76px);line-height:.95;letter-spacing:-.04em}
+.big-row span{display:block;margin-top:8px;font-weight:500;font-size:16px;line-height:1.4;max-width:26ch}
+@media (max-width:640px){.big-row{grid-template-columns:1fr}}
+
+/* ---------- 3 what I see ---------- */
+.see{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,3.5vw,56px) clamp(24px,4vw,72px);margin-top:clamp(36px,6vh,72px)}
+.see div{border-left:6px solid var(--coral);padding-left:clamp(14px,1.6vw,22px)}
+.see h3{font-weight:800;font-size:clamp(23px,2.3vw,32px);line-height:1.1;letter-spacing:-.02em;margin-bottom:10px}
+.see p{font-size:17px;max-width:46ch}
+.src{margin-top:clamp(28px,5vh,48px);font-size:15px;max-width:70ch}
+@media (max-width:700px){.see{grid-template-columns:1fr}}
+
+/* ---------- 4 brief ---------- */
+.brief{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,2.4vw,36px);margin-top:clamp(36px,6vh,72px)}
+.card{background:var(--navy);color:var(--cream);border-radius:20px;padding:clamp(22px,2.4vw,34px)}
+.card h3{font-weight:800;font-size:clamp(24px,2.4vw,34px);letter-spacing:-.025em;line-height:1.05;margin-bottom:16px;color:var(--teal)}
+.card ul{margin:0;padding:0;list-style:none}
+.card li{padding:9px 0;border-top:1px solid var(--navy-line);font-size:16.5px;line-height:1.45}
+.card li:first-child{border-top:0;padding-top:0}
+.card .pay{font-weight:800;font-size:clamp(30px,3vw,44px);letter-spacing:-.03em;line-height:1;color:var(--cream);display:block;margin-bottom:6px}
+.card.problem{background:var(--cream);color:var(--navy)}
+.card.problem h3{color:var(--navy)}
+.card.problem p{font-size:18px;font-weight:500;line-height:1.5}
+@media (max-width:900px){.brief{grid-template-columns:1fr}}
+
+/* ---------- 5 requirement -> proof ---------- */
+.req{margin-top:clamp(32px,5vh,60px);border-top:2px solid var(--cream)}
+.r{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr) minmax(0,1.35fr);gap:clamp(14px,2.4vw,40px);padding:clamp(18px,2.4vh,26px) 0;border-bottom:1px solid var(--navy-line)}
+.r h3{font-weight:800;font-size:clamp(20px,1.8vw,26px);line-height:1.15;letter-spacing:-.02em}
+.r .t{color:var(--navy-soft);font-size:16.5px}
+.r .p{font-size:16.5px}
+.r .p b{color:var(--teal);font-weight:800}
+.r .t i,.r .p i{display:block;font-style:normal;font-size:13px;font-weight:700;color:var(--coral);margin-bottom:4px}
+.req-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr) minmax(0,1.35fr);gap:clamp(14px,2.4vw,40px);padding:12px 0;font-size:14px;font-weight:700;color:var(--navy-soft)}
+@media (max-width:820px){.r,.req-head{grid-template-columns:1fr}.req-head{display:none}.r h3{margin-bottom:2px}}
+@media (min-width:821px){.r .t i,.r .p i{display:none}}
+
+/* ---------- 6 their question ---------- */
+.q{font-size:clamp(20px,1.9vw,27px);font-weight:500;font-style:italic;max-width:40ch;margin-bottom:clamp(26px,4vh,44px)}
+.ans{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(20px,4vw,64px);align-items:end}
+.ans.from,.ans.to{font-weight:800;letter-spacing:-.06em;line-height:.82}
+.ans.from{font-size:clamp(48px,8vw,130px);opacity:.72}
+.ans.to{font-size:clamp(76px,14vw,230px);white-space:nowrap}
+.ans.arrow{font-weight:800;font-size:clamp(40px,6vw,90px);line-height:1}
+.ans-wrap{display:flex;flex-wrap:wrap;align-items:flex-end;gap:clamp(12px,2.5vw,36px)}
+.ans-note{margin-top:clamp(26px,4vh,44px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,48px);border-top:2px solid currentColor;padding-top:18px}
+.ans-note h3{font-weight:800;font-size:20px;margin-bottom:6px}
+.ans-note p{font-size:17px;font-weight:500;max-width:44ch}
+@media (max-width:700px){.ans-note{grid-template-columns:1fr}}
+
+/* ---------- 7 plan ---------- */
+.plan{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:clamp(36px,6vh,72px)}
+.ph{padding:0 clamp(16px,2.2vw,34px) 0 0}
+.ph + .ph{border-left:2px solid var(--navy);padding-left:clamp(16px,2.2vw,34px)}
+.ph .d{font-weight:800;font-size:clamp(64px,8vw,124px);letter-spacing:-.06em;line-height:.85}
+.ph .d small{font-size:.32em;letter-spacing:-.02em;margin-left:.15em}
+.ph h3{font-weight:800;font-size:clamp(21px,2vw,28px);letter-spacing:-.02em;margin:14px 0 12px;line-height:1.1}
+.ph ul{margin:0;padding-left:1.1em}
+.ph li{font-size:16.5px;margin-bottom:8px}
+.ph li::marker{color:var(--coral)}
+.ph:nth-child(2) .d{color:var(--teal)}
+@media (max-width:860px){.plan{grid-template-columns:1fr;gap:34px}.ph + .ph{border-left:0;border-top:2px solid var(--navy);padding:24px 0 0}}
+
+/* ---------- 8 meet eric ---------- */
+.meet{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(28px,5vw,80px);align-items:center}
+.meet .face{background:var(--navy)}
+.meet .lede{max-width:52ch}
+.facts{margin:clamp(22px,3vh,32px) 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 28px;max-width:760px}
+.facts li{font-size:16.5px;font-weight:500;border-top:2px solid var(--navy);padding-top:8px}
+.socials{display:flex;flex-wrap:wrap;gap:10px;margin-top:clamp(24px,4vh,36px)}
+.socials a{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;background:var(--navy);color:var(--cream);text-decoration:none;font-weight:700;font-size:15px}
+.socials a:hover{background:var(--cream);color:var(--navy)}
+@media (max-width:760px){.meet{grid-template-columns:1fr}.meet .face{width:150px}.facts{grid-template-columns:1fr}}
+
+/* ---------- 9 contact ---------- */
+.close .h{max-width:12ch}
+.ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:clamp(30px,5vh,52px)}
+.btn{display:inline-flex;align-items:center;min-height:60px;padding:0 28px;border-radius:999px;font-weight:800;font-size:clamp(17px,1.5vw,20px);text-decoration:none;border:3px solid var(--coral)}
+.btn-main{background:var(--coral);color:var(--navy)}
+.btn-main:hover{background:var(--cream);border-color:var(--cream)}
+.btn-alt{color:var(--cream)}
+.btn-alt:hover{background:var(--coral);color:var(--navy)}
+.fine{margin-top:22px;color:var(--navy-soft);font-size:16px}
+.fine a{text-underline-offset:3px}
+</style>
+</head>
+<body>
+
+<!-- 1 -->
+<section class="slide s-navy hero" aria-label="Title">
+  <div class="slide-body">
+    <div>
+      <p class="lock"><span>Eric Beer</span><span class="x" aria-hidden="true">×</span><span>Performance Click Ventures</span></p>
+      <p class="role">Vice President of Marketing</p>
+      <h1 class="h">Turn job seekers into paying subscribers.</h1>
+      <p class="lede">PCV's product helps people take back control of their job search. The first marketing leader has to <b>build the whole road from first visit to paid subscriber</b>, then open the partner channels that bring job seekers in by the thousand.</p>
+    </div>
+    <figure class="face" style="margin:0">
+      <img src="https://yt3.googleusercontent.com/Mp7gOPpSMBFdGns7IfiIiY8Phw0AB94Ccs_SbKsMugqn9R9WNxBewG25xtxZJ8ks4znh5FBcOQ=s900" alt="Portrait of Eric Beer" width="340" height="453">
+      <figcaption>Eric Beer, performance marketer</figcaption>
+    </figure>
+  </div>
+  <div class="bar"><span>Eric Beer × PCV</span><span class="n">1 <span>/ 9</span></span></div>
+</section>
+
+<!-- 2 -->
+<section class="slide s-coral" aria-label="Track record">
+  <div class="slide-body">
+    <p class="kicker">Twenty-plus years, always paid on results.</p>
+    <p class="big">$100M+</p>
+    <h2 class="h-md">in affiliate commissions generated.</h2>
+    <div class="big-row">
+      <div><b>&lt;$10M → $100M+</b><span>Market cap for a language-learning product, scaled on Facebook arbitrage</span></div>
+      <div><b>8 figures</b><span>Universal Marketing Partners, the performance business I founded and ran from 2008</span></div>
+      <div><b>280+</b><span>Affiliates tracked on JVC Affiliate Network, built on Everflow</span></div>
+    </div>
+  </div>
+  <div class="bar"><span>Eric Beer × PCV</span><span class="n">2 <span>/ 9</span></span></div>
+</section>
+
+<!-- 3 -->
+<section class="slide s-cream" aria-label="What I see at PCV">
+  <div class="slide-body">
+    <h2 class="h-md">What I see at PCV.</h2>
+    <div class="see">
+      <div><h3>A founder-led product, with marketing starting from zero.</h3><p>The VP reports straight to the founder, builds the function from the ground up, and gets a say in product direction, pricing and go-to-market.</p></div>
+      <div><h3>A subscription business for job seekers.</h3><p>A consumer and prosumer job-search tool. The goal is a self-serve funnel that moves people from first visit to paid plan, with targets on acquisition cost, conversion and retention.</p></div>
+      <div><h3>Growth comes through other people's audiences.</h3><p>Career coaches, training programs, universities and outplacement firms already hold job seekers' trust. A B2B2C partner channel is part of the brief, not something to add later.</p></div>
+      <div><h3>A company that wants numbers.</h3><p>Applicants are asked for one growth result they drove: the number, what they did, how long it took. Budget reporting goes to the founder and investors.</p></div>
+    </div>
+    <p class="src">Everything here comes from PCV's public job posting. I couldn't find a public site for the product, so I've kept to what the posting says.</p>
+  </div>
+  <div class="bar"><span>Eric Beer × PCV</span><span class="n">3 <span>/ 9</span></span></div>
+</section>
+
+<!-- 4 -->
+<section class="slide s-teal" aria-label="The brief">
+  <div class="slide-body">
+    <h2 class="h-md">The brief, on one slide.</h2>
+    <div class="brief">
+      <div class="card">
+        <h3>What you're asking for</h3>
+        <ul>
+          <li>Positioning, messaging and brand</li>
+          <li>Multichannel acquisition: SEO, content, social, paid search, community</li>
+          <li>The funnel from first visit to paying subscriber</li>
+          <li>Partnerships with coaches, programs, universities and outplacement firms</li>
+          <li>Lifecycle campaigns, analytics, budget, and a team to hire</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>What you're offering</h3>
+        <ul>
+          <li><span class="pay">$137K–$165K</span>per year, as posted</li>
+          <li>Remote in the US, contract or full-time</li>
+          <li>401(k), health and dental insurance, paid time off</li>
+          <li>A direct line to the founder and a hand in pricing and product</li>
+        </ul>
+      </div>
+      <div class="card problem">
+        <h3>The problem to solve</h3>
+        <p>Job seekers are anxious, short on cash, and drowning in free tools. PCV has to earn a monthly payment from them, keep it after they land a job, and reach them through the people they already trust. That's a math problem as much as a messaging one.</p>
+      </div>
+    </div>
+  </div>
+  <div class="bar"><span>Eric Beer × PCV</span><span class="n">4 <span>/ 9</span></span></div>
+</section>
+
+<!-- 5 -->
+<section class="slide s-navy" aria-label="Requirements and proof">
+  <div class="slide-body">
+    <h2 class="h-md">Your list, my proof.</h2>
+    <div class="req">
+      <div class="req-head" aria-hidden="true"><span>You asked for</span><span>How I think about it</span><span>What I've done</span></div>
+      <div class="r">
+        <h3>10+ years in marketing, 3+ leading it</h3>
+        <p class="t"><i>How I think</i>Leading marketing means owning the number, not the activity.</p>
+        <p class="p"><i>Proof</i><b>20+ years.</b> Founder and CEO of Universal Marketing Partners from 2008, leading teams of 5–10 that grew to 15–20. My leadership has been as a founder and agency head, not as an in-house VP.</p>
+      </div>
+      <div class="r">
+        <h3>A documented lift in CAC, conversion or retention</h3>
+        <p class="t"><i>How I think</i>CPC, CPL, CPA, LTV, payback. I'm a math guy: a channel scales when its payback does.</p>
+        <p class="p"><i>Proof</i>Took a language-learning product from <b>under $10M to over $100M</b> in market cap with Facebook arbitrage.</p>
+      </div>
+      <div class="r">
+        <h3>Freemium and self-serve subscriptions</h3>
+        <p class="t"><i>How I think</i>Subscriptions are won in the first week and lost in month three. I plan for both.</p>
+        <p class="p"><i>Proof</i>Agency of record for <b>RealAge.com</b> (Hearst / Dr. Oz) and <b>Harlequin Book Club</b>, and drove memberships for <b>Disney Book Club</b>. In 2026 I built the membership tiers for Scout, an AI job agent.</p>
+      </div>
+      <div class="r">
+        <h3>SEO, paid, automation, analytics</h3>
+        <p class="t"><i>How I think</i>Every channel sits on one ledger, and every dollar gets the same test.</p>
+        <p class="p"><i>Proof</i>I lead media buyers rather than run buys myself. My channels: paid, affiliate, partnerships, publishers, creators, email and SMS. Paid search is part of my mix but not my core, and I'd hire SEO depth.</p>
+      </div>
+      <div class="r">
+        <h3>Strong copy and hands-on campaigns</h3>
+        <p class="t"><i>How I think</i>Early on, the VP writes the first ad, the first email and the first landing page.</p>
+        <p class="p"><i>Proof</i>Co-author of <b>Million Dollar Dads</b> and <b>Million Dollar Identity</b>, host of the Performance Marketer podcast, and <b>50+ apps and AI tools</b> shipped.</p>
+      </div>
+      <div class="r">
+        <h3>Career tech and B2B2C partnerships</h3>
+        <p class="t"><i>How I think</i>Coaches and universities sell when the partner terms pay them and the tracking holds up.</p>
+        <p class="p"><i>Proof</i><b>$100M+</b> in affiliate commissions. I designed a 5-level partner commission plan for AffiliateSchool.ai. I've also worked inside career tech on BeChosen / Scout, including its creator-led acquisition program.</p>
+      </div>
+      <div class="r">
+        <h3>Managing a team and a budget</h3>
+        <p class="t"><i>How I think</i>Hire for the channel that's already working, and fund it out of what it proves.</p>
+        <p class="p"><i>Proof</i>Ran an 8-figure performance business on results-based economics. Agency work drove customers for <b>LifeLock</b>, <b>Norton Antivirus</b> and <b>Credit Sesame</b>.</p>
+      </div>
+    </div>
+  </div>
+  <div class="bar"><span>Eric Beer × PCV</span><span class="n">5 <span>/ 9</span></span></div>
+</section>
+
+<!-- 6 -->
+<section class="slide s-coral" aria-label="One growth result">
+  <div class="slide-body">
+    <p class="q">"Describe one growth result you personally drove: the number, what you did, and how long it took."</p>
+    <div class="ans-wrap" role="img" aria-label="Under 10 million dollars to over 100 million dollars in market cap">
+      <span class="ans from">&lt;$10M</span>
+      <span class="ans arrow" aria-hidden="true">→</span>
+      <span class="ans to">$100M+</span>
+    </div>
+    <div class="ans-note">
+      <div><h3>The number</h3><p>A language-learning product went from under $10M to over $100M in market cap.</p></div>
+      <div><h3>What I did</h3><p>Built and scaled the Facebook arbitrage engine behind its customer growth, holding every dollar to its payback. I'll walk you through the timeline and unit economics live.</p></div>
+    </div>
+  </div>
+  <div class="bar"><span>Eric Beer × PCV</span><span class="n">6 <span>/ 9</span></span></div>
+</section>
+
+<!-- 7 -->
+<section class="slide s-cream" aria-label="30, 60, 90 day plan">
+  <div class="slide-body">
+    <h2 class="h-md">The first 90 days.</h2>
+    <div class="plan">
+      <div class="ph">
+        <p class="d">30<small>days</small></p>
+        <h3>Measure the funnel</h3>
+        <ul>
+          <li>Instrument every step from first visit to trial, paid and month-two renewal</li>
+          <li>Interview recent subscribers and recent cancels</li>
+          <li>Set CAC, conversion and payback targets with the founder</li>
+          <li>Test two positioning angles on paid social</li>
+        </ul>
+      </div>
+      <div class="ph">
+        <p class="d">60<small>days</small></p>
+        <h3>Open the partner channel</h3>
+        <ul>
+          <li>Pilot a tracked partner program with 10–20 career coaches and one outplacement firm</li>
+          <li>Launch onboarding and win-back lifecycle in email and SMS</li>
+          <li>Run capped-CPA paid tests, and plan SEO content around the searches job seekers actually make</li>
+        </ul>
+      </div>
+      <div class="ph">
+        <p class="d">90<small>days</small></p>
+        <h3>Scale what pays back</h3>
+        <ul>
+          <li>Move budget to the channels that clear payback</li>
+          <li>Pitch the first university career centers with pilot results</li>
+          <li>Hire the first one or two marketers</li>
+          <li>Give investors one dashboard and one budget plan</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="bar"><span>Eric Beer × PCV</span><span class="n">7 <span>/ 9</span></span></div>
+</section>
+
+<!-- 8 -->
+<section class="slide s-teal" aria-label="Meet Eric">
+  <div class="slide-body">
+    <div class="meet">
+      <figure class="face" style="margin:0">
+        <img src="https://yt3.googleusercontent.com/Mp7gOPpSMBFdGns7IfiIiY8Phw0AB94Ccs_SbKsMugqn9R9WNxBewG25xtxZJ8ks4znh5FBcOQ=s900" alt="Eric Beer" width="340" height="453" loading="lazy">
+      </figure>
+      <div>
+        <h2 class="h-md">Meet Eric.</h2>
+        <p class="lede">Strategist and builder, with 20+ years in performance marketing and paid on results the whole way. I build channels and the teams that run them: affiliate, partnerships, creators, owned media and lead gen. Hybrid or remote, and happy to travel anywhere.</p>
+        <ul class="facts">
+          <li>Founder, LeadQual.ai and BeChosen / Scout (2026)</li>
+          <li>Founder, JVC Affiliate Network and AffiliateSchool.ai</li>
+          <li>University of Maryland '99, finance, on a baseball scholarship</li>
+          <li>1993 USA Junior Olympic baseball team, one of 64 players</li>
+        </ul>
+        <nav class="socials" aria-label="Eric Beer on social media">
+          <a href="https://www.linkedin.com/in/ericbeer">LinkedIn</a>
+          <a href="https://www.youtube.com/@ericbeer">YouTube</a>
+          <a href="https://x.com/esb211">X</a>
+          <a href="https://www.instagram.com/ericbeerofficial">Instagram</a>
+          <a href="https://www.tiktok.com/@ericbeer">TikTok</a>
+          <a href="https://www.facebook.com/eric.beer11">Facebook</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="bar"><span>Eric Beer × PCV</span><span class="n">8 <span>/ 9</span></span></div>
+</section>
+
+<!-- 9 -->
+<section class="slide s-navy close" aria-label="Contact">
+  <div class="slide-body">
+    <h2 class="h">Let's build PCV's growth engine.</h2>
+    <p class="lede" style="color:var(--navy-soft)">I'd like 30 minutes to walk you through the funnel math and the partner channel.</p>
+    <div class="ctas">
+      <a class="btn btn-main" href="mailto:eric@performancemarketer.io?subject=Performance%20Click%20Ventures%20Vice%20President%20of%20Marketing">Email Eric</a>
+      <a class="btn btn-alt" href="tel:+16467876282">Call 646-787-6282</a>
+    </div>
+    <p class="fine"><a href="mailto:eric@performancemarketer.io?subject=Performance%20Click%20Ventures%20Vice%20President%20of%20Marketing">eric@performancemarketer.io</a> · <a href="tel:+16467876282">646-787-6282</a></p>
+  </div>
+  <div class="bar"><span>Eric Beer × PCV</span><span class="n">9 <span>/ 9</span></span></div>
+</section>
+
+</body>
+</html>

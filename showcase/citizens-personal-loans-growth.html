@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Eric Beer × Citizens · VP, Acquisition Strategy &amp; Growth, Personal Loans</title>
+<meta name="description" content="A memo from Eric Beer to Citizens on ramping Personal Loans volume while holding cost per funded account.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --desk:#E7E1D3;
+  --paper:#FAF7F0;
+  --ink:#1D1D1B;
+  --ink-2:#4A4740;
+  --ink-3:#6A665C;
+  --rule:#D9D2C2;
+  --green:#1B6B4A;
+  --green-deep:#13523A;
+  --serif:"Libre Baskerville",Georgia,"Times New Roman",serif;
+  --type:"Courier Prime","Courier New",Courier,monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--desk);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.72;overflow-x:hidden;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+a{color:var(--green);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--green-deep)}
+:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+img{max-width:100%;display:block}
+p{margin:0 0 1em}
+
+.desk{padding:clamp(16px,5vw,64px) clamp(0px,3vw,32px) clamp(40px,7vw,96px)}
+.sheet{
+  max-width:880px;margin:0 auto;background:var(--paper);
+  padding:clamp(28px,7vw,88px) clamp(20px,7vw,92px) clamp(40px,7vw,80px);
+  box-shadow:0 1px 1px rgba(60,48,20,.08),0 6px 14px -4px rgba(60,48,20,.14),0 30px 60px -30px rgba(60,48,20,.35);
+  position:relative;
+}
+
+/* Letterhead */
+.letterhead{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;flex-wrap:wrap;padding-bottom:16px;border-bottom:3px double var(--green)}
+.lockup{font-family:var(--serif);font-size:clamp(24px,3.6vw,32px);line-height:1.1;letter-spacing:-.01em;margin:0}
+.lockup .x{color:var(--green);font-style:italic;padding:0 .18em}
+.lh-meta{font-family:var(--type);font-size:13px;line-height:1.5;color:var(--ink-2);text-align:right}
+.lh-meta a{color:var(--ink-2)}
+
+.kind{font-family:var(--type);font-size:15px;letter-spacing:.3em;margin:clamp(28px,4vw,44px) 0 18px;color:var(--ink)}
+
+/* Memo fields */
+.fields{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:22px;row-gap:6px;margin:0;font-family:var(--type);font-size:16px;line-height:1.5}
+.fields dt{font-weight:700}
+.fields dd{margin:0}
+.fields-rule{border:0;border-top:1px solid var(--ink);margin:22px 0 0}
+
+/* Opening */
+.opening{margin:clamp(30px,5vw,52px) 0 0}
+.opening h1{font-family:var(--serif);font-weight:400;font-size:clamp(27px,4.4vw,42px);line-height:1.24;letter-spacing:-.012em;margin:0 0 22px;max-width:24ch}
+.opening .lede{font-size:clamp(17px,1.9vw,19px);color:var(--ink-2);max-width:60ch}
+.opening .lede strong{color:var(--ink);font-weight:700}
+
+/* Paragraphs */
+.para{margin-top:clamp(44px,6vw,68px)}
+.para-head{display:grid;grid-template-columns:3.2em minmax(0,1fr);align-items:baseline;margin:0 0 18px}
+.para-head .n{font-family:var(--type);font-size:17px;color:var(--green);font-weight:700}
+.para-head h2{font-family:var(--serif);font-weight:700;font-size:clamp(20px,2.5vw,24px);line-height:1.3;margin:0}
+.para-body{padding-left:3.2em}
+@media (max-width:560px){.para-body{padding-left:0}.para-head{grid-template-columns:2.6em minmax(0,1fr)}}
+
+.sub{list-style:none;margin:0;padding:0}
+.sub li{display:grid;grid-template-columns:2.4em minmax(0,1fr);margin:0 0 14px}
+.sub li>span:first-child{font-family:var(--type);color:var(--ink-3)}
+.sub b{font-weight:700}
+.cite{font-family:var(--type);font-size:13px;color:var(--ink-3)}
+
+.brief{display:grid;gap:0;border-top:1px solid var(--ink)}
+.brief>div{display:grid;grid-template-columns:11em minmax(0,1fr);gap:18px;padding:14px 0;border-bottom:1px solid var(--rule)}
+.brief h3{margin:0;font-family:var(--type);font-size:15px;font-weight:700;line-height:1.6}
+.brief p{margin:0}
+@media (max-width:560px){.brief>div{grid-template-columns:1fr;gap:4px}}
+
+/* Memo table */
+.mtable{width:100%;border-collapse:collapse;font-size:15.5px;line-height:1.6}
+.mtable caption{text-align:left;font-family:var(--type);font-size:14px;color:var(--ink-2);padding-bottom:10px}
+.mtable th,.mtable td{text-align:left;vertical-align:top;padding:14px 14px 14px 0;border-bottom:1px solid var(--rule)}
+.mtable thead th{font-family:var(--type);font-size:14px;font-weight:700;border-bottom:1.5px solid var(--ink);padding-top:0}
+.mtable tbody th{font-family:var(--type);font-weight:700;font-size:14.5px;width:26%}
+.mtable td:last-child{padding-right:0}
+.mtable .gap{display:block;margin-top:6px;font-family:var(--type);font-size:13px;color:var(--green)}
+@media (max-width:680px){
+  .mtable thead{display:none}
+  .mtable,.mtable caption,.mtable tbody,.mtable tr,.mtable th,.mtable td{display:block;width:100%}
+  .mtable tr{border-bottom:1px solid var(--rule);padding:14px 0}
+  .mtable th,.mtable td{border:0;padding:0}
+  .mtable tbody th{width:100%;margin-bottom:6px}
+  .mtable td+td{margin-top:10px}
+  .mtable td::before{content:attr(data-h);display:block;font-family:var(--type);font-size:12.5px;color:var(--ink-3)}
+}
+
+/* Exhibit */
+.exhibit{border:1px solid var(--ink);padding:22px clamp(16px,3vw,28px) 18px;font-family:var(--type);background:#FCFAF5}
+.exhibit-title{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--ink);padding-bottom:10px;margin-bottom:6px;font-size:14px}
+.exhibit-title b{font-weight:700}
+.ledger{list-style:none;margin:0;padding:0}
+.ledger li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 18px;align-items:baseline;padding:11px 0;border-bottom:1px dashed var(--rule)}
+.ledger li:last-child{border-bottom:0}
+.ledger .what{font-size:15px;line-height:1.5}
+.ledger .fig{font-size:clamp(20px,2.6vw,26px);font-weight:700;color:var(--ink);white-space:nowrap;text-align:right}
+.exhibit-note{font-size:12.5px;color:var(--ink-3);margin:10px 0 0}
+@media (max-width:420px){.ledger li{grid-template-columns:1fr}.ledger .fig{text-align:left}}
+
+/* Recommendation */
+.phases{list-style:none;margin:0;padding:0}
+.phases>li{display:grid;grid-template-columns:6.5em minmax(0,1fr);gap:18px;padding:16px 0;border-top:1px solid var(--rule)}
+.phases>li:first-child{border-top:1px solid var(--ink)}
+.phases .when{font-family:var(--type);font-weight:700;font-size:15px;line-height:1.6;color:var(--green)}
+.phases h3{margin:0 0 6px;font-size:17px;font-weight:700}
+.phases ul{margin:0;padding-left:1.1em}
+.phases ul li{margin-bottom:4px}
+@media (max-width:560px){.phases>li{grid-template-columns:1fr;gap:4px}}
+
+/* Close & signature */
+.close{margin-top:clamp(40px,6vw,60px)}
+.sig{margin:26px 0 0}
+.sig .hand{font-family:var(--serif);font-style:italic;font-size:clamp(38px,6vw,52px);line-height:1;color:var(--green);letter-spacing:-.02em;transform:rotate(-3deg);transform-origin:left bottom;display:inline-block;margin:0 0 6px}
+.sig .line{border-top:1px solid var(--ink);width:min(280px,100%);padding-top:6px;font-family:var(--type);font-size:14.5px;line-height:1.5}
+
+/* Attachment: Meet Eric */
+.attach{display:grid;grid-template-columns:170px minmax(0,1fr);gap:clamp(20px,4vw,36px);align-items:start}
+.print{background:#fff;padding:8px 8px 26px;box-shadow:0 2px 6px rgba(60,48,20,.18);transform:rotate(-2deg);position:relative;max-width:170px}
+.print::before{content:"";position:absolute;top:-14px;left:28px;width:16px;height:42px;border:2px solid #8E8B82;border-radius:9px;border-bottom-color:transparent}
+.print img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.print span{position:absolute;bottom:5px;left:0;right:0;text-align:center;font-family:var(--type);font-size:12px;color:var(--ink-2)}
+.socials{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 18px;font-family:var(--type);font-size:15px}
+@media (max-width:560px){.attach{grid-template-columns:1fr}.print{max-width:150px}}
+
+/* Reply slip */
+.reply{margin-top:clamp(48px,7vw,72px);border:1.5px dashed var(--green);padding:24px clamp(16px,3vw,28px)}
+.reply h2{margin:0 0 8px;font-size:clamp(20px,2.5vw,24px);font-weight:700}
+.reply p{max-width:56ch}
+.reply-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 20px;font-family:var(--type);font-size:16px;font-weight:700;text-decoration:none;border:1.5px solid var(--green)}
+.btn-solid{background:var(--green);color:var(--paper)}
+.btn-solid:hover{background:var(--green-deep);border-color:var(--green-deep);color:var(--paper)}
+.btn-line{color:var(--green);background:transparent}
+.btn-line:hover{background:var(--green);color:var(--paper)}
+
+@media (max-width:560px){.lh-meta{text-align:left}}
+.foot{margin-top:40px;padding-top:12px;border-top:3px double var(--green);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-family:var(--type);font-size:12.5px;color:var(--ink-3)}
+</style>
+</head>
+<body>
+<main class="desk">
+<article class="sheet">
+
+  <header class="letterhead">
+    <p class="lockup">Eric Beer<span class="x">×</span>Citizens</p>
+    <div class="lh-meta">
+      <a href="mailto:eric@performancemarketer.io">eric@performancemarketer.io</a><br>
+      <a href="tel:+16467876282">646-787-6282</a>
+    </div>
+  </header>
+
+  <p class="kind">MEMORANDUM</p>
+  <dl class="fields">
+    <dt>TO:</dt><dd>Head of Personal Loans, Citizens</dd>
+    <dt>FROM:</dt><dd>Eric Beer, performance marketer and builder</dd>
+    <dt>RE:</dt><dd>VP, Acquisition Strategy &amp; Growth, Personal Loans</dd>
+    <dt>DATE:</dt><dd>October 14, 2026</dd>
+  </dl>
+  <hr class="fields-rule">
+
+  <section class="opening">
+    <h1>Restarting a personal loan engine is a math problem: every new channel has to pay for itself at the funded account, not the application.</h1>
+    <p class="lede">You are asking for a 6 to 12 month roadmap to ramp volume and widen eligibility while credit and fraud losses stay in check. I have spent 20+ years being <strong>paid only when the customer actually converted</strong>. This memo sets out what I see, how my record maps to your requirements, and what I would do in the first 90 days.</p>
+  </section>
+
+  <section class="para" aria-labelledby="p1">
+    <div class="para-head"><span class="n">1.</span><h2 id="p1">What I see at Citizens</h2></div>
+    <div class="para-body">
+      <ol class="sub">
+        <li><span>(a)</span><span><b>A franchise with reach most lenders would pay for.</b> Founded in 1828 in Providence, Citizens runs about 1,000 branches and 3,000 ATMs across 14 states and DC. Branch traffic and existing deposit customers are a pre-qualified audience a fintech has to buy. <span class="cite">Source: Citizens 2Q26 earnings release.</span></span></li>
+        <li><span>(b)</span><span><b>A balance sheet that can carry growth.</b> $233.8B in total assets, $185.6B in deposits and $70.2B in retail loans at June 30, 2026, with retail growth so far led by home equity and mortgage. <span class="cite">Source: 2Q26 release.</span></span></li>
+        <li><span>(c)</span><span><b>Personal loans are coming back from a standing start.</b> By public reports, Citizens stopped writing personal loans for new applicants a few years ago and kept servicing the existing book. The old product ran $5K to $50K over 3 to 7 years with no origination, late or prepayment fees. A volume ramp means rebuilding demand, partners and the funnel from scratch. <span class="cite">Source: third-party lender reviews, 2026.</span></span></li>
+        <li><span>(d)</span><span><b>The mandate is growth with guardrails.</b> The role sits under the Head of Personal Loans and works across Marketing, Product, Risk, Finance, Operations, Analytics and Technology. Volume only counts if the loans fund, perform and pass fraud checks.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="para" aria-labelledby="p2">
+    <div class="para-head"><span class="n">2.</span><h2 id="p2">The brief, as I read it</h2></div>
+    <div class="para-body">
+      <div class="brief">
+        <div><h3>What you're asking for</h3><p>A 6 to 12 month plan to grow Personal Loans: new segments, channels and markets; business cases for marketing spend; a multi-channel strategy across digital, email, direct mail, branch and partnerships; better application, approval and funded conversion; and reporting executives trust.</p></div>
+        <div><h3>What you're offering</h3><p>$150,000 to $165,000 base plus incentive. In-office or remote, two US locations. Medical, dental, vision, retirement, parental leave, flexible work, education reimbursement and wellness programs.</p></div>
+        <div><h3>The problem to solve</h3><p>Buy funded accounts, not clicks or applications, at a cost per funded account Finance and Risk will sign off on, while the eligibility box widens.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="para" aria-labelledby="p3">
+    <div class="para-head"><span class="n">3.</span><h2 id="p3">Requirements against record</h2></div>
+    <div class="para-body">
+      <table class="mtable">
+        <caption>Six requirements from the posting, how I would approach each, and the proof.</caption>
+        <thead><tr><th scope="col">Requirement</th><th scope="col">How I think</th><th scope="col">Proof</th></tr></thead>
+        <tbody>
+          <tr>
+            <th scope="row">7+ years in consumer lending or marketing strategy</th>
+            <td data-h="How I think">Strategy is choosing which customers to buy and what you can afford to pay for each one.</td>
+            <td data-h="Proof">20+ years in performance marketing. Founder and CEO of Universal Marketing Partners (2008 to ~2022), an 8-figure performance and affiliate business.</td>
+          </tr>
+          <tr>
+            <th scope="row">Personal loans or unsecured lending</th>
+            <td data-h="How I think">Consumer finance buyers want speed, a clear rate and trust. The funnel has to earn all three before credit pulls.</td>
+            <td data-h="Proof">Drove customers for Credit Sesame, LifeLock and Norton Antivirus. Today LeadQual.ai qualifies and routes live, consent-compliant consumer leads.<span class="gap">I haven't owned a lending P&amp;L; I'd bring consumer-finance acquisition and work beside your Risk and Pricing leads.</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Business cases and cost per account</th>
+            <td data-h="How I think">Every channel gets a CPA ceiling worked back from funded-loan value and expected loss, and spend scales only below it.</td>
+            <td data-h="Proof">Paid on results my entire career. I think in CPC, CPL, CPA, LTV and payback, and I build the model before the media plan.</td>
+          </tr>
+          <tr>
+            <th scope="row">Multi-channel strategy, including partnerships</th>
+            <td data-h="How I think">Partners are the fastest way to restart volume without a big brand budget, as long as you pay on funded loans.</td>
+            <td data-h="Proof">$100M+ in affiliate commissions generated. Built JVC Affiliate Network on Everflow, 280+ affiliates tracked. Agency of record for RealAge.com (Hearst / Dr. Oz) and Harlequin Book Club; drove memberships for Disney Book Club.</td>
+          </tr>
+          <tr>
+            <th scope="row">Funnel analytics, application to funded</th>
+            <td data-h="How I think">Find the biggest drop between offer, application, approval and funding, fix that one first, then re-cut by source.</td>
+            <td data-h="Proof">Scaled a language-learning product from under $10M to over $100M market cap through Facebook arbitrage, which only works when you read the funnel daily. 50+ apps and AI tools shipped.</td>
+          </tr>
+          <tr>
+            <th scope="row">Influence in a matrix; MBA preferred</th>
+            <td data-h="How I think">Risk, Finance and Product say yes to a shared model and a test with a stop-loss.</td>
+            <td data-h="Proof">Led teams from 5–10 up to 15–20 and ran agency-of-record work inside large media companies. University of Maryland '99, finance.<span class="gap">No MBA. I have a finance degree and two decades running unit economics.</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="para" aria-labelledby="p4">
+    <div class="para-head"><span class="n">4.</span><h2 id="p4">Supporting figures</h2></div>
+    <div class="para-body">
+      <div class="exhibit" role="group" aria-label="Exhibit A: track record figures">
+        <div class="exhibit-title"><b>Exhibit A</b><span>Track record, E. Beer</span></div>
+        <ul class="ledger">
+          <li><span class="what">Affiliate commissions generated, career to date</span><span class="fig">$100M+</span></li>
+          <li><span class="what">Language-learning product, market cap via Facebook arbitrage</span><span class="fig">&lt;$10M → &gt;$100M</span></li>
+          <li><span class="what">Years paid on results in performance marketing</span><span class="fig">20+</span></li>
+          <li><span class="what">Affiliates tracked on JVC Affiliate Network (Everflow)</span><span class="fig">280+</span></li>
+          <li><span class="what">Apps and AI tools shipped</span><span class="fig">50+</span></li>
+          <li><span class="what">Largest team led at Universal Marketing Partners</span><span class="fig">15–20</span></li>
+        </ul>
+        <p class="exhibit-note">Consumer-finance clients: Credit Sesame, LifeLock, Norton Antivirus.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="para" aria-labelledby="p5">
+    <div class="para-head"><span class="n">5.</span><h2 id="p5">Recommendation: the first 90 days</h2></div>
+    <div class="para-body">
+      <ol class="phases">
+        <li>
+          <span class="when">Days 1–30</span>
+          <div>
+            <h3>Build the model everyone signs</h3>
+            <ul>
+              <li>Map the funnel from offer to funded by source, and find the biggest drop.</li>
+              <li>Agree a funded-account value and a CPA ceiling per channel with Finance, Risk and Pricing.</li>
+              <li>Size the warm base first: deposit customers, branch traffic and past borrowers in good standing.</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <span class="when">Days 31–60</span>
+          <div>
+            <h3>Run small tests with stop-losses</h3>
+            <ul>
+              <li>Launch pre-qualified offers to existing customers through email, digital and branch.</li>
+              <li>Open two or three partner tests (loan marketplaces and comparison sites) paid on funded loans, with fraud and consent checks at the door.</li>
+              <li>Fix the top funnel leak with Product, starting from the application to approval step.</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <span class="when">Days 61–90</span>
+          <div>
+            <h3>Scale what clears the bar</h3>
+            <ul>
+              <li>Move budget to the channels under their CPA ceiling and cut the rest.</li>
+              <li>Ship a one-page weekly executive view: volume, approval rate, funded conversion, cost per funded account and early loss signals.</li>
+              <li>Present the 6 to 12 month roadmap with segments, channels and the spend case behind each.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+
+      <div class="close">
+        <p>I'd welcome a conversation about how you see the ramp, and where you'd want me to start.</p>
+        <div class="sig">
+          <span class="hand" aria-hidden="true">Eric Beer</span>
+          <div class="line">Eric Beer<br><a href="tel:+16467876282">646-787-6282</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="para" aria-labelledby="p6">
+    <div class="para-head"><span class="n">6.</span><h2 id="p6">Attachment: about the author</h2></div>
+    <div class="para-body">
+      <div class="attach">
+        <figure class="print" style="margin:0">
+          <img src="https://yt3.googleusercontent.com/Mp7gOPpSMBFdGns7IfiIiY8Phw0AB94Ccs_SbKsMugqn9R9WNxBewG25xtxZJ8ks4znh5FBcOQ=s900" alt="Portrait of Eric Beer" width="300" height="300">
+          <span>E. Beer</span>
+        </figure>
+        <div>
+          <p>I'm an entrepreneur and performance marketer, and I've been paid on results for more than 20 years. I lead media buyers and teams rather than run the buying myself. I built Universal Marketing Partners into an 8-figure performance and affiliate business. In 2026 I founded LeadQual.ai, which uses AI voice agents to qualify and route live insurance leads, and BeChosen, an AI job agent and job platform.</p>
+          <p>I host the Performance Marketer podcast and co-wrote <i>Million Dollar Dads</i> and <i>Million Dollar Identity</i>. I have a finance degree from the University of Maryland ('99), where I played baseball on scholarship, and I was on the 1993 USA Junior Olympic team. I prefer hybrid or remote work and I'm happy to travel anywhere.</p>
+          <ul class="socials">
+            <li><a href="https://www.linkedin.com/in/ericbeer" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.youtube.com/@ericbeer" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="https://x.com/esb211" target="_blank" rel="noopener">X</a></li>
+            <li><a href="https://www.instagram.com/ericbeerofficial" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@ericbeer" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a href="https://www.facebook.com/eric.beer11" target="_blank" rel="noopener">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <aside class="reply" aria-labelledby="reply-h">
+    <h2 id="reply-h">Reply to this memo</h2>
+    <p>Write back or call. I'm glad to walk through the funded-account model with your team.</p>
+    <div class="reply-actions">
+      <a class="btn btn-solid" href="mailto:eric@performancemarketer.io?subject=Citizens%20VP%2C%20Acquisition%20Strategy%20%26%20Growth%2C%20Personal%20Loans">Email Eric</a>
+      <a class="btn btn-line" href="tel:+16467876282">Call 646-787-6282</a>
+    </div>
+  </aside>
+
+  <footer class="foot">
+    <span>Prepared for Citizens by Eric Beer</span>
+    <span>Page 1 of 1</span>
+  </footer>
+
+</article>
+</main>
+</body>
+</html>

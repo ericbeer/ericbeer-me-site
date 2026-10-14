@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Eric Beer × HealthCare.com · VP, Performance Marketing</title>
+<meta name="description" content="Eric Beer's Showcase for the VP, Performance Marketing role at HealthCare.com: the acquisition P&L read like a dashboard.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --ground:#EEF1F5;
+  --panel:#FFFFFF;
+  --line:#D5DBE3;
+  --line-soft:#E6EAF0;
+  --ink:#0E1726;
+  --ink-2:#3B4658;
+  --ink-3:#5A6577;
+  --blue:#1F6FEB;
+  --blue-deep:#1858BF;
+  --blue-wash:#E8F0FD;
+  --green:#18A058;
+  --green-ink:#0F7A42;
+  --green-wash:#E5F5EC;
+  --amber:#B26A00;
+  --amber-wash:#FDF2E1;
+  --display:"Rubik",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --gut:clamp(16px,3vw,32px);
+  --gap:clamp(10px,1.4vw,16px);
+  --r:6px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--display);font-size:16px;line-height:1.55;overflow-x:hidden;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+a{color:var(--blue)}
+a:hover{color:var(--blue-deep)}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:3px}
+.num{font-family:var(--mono);font-feature-settings:"tnum" 1}
+.wrap{max-width:1240px;margin:0 auto;padding:0 var(--gut)}
+
+/* ---------- Console top bar ---------- */
+.bar{background:var(--panel);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:56px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+.crumb{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink-3);min-width:0}
+.crumb b{color:var(--ink);font-weight:600}
+.crumb .sep{color:var(--line)}
+.live{white-space:nowrap;display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:12px;color:var(--green-ink);background:var(--green-wash);border:1px solid #BFE6CF;padding:3px 9px;border-radius:999px}
+.live i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(24,160,88,.5);animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(24,160,88,.45)}70%{box-shadow:0 0 0 7px rgba(24,160,88,0)}100%{box-shadow:0 0 0 0 rgba(24,160,88,0)}}
+.bar nav{display:flex;gap:4px;flex-wrap:wrap}
+.bar nav a{font-size:14px;text-decoration:none;color:var(--ink-2);padding:6px 10px;border-radius:5px}
+.bar nav a:hover{background:var(--ground);color:var(--ink)}
+
+/* ---------- Hero ---------- */
+.hero{padding:clamp(24px,4vw,44px) 0 clamp(18px,3vw,28px)}
+.hero-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:var(--gap) 28px;align-items:end;margin-bottom:clamp(18px,2.6vw,28px)}
+.lockup{margin:0 0 12px;font-size:clamp(15px,1.4vw,17px);font-weight:500;color:var(--ink-3);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.lockup .x{color:var(--blue);font-family:var(--mono)}
+.lockup strong{color:var(--ink);font-weight:700}
+h1{margin:0;font-weight:800;font-size:clamp(32px,4.6vw,60px);line-height:1.02;letter-spacing:-.025em;max-width:20ch}
+.thesis{margin:16px 0 0;font-size:clamp(17px,1.5vw,20px);color:var(--ink-2);max-width:60ch;line-height:1.5}
+.role-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;min-width:250px;font-size:14px}
+.role-card dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px}
+.role-card dt{color:var(--ink-3)}
+.role-card dd{margin:0;font-weight:500;text-align:right}
+
+.tiles{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--gap)}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px 14px 12px;display:flex;flex-direction:column;min-width:0}
+.tile.wide{grid-column:span 2}
+.tile .k{font-size:13px;color:var(--ink-3);line-height:1.35}
+.tile .v{font-family:var(--mono);font-weight:600;font-size:clamp(24px,2.5vw,34px);letter-spacing:-.02em;line-height:1.1;margin:10px 0 6px;color:var(--ink)}
+.tile .v small{font-size:.5em;font-weight:500;color:var(--ink-3);letter-spacing:0}
+.delta{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:12px;color:var(--green-ink);background:var(--green-wash);padding:2px 7px;border-radius:4px;align-self:flex-start}
+.delta::before{content:"";width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:6px solid var(--green)}
+.delta.flat{color:var(--blue-deep);background:var(--blue-wash)}
+.delta.flat::before{border:0;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.spark{display:flex;align-items:flex-end;gap:3px;height:30px;margin-top:auto;padding-top:12px}
+.spark i{flex:1;background:var(--blue);opacity:.22;border-radius:2px 2px 0 0;min-width:3px}
+.spark i:last-child{opacity:1}
+.spark.g i{background:var(--green)}
+.tile.feature{background:var(--ink);border-color:var(--ink);color:#fff}
+.tile.feature .k{color:#AEB8C8}
+.tile.feature .v{color:#fff}
+.tile.feature .v small{color:#AEB8C8}
+.tile.feature .spark i{background:#5B9BFF}
+.tile.feature .delta{background:rgba(24,160,88,.18);color:#6FE0A2}
+.tile.feature .delta::before{border-bottom-color:#6FE0A2}
+
+/* ---------- Panels ---------- */
+main{padding-bottom:40px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);margin-top:var(--gap)}
+.ph{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 18px;border-bottom:1px solid var(--line)}
+.ph h2{margin:0;font-size:17px;font-weight:600;letter-spacing:-.005em;display:flex;align-items:center;gap:10px}
+.ph h2::before{content:"";width:10px;height:10px;border-radius:2px;background:var(--blue)}
+.ph .meta{font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+.pb{padding:18px}
+.grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--gap)}
+.grid2 .panel{margin-top:0}
+.row{margin-top:var(--gap)}
+
+/* facts */
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.fact{padding:18px;border-right:1px solid var(--line-soft);min-width:0}
+.fact:last-child{border-right:0}
+.fact .fv{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--blue-deep);line-height:1.15}
+.fact h3{margin:8px 0 6px;font-size:16px;font-weight:600}
+.fact p{margin:0;font-size:15px;color:var(--ink-2)}
+.src{display:block;margin-top:10px;font-size:12px;color:var(--ink-3)}
+.src a{color:var(--ink-3)}
+
+/* brief */
+.brief{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.brief section{padding:18px;border-right:1px solid var(--line-soft);min-width:0}
+.brief section:last-child{border-right:0;background:var(--blue-wash)}
+.brief h3{margin:0 0 10px;font-size:15px;font-weight:600;color:var(--ink-3)}
+.brief ul{margin:0;padding-left:18px;font-size:15px;color:var(--ink-2)}
+.brief li{margin-bottom:6px}
+.brief p{margin:0 0 10px;font-size:15px;color:var(--ink-2)}
+.brief .problem{font-size:17px;color:var(--ink);font-weight:500;line-height:1.45}
+
+/* requirements table */
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:15px}
+thead th{text-align:left;font-weight:500;font-size:13px;color:var(--ink-3);background:#F7F9FB;padding:10px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+thead th .sort{display:inline-block;margin-left:6px;font-size:10px;color:#9AA5B6}
+thead th.active{color:var(--ink)}
+thead th.active .sort{color:var(--blue)}
+tbody td{padding:14px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover{background:#FAFBFD}
+td.req{font-weight:600;width:24%}
+td.req .id{display:block;font-family:var(--mono);font-size:12px;font-weight:400;color:var(--ink-3);margin-bottom:3px}
+td.think{color:var(--ink-2);width:34%}
+td.proof{color:var(--ink);width:30%}
+td.st{width:12%;white-space:nowrap}
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:500;padding:3px 9px;border-radius:999px;border:1px solid}
+.pill::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.pill.ok{color:var(--green-ink);background:var(--green-wash);border-color:#BFE6CF}
+.pill.tr{color:var(--amber);background:var(--amber-wash);border-color:#F3D9AE}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--ink-3)}
+
+/* gantt */
+.gantt{display:grid;grid-template-columns:minmax(150px,230px) minmax(0,1fr);font-size:14px}
+.g-scale{display:grid;grid-template-columns:repeat(13,minmax(0,1fr));border-bottom:1px solid var(--line);background:#F7F9FB}
+.g-scale span{font-family:var(--mono);font-size:11px;color:var(--ink-3);padding:8px 0;text-align:center;border-left:1px solid var(--line-soft)}
+.g-phase{display:grid;grid-template-columns:repeat(13,minmax(0,1fr));border-bottom:1px solid var(--line)}
+.g-phase b{font-weight:600;font-size:13px;padding:8px 10px;border-left:1px solid var(--line)}
+.g-phase b:nth-child(1){grid-column:1/5}
+.g-phase b:nth-child(2){grid-column:5/9}
+.g-phase b:nth-child(3){grid-column:9/14}
+.g-corner{border-bottom:1px solid var(--line);background:#F7F9FB}
+.g-corner.top{background:var(--panel)}
+.g-label{padding:12px 14px 12px 18px;border-bottom:1px solid var(--line-soft);font-weight:500;line-height:1.3}
+.g-label small{display:block;font-weight:400;color:var(--ink-3);font-size:13px;margin-top:3px}
+.g-track{position:relative;border-bottom:1px solid var(--line-soft);display:grid;grid-template-columns:repeat(13,minmax(0,1fr));align-items:center;background:
+  repeating-linear-gradient(90deg,transparent 0,transparent calc(100%/13 - 1px),var(--line-soft) calc(100%/13 - 1px),var(--line-soft) calc(100%/13))}
+.g-bar{height:26px;border-radius:4px;background:var(--blue);color:#fff;font-size:12px;font-family:var(--mono);display:flex;align-items:center;padding:0 9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.g-bar.soft{background:var(--blue-wash);color:var(--blue-deep);border:1px solid #BCD3F7}
+.g-bar.go{background:var(--green)}
+.g-ms{grid-row:1;justify-self:end;width:12px;height:12px;background:var(--ink);transform:rotate(45deg) translateX(-2px)}
+.g-notes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line)}
+.g-notes div{padding:16px 18px;border-right:1px solid var(--line-soft);font-size:15px;color:var(--ink-2)}
+.g-notes div:last-child{border-right:0}
+.g-notes h3{margin:0 0 6px;font-size:15px;color:var(--ink)}
+.g-notes h3 .num{color:var(--blue-deep);font-weight:500;margin-right:6px}
+
+/* meet */
+.meet{display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px;align-items:start}
+.photo{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);aspect-ratio:1/1;background:var(--ground)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.meet p{margin:0 0 12px;color:var(--ink-2);max-width:66ch}
+.meet p:first-child{font-size:18px;color:var(--ink)}
+.socials{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;padding:0;list-style:none}
+.socials a{display:inline-flex;align-items:center;min-height:36px;padding:0 12px;border:1px solid var(--line);border-radius:5px;font-size:14px;color:var(--ink);text-decoration:none;background:var(--panel)}
+.socials a:hover{border-color:var(--blue);color:var(--blue)}
+
+/* cta */
+.cta{background:var(--ink);border-color:var(--ink);color:#fff}
+.cta .ph{border-bottom-color:#26324A}
+.cta .ph h2::before{background:var(--green)}
+.cta .ph .meta{color:#AEB8C8}
+.cta-body{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center;padding:24px 18px}
+.cta h3{margin:0;font-size:clamp(22px,2.6vw,32px);font-weight:700;letter-spacing:-.015em;max-width:28ch;line-height:1.15}
+.cta p{margin:8px 0 0;color:#C6CFDC;max-width:56ch}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border-radius:5px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid}
+.btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn.primary:hover{background:var(--blue-deep);color:#fff}
+.btn.ghost{background:transparent;border-color:#3A4763;color:#fff}
+.btn.ghost:hover{border-color:#fff;color:#fff}
+.btn .num{margin-left:2px}
+
+footer{padding:18px 0 36px;font-size:13px;color:var(--ink-3)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1060px){
+  .tiles{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .tile.wide{grid-column:span 3}
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fact:nth-child(2){border-right:0}
+  .fact:nth-child(-n+2){border-bottom:1px solid var(--line-soft)}
+}
+@media (max-width:860px){
+  .hero-head{grid-template-columns:1fr}
+  .role-card{min-width:0}
+  .brief{grid-template-columns:1fr}
+  .brief section{border-right:0;border-bottom:1px solid var(--line-soft)}
+  .grid2{grid-template-columns:1fr}
+  .g-notes{grid-template-columns:1fr}
+  .g-notes div{border-right:0;border-bottom:1px solid var(--line-soft)}
+  .cta-body{grid-template-columns:1fr}
+  /* table becomes stacked rows */
+  table,thead,tbody,tr,td{display:block;width:100%}
+  thead{display:none}
+  tbody tr{padding:14px 16px;border-bottom:1px solid var(--line-soft)}
+  tbody td{padding:0;border:0;width:auto !important}
+  td.req{font-size:16px}
+  td.st{margin:8px 0 10px}
+  td.think::before,td.proof::before{display:block;font-size:12px;color:var(--ink-3);margin-bottom:2px}
+  td.think::before{content:"How I think"}
+  td.proof::before{content:"Proof"}
+  td.think{margin-bottom:10px}
+}
+@media (max-width:720px){
+  .bar nav{display:none}
+  .crumb .hide-sm{display:none}
+  .crumb b{white-space:nowrap}
+  .crumb{flex-wrap:wrap;row-gap:4px}
+  .tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tile.wide{grid-column:span 2}
+  .facts{grid-template-columns:1fr}
+  .fact{border-right:0;border-bottom:1px solid var(--line-soft)}
+  .fact:last-child{border-bottom:0}
+  .meet{grid-template-columns:1fr}
+  .photo{width:140px}
+  /* gantt: stack label above bar */
+  .gantt{grid-template-columns:1fr}
+  .g-corner{display:none}
+  .g-label{border-bottom:0;padding:12px 16px 6px}
+  .g-track{margin:0 16px 0;border-bottom:1px solid var(--line-soft);padding-bottom:12px;background:none}
+  .g-scale span:nth-child(even){color:transparent}
+}
+@media (prefers-reduced-motion:reduce){.live i{animation:none}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <div class="crumb">
+      <b>Eric Beer</b><span class="sep hide-sm">/</span><span class="hide-sm">Showcases</span><span class="sep">/</span><span>HealthCare.com</span>
+      <span class="live"><i></i>Open to this role</span>
+    </div>
+    <nav aria-label="Sections">
+      <a href="#market">Market</a>
+      <a href="#brief">Brief</a>
+      <a href="#fit">Fit</a>
+      <a href="#plan">90 days</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div class="hero-head">
+      <div>
+        <p class="lockup"><strong>Eric Beer</strong><span class="x">×</span><strong>HealthCare.com</strong><span>VP, Performance Marketing</span></p>
+        <h1 id="hero-title">Every enrollment is a margin decision. I run the board that makes it.</h1>
+        <p class="thesis">HealthCare.com wins when the right consumer meets the right partner at a cost that still leaves contribution margin. That match, across first-party and third-party supply, is the job. It is also the game I have played and been paid on for 20+ years.</p>
+      </div>
+      <aside class="role-card" aria-label="Role summary">
+        <dl>
+          <dt>Role</dt><dd>VP, Performance Marketing</dd>
+          <dt>Team</dt><dd>Marketplace · Marketing</dd>
+          <dt>Location</dt><dd>Remote, US</dd>
+          <dt>Owns</dt><dd>1P + 3P acquisition P&amp;L</dd>
+        </dl>
+      </aside>
+    </div>
+
+    <div class="tiles" role="list" aria-label="Eric's numbers">
+      <div class="tile feature wide" role="listitem">
+        <span class="k">Affiliate commissions generated across my career</span>
+        <span class="v">$100M<small>+</small></span>
+        <span class="delta">paid on results, always</span>
+        <div class="spark" aria-hidden="true"><i style="height:18%"></i><i style="height:24%"></i><i style="height:22%"></i><i style="height:35%"></i><i style="height:41%"></i><i style="height:38%"></i><i style="height:52%"></i><i style="height:60%"></i><i style="height:57%"></i><i style="height:71%"></i><i style="height:80%"></i><i style="height:100%"></i></div>
+      </div>
+      <div class="tile wide" role="listitem">
+        <span class="k">Language-learning product scaled via Facebook arbitrage (market cap)</span>
+        <span class="v">&lt;$10M<small> → </small>$100M<small>+</small></span>
+        <span class="delta">10x+ on paid social math</span>
+        <div class="spark g" aria-hidden="true"><i style="height:8%"></i><i style="height:10%"></i><i style="height:14%"></i><i style="height:19%"></i><i style="height:26%"></i><i style="height:33%"></i><i style="height:44%"></i><i style="height:55%"></i><i style="height:66%"></i><i style="height:78%"></i><i style="height:90%"></i><i style="height:100%"></i></div>
+      </div>
+      <div class="tile" role="listitem">
+        <span class="k">Years running an 8-figure performance business (UMP)</span>
+        <span class="v">2008<small>–2022</small></span>
+        <span class="delta flat">Founder &amp; CEO</span>
+        <div class="spark" aria-hidden="true"><i style="height:30%"></i><i style="height:45%"></i><i style="height:40%"></i><i style="height:62%"></i><i style="height:70%"></i><i style="height:100%"></i></div>
+      </div>
+      <div class="tile" role="listitem">
+        <span class="k">Affiliates tracked on JVC Affiliate Network (Everflow)</span>
+        <span class="v">280<small>+</small></span>
+        <span class="delta">3P supply</span>
+        <div class="spark g" aria-hidden="true"><i style="height:20%"></i><i style="height:34%"></i><i style="height:48%"></i><i style="height:60%"></i><i style="height:82%"></i><i style="height:100%"></i></div>
+      </div>
+      <div class="tile wide" role="listitem">
+        <span class="k">LeadQual.ai: AI voice agents qualifying and routing live Medicare and Final Expense leads</span>
+        <span class="v">2026<small> founder</small></span>
+        <span class="delta">TCPA / consent-compliant</span>
+        <div class="spark" aria-hidden="true"><i style="height:25%"></i><i style="height:30%"></i><i style="height:42%"></i><i style="height:50%"></i><i style="height:58%"></i><i style="height:66%"></i><i style="height:74%"></i><i style="height:86%"></i><i style="height:100%"></i></div>
+      </div>
+      <div class="tile" role="listitem">
+        <span class="k">Apps and AI tools shipped</span>
+        <span class="v">50<small>+</small></span>
+        <span class="delta">AI operating model</span>
+        <div class="spark g" aria-hidden="true"><i style="height:15%"></i><i style="height:28%"></i><i style="height:40%"></i><i style="height:58%"></i><i style="height:76%"></i><i style="height:100%"></i></div>
+      </div>
+      <div class="tile" role="listitem">
+        <span class="k">Years in performance marketing</span>
+        <span class="v">20<small>+</small></span>
+        <span class="delta flat">CPC · CPL · CPA · LTV</span>
+        <div class="spark" aria-hidden="true"><i style="height:40%"></i><i style="height:52%"></i><i style="height:60%"></i><i style="height:74%"></i><i style="height:86%"></i><i style="height:100%"></i></div>
+      </div>
+      <div class="tile wide" role="listitem">
+        <span class="k">Customer acquisition for consumer brands that sell trust</span>
+        <span class="v" style="font-size:clamp(17px,1.6vw,21px);line-height:1.35;font-family:var(--display);font-weight:600;letter-spacing:-.01em">LifeLock · Norton · Credit Sesame · RealAge (Hearst / Dr. Oz) · Harlequin · Disney Book Club</span>
+        <span class="delta">agency of record + customer acquisition</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <section class="panel" id="market" aria-labelledby="market-h">
+    <div class="ph"><h2 id="market-h">What I see at HealthCare.com</h2><span class="meta">public sources</span></div>
+    <div class="facts">
+      <article class="fact">
+        <div class="fv">3 businesses</div>
+        <h3>Marketplace, Pivot Health, TrustRx</h3>
+        <p>A consumer marketplace for health and Medicare coverage, its own specialty plans (short-term medical, fixed indemnity, supplemental) through Pivot Health, and a pharmacy arm in TrustRx. Acquisition feeds all three.</p>
+        <span class="src">Lever posting; <a href="https://coverager.com/healthcare-com-acquires-pivot-health/">Coverager, 2018</a></span>
+      </article>
+      <article class="fact">
+        <div class="fv">~$180M</div>
+        <h3>Raised in Dec 2021, led by Oaktree</h3>
+        <p>An oversubscribed round, with direct-to-consumer enrollments up 97% that year. Investors at that scale expect acquisition to compound on margin, not just volume.</p>
+        <span class="src"><a href="https://pulse2.com/healthcare-com-secures-180-million-in-oversubscribed-funding-round">Pulse 2.0, Dec 2021</a></span>
+      </article>
+      <article class="fact">
+        <div class="fv">Two-sided</div>
+        <h3>Consumer supply meets distributor demand</h3>
+        <p>The platform matches shoppers to plans and to distribution partners, with AI-driven enrollment (Autopilot, by public reports). So this VP must balance the buy side and the sell side, alongside Marketplace Ops and the Distributor team.</p>
+        <span class="src">Lever posting; public company profiles</span>
+      </article>
+      <article class="fact">
+        <div class="fv">Oct–Jan</div>
+        <h3>The calendar sets the P&amp;L</h3>
+        <p>Medicare AEP (Oct 15 – Dec 7) and ACA open enrollment (from Nov 1) bunch demand into a few months. Forecasting and capital allocation have to be ready before the spike, then pull back cleanly after it.</p>
+        <span class="src">CMS enrollment calendars</span>
+      </article>
+    </div>
+  </section>
+
+  <section class="panel" id="brief" aria-labelledby="brief-h">
+    <div class="ph"><h2 id="brief-h">The brief</h2><span class="meta">VP, Performance Marketing · Marketplace</span></div>
+    <div class="brief">
+      <section>
+        <h3>What they're asking for</h3>
+        <ul>
+          <li>Own consumer acquisition as an operating leader: revenue, contribution margin, ROAS, volume</li>
+          <li>Run first-party and third-party channels, forecasting and capital allocation</li>
+          <li>Develop channel leaders; launch and incubate new channels</li>
+          <li>Fix measurement and conversion tracking; build an AI-enabled operating model</li>
+          <li>Plan supply, budget and goals with Marketplace Ops and the Distributor team</li>
+        </ul>
+      </section>
+      <section>
+        <h3>What they're offering</h3>
+        <p>Full-time, remote in the US. Compensation isn't listed in the posting.</p>
+        <ul>
+          <li>Medical (PPO and HSA, with company HSA funding), dental, vision</li>
+          <li>401(k) with match from day one</li>
+          <li>PTO, holidays, paid parental leave</li>
+          <li>Company-paid life and AD&amp;D, EAP, employee discounts</li>
+        </ul>
+      </section>
+      <section>
+        <h3>The problem to solve</h3>
+        <p class="problem">Turn paid and partner traffic into enrollments that make money for HealthCare.com and its partners. Prove it with measurement everyone trusts, and run it with a team and an AI layer that can scale into the next open enrollment.</p>
+      </section>
+    </div>
+  </section>
+
+  <section class="panel" id="fit" aria-labelledby="fit-h">
+    <div class="ph">
+      <h2 id="fit-h">Requirement → proof</h2>
+      <div class="legend"><span class="pill ok">Proven</span><span class="pill tr">Transferable</span></div>
+    </div>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col" class="active">Requirement <span class="sort" aria-hidden="true">▲</span></th>
+            <th scope="col">Status <span class="sort" aria-hidden="true">▼</span></th>
+            <th scope="col">How I think <span class="sort" aria-hidden="true">▼</span></th>
+            <th scope="col">Proof <span class="sort" aria-hidden="true">▼</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="req"><span class="id">R1</span>Senior performance, growth or acquisition leadership</td>
+            <td class="st"><span class="pill ok">Proven</span></td>
+            <td class="think">Leadership here means owning the outcome, not the dashboard. Set the target, give channel owners room, and judge on margin.</td>
+            <td class="proof">Founder &amp; CEO of Universal Marketing Partners (2008–2022), an 8-figure performance and affiliate business. $100M+ in affiliate commissions over my career.</td>
+          </tr>
+          <tr>
+            <td class="req"><span class="id">R2</span>Ownership of large multi-channel budgets and P&amp;L outcomes</td>
+            <td class="st"><span class="pill ok">Proven</span></td>
+            <td class="think">When you are paid on results, the budget is your own money. Every dollar moves to the channel with the best marginal return this week.</td>
+            <td class="proof">Agency of record for RealAge.com (Hearst / Dr. Oz) and Harlequin Book Club. Drove memberships for Disney Book Club. Ran my own P&amp;L for 14 years.</td>
+          </tr>
+          <tr>
+            <td class="req"><span class="id">R3</span>Command of CAC/CPA, LTV, ROAS, contribution margin</td>
+            <td class="st"><span class="pill ok">Proven</span></td>
+            <td class="think">I'm a math guy. CPC to CPL to CPA to LTV to payback is one chain. ROAS without contribution margin hides the losses.</td>
+            <td class="proof">Scaled a language-learning product from under $10M to over $100M market cap through Facebook arbitrage, which only works if the unit math holds.</td>
+          </tr>
+          <tr>
+            <td class="req"><span class="id">R4</span>1P and 3P acquisition channel depth</td>
+            <td class="st"><span class="pill ok">Proven</span></td>
+            <td class="think">3P is a portfolio of partners, priced on quality, not just volume. 1P is bought by specialist buyers I set targets for. Paid search I've done some of, but it isn't my core.</td>
+            <td class="proof">JVC Affiliate Network on Everflow, 280+ affiliates tracked. LeadQual buys and sells leads. Channels run: paid (via buyers), affiliate/JV, publishers, creators/UGC, social, email/SMS, lead gen.</td>
+          </tr>
+          <tr>
+            <td class="req"><span class="id">R5</span>Manager of managers who develops channel leaders</td>
+            <td class="st"><span class="pill tr">Transferable</span></td>
+            <td class="think">I don't sit in the ad accounts. I lead the people who do: clear scorecards, weekly reviews of margin by channel, and coaching toward bigger P&amp;L slices.</td>
+            <td class="proof">Built and led teams of 5–10, growing to 15–20, at UMP, including media buyers. Today I run builders and operators across LeadQual, BeChosen and AffiliateSchool.ai.</td>
+          </tr>
+          <tr>
+            <td class="req"><span class="id">R6</span>Forecasting, attribution, MarTech/AdTech</td>
+            <td class="st"><span class="pill ok">Proven</span></td>
+            <td class="think">Attribution must be good enough to settle arguments between partners and finance. Forecast from cost curves and the enrollment calendar, not last month's spend.</td>
+            <td class="proof">Partner tracking on Everflow across 280+ affiliates. LeadQual qualifies and routes live leads with consent compliance built in. A 5-level partner commission plan at AffiliateSchool.ai.</td>
+          </tr>
+          <tr>
+            <td class="req"><span class="id">R7</span>AI mindset, regulated lead gen, new channels <span class="id" style="display:inline;margin:0">(incl. nice-to-haves)</span></td>
+            <td class="st"><span class="pill ok">Proven</span></td>
+            <td class="think">AI should take on the repetitive work (qualifying, routing, bid and budget pacing, reporting) so people spend their time on partner and channel bets. Compliance is designed in from the start.</td>
+            <td class="proof">LeadQual.ai: AI voice agents qualifying and routing live Medicare and Final Expense leads, TCPA/consent-compliant. 50+ apps and AI tools shipped. Built a creator-led acquisition program at BeChosen.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel" id="plan" aria-labelledby="plan-h">
+    <div class="ph"><h2 id="plan-h">30 / 60 / 90-day plan</h2><span class="meta">13 weeks · starts inside open enrollment</span></div>
+    <div class="gantt">
+      <div class="g-corner top" aria-hidden="true"></div>
+      <div class="g-phase"><b>Days 1–30 · Read the board</b><b>Days 31–60 · Re-weight</b><b>Days 61–90 · Compound</b></div>
+      <div class="g-corner" aria-hidden="true"></div>
+      <div class="g-scale" aria-hidden="true"><span>W1</span><span>W2</span><span>W3</span><span>W4</span><span>W5</span><span>W6</span><span>W7</span><span>W8</span><span>W9</span><span>W10</span><span>W11</span><span>W12</span><span>W13</span></div>
+
+      <div class="g-label">Channel P&amp;L audit<small>Margin by source, not ROAS alone</small></div>
+      <div class="g-track"><span class="g-bar" style="grid-column:1/5">weeks 1–4</span></div>
+
+      <div class="g-label">Team and scorecards<small>One scorecard per channel leader</small></div>
+      <div class="g-track"><span class="g-bar soft" style="grid-column:1/7">weeks 1–6</span></div>
+
+      <div class="g-label">Supply–demand match<small>With Marketplace Ops and Distributor team</small></div>
+      <div class="g-track"><span class="g-bar" style="grid-column:2/9">weeks 2–8</span></div>
+
+      <div class="g-label">Measurement rebuild<small>Conversion tracking partners and finance trust</small></div>
+      <div class="g-track"><span class="g-bar soft" style="grid-column:3/10">weeks 3–9</span></div>
+
+      <div class="g-label">AI operating model<small>Routing, pacing and reporting pilots</small></div>
+      <div class="g-track"><span class="g-bar" style="grid-column:5/13">weeks 5–12</span></div>
+
+      <div class="g-label">New channel incubation<small>Creators, publishers, partner lead buys</small></div>
+      <div class="g-track"><span class="g-bar go" style="grid-column:7/14">weeks 7–13</span></div>
+
+      <div class="g-label">Next-year forecast and capital plan<small>Ready before the next AEP / OEP</small></div>
+      <div class="g-track"><span class="g-bar go" style="grid-column:9/14">weeks 9–13</span></div>
+    </div>
+    <div class="g-notes">
+      <div>
+        <h3><span class="num">30</span>Read the board</h3>
+        <p style="margin:0">Map every 1P and 3P source to contribution margin per enrollment. Sit with each channel leader, Marketplace Ops and the Distributor team. Protect the open enrollment run rate; no big moves during peak.</p>
+      </div>
+      <div>
+        <h3><span class="num">60</span>Re-weight</h3>
+        <p style="margin:0">Move budget from low-margin sources to the best ones. Price 3P partners on quality. Put shared conversion tracking live so partners, ops and finance work from one set of numbers.</p>
+      </div>
+      <div>
+        <h3><span class="num">90</span>Compound</h3>
+        <p style="margin:0">AI routing and pacing in production on one channel. Two new channels in test, each with a kill or scale threshold. A forecast and capital allocation plan for the year, signed off with finance.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel row" aria-labelledby="meet-h">
+    <div class="ph"><h2 id="meet-h">Meet Eric</h2><span class="meta">Pearl River, NY · remote, travels anywhere</span></div>
+    <div class="pb meet">
+      <div class="photo"><img src="https://yt3.googleusercontent.com/Mp7gOPpSMBFdGns7IfiIiY8Phw0AB94Ccs_SbKsMugqn9R9WNxBewG25xtxZJ8ks4znh5FBcOQ=s900" alt="Portrait of Eric Beer" width="400" height="400" loading="lazy"></div>
+      <div>
+        <p>I'm a performance marketer and builder who has been paid on results for more than 20 years. I lead the people who run the channels, and I think in CPL, CPA, LTV and payback.</p>
+        <p>I founded and ran Universal Marketing Partners (2008–2022), an 8-figure performance and affiliate business. Today I build LeadQual.ai (AI voice agents for insurance lead qualification and routing), BeChosen / Scout (an AI job agent), AffiliateSchool.ai and JVC Affiliate Network. I host the Performance Marketer podcast and co-wrote Million Dollar Dads and Million Dollar Identity.</p>
+        <p>University of Maryland '99, finance, on a baseball scholarship. Before that I was one of 64 players on the 1993 USA Junior Olympic baseball team, with A-Rod and Scott Rolen.</p>
+        <ul class="socials">
+          <li><a href="https://www.linkedin.com/in/ericbeer">LinkedIn</a></li>
+          <li><a href="https://www.youtube.com/@ericbeer">YouTube</a></li>
+          <li><a href="https://x.com/esb211">X</a></li>
+          <li><a href="https://www.instagram.com/ericbeerofficial">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@ericbeer">TikTok</a></li>
+          <li><a href="https://www.facebook.com/eric.beer11">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel cta" id="contact" aria-labelledby="cta-h">
+    <div class="ph"><h2 id="cta-h">Next step</h2><span class="meta">eric@performancemarketer.io</span></div>
+    <div class="cta-body">
+      <div>
+        <h3>Let's put your acquisition P&amp;L on the table together.</h3>
+        <p>Thirty minutes is enough to walk through where margin is leaking and what I would do about it in the first 90 days.</p>
+      </div>
+      <div class="btns">
+        <a class="btn primary" href="mailto:eric@performancemarketer.io?subject=HealthCare.com%20VP%2C%20Performance%20Marketing">Email Eric</a>
+        <a class="btn ghost" href="tel:+16467876282">Call <span class="num">646-787-6282</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Eric Beer · eric@performancemarketer.io · 646-787-6282</span>
+    <span>Built for HealthCare.com's VP, Performance Marketing search</span>
+  </div>
+</footer>
+
+</body>
+</html>

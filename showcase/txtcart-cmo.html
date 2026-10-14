@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Eric Beer × TxtCart · Chief Marketing Officer</title>
+<meta name="description" content="A Showcase from Eric Beer for TxtCart's Chief Marketing Officer role: how to take an AI SMS platform for Shopify from about $3M ARR toward $25M.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --y:#FFD400;
+  --k:#000000;
+  --m:#FF2D87;
+  --w:#FFFFFF;
+  --paper:#FFF6C2;
+  --shadow:8px 8px 0 #000;
+  --shadow-sm:5px 5px 0 #000;
+  --b:4px solid #000;
+  --display:"Anton","Impact","Haettenschweiler","Arial Narrow Bold",sans-serif;
+  --body:"Work Sans","Helvetica Neue",Arial,sans-serif;
+  --gut:clamp(16px,4vw,48px);
+  --max:1240px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--y);color:var(--k);font-family:var(--body);font-size:18px;line-height:1.5;overflow-x:hidden;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:4px solid var(--m);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-transform:uppercase;margin:0;line-height:.9;letter-spacing:.005em}
+p{margin:0}
+
+/* ---------- top strip ---------- */
+.strip{background:var(--k);color:var(--y);border-bottom:var(--b)}
+.strip .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-top:12px;padding-bottom:12px;font-weight:700;font-size:15px}
+.strip a{color:var(--y);text-decoration:none}
+.strip a:hover{color:var(--m)}
+.strip nav{display:flex;gap:18px;flex-wrap:wrap}
+
+/* ---------- hero ---------- */
+.hero{padding:clamp(28px,5vw,64px) 0 clamp(48px,7vw,96px);border-bottom:var(--b)}
+.lockup{font-size:clamp(52px,15vw,212px);line-height:.84;letter-spacing:-.005em}
+.lockup .row{display:block;white-space:nowrap}
+.lockup .x{display:inline-block;background:var(--m);color:var(--k);border:var(--b);box-shadow:var(--shadow);padding:0 .08em;margin:.06em 0;line-height:.9;transform:rotate(-3deg)}
+.role{display:inline-block;margin-top:clamp(18px,3vw,28px);background:var(--k);color:var(--y);font-family:var(--display);text-transform:uppercase;font-size:clamp(26px,4.4vw,52px);line-height:1;padding:.18em .35em;box-shadow:8px 8px 0 var(--m)}
+.hero-meta{margin-top:24px;font-weight:600;font-size:16px;max-width:60ch}
+
+/* SMS thread thesis */
+.thread{margin-top:clamp(36px,6vw,64px);display:grid;gap:16px;max-width:900px}
+.bubble{position:relative;border:var(--b);box-shadow:var(--shadow);padding:18px 22px;font-weight:600;font-size:clamp(18px,2.2vw,24px);line-height:1.3;max-width:min(680px,92%)}
+.bubble small{display:block;font-size:13px;font-weight:700;margin-bottom:6px;opacity:.85}
+.bubble.in{background:var(--w);justify-self:start}
+.bubble.in::after{content:"";position:absolute;left:-4px;bottom:-22px;border-left:4px solid #000;width:0;height:0;border-top:18px solid #000;border-right:22px solid transparent}
+.bubble.out{background:var(--k);color:var(--y);justify-self:end;box-shadow:8px 8px 0 var(--m)}
+.bubble.out::after{content:"";position:absolute;right:-4px;bottom:-22px;width:0;height:0;border-top:18px solid #000;border-left:22px solid transparent}
+.bubble.out strong{color:var(--m)}
+.bubble.big{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(30px,4.8vw,58px);line-height:.98;max-width:100%}
+
+.cta-row{margin-top:clamp(40px,6vw,64px);display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;min-height:56px;padding:0 24px;border:var(--b);box-shadow:var(--shadow-sm);font-weight:800;font-size:17px;text-decoration:none;transition:transform .08s,box-shadow .08s}
+.btn:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 #000}
+.btn-k{background:var(--k);color:var(--y)}
+.btn-m{background:var(--m);color:var(--k)}
+.btn-w{background:var(--w);color:var(--k)}
+
+/* ---------- poster blocks ---------- */
+.block{padding:clamp(56px,8vw,112px) 0;border-bottom:var(--b)}
+.block.dark{background:var(--k);color:var(--y)}
+.block.pink{background:var(--m);color:var(--k)}
+.h2{font-size:clamp(52px,10vw,136px);margin-bottom:clamp(28px,4vw,52px);max-width:14ch}
+.dark .h2{color:var(--y)}
+.lede{font-size:clamp(18px,1.8vw,21px);font-weight:500;max-width:62ch;margin-bottom:clamp(32px,4vw,48px)}
+
+/* what I see: giant numbers */
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border:var(--b);border-color:var(--y)}
+.fact{padding:clamp(20px,3vw,36px);border:2px solid var(--y)}
+.fact .num{font-family:var(--display);white-space:nowrap;font-size:clamp(64px,8.4vw,124px);line-height:.85;color:var(--y);display:block}
+.fact:nth-child(2) .num,.fact:nth-child(3) .num{color:var(--m)}
+.fact h3{font-family:var(--body);text-transform:none;font-weight:800;font-size:clamp(19px,1.8vw,22px);line-height:1.2;margin:16px 0 8px;color:var(--w)}
+.fact p{color:#F2EBC4;font-size:17px;max-width:46ch}
+.src{margin-top:20px;font-size:14px;color:#E6DDA8;max-width:80ch}
+.src a{color:#E6DDA8}
+
+/* the brief */
+.brief-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.slab{background:var(--w);border:var(--b);box-shadow:var(--shadow);padding:clamp(20px,2.6vw,30px)}
+.slab:nth-child(2){background:var(--k);color:var(--y);box-shadow:8px 8px 0 var(--w)}
+.slab:nth-child(3){background:var(--y)}
+.slab h3{font-size:clamp(34px,4vw,52px);margin-bottom:16px}
+.slab ul{margin:0;padding-left:20px}
+.slab li{margin:0 0 8px;font-weight:500}
+.slab p{font-weight:600;font-size:19px;line-height:1.4}
+.slab p + p{margin-top:12px;font-weight:500;font-size:17px}
+
+/* requirement tiles */
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.tile{background:var(--w);border:6px solid #000;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.tile .ask{background:var(--k);color:var(--y);padding:18px 20px;font-family:var(--display);text-transform:uppercase;font-size:clamp(26px,3vw,36px);line-height:.98}
+.tile .body{padding:20px;display:grid;gap:14px;flex:1}
+.tile .lbl{display:inline-block;background:var(--m);color:var(--k);font-weight:800;font-size:14px;padding:2px 8px;border:2px solid #000;margin-bottom:6px}
+.tile .lbl.proof{background:var(--y)}
+.tile p{font-size:17px}
+.tile.wide{grid-column:1/-1}
+.tile.honest .ask{background:var(--m);color:var(--k)}
+
+/* 30/60/90 */
+.plan{display:grid;gap:28px}
+.phase{display:grid;grid-template-columns:clamp(150px,22vw,300px) minmax(0,1fr);border:var(--b);background:var(--y);box-shadow:var(--shadow)}
+.phase .day{background:var(--k);color:var(--y);font-family:var(--display);font-size:clamp(96px,16vw,220px);line-height:.8;padding:18px 16px 10px;display:flex;flex-direction:column;justify-content:flex-end}
+.phase .day span{font-family:var(--body);font-weight:800;font-size:16px;line-height:1.2;margin-top:10px;color:var(--w)}
+.phase:nth-child(2) .day{background:var(--m);color:var(--k)}
+.phase:nth-child(2) .day span{color:var(--k)}
+.phase .what{padding:clamp(20px,3vw,32px)}
+.phase h3{font-size:clamp(30px,3.8vw,48px);margin-bottom:14px}
+.phase ul{margin:0;padding-left:20px}
+.phase li{margin-bottom:8px;font-weight:500}
+
+/* meet Eric */
+.meet{display:grid;grid-template-columns:minmax(220px,380px) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:start}
+.photo{margin:0;border:6px solid var(--y);box-shadow:12px 12px 0 var(--m);align-self:start;background:var(--y);transform:rotate(-2deg)}
+.photo img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;filter:grayscale(1) contrast(1.1)}
+.photo figcaption{background:var(--k);color:var(--y);font-family:var(--display);text-transform:uppercase;font-size:28px;padding:8px 14px}
+.bio p{font-size:19px;font-weight:500;max-width:60ch;margin-bottom:16px}
+.bio p strong{font-weight:800}
+.ledger{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:28px 0}
+.ledger div{background:var(--k);color:var(--y);border:var(--b);padding:14px}
+.ledger b{display:block;white-space:nowrap;font-family:var(--display);font-weight:400;font-size:clamp(36px,3.6vw,56px);line-height:.9;color:var(--m)}
+.ledger span{display:block;margin-top:6px;font-size:15px;font-weight:600;color:var(--w);line-height:1.3}
+.socials{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;padding:0;list-style:none}
+.socials a{display:inline-block;background:var(--w);color:var(--k);border:3px solid #000;box-shadow:4px 4px 0 var(--m);padding:8px 14px;font-weight:700;font-size:16px;text-decoration:none}
+.socials a:hover{background:var(--m)}
+
+/* contact */
+.close .h2{max-width:none;font-size:clamp(60px,12.5vw,176px)}
+.close .bubble{margin-bottom:36px}
+.contact-lines{display:grid;gap:12px;font-weight:700;font-size:clamp(18px,2.2vw,24px)}
+.contact-lines a{text-decoration-thickness:3px;text-underline-offset:4px}
+footer{background:var(--k);color:var(--y);padding:24px 0;font-size:14px;font-weight:600}
+
+@media (max-width:900px){
+  .brief-grid{grid-template-columns:minmax(0,1fr)}
+  .tiles{grid-template-columns:minmax(0,1fr)}
+  .meet{grid-template-columns:minmax(0,1fr)}
+  .photo{max-width:300px}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .facts{grid-template-columns:minmax(0,1fr)}
+  .fact .num{font-size:clamp(48px,15vw,72px)}
+  .phase{grid-template-columns:1fr}
+  .phase .day{flex-direction:row;justify-content:flex-start;align-items:flex-end;gap:14px;padding:14px 16px 10px;font-size:96px}
+  .phase .day span{margin:0 0 8px}
+  .ledger{grid-template-columns:1fr}
+  .bubble{max-width:100%}
+  .bubble.out{box-shadow:6px 6px 0 var(--m)}
+  .btn{width:100%;justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<header class="strip">
+  <div class="wrap">
+    <span>A Showcase for TxtCart, from Eric Beer</span>
+    <nav aria-label="Sections">
+      <a href="#see">What I see</a>
+      <a href="#proof">Proof</a>
+      <a href="#plan">90 days</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <h1 class="lockup">
+      <span class="row">Eric Beer</span>
+      <span class="row"><span class="x">×</span> TxtCart</span>
+    </h1>
+    <p class="role">Chief Marketing Officer</p>
+    <p class="hero-meta">Remote, US. Twenty years of marketing that only got paid when it produced revenue, pointed at a bootstrapped AI SMS platform for Shopify.</p>
+
+    <div class="thread" aria-label="Thesis, written as a text conversation">
+      <p class="bubble in"><small>TxtCart</small>We recover carts and turn browsers into buyers for thousands of Shopify brands. Now we need a CMO who owns pipeline, not just brand.</p>
+      <p class="bubble out big">The product already proves its ROI. The next $20M of ARR comes from distribution you own.</p>
+      <p class="bubble out">Partners, creators and paid, run on <strong>CAC, LTV and payback</strong>, with every channel attributed the way your merchants' SMS revenue already is.</p>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn btn-k" href="mailto:eric@performancemarketer.io?subject=TxtCart%20Chief%20Marketing%20Officer">Email Eric</a>
+      <a class="btn btn-w" href="tel:+16467876282">Call 646-787-6282</a>
+    </div>
+  </div>
+</section>
+
+<section class="block dark" id="see">
+  <div class="wrap">
+    <h2 class="h2">What I see at TxtCart</h2>
+    <div class="facts">
+      <article class="fact">
+        <span class="num">2019</span>
+        <h3>Started as abandoned cart recovery, still bootstrapped</h3>
+        <p>No venture capital, while the SMS players it competes with have raised hundreds of millions. Every growth dollar has to pay itself back.</p>
+      </article>
+      <article class="fact">
+        <span class="num">$100M+</span>
+        <h3>SMS-attributed revenue for merchants</h3>
+        <p>Company-reported across thousands of Shopify brands, with a 4.9-star Shopify App Store rating. The proof that sells the product already exists.</p>
+      </article>
+      <article class="fact">
+        <span class="num">$3M→$25M</span>
+        <h3>About $3M ARR, aiming for $25M</h3>
+        <p>By public reports in late 2025, from a team of around five then. That gap is exactly the "under $5M to $10–25M+" bonus line in this posting.</p>
+      </article>
+      <article class="fact">
+        <span class="num">$50K–$10M</span>
+        <h3>A merchant market with partners all around it</h3>
+        <p>Shopify stores doing $50K to $10M+ a year, reached through agencies, app partners and creators. The company has said it plans agency partnerships and managed services for larger brands.</p>
+      </article>
+    </div>
+    <p class="src">Sources: the TxtCart <a href="https://txtcart.ai/careers/chief-marketing-officer/">CMO posting</a>, a February 2026 PR Newswire release and a November 2025 press release. ARR and revenue figures are company-reported.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <h2 class="h2">The brief</h2>
+    <div class="brief-grid">
+      <div class="slab">
+        <h3>What you're asking for</h3>
+        <ul>
+          <li>Own brand, content, performance, demand gen, product marketing and community</li>
+          <li>Pipeline through SEO, paid, influencer and partner channels</li>
+          <li>Own CAC, LTV, conversion, NRR and marketing-sourced revenue</li>
+          <li>Build a lean team; align outbound, inbound and partners with the CEO and Head of Sales</li>
+          <li>Fix attribution and marketing ops as you scale</li>
+        </ul>
+      </div>
+      <div class="slab">
+        <h3>What you're offering</h3>
+        <ul>
+          <li>Executive salary plus performance bonus</li>
+          <li>Potential equity in a fast-growing SaaS business</li>
+          <li>Health, dental, PTO and executive perks, as a W2 employee</li>
+          <li>Remote, US only; start targeted for Q2 2026</li>
+        </ul>
+      </div>
+      <div class="slab">
+        <h3>The problem to solve</h3>
+        <p>Turn a product with proven merchant ROI into a repeatable, attributed acquisition engine.</p>
+        <p>Do it without venture money, against competitors who buy their reach, so growth has to come from channels that are paid on results.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block pink" id="proof">
+  <div class="wrap">
+    <h2 class="h2">Requirement → proof</h2>
+    <div class="tiles">
+      <article class="tile">
+        <h3 class="ask">Own pipeline and revenue, not just brand</h3>
+        <div class="body">
+          <div><span class="lbl">How I think</span><p>Marketing gets a number, and that number is revenue. Brand earns its budget by lowering CAC on the channels that close.</p></div>
+          <div><span class="lbl proof">Proof</span><p>Twenty-plus years always paid on results. As Founder and CEO of Universal Marketing Partners (2008 to about 2022), I built an 8-figure performance and affiliate business.</p></div>
+        </div>
+      </article>
+      <article class="tile">
+        <h3 class="ask">Partner and influencer channels</h3>
+        <div class="body">
+          <div><span class="lbl">How I think</span><p>Shopify agencies, app partners and ecommerce creators already have your merchants' trust. Pay them on revenue and they become your sales force.</p></div>
+          <div><span class="lbl proof">Proof</span><p>$100M+ in affiliate commissions generated over my career. I built JVC Affiliate Network on Everflow (280+ affiliates tracked) and run creator-led acquisition at BeChosen.</p></div>
+        </div>
+      </article>
+      <article class="tile">
+        <h3 class="ask">Demand gen, paid and attribution</h3>
+        <div class="body">
+          <div><span class="lbl">How I think</span><p>Every channel gets the same scoreboard: CPC to CPL to CPA to LTV and payback. If it can't be attributed, it gets a test budget, not a real one.</p></div>
+          <div><span class="lbl proof">Proof</span><p>Scaled a language-learning product from under $10M to over $100M market cap through Facebook arbitrage. I lead media buyers rather than run the buttons myself.</p></div>
+        </div>
+      </article>
+      <article class="tile">
+        <h3 class="ask">Copy and creative strategy</h3>
+        <div class="body">
+          <div><span class="lbl">How I think</span><p>Direct response first: one merchant, one problem, one number. "$25,000 a month recovered" beats any tagline.</p></div>
+          <div><span class="lbl proof">Proof</span><p>Agency of record for RealAge.com (Hearst / Dr. Oz) and Harlequin Book Club; drove memberships for Disney Book Club and customers for LifeLock, Norton and Credit Sesame. Co-author of two books and host of the Performance Marketer podcast.</p></div>
+        </div>
+      </article>
+      <article class="tile">
+        <h3 class="ask">Lifecycle and CAC/LTV</h3>
+        <div class="body">
+          <div><span class="lbl">How I think</span><p>For a usage-based product, NRR is the growth engine. Activation in the 14-day trial and expansion inside merchants matter as much as new logos.</p></div>
+          <div><span class="lbl proof">Proof</span><p>I run owned email and SMS across my own businesses, and built membership tiers and lifecycle for BeChosen / Scout. I'm a math guy: payback decides budget.</p></div>
+        </div>
+      </article>
+      <article class="tile">
+        <h3 class="ask">Lean team, hands-on builder</h3>
+        <div class="body">
+          <div><span class="lbl">How I think</span><p>Small team, big systems. Use AI to build the tooling so people spend their time on partners and creative.</p></div>
+          <div><span class="lbl proof">Proof</span><p>Led teams from 5–10 up to 15–20. Shipped 50+ apps and AI tools, including LeadQual.ai's AI voice agents that qualify and route live leads.</p></div>
+        </div>
+      </article>
+      <article class="tile wide honest">
+        <h3 class="ask">SaaS marketing leadership, required</h3>
+        <div class="body">
+          <div><span class="lbl">Straight answer</span><p>I haven't held a CMO title at a venture-style SaaS company. What I've done is the part this role is graded on: acquiring paying customers profitably, for subscription and membership businesses (RealAge, Harlequin, Disney Book Club, LifeLock) and for my own software (LeadQual.ai, BeChosen / Scout, AffiliateSchool.ai with 17 digital products and a 5-level partner plan). Your buyers are ecommerce operators, the same audience I've marketed to for two decades.</p></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="plan">
+  <div class="wrap">
+    <h2 class="h2">The first 90 days</h2>
+    <div class="plan">
+      <article class="phase">
+        <div class="day">30<span>Days: measure</span></div>
+        <div class="what">
+          <h3>Find the real CAC</h3>
+          <ul>
+            <li>Rebuild attribution from trial to paid to expansion, by source: SEO, App Store, paid, partner, referral</li>
+            <li>Calculate CAC, LTV and payback by channel and by merchant size band</li>
+            <li>Interview 20 merchants and 10 agencies about why they picked TxtCart</li>
+            <li>Turn the strongest merchant results into a case-study library with verified numbers</li>
+          </ul>
+        </div>
+      </article>
+      <article class="phase">
+        <div class="day">60<span>Days: build</span></div>
+        <div class="what">
+          <h3>Launch the partner engine</h3>
+          <ul>
+            <li>A Shopify agency and app-partner program with revenue share and co-marketing kits</li>
+            <li>A creator program for ecommerce operators, paid on attributed signups</li>
+            <li>Shopify App Store listing and SEO pages for each use case and competitor comparison</li>
+            <li>Paid only where payback clears the bar, run by buyers I direct</li>
+          </ul>
+        </div>
+      </article>
+      <article class="phase">
+        <div class="day">90<span>Days: scale</span></div>
+        <div class="what">
+          <h3>Make growth repeatable</h3>
+          <ul>
+            <li>A weekly scoreboard of marketing-sourced revenue, CAC by channel and NRR, shared with the CEO and Head of Sales</li>
+            <li>Launch playbooks for TxtCart 4.5 and the agentic campaign features</li>
+            <li>Hiring plan for a lean team covering content, partners and lifecycle</li>
+            <li>A 12-month model from today's ARR toward the $25M target</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block dark">
+  <div class="wrap">
+    <h2 class="h2">Meet Eric</h2>
+    <div class="meet">
+      <figure class="photo">
+        <img src="https://yt3.googleusercontent.com/Mp7gOPpSMBFdGns7IfiIiY8Phw0AB94Ccs_SbKsMugqn9R9WNxBewG25xtxZJ8ks4znh5FBcOQ=s900" alt="Portrait of Eric Beer" width="900" height="900" loading="lazy">
+        <figcaption>Eric Beer</figcaption>
+      </figure>
+      <div class="bio">
+        <p>I'm an entrepreneur and performance marketer with <strong>20+ years</strong> of being paid only when the numbers moved. I founded and ran Universal Marketing Partners for about fourteen years. Today I build AI products: LeadQual.ai for compliant insurance lead gen, BeChosen / Scout, an AI job agent, and AffiliateSchool.ai.</p>
+        <p>I lead strategy, partners and teams of media buyers. I think in CPC, CPL, CPA, LTV and payback. University of Maryland '99 in finance, on a baseball scholarship, and a member of the 1993 USA Junior Olympic team. Hybrid or remote, and happy to travel anywhere.</p>
+        <div class="ledger">
+          <div><b>$100M+</b><span>affiliate commissions generated</span></div>
+          <div><b>280+</b><span>affiliates tracked at JVC Affiliate Network</span></div>
+          <div><b>50+</b><span>apps and AI tools shipped</span></div>
+        </div>
+        <ul class="socials" aria-label="Eric Beer on social media">
+          <li><a href="https://www.linkedin.com/in/ericbeer">LinkedIn</a></li>
+          <li><a href="https://www.youtube.com/@ericbeer">YouTube</a></li>
+          <li><a href="https://x.com/esb211">X</a></li>
+          <li><a href="https://www.instagram.com/ericbeerofficial">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@ericbeer">TikTok</a></li>
+          <li><a href="https://www.facebook.com/eric.beer11">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block close" id="contact">
+  <div class="wrap">
+    <h2 class="h2">Text me back</h2>
+    <p class="bubble out">Kyle, I'd like 30 minutes on how TxtCart gets from about $3M to $25M without raising a dollar.</p>
+    <div class="cta-row" style="margin-top:0">
+      <a class="btn btn-k" href="mailto:eric@performancemarketer.io?subject=TxtCart%20Chief%20Marketing%20Officer">Email eric@performancemarketer.io</a>
+      <a class="btn btn-m" href="tel:+16467876282">Call 646-787-6282</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">Eric Beer · Showcase prepared for TxtCart's Chief Marketing Officer role. Company figures are from public, company-reported sources.</div>
+</footer>
+</body>
+</html>

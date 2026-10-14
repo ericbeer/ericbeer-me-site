@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Eric Beer × Health-E Commerce · VP of Marketing, Telehealth</title>
+<meta name="description" content="Eric Beer's Showcase for the VP of Marketing, Telehealth role at Health-E Commerce (Patiently).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --white:#FFFFFF;
+  --mint:#E8F6F3;
+  --mint-2:#D3EEE8;
+  --ink:#0B3B3C;
+  --ink-2:#2E5A5B;
+  --ink-3:#4D6F70;
+  --accent:#00A88F;
+  --accent-ink:#00715F; /* accessible accent for small text on white/mint */
+  --warm:#FFB547;
+  --line:#CFE6E1;
+  --shadow:0 1px 2px rgba(11,59,60,.06),0 12px 32px -12px rgba(11,59,60,.18);
+  --r-lg:24px;
+  --r-md:16px;
+  --gutter:clamp(16px,4vw,40px);
+  --max:1160px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--white);color:var(--ink);font-family:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:400;font-size:17px;line-height:1.6;overflow-x:hidden;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--accent-ink);text-underline-offset:3px}
+a:hover{color:var(--ink)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:8px}
+h1,h2,h3{font-weight:800;letter-spacing:-.02em;margin:0;color:var(--ink)}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:var(--mint);color:var(--ink);font-size:14px;font-weight:600;line-height:1.3}
+.pill .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex:none}
+.pill.warm .dot{background:var(--warm)}
+
+/* Top bar */
+.top{padding:18px 0}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:17px;color:var(--ink);text-decoration:none}
+.top nav{display:flex;gap:6px;flex-wrap:wrap}
+.top nav a{text-decoration:none;color:var(--ink-2);font-weight:600;font-size:15px;padding:8px 12px;border-radius:999px}
+.top nav a:hover{background:var(--mint);color:var(--ink)}
+
+/* Hero */
+.hero{padding:clamp(24px,4vw,48px) 0 clamp(56px,8vw,96px)}
+.hero-card{background:var(--mint);border-radius:calc(var(--r-lg) * 1.5);padding:clamp(28px,5vw,64px);display:grid;grid-template-columns:minmax(0,1fr) clamp(220px,28vw,340px);gap:clamp(28px,5vw,64px);align-items:center;position:relative;overflow:hidden}
+.hero-card::after{content:"";position:absolute;right:-120px;top:-120px;width:380px;height:380px;border-radius:50%;border:56px solid rgba(0,168,143,.08);pointer-events:none}
+.lockup{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;font-weight:800;font-size:clamp(18px,2vw,22px);margin-bottom:22px}
+.lockup .x{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--warm);color:var(--ink);font-weight:800;font-size:18px;line-height:1}
+.hero h1{font-size:clamp(34px,5vw,62px);line-height:1.04;letter-spacing:-.035em;max-width:17ch}
+.hero .thesis{margin-top:22px;font-size:clamp(17px,1.5vw,20px);line-height:1.55;color:var(--ink-2);max-width:54ch}
+.hero .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.hero .pills .pill{background:var(--white)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;transition:background .15s,color .15s,box-shadow .15s}
+.btn-primary{background:var(--ink);color:var(--white)}
+.btn-primary:hover{background:#082C2D;color:var(--white)}
+.btn-ghost{background:var(--white);color:var(--ink);box-shadow:inset 0 0 0 2px var(--line)}
+.btn-ghost:hover{box-shadow:inset 0 0 0 2px var(--accent);color:var(--ink)}
+.portrait{position:relative;justify-self:center;width:100%;max-width:340px;aspect-ratio:1/1}
+.portrait .ring{position:absolute;inset:0;border-radius:50%;background:var(--white);box-shadow:var(--shadow)}
+.portrait img{position:absolute;inset:14px;width:calc(100% - 28px);height:calc(100% - 28px);border-radius:50%;object-fit:cover}
+.portrait .badge{position:absolute;left:-6px;bottom:8%;background:var(--white);border-radius:var(--r-md);box-shadow:var(--shadow);padding:12px 16px;max-width:210px}
+.portrait .badge b{display:block;font-weight:800;font-size:22px;line-height:1.1}
+.portrait .badge span{display:block;font-size:13px;color:var(--ink-3);line-height:1.35;margin-top:2px}
+
+/* Sections */
+section.block{padding:clamp(56px,8vw,104px) 0}
+section.block.tint{background:linear-gradient(var(--white),var(--mint) 40%,var(--white))}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(16px,4vw,56px);align-items:end;margin-bottom:clamp(28px,4vw,48px)}
+.sec-head h2{font-size:clamp(28px,3.6vw,44px);line-height:1.1;max-width:20ch}
+.sec-head p{color:var(--ink-2);max-width:52ch}
+
+/* What I see */
+.see{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.see-card{background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);padding:28px;box-shadow:var(--shadow)}
+.see-card h3{font-size:21px;line-height:1.25;margin:14px 0 10px}
+.see-card p{color:var(--ink-2);font-size:16px}
+.see-card .src{display:block;margin-top:14px;font-size:13px;color:var(--ink-3)}
+.see-card.feature{background:var(--ink);border-color:var(--ink);grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:24px;align-items:center}
+.see-card.feature h3{color:var(--white);font-size:clamp(22px,2.6vw,30px);margin:14px 0 0}
+.see-card.feature p{color:#CFE6E1}
+.see-card.feature .pill{background:rgba(255,255,255,.1);color:var(--white)}
+.see-card.feature .src{color:#A9C9C4}
+
+/* Brief */
+.brief{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.brief-card{border-radius:var(--r-lg);padding:28px;background:var(--mint)}
+.brief-card h3{font-size:19px;margin-bottom:14px}
+.brief-card ul{margin:0;padding:0;list-style:none}
+.brief-card li{position:relative;padding:8px 0 8px 22px;font-size:15.5px;line-height:1.5;color:var(--ink-2);border-top:1px solid var(--mint-2)}
+.brief-card li:first-child{border-top:0}
+.brief-card li::before{content:"";position:absolute;left:2px;top:16px;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.brief-card.problem{background:var(--white);box-shadow:inset 0 0 0 2px var(--accent)}
+.brief-card.problem .lead{font-weight:700;font-size:20px;line-height:1.35;color:var(--ink)}
+.brief-card.problem p+p{margin-top:14px;color:var(--ink-2);font-size:15.5px}
+.money{font-weight:800;font-size:28px;letter-spacing:-.02em;color:var(--ink);line-height:1.1;margin-bottom:6px}
+.money-sub{font-size:14px;color:var(--ink-3);margin-bottom:14px}
+
+/* Requirements stack (accordion look, always open) */
+.stack{display:flex;flex-direction:column;gap:14px}
+.req{border-radius:var(--r-lg);background:var(--white);border:1px solid var(--line);box-shadow:var(--shadow);overflow:hidden}
+.req-head{display:flex;align-items:center;gap:16px;padding:20px 24px;background:var(--white)}
+.req-head h3{font-size:clamp(18px,1.9vw,22px);line-height:1.3;flex:1;min-width:0}
+.req-head .tog{flex:none;width:36px;height:36px;border-radius:50%;background:var(--mint);position:relative}
+.req-head .tog::before{content:"";position:absolute;left:50%;top:50%;width:14px;height:2.5px;border-radius:2px;background:var(--accent-ink);transform:translate(-50%,-50%)}
+.req-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:16px;padding:0 24px 24px}
+.req-body > div{border-radius:var(--r-md);padding:18px 20px}
+.think{background:var(--mint)}
+.proof{background:var(--white);box-shadow:inset 0 0 0 1.5px var(--line)}
+.req-body h4{margin:0 0 6px;font-size:14px;font-weight:700;color:var(--accent-ink)}
+.think p{font-weight:600;color:var(--ink);font-size:16px;line-height:1.5}
+.proof p{color:var(--ink-2);font-size:15.5px}
+.proof p + p{margin-top:8px}
+.honest{display:inline-block;margin-top:10px;font-size:14px;color:var(--ink);background:#FFF3DF;border-radius:10px;padding:6px 10px}
+
+/* 90-day care plan */
+.plan{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.phase{border-radius:var(--r-lg);background:var(--white);border:1px solid var(--line);box-shadow:var(--shadow);padding:28px;display:flex;flex-direction:column}
+.phase .days{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px}
+.phase .days b{font-weight:800;font-size:15px;color:var(--accent-ink)}
+.phase h3{font-size:24px;line-height:1.2;margin-bottom:6px}
+.phase .goal{color:var(--ink-3);font-size:15px;margin-bottom:16px}
+.phase ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.phase li{position:relative;padding-left:30px;font-size:15.5px;line-height:1.5;color:var(--ink-2)}
+.phase li::before{content:"";position:absolute;left:0;top:3px;width:18px;height:18px;border-radius:6px;background:var(--mint);box-shadow:inset 0 0 0 2px var(--accent)}
+.phase .out{margin-top:auto;padding-top:20px}
+.phase .out p{background:var(--mint);border-radius:var(--r-md);padding:14px 16px;font-size:15px;font-weight:600;color:var(--ink)}
+.phase.mid{background:var(--mint);border-color:var(--mint)}
+.phase.mid li::before{background:var(--white)}
+.phase.mid .out p{background:var(--white)}
+
+/* Meet Eric */
+.meet{display:grid;grid-template-columns:clamp(160px,22vw,240px) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;background:var(--mint);border-radius:calc(var(--r-lg) * 1.5);padding:clamp(28px,5vw,56px)}
+.meet img{width:100%;aspect-ratio:1/1;border-radius:50%;object-fit:cover;border:10px solid var(--white);box-shadow:var(--shadow)}
+.meet h2{font-size:clamp(28px,3.4vw,40px);margin-bottom:14px}
+.meet p{color:var(--ink-2);max-width:62ch}
+.meet p + p{margin-top:12px}
+.socials{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;padding:0;list-style:none}
+.socials a{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border-radius:999px;background:var(--white);color:var(--ink);font-weight:600;font-size:15px;text-decoration:none}
+.socials a:hover{box-shadow:inset 0 0 0 2px var(--accent)}
+
+/* Contact */
+.contact{text-align:center;padding:clamp(64px,9vw,112px) 0}
+.contact h2{font-size:clamp(30px,4.4vw,54px);line-height:1.08;max-width:20ch;margin:0 auto}
+.contact p{color:var(--ink-2);max-width:52ch;margin:18px auto 0}
+.contact .cta-row{justify-content:center}
+.foot{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--ink-3);font-size:14px}
+.foot .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:900px){
+  .hero-card{grid-template-columns:minmax(0,1fr)}
+  .portrait{grid-row:1;max-width:220px;justify-self:start}
+  .portrait .badge{left:auto;right:-150px;bottom:20%}
+  .sec-head{grid-template-columns:minmax(0,1fr)}
+  .brief{grid-template-columns:minmax(0,1fr)}
+  .plan{grid-template-columns:minmax(0,1fr)}
+  .see-card.feature{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  .see{grid-template-columns:minmax(0,1fr)}
+  .req-body{grid-template-columns:minmax(0,1fr);padding:0 16px 16px}
+  .req-head{padding:18px 16px}
+  .meet{grid-template-columns:minmax(0,1fr)}
+  .meet img{max-width:180px}
+  .portrait{max-width:180px}
+  .portrait .badge{position:static;margin-top:12px;max-width:none}
+  .portrait{aspect-ratio:auto}
+  .portrait .ring{position:relative;display:block;aspect-ratio:1/1}
+  .portrait img{inset:10px;width:calc(100% - 20px);height:auto;aspect-ratio:1/1}
+  .top nav{display:none}
+  .see-card,.brief-card,.phase{padding:22px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Eric Beer</a>
+    <nav aria-label="Sections">
+      <a href="#see">What I see</a>
+      <a href="#brief">The brief</a>
+      <a href="#fit">Fit</a>
+      <a href="#plan">90 days</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-card">
+        <div>
+          <div class="lockup"><span>Eric Beer</span><span class="x" aria-label="times">×</span><span>Health-E Commerce</span></div>
+          <h1>Turn 70 million account holders into Patiently patients, one condition at a time.</h1>
+          <p class="thesis">You already own one of the most qualified health audiences anywhere: people with pre-tax dollars set aside for care. Patiently's growth comes from a launch playbook that gets cheaper with every new condition, and partners who carry it well beyond your own stores.</p>
+          <div class="pills">
+            <span class="pill"><span class="dot"></span>VP of Marketing, Telehealth</span>
+            <span class="pill"><span class="dot"></span>Patiently by FSA &amp; HSA Store</span>
+            <span class="pill warm"><span class="dot"></span>Remote, US (EST hours)</span>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="mailto:eric@performancemarketer.io?subject=Health-E%20Commerce%20VP%20of%20Marketing%2C%20Telehealth">Email Eric</a>
+            <a class="btn btn-ghost" href="#plan">See the 90-day plan</a>
+          </div>
+        </div>
+        <div class="portrait">
+          <span class="ring"></span>
+          <img src="https://yt3.googleusercontent.com/Mp7gOPpSMBFdGns7IfiIiY8Phw0AB94Ccs_SbKsMugqn9R9WNxBewG25xtxZJ8ks4znh5FBcOQ=s900" alt="Portrait of Eric Beer" width="340" height="340">
+          <div class="badge"><b>$100M+</b><span>in affiliate commissions generated, always paid on results</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="see">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>What I see at Health-E Commerce</h2>
+        <p>A trusted benefits storefront that just became a care provider. That changes the marketing job from selling eligible products to earning patients, and keeping them.</p>
+      </div>
+      <div class="see">
+        <article class="see-card feature">
+          <div>
+            <span class="pill"><span class="dot"></span>Launched July 30, 2026</span>
+            <h3>Patiently is your first fully owned care service.</h3>
+          </div>
+          <div>
+            <p>It opened with medical weight loss (GLP-1 options) and menopause support (HRT), with licensed providers in all 50 states, HSA and FSA card checkout, unlimited provider messaging, and a link back to eligible products on FSA Store and HSA Store. More care categories are planned.</p>
+            <span class="src">Source: Health-E Commerce launch announcement, PR Newswire; HSA Store learning center</span>
+          </div>
+        </article>
+        <article class="see-card">
+          <span class="pill"><span class="dot"></span>Since 2010</span>
+          <h3>A storefront people already trust with health dollars</h3>
+          <p>FSA Store launched in 2010 and HSA Store in 2015, alongside the Caring Mill private label and WellDeserved Health. The company says its brands serve the 70+ million consumers enrolled in pre-tax health accounts.</p>
+          <span class="src">Source: company statements and public profiles</span>
+        </article>
+        <article class="see-card">
+          <span class="pill"><span class="dot"></span>B2B2C</span>
+          <h3>Distribution runs through employers and administrators</h3>
+          <p>The business connects employers, benefits administrators and consumers, and has partnered with telehealth names such as Everlywell, SmileSet and TeleDentists before building its own platform.</p>
+          <span class="src">By public reports</span>
+        </article>
+        <article class="see-card">
+          <span class="pill warm"><span class="dot"></span>New chapter</span>
+          <h3>Fresh ownership with a growth mandate</h3>
+          <p>An H.I.G. Capital affiliate completed its acquisition of Health-E Commerce in June 2024, and Zack Peckham became CEO in March 2025. Owning care, not just commerce, is the clearest growth move on the board.</p>
+          <span class="src">Source: H.I.G. Capital announcement; public reports</span>
+        </article>
+        <article class="see-card">
+          <span class="pill"><span class="dot"></span>The opening</span>
+          <h3>The most senior marketing seat on Patiently</h3>
+          <p>The VP reports to the CMO and works closely with the Chief Digital Health Officer, owning brand, go-to-market and acquisition across DTC, B2B and partnerships, with budget and ROI accountability.</p>
+          <span class="src">Source: the job posting</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tint" id="brief">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>The brief, as I read it</h2>
+        <p>What you're asking for, what you're offering, and the problem underneath both.</p>
+      </div>
+      <div class="brief">
+        <div class="brief-card">
+          <h3>What you're asking for</h3>
+          <ul>
+            <li>Set Patiently's strategy, budgets and targets with the CMO and Chief Digital Health Officer</li>
+            <li>Define and protect the brand as it expands into new conditions</li>
+            <li>Own every condition and channel launch, then turn it into a repeatable playbook</li>
+            <li>Lead DTC and partner with Strategy and Sales on B2B growth</li>
+            <li>Run acquisition and CRM across paid, organic, content, partnerships and B2B2C</li>
+            <li>Build the team, tools and agency relationships</li>
+          </ul>
+        </div>
+        <div class="brief-card">
+          <h3>What you're offering</h3>
+          <div class="money">$190K–$230K</div>
+          <div class="money-sub">base, plus a discretionary bonus of up to 25%</div>
+          <ul>
+            <li>100% remote in the US, working EST hours</li>
+            <li>Medical, dental, vision and a 401(k) with match</li>
+            <li>FSA, HSA and dependent care accounts</li>
+            <li>Paid parental leave and flexible PTO</li>
+            <li>Wellness and internet reimbursements</li>
+            <li>Certification support and leadership coaching</li>
+          </ul>
+        </div>
+        <div class="brief-card problem">
+          <h3>The problem to solve</h3>
+          <p class="lead">Every new condition is a new launch: a new audience, new claims rules and a new channel mix.</p>
+          <p>Without a system, each one starts from zero. With one, the fifth condition launches faster and cheaper than the first, because the audience, the creative approvals, the partners and the measurement already exist.</p>
+          <p>The job is to build that system while the first two conditions are still finding their footing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="fit">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Your requirements, my proof</h2>
+        <p>Each requirement from the posting, how I'd think about it at Patiently, and what I've actually done. Where I haven't done the exact thing, I say so.</p>
+      </div>
+      <div class="stack">
+        <article class="req">
+          <div class="req-head"><h3>10+ years in marketing, 3+ leading a function</h3><span class="tog" aria-hidden="true"></span></div>
+          <div class="req-body">
+            <div class="think"><h4>How I think</h4><p>Leading marketing means owning the number, the budget and the people, not only the plan.</p></div>
+            <div class="proof"><h4>Proof</h4><p>20+ years in performance marketing. Founder and CEO of Universal Marketing Partners from 2008 to about 2022, an 8-figure performance and affiliate business, leading teams that grew from 5–10 to 15–20 people.</p></div>
+          </div>
+        </article>
+        <article class="req">
+          <div class="req-head"><h3>Brand plus performance</h3><span class="tog" aria-hidden="true"></span></div>
+          <div class="req-body">
+            <div class="think"><h4>How I think</h4><p>In health, trust is the conversion rate. Brand earns the intake start; performance proves which promise earned it.</p></div>
+            <div class="proof"><h4>Proof</h4><p>Agency of record for RealAge.com (Hearst / Dr. Oz), a consumer health brand, and for Harlequin Book Club. Drove memberships for Disney Book Club and customers for LifeLock, Norton Antivirus and Credit Sesame, all categories where trust decides the sale.</p></div>
+          </div>
+        </article>
+        <article class="req">
+          <div class="req-head"><h3>Launching new products, conditions or segments</h3><span class="tog" aria-hidden="true"></span></div>
+          <div class="req-body">
+            <div class="think"><h4>How I think</h4><p>The first launch is a product. The second should be a template: same gates, same dashboards, a new audience.</p></div>
+            <div class="proof"><h4>Proof</h4><p>Scaled a language-learning product from under $10M to over $100M market cap through Facebook arbitrage. Shipped 50+ apps and AI tools, and launched LeadQual.ai and BeChosen in 2026.</p><span class="honest">I haven't launched a telehealth condition. I've launched many offers where the playbook had to be rebuilt for each audience.</span></div>
+          </div>
+        </article>
+        <article class="req">
+          <div class="req-head"><h3>DTC and B2B, across multiple distribution channels</h3><span class="tog" aria-hidden="true"></span></div>
+          <div class="req-body">
+            <div class="think"><h4>How I think</h4><p>B2B2C is partner marketing at scale: administrators, employers and publishers each need their own economics and their own reason to promote you.</p></div>
+            <div class="proof"><h4>Proof</h4><p>$100M+ in affiliate commissions generated across my career. Built JVC Affiliate Network on Everflow with 280+ affiliates tracked, and a 5-level partner commission plan at AffiliateSchool.ai. LeadQual.ai buys and sells leads business to business.</p></div>
+          </div>
+        </article>
+        <article class="req">
+          <div class="req-head"><h3>Building teams</h3><span class="tog" aria-hidden="true"></span></div>
+          <div class="req-body">
+            <div class="think"><h4>How I think</h4><p>Hire operators who own channels, give them clear payback targets, and keep the strategy work with me.</p></div>
+            <div class="proof"><h4>Proof</h4><p>Built and led the Universal Marketing Partners team for more than a decade. I lead media buyers rather than running the buys myself, and I've sat on the agency side as agency of record, so I know how to manage agencies well.</p></div>
+          </div>
+        </article>
+        <article class="req">
+          <div class="req-head"><h3>Data-driven budgeting, with FTC and HIPAA familiarity a plus</h3><span class="tog" aria-hidden="true"></span></div>
+          <div class="req-body">
+            <div class="think"><h4>How I think</h4><p>Budget by condition and channel against CPA, LTV and payback. GLP-1 and HRT patients are subscriptions, so retention moves the budget as much as acquisition does.</p></div>
+            <div class="proof"><h4>Proof</h4><p>Paid on results for 20+ years; I think in CPC, CPL, CPA, LTV and payback. LeadQual.ai runs TCPA and consent-compliant lead gen for Medicare and Final Expense insurance, with AI voice agents qualifying and routing live leads.</p><span class="honest">I don't have formal telehealth regulatory experience. I'd work hand in hand with Clinical, Compliance and Legal on every claim.</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tint" id="plan">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>A 90-day care plan for Patiently</h2>
+        <p>Assess, treat and sustain: understand the two live conditions, build the launch playbook on them, then prove it on the next one.</p>
+      </div>
+      <div class="plan">
+        <article class="phase">
+          <div class="days"><b>Days 1–30</b><span class="pill"><span class="dot"></span>Assess</span></div>
+          <h3>Learn the patient path</h3>
+          <p class="goal">Know exactly where weight loss and menopause patients start, stall and stay.</p>
+          <ul>
+            <li>Sit down with the CMO, Chief Digital Health Officer, Clinical, Compliance and Sales</li>
+            <li>Map each funnel: visit, intake start, intake complete, provider approval, first shipment, month-three refill</li>
+            <li>Build unit economics per condition and channel: CPA, LTV, payback</li>
+            <li>Inventory the owned audience: FSA Store and HSA Store customers, email, SMS and eligible-product buyers</li>
+            <li>Agree a claims review process with Compliance and Legal</li>
+          </ul>
+          <div class="out"><p>Outcome: one shared scorecard for both conditions.</p></div>
+        </article>
+        <article class="phase mid">
+          <div class="days"><b>Days 31–60</b><span class="pill"><span class="dot"></span>Treat</span></div>
+          <h3>Build the launch playbook</h3>
+          <p class="goal">Turn what's working into a repeatable system.</p>
+          <ul>
+            <li>Playbook v1: positioning, an approved creative and claims library, landing pages, offer and KPI gates</li>
+            <li>Cross-sell from the stores to shoppers whose purchases signal a fit for each condition</li>
+            <li>Open a compliant partner channel with vetted publishers and creators on clear payouts</li>
+            <li>Pilot B2B2C with benefits administrators and employers alongside Sales</li>
+            <li>Hire or assign owners for acquisition, CRM and partnerships</li>
+          </ul>
+          <div class="out"><p>Outcome: a documented playbook and partner program live.</p></div>
+        </article>
+        <article class="phase">
+          <div class="days"><b>Days 61–90</b><span class="pill warm"><span class="dot"></span>Sustain</span></div>
+          <h3>Prove it on the next condition</h3>
+          <p class="goal">Show the system makes launch three faster and cheaper.</p>
+          <ul>
+            <li>Run the next condition launch through the playbook with leadership</li>
+            <li>Set the budget model by condition and channel against payback targets</li>
+            <li>Ship an executive dashboard on acquisition, retention and ROI</li>
+            <li>Lock in the team structure and agency roster for the next year</li>
+          </ul>
+          <div class="out"><p>Outcome: a launch calendar leadership can fund with confidence.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="eric">
+    <div class="wrap">
+      <div class="meet">
+        <img src="https://yt3.googleusercontent.com/Mp7gOPpSMBFdGns7IfiIiY8Phw0AB94Ccs_SbKsMugqn9R9WNxBewG25xtxZJ8ks4znh5FBcOQ=s900" alt="Eric Beer" width="240" height="240" loading="lazy">
+        <div>
+          <h2>Meet Eric</h2>
+          <p>I'm a strategist and builder with 20+ years in performance marketing, always paid on results. I've generated $100M+ in affiliate commissions, led Universal Marketing Partners as founder and CEO, and built acquisition for consumer health and trust-led brands from RealAge.com to LifeLock.</p>
+          <p>Today I run LeadQual.ai, BeChosen and AffiliateSchool.ai, host the Performance Marketer podcast, and co-authored Million Dollar Dads and Million Dollar Identity. University of Maryland '99 in finance, on a baseball scholarship, and a member of the 1993 USA Junior Olympic baseball team. I prefer remote or hybrid and I'm happy to travel anywhere.</p>
+          <ul class="socials">
+            <li><a href="https://www.linkedin.com/in/ericbeer">LinkedIn</a></li>
+            <li><a href="https://www.youtube.com/@ericbeer">YouTube</a></li>
+            <li><a href="https://x.com/esb211">X</a></li>
+            <li><a href="https://www.instagram.com/ericbeerofficial">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@ericbeer">TikTok</a></li>
+            <li><a href="https://www.facebook.com/eric.beer11">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Let's talk about Patiently's next launch.</h2>
+      <p>I'd welcome a conversation about the role and the plan above.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:eric@performancemarketer.io?subject=Health-E%20Commerce%20VP%20of%20Marketing%2C%20Telehealth">eric@performancemarketer.io</a>
+        <a class="btn btn-ghost" href="tel:+16467876282">646-787-6282</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>Eric Beer, prepared for Health-E Commerce</span>
+    <span>Facts about Health-E Commerce come from public sources and the job posting.</span>
+  </div>
+</footer>
+</body>
+</html>

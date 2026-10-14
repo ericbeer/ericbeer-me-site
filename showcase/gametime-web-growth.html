@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Eric Beer × Gametime · Director, Web Growth</title>
+<meta name="description" content="Eric Beer's Showcase for Gametime's Director, Web Growth role: requirement-by-requirement proof and a nine-inning 90-day plan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto+Condensed:ital,wght@0,400;0,500;0,700;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+:root{
+  --turf:#0F5132;--turf-2:#12603B;--turf-deep:#0A3B24;
+  --board:#0A0A0A;--board-2:#161616;--board-rule:#2B2B2B;
+  --amber:#FFB000;--amber-dim:#8A6000;
+  --chalk:#FFFFFF;--chalk-soft:rgba(255,255,255,.82);--chalk-line:rgba(255,255,255,.55);
+  --paper:#F6F1E3;--paper-ink:#141414;--paper-ink-2:#4A463D;--paper-rule:#CFC6AE;
+  --display:"Oswald","Arial Narrow",Impact,sans-serif;
+  --body:"Roboto Condensed","Arial Narrow",Arial,sans-serif;
+  --led:"Share Tech Mono",ui-monospace,Menlo,monospace;
+  --gutter:clamp(16px,4vw,56px);--max:1240px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--board);color:var(--chalk);font-family:var(--body);font-size:18px;line-height:1.5;overflow-x:hidden;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+h1,h2,h3{font-family:var(--display);text-transform:uppercase;font-weight:700;letter-spacing:.01em;margin:0}
+h2{font-size:clamp(36px,6vw,76px);line-height:.95;max-width:16ch}
+.led{font-family:var(--led);color:var(--amber);text-shadow:0 0 6px rgba(255,176,0,.55),0 0 18px rgba(255,176,0,.18)}
+/* dot-matrix overlay for scoreboard panels */
+.board{background:var(--board);position:relative;border:6px solid #1E1E1E;box-shadow:inset 0 0 0 2px #000,0 0 0 2px #2A2A2A}
+.board::after{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(rgba(0,0,0,.55) 30%,transparent 31%);background-size:4px 4px;mix-blend-mode:multiply}
+/* turf with mowing stripes */
+.turf{background:repeating-linear-gradient(90deg,var(--turf) 0 120px,var(--turf-2) 120px 240px);color:var(--chalk)}
+.chalk{border:0;height:0;border-top:3px solid var(--chalk-line);margin:0}
+
+/* TOP STRIP */
+.strip{border-bottom:1px solid var(--board-rule)}
+.strip .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px 24px;flex-wrap:wrap;padding-top:14px;padding-bottom:14px}
+.strip .who{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:16px;letter-spacing:.06em;text-decoration:none}
+.strip nav{display:flex;gap:18px;flex-wrap:wrap;font-size:15px}
+.strip nav a{text-decoration:none;color:#BDBDBD}
+.strip nav a:hover{color:var(--amber)}
+
+/* HERO: the batter board */
+.hero{padding:clamp(28px,5vw,64px) 0 0}
+.batter{padding:clamp(20px,3.4vw,44px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(20px,4vw,56px);align-items:center}
+.batter .rows{display:grid;gap:clamp(10px,1.6vw,18px);min-width:0}
+.bline{display:grid;grid-template-columns:minmax(110px,170px) minmax(0,1fr);gap:14px;align-items:baseline;border-bottom:1px solid var(--board-rule);padding-bottom:clamp(10px,1.6vw,16px)}
+.bline:last-child{border-bottom:0;padding-bottom:0}
+.bline .k{font-family:var(--display);font-weight:500;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:#9C9C9C}
+.bline .v{font-size:clamp(26px,4.4vw,58px);line-height:1;letter-spacing:.04em;text-transform:uppercase}
+.bline .v.small{font-size:clamp(20px,2.6vw,34px)}
+.bline .x{color:#fff;text-shadow:none;padding:0 .2em}
+.portrait{width:clamp(130px,17vw,210px);aspect-ratio:1;position:relative;border:3px solid var(--amber);background:#111;overflow:hidden}
+.portrait img{width:100%;height:100%;object-fit:cover;filter:grayscale(.15) contrast(1.05)}
+.portrait span{position:absolute;left:0;right:0;bottom:0;background:rgba(10,10,10,.86);text-align:center;font-size:13px;padding:5px 4px;letter-spacing:.08em}
+.thesis{margin-top:0;padding:clamp(40px,6vw,84px) 0 clamp(48px,7vw,96px);position:relative}
+.thesis .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:24px}
+.thesis h1{font-size:clamp(40px,7.4vw,104px);line-height:.92;max-width:15ch}
+.thesis p{margin:0;max-width:60ch;font-size:clamp(18px,1.6vw,21px);color:var(--chalk-soft)}
+.thesis p b{color:#fff}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.btn{display:inline-flex;align-items:center;min-height:52px;padding:0 22px;font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;font-weight:600;font-size:17px;text-decoration:none;border:2px solid var(--chalk)}
+.btn-amber{background:var(--amber);border-color:var(--amber);color:#0A0A0A}
+.btn-amber:hover{background:#FFC53D;border-color:#FFC53D}
+.btn-line:hover{background:#fff;color:var(--turf)}
+
+/* SECTION SHELLS */
+.sec{padding:clamp(64px,9vw,120px) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,44ch);gap:24px 48px;align-items:end;margin-bottom:clamp(36px,5vw,64px)}
+.sec-head p{margin:0;color:var(--chalk-soft)}
+.on-board .sec-head p{color:#BDBDBD}
+
+/* WHAT I SEE: chalk-lined field facts */
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:3px solid var(--chalk-line);border-left:3px solid var(--chalk-line)}
+.fact{padding:clamp(22px,3vw,36px);border-right:3px solid var(--chalk-line);border-bottom:3px solid var(--chalk-line)}
+.fact .led{font-size:clamp(34px,4.4vw,56px);line-height:1;display:block;margin-bottom:14px;background:var(--board);padding:8px 12px;width:max-content;max-width:100%}
+.fact h3{font-size:clamp(20px,2vw,26px);line-height:1.1;margin-bottom:10px}
+.fact p{margin:0;color:var(--chalk-soft);max-width:52ch}
+.src{margin-top:18px;font-size:15px;color:var(--chalk-soft)}
+
+/* THE BRIEF: three-row board */
+.brief{display:grid;gap:0}
+.brow{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:20px 36px;padding:clamp(20px,3vw,32px);border-bottom:1px solid var(--board-rule);position:relative;z-index:1}
+.brow:last-child{border-bottom:0}
+.brow .tag{font-size:clamp(22px,2.4vw,30px);line-height:1}
+.brow p{margin:0;color:#E6E6E6;max-width:68ch}
+.brow ul{margin:0;padding-left:1.1em;color:#E6E6E6;max-width:68ch}
+.brow li{margin:0 0 6px}
+.brow b{color:#fff}
+
+/* TICKET STUBS */
+.tickets{display:grid;gap:22px}
+.ticket{--stub:190px;--n:13px;display:grid;grid-template-columns:var(--stub) minmax(0,1fr);background:var(--paper);color:var(--paper-ink);
+  -webkit-mask:radial-gradient(circle var(--n) at var(--stub) 0,#0000 98%,#000) top/100% 51% no-repeat,radial-gradient(circle var(--n) at var(--stub) 100%,#0000 98%,#000) bottom/100% 51% no-repeat;
+  mask:radial-gradient(circle var(--n) at var(--stub) 0,#0000 98%,#000) top/100% 51% no-repeat,radial-gradient(circle var(--n) at var(--stub) 100%,#0000 98%,#000) bottom/100% 51% no-repeat}
+.stub{background:var(--amber);padding:22px 20px;border-right:3px dashed var(--paper-ink);display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.stub .seat{font-family:var(--led);font-size:14px;letter-spacing:.06em;color:#3A2A00}
+.stub .seat b{display:block;font-family:var(--display);font-size:46px;line-height:1;color:var(--paper-ink);font-weight:700}
+.stub .req{font-family:var(--display);text-transform:uppercase;font-weight:600;font-size:19px;line-height:1.1}
+.tbody{padding:24px clamp(20px,3vw,36px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 36px}
+.tbody h4{margin:0 0 6px;font-family:var(--display);text-transform:uppercase;font-weight:600;font-size:15px;letter-spacing:.1em;color:var(--paper-ink-2)}
+.tbody p{margin:0;font-size:17px;line-height:1.5}
+.tbody .proof{border-left:3px solid var(--turf);padding-left:16px}
+.tbody .honest{grid-column:1/-1;font-size:16px;color:var(--paper-ink-2);border-top:1px solid var(--paper-rule);padding-top:12px;margin:0}
+
+/* LINE SCORE */
+.linescore{padding:clamp(14px,2.4vw,28px)}
+.ls{position:relative;z-index:1;width:100%}
+.ls-row{display:grid;grid-template-columns:70px minmax(0,1.5fr) 120px minmax(0,2fr) minmax(0,1.3fr);gap:16px;align-items:baseline;padding:14px 8px;border-bottom:1px solid var(--board-rule)}
+.ls-head{color:#9C9C9C;font-family:var(--display);text-transform:uppercase;font-size:14px;letter-spacing:.12em;padding-top:4px}
+.ls-row .code{font-size:24px}
+.ls-row .team{font-family:var(--display);text-transform:uppercase;font-weight:600;font-size:19px;line-height:1.15}
+.ls-row .yrs{font-size:18px}
+.ls-row .play{color:#D9D9D9;font-size:16px;line-height:1.45}
+.ls-row .res{font-size:18px;line-height:1.3}
+.ls-final{border-bottom:0;border-top:3px solid var(--amber);margin-top:4px}
+.ls-final .team{color:var(--amber)}
+
+/* INNINGS */
+.innings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,24px)}
+.phase{display:grid;grid-template-rows:auto 1fr;border:3px solid var(--chalk-line)}
+.phase-top{padding:16px 18px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:12px;background:var(--board)}
+.phase-top h3{font-size:22px;color:#fff}
+.phase-top .led{font-size:18px;white-space:nowrap}
+.inn{display:grid;grid-template-columns:56px minmax(0,1fr);border-top:3px solid var(--chalk-line)}
+.inn:first-of-type{border-top:0}
+.inn .num{background:var(--board);display:flex;align-items:flex-start;justify-content:center;padding-top:16px;font-size:30px}
+.inn div:last-child{padding:16px 18px}
+.inn h4{margin:0 0 4px;font-family:var(--display);text-transform:uppercase;font-weight:600;font-size:18px;line-height:1.15}
+.inn p{margin:0;color:var(--chalk-soft);font-size:16px}
+.goal{margin-top:clamp(24px,3vw,36px);padding:clamp(18px,2.6vw,28px);display:grid;grid-template-columns:auto minmax(0,1fr);gap:20px;align-items:center}
+.goal .led{font-size:clamp(22px,2.6vw,32px);position:relative;z-index:1}
+.goal p{margin:0;color:#E6E6E6;position:relative;z-index:1;max-width:72ch}
+
+/* MEET ERIC */
+.meet{display:grid;grid-template-columns:minmax(200px,320px) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.card{background:var(--paper);color:var(--paper-ink);padding:14px 14px 18px;transform:rotate(-1.5deg);box-shadow:8px 8px 0 #000}
+.card img{width:100%;aspect-ratio:1;object-fit:cover}
+.card .cap{font-family:var(--display);text-transform:uppercase;font-weight:700;font-size:24px;margin-top:12px;line-height:1}
+.card .stats{font-family:var(--led);font-size:14px;color:var(--paper-ink-2);margin-top:6px}
+.bio p{margin:0 0 16px;max-width:62ch;color:var(--chalk-soft)}
+.bio p b{color:#fff}
+.socials{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;padding:0;list-style:none}
+.socials a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:2px solid var(--chalk-line);text-decoration:none;font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;font-size:15px}
+.socials a:hover{border-color:var(--amber);color:var(--amber)}
+
+/* CLOSE: admit-one ticket */
+.close{padding:clamp(64px,9vw,120px) 0}
+.admit{--stub:30%;--n:18px;display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,30%);background:var(--amber);color:#0A0A0A;
+  -webkit-mask:radial-gradient(circle var(--n) at 70% 0,#0000 98%,#000) top/100% 51% no-repeat,radial-gradient(circle var(--n) at 70% 100%,#0000 98%,#000) bottom/100% 51% no-repeat;
+  mask:radial-gradient(circle var(--n) at 70% 0,#0000 98%,#000) top/100% 51% no-repeat,radial-gradient(circle var(--n) at 70% 100%,#0000 98%,#000) bottom/100% 51% no-repeat}
+.admit .main{padding:clamp(28px,4vw,56px)}
+.admit h2{max-width:16ch;color:#0A0A0A;font-size:clamp(32px,4.6vw,64px);overflow-wrap:normal}
+.admit .main p{margin:18px 0 0;max-width:52ch;font-size:19px}
+.admit .side{border-left:3px dashed #0A0A0A;padding:clamp(28px,4vw,56px) clamp(20px,3vw,36px);display:flex;flex-direction:column;justify-content:center;gap:14px}
+.admit .side a{display:flex;align-items:center;justify-content:center;min-height:54px;padding:0 16px;text-decoration:none;font-family:var(--display);text-transform:uppercase;font-weight:600;letter-spacing:.05em;font-size:17px;border:2px solid #0A0A0A;text-align:center}
+.admit .side a.primary{background:#0A0A0A;color:var(--amber)}
+.admit .side a:hover{background:#0A0A0A;color:#fff}
+.admit .side small{font-family:var(--led);font-size:14px;text-align:center}
+footer{border-top:1px solid var(--board-rule);padding:24px 0 40px;color:#9C9C9C;font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:900px){
+  .sec-head{grid-template-columns:1fr}
+  .innings{grid-template-columns:1fr}
+  .meet{grid-template-columns:1fr}
+  .card{max-width:300px}
+  .ls-head{display:none}
+  .ls-row{grid-template-columns:56px minmax(0,1fr);gap:4px 14px}
+  .ls-row .code{grid-row:span 4}
+  .tbody{grid-template-columns:1fr}
+}
+@media (max-width:680px){
+  .batter{grid-template-columns:1fr}
+  .portrait{grid-row:1}
+  .bline{grid-template-columns:1fr;gap:4px}
+  .facts{grid-template-columns:1fr}
+  .brow{grid-template-columns:1fr;gap:10px}
+  .ticket{--stub:118px;grid-template-columns:1fr;
+    -webkit-mask:radial-gradient(circle var(--n) at 0 var(--stub),#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle var(--n) at 100% var(--stub),#0000 98%,#000) right/51% 100% no-repeat;
+    mask:radial-gradient(circle var(--n) at 0 var(--stub),#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle var(--n) at 100% var(--stub),#0000 98%,#000) right/51% 100% no-repeat}
+  .stub{height:var(--stub);border-right:0;border-bottom:3px dashed var(--paper-ink);flex-direction:row;align-items:center;padding:16px 22px}
+  .stub .seat b{font-size:38px}
+  .stub .req{text-align:right;font-size:17px}
+  .admit{grid-template-columns:1fr;
+    -webkit-mask:radial-gradient(circle var(--n) at 0 72%,#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle var(--n) at 100% 72%,#0000 98%,#000) right/51% 100% no-repeat;
+    mask:radial-gradient(circle var(--n) at 0 72%,#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle var(--n) at 100% 72%,#0000 98%,#000) right/51% 100% no-repeat}
+  .admit .side{border-left:0;border-top:3px dashed #0A0A0A}
+  .goal{grid-template-columns:1fr}
+  .turf{background:repeating-linear-gradient(90deg,var(--turf) 0 80px,var(--turf-2) 80px 160px)}
+}
+@media (prefers-reduced-motion:no-preference){
+  .hero .led{animation:flick 1.6s steps(1) 1}
+  @keyframes flick{0%{opacity:.15}12%{opacity:1}18%{opacity:.3}26%{opacity:1}}
+}
+</style>
+</head>
+<body>
+
+<header class="strip">
+  <div class="wrap">
+    <a class="who" href="#eric">Eric Beer</a>
+    <nav aria-label="Sections">
+      <a href="#see">What I see</a>
+      <a href="#brief">The brief</a>
+      <a href="#proof">Proof</a>
+      <a href="#plan">90 days</a>
+      <a href="#talk">Talk</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="board batter" aria-label="Now batting: Eric Beer for Gametime, Director, Web Growth">
+      <div class="rows">
+        <div class="bline"><span class="k">Now batting</span><span class="v led">Eric Beer<span class="x">×</span>Gametime</span></div>
+        <div class="bline"><span class="k">Position</span><span class="v small led">Director, Web Growth</span></div>
+        <div class="bline"><span class="k">Career</span><span class="v small led">20+ yrs · paid on results</span></div>
+      </div>
+      <div class="portrait">
+        <img src="https://yt3.googleusercontent.com/Mp7gOPpSMBFdGns7IfiIiY8Phw0AB94Ccs_SbKsMugqn9R9WNxBewG25xtxZJ8ks4znh5FBcOQ=s900" alt="Eric Beer" width="210" height="210">
+        <span class="led">#EB</span>
+      </div>
+    </div>
+  </div>
+  <div class="turf thesis">
+    <div class="wrap">
+      <h1>The app wins the last minute. The web has to win the first search.</h1>
+      <p>Gametime built its name on the fan who decides at 6:40 for a 7:05 first pitch. The <b>web</b> is where a lot of that intent starts: someone searching tonight's game. This role puts one owner on web GMV and contribution margin. I've spent 20+ years being paid only when the math worked, and that's the job here.</p>
+      <div class="cta-row">
+        <a class="btn btn-amber" href="mailto:eric@performancemarketer.io?subject=Gametime%20Director%2C%20Web%20Growth">Email Eric</a>
+        <a class="btn btn-line" href="#plan">See the 9-inning plan</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec turf" id="see" aria-labelledby="see-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="see-h">What I see at Gametime</h2>
+      <p>Four things from Gametime's own pages and public reports that shape how I'd run web growth.</p>
+    </div>
+    <div class="facts">
+      <article class="fact">
+        <span class="led">+90 MIN</span>
+        <h3>You can buy after the game starts</h3>
+        <p>Tickets stay on sale up to 90 minutes after an event begins, and prices often fall as start time approaches. The whole product is built for urgency, so web pages have to load fast and convert in a few taps.</p>
+      </article>
+      <article class="fact">
+        <span class="led">110%</span>
+        <h3>Price shown is price paid</h3>
+        <p>Gametime shows fees in the price up front, and its Ticket Coverage promises the lowest price or 110% of the difference (restrictions apply). That is a real message advantage in paid search, where people compare prices.</p>
+      </article>
+      <article class="fact">
+        <span class="led">60+</span>
+        <h3>A resale marketplace across North America</h3>
+        <p>Sports, concerts, theater and comedy, from inventory listed by resellers, in 60+ cities by public reports. Every team, artist and venue page is a long-tail search entry that SEO can win, and paid search is paying for today.</p>
+      </article>
+      <article class="fact">
+        <span class="led">$91.5M</span>
+        <h3>Venture-backed, lean growth team</h3>
+        <p>About $91.5M raised by public reports, Accel among the backers, latest round $30M in 2022. Growth is a small team of channel owners. The VP Growth already has paid social, CRM and brand covered. Web is the open seat.</p>
+      </article>
+    </div>
+    <p class="src">Sources: gametime.co, the Gametime App Store listing, the Built In posting and public funding reports.</p>
+  </div>
+</section>
+
+<section class="sec on-board" id="brief" aria-labelledby="brief-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="brief-h">The brief</h2>
+      <p>What the posting asks for, what it pays, and the problem underneath it.</p>
+    </div>
+    <div class="board brief">
+      <div class="brow">
+        <span class="tag led">Asking for</span>
+        <ul>
+          <li><b>One owner for web-driven GMV</b> and blended contribution economics, not one channel's KPIs.</li>
+          <li>Run the <b>paid search team</b>: strategy, budget, performance.</li>
+          <li>Work with Product on <b>CRO</b> and an experimentation culture across landing pages and flows.</li>
+          <li>Build <b>SEO and content from zero</b>, likely through agencies or contractors.</li>
+          <li>A data-backed view on <b>web-to-app</b>: when web should drive installs and when it should close the sale itself.</li>
+          <li>Dashboards, metrics and business reviews. Reports to the VP of Growth.</li>
+        </ul>
+      </div>
+      <div class="brow">
+        <span class="tag led">Offering</span>
+        <p><b>$240K–$270K + equity</b>, remote in the US. Flexible PTO, $1,200 a year in Gametime event credits, medical, dental and vision, life and disability, fertility benefits through Carrot, 401k with HSA and pre-tax savings, company off-sites and wellness programs.</p>
+      </div>
+      <div class="brow">
+        <span class="tag led">The problem</span>
+        <p>Right now web performance is split across channels and nobody owns the total. Paid search spends against tonight's demand, SEO doesn't exist yet, and CRO sits with Product. Gametime needs <b>one person accountable for web GMV and what each dollar of it costs</b>, who can also decide which web visitors should go to the app.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec turf" id="proof" aria-labelledby="proof-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="proof-h">Requirement → proof</h2>
+      <p>Each requirement in the posting, how I'd approach it, and what I've actually done. Where I'm lighter, I say so.</p>
+    </div>
+    <div class="tickets">
+      <article class="ticket">
+        <div class="stub"><span class="seat">SEAT<b>01</b></span><span class="req">Owned a revenue number</span></div>
+        <div class="tbody">
+          <div><h4>How I think</h4><p>Owning GMV means owning the total, so I'd rather cut a good-looking channel than defend it. One P&amp;L view, reviewed every week.</p></div>
+          <div class="proof"><h4>Proof</h4><p>Founder &amp; CEO of Universal Marketing Partners from 2008 to about 2022, an 8-figure performance and affiliate business where revenue was the only scoreboard. Teams from 5–10 up to 15–20.</p></div>
+        </div>
+      </article>
+      <article class="ticket">
+        <div class="stub"><span class="seat">SEAT<b>02</b></span><span class="req">Full-funnel economics</span></div>
+        <div class="tbody">
+          <div><h4>How I think</h4><p>CPC, CPA, AOV, take rate, refunds, LTV, payback. I'm a math guy. A $40 CPA can be great on a playoff ticket and a loss on a Tuesday-night game, so bids should follow contribution margin, not blended averages.</p></div>
+          <div class="proof"><h4>Proof</h4><p>At LeadQual.ai I buy and sell live insurance leads, where margin is set lead by lead. Earlier I scaled a language-learning product from under $10M to over $100M market cap with Facebook arbitrage, which only works when you know your margin per click.</p></div>
+        </div>
+      </article>
+      <article class="ticket">
+        <div class="stub"><span class="seat">SEAT<b>03</b></span><span class="req">Paid search / SEM</span></div>
+        <div class="tbody">
+          <div><h4>How I think</h4><p>I'd run the paid search team on economics: margin-based bid targets by event type and days to event, brand vs. non-brand kept separate, and all-in pricing in the ad copy.</p></div>
+          <div class="proof"><h4>Proof</h4><p>I've led media buyers for 20+ years. I was agency of record for RealAge.com (Hearst / Dr. Oz) and Harlequin Book Club, and drove customers for LifeLock, Norton Antivirus and Credit Sesame.</p></div>
+          <p class="honest">To be straight: paid search is some of my work, not the core. I lead the people at the keyboard and set the math they bid to. I'm not the hands-on SEM specialist.</p>
+        </div>
+      </article>
+      <article class="ticket">
+        <div class="stub"><span class="seat">SEAT<b>04</b></span><span class="req">Web product sense &amp; CRO</span></div>
+        <div class="tbody">
+          <div><h4>How I think</h4><p>Find where the funnel leaks: event page → seat map → checkout. Then fix the biggest leak first, with a test plan Product can actually ship. Direct response taught me to test the offer before the button color.</p></div>
+          <div class="proof"><h4>Proof</h4><p>I've shipped 50+ apps and AI tools, plus the funnels behind them. I built BeChosen / Scout, an AI job platform with membership tiers, and the consent-compliant lead flows at LeadQual.ai.</p></div>
+        </div>
+      </article>
+      <article class="ticket">
+        <div class="stub"><span class="seat">SEAT<b>05</b></span><span class="req">Built a channel from zero</span></div>
+        <div class="tbody">
+          <div><h4>How I think</h4><p>SEO from zero is mostly vendor management: choose the right agency, give them a page plan (teams, venues, artists, "tickets tonight") and judge them on attributed GMV, not traffic.</p></div>
+          <div class="proof"><h4>Proof</h4><p>I launched JVC Affiliate Network on Everflow in 2025 with 280+ affiliates now tracked, built AffiliateSchool.ai (17 digital products and a 5-level partner plan), and started BeChosen's creator-led acquisition program.</p></div>
+        </div>
+      </article>
+      <article class="ticket">
+        <div class="stub"><span class="seat">SEAT<b>06</b></span><span class="req">Judged on outcomes</span></div>
+        <div class="tbody">
+          <div><h4>How I think</h4><p>Channel KPIs are useful for diagnosing problems. Business outcomes are how you get paid. I'd put the web team's work in terms the CFO uses.</p></div>
+          <div class="proof"><h4>Proof</h4><p>$100M+ in affiliate commissions generated over my career, all of it paid only on results. Memberships for Disney Book Club, and customers for brands that measured every acquisition.</p></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec on-board" aria-labelledby="ls-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="ls-h">The line score</h2>
+      <p>Two decades of growth work in box-score form. Every line pays on results.</p>
+    </div>
+    <div class="board linescore">
+      <div class="ls" role="table" aria-label="Eric Beer career line score">
+        <div class="ls-row ls-head" role="row"><span role="columnheader">Code</span><span role="columnheader">Team</span><span role="columnheader">Years</span><span role="columnheader">The play</span><span role="columnheader">Result</span></div>
+        <div class="ls-row" role="row"><span class="code led" role="cell">UMP</span><span class="team" role="cell">Universal Marketing Partners</span><span class="yrs led" role="cell">2008–~22</span><span class="play" role="cell">Founder &amp; CEO. AOR for RealAge.com and Harlequin Book Club; memberships for Disney Book Club; customers for LifeLock, Norton, Credit Sesame.</span><span class="res led" role="cell">8-figure business</span></div>
+        <div class="ls-row" role="row"><span class="code led" role="cell">FB</span><span class="team" role="cell">Language-learning scale-up</span><span class="yrs led" role="cell">UMP era</span><span class="play" role="cell">Facebook arbitrage at scale, tracked to margin per click.</span><span class="res led" role="cell">&lt;$10M → $100M+ cap</span></div>
+        <div class="ls-row" role="row"><span class="code led" role="cell">JVC</span><span class="team" role="cell">JVC Affiliate Network</span><span class="yrs led" role="cell">2025</span><span class="play" role="cell">Affiliate network built from zero on Everflow.</span><span class="res led" role="cell">280+ affiliates</span></div>
+        <div class="ls-row" role="row"><span class="code led" role="cell">LQ</span><span class="team" role="cell">LeadQual.ai</span><span class="yrs led" role="cell">2026</span><span class="play" role="cell">AI voice agents qualifying and routing live Medicare and Final Expense leads; TCPA-compliant lead buying and selling.</span><span class="res led" role="cell">Founder</span></div>
+        <div class="ls-row" role="row"><span class="code led" role="cell">BC</span><span class="team" role="cell">BeChosen / Scout</span><span class="yrs led" role="cell">2026</span><span class="play" role="cell">AI job agent and job platform across ATS sources; membership tiers; creator-led acquisition.</span><span class="res led" role="cell">Founder</span></div>
+        <div class="ls-row" role="row"><span class="code led" role="cell">AS</span><span class="team" role="cell">AffiliateSchool.ai</span><span class="yrs led" role="cell">Ongoing</span><span class="play" role="cell">Affiliate education, Skool community, partner commission plan.</span><span class="res led" role="cell">17 products</span></div>
+        <div class="ls-row ls-final" role="row"><span class="code led" role="cell">TOT</span><span class="team" role="cell">Career</span><span class="yrs led" role="cell">20+ yrs</span><span class="play" role="cell">Paid, affiliate/JV, partnerships, publishers, creators/UGC, social, email/SMS, lead gen. 50+ apps and AI tools shipped.</span><span class="res led" role="cell">$100M+ commissions</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec turf" id="plan" aria-labelledby="plan-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="plan-h">The 90-day plan, in nine innings</h2>
+      <p>Each inning is about 10 days. The first third is learning the numbers, the second is fixing the biggest leaks, and the last third is building something that compounds.</p>
+    </div>
+    <div class="innings">
+      <div class="phase">
+        <div class="phase-top"><h3>Read the field</h3><span class="led">DAYS 1–30</span></div>
+        <div class="inn"><span class="num led">1</span><div><h4>One GMV truth</h4><p>Agree with Data and Finance on web GMV, contribution margin and attribution, including web sessions that end in an app purchase.</p></div></div>
+        <div class="inn"><span class="num led">2</span><div><h4>Meet the paid search team</h4><p>Audit the account by event category and days to event. Find where spend runs ahead of margin and move it.</p></div></div>
+        <div class="inn"><span class="num led">3</span><div><h4>Funnel walk</h4><p>Map event page → seat map → checkout on mobile web with Product. Rank the leaks by GMV at stake and agree on the first three tests.</p></div></div>
+      </div>
+      <div class="phase">
+        <div class="phase-top"><h3>Fix the leaks</h3><span class="led">DAYS 31–60</span></div>
+        <div class="inn"><span class="num led">4</span><div><h4>Margin-based bidding</h4><p>Move paid search to contribution targets by segment. Put all-in pricing and the 110% guarantee in the copy and test it.</p></div></div>
+        <div class="inn"><span class="num led">5</span><div><h4>Test cadence</h4><p>Get a weekly test rhythm going with a shared backlog, pre-registered metrics and a readout everyone trusts.</p></div></div>
+        <div class="inn"><span class="num led">6</span><div><h4>SEO kickoff</h4><p>Choose the agency or contractors. Ship the first set of team, venue and "tickets tonight" pages, judged on GMV per page.</p></div></div>
+      </div>
+      <div class="phase">
+        <div class="phase-top"><h3>Build what compounds</h3><span class="led">DAYS 61–90</span></div>
+        <div class="inn"><span class="num led">7</span><div><h4>Web-to-app rule</h4><p>Use cohort data to decide which visitors get pushed to install and which should check out on web. Write it down and test it.</p></div></div>
+        <div class="inn"><span class="num led">8</span><div><h4>Cross-channel input</h4><p>Work with paid social and CRM on the landing pages and retargeting that feed the web funnel, without taking over their channels.</p></div></div>
+        <div class="inn"><span class="num led">9</span><div><h4>First business review</h4><p>Present web GMV, contribution margin and test wins in one view, plus a 2027 plan with targets I'm willing to be judged on.</p></div></div>
+      </div>
+    </div>
+    <div class="board goal">
+      <span class="led">FINAL</span>
+      <p>By day 90: one agreed web GMV number, paid search bidding to margin, a weekly test cadence, SEO live and producing, and a written web-to-app rule. AI handles the busywork, like ad copy variants, page briefs and test readouts, so the team spends its time on decisions.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec on-board" id="eric" aria-labelledby="eric-h">
+  <div class="wrap meet">
+    <figure class="card" style="margin:0">
+      <img src="https://yt3.googleusercontent.com/Mp7gOPpSMBFdGns7IfiIiY8Phw0AB94Ccs_SbKsMugqn9R9WNxBewG25xtxZJ8ks4znh5FBcOQ=s900" alt="Portrait of Eric Beer" width="300" height="300">
+      <figcaption><div class="cap">Eric Beer</div><div class="stats">Maryland '99 · Finance · Baseball</div></figcaption>
+    </figure>
+    <div class="bio">
+      <h2 id="eric-h" style="margin-bottom:28px">Meet Eric</h2>
+      <p>I'm an entrepreneur and performance marketer with <b>20+ years</b> of growth work where I only got paid when it worked. I build strategy and lead the teams that run it: media buyers, affiliates, publishers, creators and the funnels behind them. I've generated <b>$100M+ in affiliate commissions</b> along the way.</p>
+      <p>Right now I'm building LeadQual.ai, BeChosen / Scout and AffiliateSchool.ai, and I host the Performance Marketer podcast. I co-authored <i>Million Dollar Dads</i> and <i>Million Dollar Identity</i>.</p>
+      <p>Before all that I played scholarship baseball at Maryland and made the 1993 USA Junior Olympic team, one of 64 players in a class that included A-Rod and Scott Rolen. I still like a ballpark on a weeknight. I prefer hybrid or remote and will travel anywhere.</p>
+      <ul class="socials">
+        <li><a href="https://www.linkedin.com/in/ericbeer">LinkedIn</a></li>
+        <li><a href="https://www.youtube.com/@ericbeer">YouTube</a></li>
+        <li><a href="https://x.com/esb211">X</a></li>
+        <li><a href="https://www.instagram.com/ericbeerofficial">Instagram</a></li>
+        <li><a href="https://www.tiktok.com/@ericbeer">TikTok</a></li>
+        <li><a href="https://www.facebook.com/eric.beer11">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="close turf" id="talk" aria-labelledby="talk-h">
+  <div class="wrap">
+    <div class="admit">
+      <div class="main">
+        <h2 id="talk-h">Admit one: a conversation</h2>
+        <p>If web GMV is the number, I'd like to talk through how I'd own it. Twenty minutes, any day this week.</p>
+      </div>
+      <div class="side">
+        <a class="primary" href="mailto:eric@performancemarketer.io?subject=Gametime%20Director%2C%20Web%20Growth">Email Eric</a>
+        <a href="tel:+16467876282">Call 646-787-6282</a>
+        <small>eric@performancemarketer.io</small>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap"><span>Eric Beer × Gametime · Director, Web Growth</span><span>Prepared for Gametime, October 2026</span></div>
+</footer>
+</body>
+</html>

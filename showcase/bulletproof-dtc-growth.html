@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Eric Beer × Bulletproof · DTC Ecommerce Growth Lead</title>
+<meta name="description" content="How Eric Beer would keep Bulletproof.com growing, profitably, for the next 90 days.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FFF1DC; --cream-2:#FBE3C0; --orange:#E8642C; --mustard:#F2A93B; --brown:#5B3A29;
+  --ink:#2A180E; --ink-2:#5B3A29; --on-dark:#FFF1DC;
+  --display:"Bricolage Grotesque",Georgia,sans-serif; --body:"Figtree",system-ui,sans-serif;
+  --gut:clamp(16px,4vw,48px); --max:1160px; --r-lg:34px; --r-md:22px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6;overflow-x:hidden;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:8px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.035em;line-height:.95;margin:0}
+h2{font-size:clamp(38px,6vw,72px);color:var(--brown)}
+p{margin:0}
+.lede{font-size:clamp(18px,1.6vw,21px);max-width:58ch;color:var(--ink-2);margin-top:18px}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:20px;padding-bottom:20px}
+.top .me{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.02em;text-decoration:none;color:var(--brown)}
+.top nav{display:flex;gap:8px;flex-wrap:wrap}
+.top nav a{font-weight:600;font-size:15px;text-decoration:none;padding:8px 14px;border-radius:999px;border:2px solid var(--brown);color:var(--brown)}
+.top nav a:hover{background:var(--brown);color:var(--cream)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:clamp(40px,7vw,90px) 0 0;border-bottom:0}
+.stage{position:relative;padding-bottom:clamp(20px,3vw,40px)}
+.stage > *:not(.sun){position:relative}
+.sun{position:absolute;left:50%;bottom:-2px;z-index:0;width:min(1200px,170vw);aspect-ratio:2/1;transform:translateX(-50%);
+  border-radius:1200px 1200px 0 0;
+  background:repeating-radial-gradient(circle at 50% 100%,
+    var(--mustard) 0 9%, var(--cream) 9% 10.5%,
+    var(--orange) 10.5% 19%, var(--cream) 19% 20.5%,
+    var(--brown) 20.5% 29%, var(--cream) 29% 30.5%);
+  -webkit-mask:radial-gradient(circle at 50% 100%,#000 0 70.5%,transparent 70.6%);mask:radial-gradient(circle at 50% 100%,#000 0 70.5%,transparent 70.6%);
+  opacity:.95}
+.hero-in{position:relative;text-align:center;padding-bottom:clamp(36px,5vw,60px)}
+.lockup{display:inline-flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;background:var(--cream);border:3px solid var(--brown);border-radius:999px;padding:10px 22px;font-family:var(--display);font-weight:800;font-size:clamp(18px,2.4vw,26px);color:var(--brown);letter-spacing:-.02em}
+.lockup .x{color:var(--orange)}
+.hero h1{font-size:clamp(46px,10vw,140px);color:var(--cream);margin:clamp(22px,3vw,34px) auto 0;max-width:11ch;-webkit-text-stroke:3px var(--brown);paint-order:stroke fill;text-shadow:6px 6px 0 var(--brown)}
+.role{display:inline-block;max-width:100%;margin-top:24px;background:var(--brown);color:var(--cream);font-weight:600;padding:10px 20px;border-radius:999px;font-size:16px}
+.hero-card{position:relative;background:var(--cream);border:3px solid var(--brown);border-radius:var(--r-lg);max-width:760px;margin:clamp(28px,4vw,44px) auto 0;padding:clamp(22px,3vw,34px);text-align:left;box-shadow:8px 8px 0 var(--brown)}
+.hero-card p{font-size:clamp(18px,1.7vw,21px);color:var(--ink)}
+.hero-card p + p{margin-top:12px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;border-radius:999px;font-family:var(--display);font-weight:700;font-size:17px;text-decoration:none;border:3px solid var(--brown);transition:transform .12s, box-shadow .12s}
+.btn-hot{background:var(--orange);color:var(--ink);box-shadow:4px 4px 0 var(--brown)}
+.btn-hot:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--brown)}
+.btn-line{background:var(--cream);color:var(--brown)}
+.btn-line:hover{background:var(--cream-2)}
+.bands{position:relative;height:72px;background:linear-gradient(var(--orange) 0 33.3%,var(--mustard) 33.3% 66.6%,var(--brown) 66.6% 100%)}
+
+/* sections */
+section{padding:clamp(64px,9vw,120px) 0}
+.see{background:var(--cream)}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:clamp(32px,4vw,52px)}
+.fact{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;background:var(--cream-2);border-radius:var(--r-lg);padding:26px}
+.badge{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:28px;color:var(--cream);background:var(--brown);flex:none}
+.fact:nth-child(2) .badge{background:var(--orange);color:var(--ink)}
+.fact:nth-child(3) .badge{background:var(--mustard);color:var(--ink)}
+.fact h3{font-size:24px;color:var(--brown);letter-spacing:-.02em;line-height:1.1}
+.fact p{margin-top:8px;font-size:17px;color:var(--ink)}
+.src{font-size:14px;color:var(--ink-2);margin-top:18px}
+
+/* brief */
+.brief{background:var(--brown);color:var(--on-dark)}
+.brief h2{color:var(--mustard)}
+.brief .lede{color:var(--on-dark)}
+.brief-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:clamp(32px,4vw,52px)}
+.pane{border-radius:var(--r-lg);padding:28px;background:#6B4532;border:3px solid #8A5E44}
+.pane h3{font-size:28px;color:var(--cream);letter-spacing:-.02em;margin-bottom:14px}
+.pane ul{margin:0;padding-left:20px}
+.pane li{margin:6px 0;font-size:17px}
+.pane.hot{background:var(--orange);border-color:var(--orange);color:var(--ink)}
+.pane.hot h3{color:var(--ink)}
+.pane.hot p{font-size:18px;font-weight:500}
+
+/* coupons */
+.coupons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;margin-top:clamp(32px,4vw,52px)}
+.coupon{position:relative;background:#FFF8EC;border:3px dashed var(--brown);border-radius:var(--r-md);padding:26px 26px 26px 30px}
+.coupon::before,.coupon::after{content:"";position:absolute;top:50%;width:26px;height:26px;border-radius:50%;background:var(--cream);border:3px dashed var(--brown);transform:translateY(-50%)}
+.coupon::before{left:-15px;clip-path:inset(0 0 0 50%)}
+.coupon::after{right:-15px;clip-path:inset(0 50% 0 0)}
+.coupon .ask{display:inline-block;background:var(--mustard);color:var(--ink);font-weight:700;font-size:15px;padding:6px 14px;border-radius:999px}
+.coupon h3{font-size:clamp(24px,2.4vw,30px);color:var(--brown);letter-spacing:-.025em;line-height:1.05;margin:14px 0 12px}
+.coupon .think{font-size:17px;color:var(--ink)}
+.coupon .proof{margin-top:14px;padding-top:14px;border-top:2px dashed #C9A88C;font-size:16px;color:var(--ink)}
+.coupon .proof b{color:var(--brown)}
+.coupon.wide{grid-column:1/-1;background:var(--cream-2)}
+
+/* plan */
+.plan{padding-bottom:0}
+.plan .wrap{padding-bottom:clamp(32px,4vw,52px)}
+.band{padding:clamp(40px,6vw,72px) 0}
+.band .wrap{display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,48px);align-items:start;padding-bottom:0}
+.band .num{width:clamp(96px,12vw,150px);height:clamp(96px,12vw,150px);border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:clamp(34px,4.6vw,56px);letter-spacing:-.04em;border:4px solid currentColor}
+.band h3{font-size:clamp(30px,4vw,50px);letter-spacing:-.03em}
+.band p.sub{margin-top:8px;font-weight:600;font-size:18px}
+.band ul{margin:16px 0 0;padding-left:22px;max-width:70ch}
+.band li{margin:8px 0}
+.b1{background:var(--mustard);color:var(--ink)}
+.b1 .num{background:var(--cream);color:var(--brown)}
+.b2{background:var(--orange);color:var(--ink)}
+.b2 .num{background:var(--cream);color:var(--brown)}
+.b3{background:var(--brown);color:var(--cream)}
+.b3 .num{background:var(--mustard);color:var(--ink);border-color:var(--mustard)}
+
+/* meet */
+.meet-grid{display:grid;grid-template-columns:minmax(220px,340px) 1fr;gap:clamp(28px,5vw,64px);align-items:center}
+.photo{position:relative;border-radius:50%;aspect-ratio:1;padding:14px;background:conic-gradient(var(--orange) 0 33%,var(--mustard) 33% 66%,var(--brown) 66% 100%)}
+.photo img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:6px solid var(--cream)}
+.meet p{margin-top:16px;max-width:62ch}
+.meet p:first-of-type{margin-top:20px}
+.socials{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.socials a{text-decoration:none;font-weight:600;font-size:15px;padding:8px 16px;border-radius:999px;background:var(--cream-2);color:var(--brown);border:2px solid var(--brown)}
+.socials a:hover{background:var(--brown);color:var(--cream)}
+
+/* contact */
+.contact{padding-top:0}
+.ticket{background:var(--orange);border-radius:var(--r-lg);padding:clamp(32px,5vw,64px);text-align:center;border:4px solid var(--brown);box-shadow:10px 10px 0 var(--brown);position:relative;overflow:hidden}
+.ticket h2{color:var(--ink);font-size:clamp(40px,7vw,88px);max-width:14ch;margin:0 auto}
+.ticket p{max-width:54ch;margin:18px auto 0;font-size:19px;color:var(--ink)}
+.ticket .cta-row{justify-content:center}
+.ticket .btn-hot{background:var(--brown);color:var(--cream);box-shadow:4px 4px 0 var(--ink);border-color:var(--ink)}
+.ticket .btn-line{border-color:var(--ink);color:var(--ink)}
+footer{padding:32px 0 48px;font-size:15px;color:var(--ink-2);text-align:center}
+
+@media (max-width:860px){
+  .facts,.coupons,.brief-grid{grid-template-columns:1fr}
+  .meet-grid{grid-template-columns:1fr}
+  .photo{max-width:240px}
+}
+@media (max-width:560px){
+  .band .wrap{grid-template-columns:1fr}
+  .fact{grid-template-columns:1fr}
+  .sun{width:150vw}
+  .top nav{display:none}
+  .hero-card{box-shadow:5px 5px 0 var(--brown)}
+  .ticket{box-shadow:6px 6px 0 var(--brown)}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="wrap top">
+  <a class="me" href="#meet">Eric Beer</a>
+  <nav aria-label="Sections">
+    <a href="#see">What I see</a>
+    <a href="#proof">Proof</a>
+    <a href="#plan">90 days</a>
+    <a href="#contact">Talk</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="hero-h">
+  <div class="wrap hero-in">
+    <div class="stage">
+    <div class="sun" aria-hidden="true"></div>
+    <div class="lockup"><span>Eric Beer</span><span class="x" aria-hidden="true">×</span><span>Bulletproof</span></div>
+    <h1 id="hero-h">Keep the ritual on repeat.</h1>
+    </div>
+    <span class="role">DTC Ecommerce Growth Lead (Contract)</span>
+    <div class="hero-card">
+      <p><b>The thesis:</b> Bulletproof.com doesn't need a new strategy for 90 days. It needs someone who reads the P&amp;L every morning, holds the agency to outcomes, and protects the subscribers who already drink this coffee daily.</p>
+      <p>That's the job I've done for 20+ years, always paid on results: acquisition that pencils out on CAC, LTV and payback, not on ROAS screenshots.</p>
+      <div class="cta-row">
+        <a class="btn btn-hot" href="mailto:eric@performancemarketer.io?subject=Bulletproof%20DTC%20Ecommerce%20Growth%20Lead">Email Eric</a>
+        <a class="btn btn-line" href="#plan">See the 90-day plan</a>
+      </div>
+    </div>
+  </div>
+  <div class="bands" aria-hidden="true"></div>
+</section>
+
+<section class="see" id="see" aria-labelledby="see-h">
+  <div class="wrap">
+    <h2 id="see-h">What I see at Bulletproof</h2>
+    <p class="lede">A category-creating brand mid-reinvention, with a DTC site that has to stay profitable while retail and the new positioning do their work.</p>
+    <div class="facts">
+      <div class="fact"><span class="badge" aria-hidden="true">1</span><div>
+        <h3>The brand that made butter coffee a habit</h3>
+        <p>Founded in Seattle by Dave Asprey, Bulletproof turned coffee plus MCT oil into a daily ritual, then built a range around it: coffee, MCT oil, creamers, collagen and protein. Rituals are subscriptions waiting to happen.</p></div></div>
+      <div class="fact"><span class="badge" aria-hidden="true">2</span><div>
+        <h3>Now part of a family of Americas brands</h3>
+        <p>In 2024 Bulletproof became part of Bia Foods, alongside Badia, El Rey and Iberia Foods, backed by Guatemala's Grupo Mariposa. That means a parent that thinks in margin and distribution, not just growth at any cost.</p></div></div>
+      <div class="fact"><span class="badge" aria-hidden="true">3</span><div>
+        <h3>A rebrand toward everyday wellness</h3>
+        <p>The June 2025 refresh, "Coffee that lifts you up," moved Bulletproof from biohacking toward accessible wellness. A broader promise means new customers, and new customers need proof the economics hold.</p></div></div>
+      <div class="fact"><span class="badge" aria-hidden="true">4</span><div>
+        <h3>DTC sits next to big retail</h3>
+        <p>The bags sell on Amazon/Whole Foods, Sprouts, Kroger and Target, and on a Shopify Plus site run with Klaviyo and Triple Whale by public tech data. Bulletproof.com has to earn its place with subscribers, bundles and margin retail can't match.</p></div></div>
+    </div>
+    <p class="src">Sources: Daily Coffee News (June 2025), the job posting, and public company data. Revenue is about $35M by public estimates.</p>
+  </div>
+</section>
+
+<section class="brief" aria-labelledby="brief-h">
+  <div class="wrap">
+    <h2 id="brief-h">The brief</h2>
+    <p class="lede">Interim leadership of Bulletproof.com while the DTC leader is on leave. Run it as an owner, then hand it back better documented than you found it.</p>
+    <div class="brief-grid">
+      <div class="pane">
+        <h3>What you're asking for</h3>
+        <ul>
+          <li>Own revenue, margin, conversion, AOV, subscriptions and acquisition</li>
+          <li>Direct the agency on retention, CRO, site and AIO against scope and SLAs</li>
+          <li>Oversee Google and Meta on CAC, contribution margin and LTV</li>
+          <li>Run forecasting, S&amp;OP and the monthly business review</li>
+          <li>Set priorities for the Senior Ecommerce Specialist</li>
+        </ul>
+      </div>
+      <div class="pane">
+        <h3>What you're offering</h3>
+        <ul>
+          <li>3-month contract, starting as soon as possible</li>
+          <li>$50–$75 per hour, 30–40 hours a week</li>
+          <li>Fully remote, anywhere in the US</li>
+          <li>A leadership role, not a hands-on production seat</li>
+        </ul>
+      </div>
+      <div class="pane hot">
+        <h3>The problem to solve</h3>
+        <p>Keep a subscription coffee business compounding through a leadership gap: no dip in subscribers, no drift in agency output, no paid spend that buys revenue at a loss. Then leave a roadmap the returning leader can run with on day one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="proof" aria-labelledby="proof-h">
+  <div class="wrap">
+    <h2 id="proof-h">Requirement, meet proof</h2>
+    <p class="lede">Seven things the posting asks for, how I think about each, and what I've actually done.</p>
+    <div class="coupons">
+      <article class="coupon">
+        <span class="ask">8+ years DTC and growth</span>
+        <h3>Twenty years of selling direct, and getting paid only when it worked</h3>
+        <p class="think">Direct response is DTC before it had a name: an offer, a funnel, a customer and a number that has to clear.</p>
+        <p class="proof"><b>Proof:</b> drove memberships for Disney Book Club, customers for LifeLock, Norton Antivirus and Credit Sesame, and scaled a language-learning product from under $10M to over $100M market cap.</p>
+      </article>
+      <article class="coupon">
+        <span class="ask">Ecommerce P&amp;L ownership</span>
+        <h3>I've signed the checks, so I read the P&amp;L like an owner</h3>
+        <p class="think">Revenue is vanity until contribution margin agrees. I'd run Bulletproof.com off a weekly margin view, not a top-line one.</p>
+        <p class="proof"><b>Proof:</b> founder and CEO of Universal Marketing Partners for about 14 years, an 8-figure performance and affiliate business with teams of up to 15–20.</p>
+      </article>
+      <article class="coupon">
+        <span class="ask">Google and Meta performance</span>
+        <h3>Paid media judged on payback, not platform ROAS</h3>
+        <p class="think">I lead media buyers rather than sit in the ad account. My job is the question behind the dashboard: what did that subscriber cost, and when do we get it back?</p>
+        <p class="proof"><b>Proof:</b> scaled the language-learning product above through Facebook arbitrage. Google is part of my toolkit, Meta is where I've done the most scaling.</p>
+      </article>
+      <article class="coupon">
+        <span class="ask">CAC, ROAS, LTV, contribution margin</span>
+        <h3>I'm a math guy, and this role is a math job</h3>
+        <p class="think">One shared sheet: CPC to CPA to first-order margin to 90-day LTV by channel and offer. Every promo gets a break-even before it ships.</p>
+        <p class="proof"><b>Proof:</b> $100M+ in affiliate commissions generated over my career, all of it earned on CPA and payback math that had to hold.</p>
+      </article>
+      <article class="coupon">
+        <span class="ask">Subscriptions and retention</span>
+        <h3>Book clubs taught me that the second shipment is the business</h3>
+        <p class="think">Coffee is a daily habit. The wins are in skip-instead-of-cancel, bundle upgrades and lifecycle flows that fire before the bag runs out.</p>
+        <p class="proof"><b>Proof:</b> agency of record for Harlequin Book Club and RealAge.com (Hearst / Dr. Oz), and builder of the membership tiers at BeChosen.</p>
+      </article>
+      <article class="coupon">
+        <span class="ask">Agency management</span>
+        <h3>I ran the agency, so I know where the slack hides</h3>
+        <p class="think">Clear scope, a weekly scorecard tied to outcomes, and a short list of tests ranked by expected margin, not by what's easiest to ship.</p>
+        <p class="proof"><b>Proof:</b> agency of record for RealAge.com and Harlequin. I've sat on the agency side of the SLA and know what a good client asks for.</p>
+      </article>
+      <article class="coupon wide">
+        <span class="ask">Shopify and CPG (preferred)</span>
+        <h3>Honest gap: I'm not a Shopify operator or a CPG lifer</h3>
+        <p class="think">You've said this isn't a production role, and you already have a Senior Ecommerce Specialist and an agency on Shopify Plus. I'd bring the commercial judgment and set their priorities. My consumer subscription work is in memberships and consumer brands rather than grocery, and I'd lean on your team for retail context.</p>
+        <p class="proof"><b>Proof I learn fast:</b> 50+ apps and AI tools shipped, plus LeadQual.ai and BeChosen launched in 2026.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="plan" id="plan" aria-labelledby="plan-h">
+  <div class="wrap">
+    <h2 id="plan-h">Ninety days, three bands</h2>
+    <p class="lede">Built for an interim seat: keep things steady first, improve what's provable, then hand back a cleaner business.</p>
+  </div>
+  <div class="band b1">
+    <div class="wrap">
+      <span class="num" aria-hidden="true">30</span>
+      <div>
+        <h3>Days 1–30: hold the line</h3>
+        <p class="sub">No surprises for the returning leader or for Grupo Mariposa.</p>
+        <ul>
+          <li>Rebuild the weekly scorecard: revenue, contribution margin, active subscribers, churn, CAC by channel, AOV</li>
+          <li>Meet the agency, re-confirm scope and SLAs, agree a ranked test queue</li>
+          <li>Audit Google and Meta for spend that clears ROAS but not margin</li>
+          <li>Lock the forecast and promo calendar into S&amp;OP so DTC never fights supply</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="band b2">
+    <div class="wrap">
+      <span class="num" aria-hidden="true">60</span>
+      <div>
+        <h3>Days 31–60: tune the economics</h3>
+        <p class="sub">Small, provable wins on margin and retention.</p>
+        <ul>
+          <li>Subscription save flow: skip, swap and pause offers before cancel</li>
+          <li>Bundle and AOV tests built around the coffee-plus-MCT ritual</li>
+          <li>Shift paid budget toward the audiences and offers with the fastest payback</li>
+          <li>Klaviyo replenishment flows timed to when the bag runs out</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="band b3">
+    <div class="wrap">
+      <span class="num" aria-hidden="true">90</span>
+      <div>
+        <h3>Days 61–90: hand it back better</h3>
+        <p class="sub">A business the returning leader can run from day one.</p>
+        <ul>
+          <li>Document every test, result and open risk in one place</li>
+          <li>Deliver a prioritized roadmap sized by expected margin</li>
+          <li>Scope a results-paid creator and affiliate channel that fits the new "lifts you up" brand</li>
+          <li>Present the monthly business review with a clear next-quarter forecast</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="meet" id="meet" aria-labelledby="meet-h">
+  <div class="wrap meet-grid">
+    <div class="photo"><img src="https://yt3.googleusercontent.com/Mp7gOPpSMBFdGns7IfiIiY8Phw0AB94Ccs_SbKsMugqn9R9WNxBewG25xtxZJ8ks4znh5FBcOQ=s900" alt="Portrait of Eric Beer" width="340" height="340" loading="lazy"></div>
+    <div>
+      <h2 id="meet-h">Meet Eric</h2>
+      <p>I'm an entrepreneur and performance marketer with 20+ years of results-paid growth. I founded and ran Universal Marketing Partners, generated $100M+ in affiliate commissions, and was agency of record for RealAge.com and Harlequin Book Club.</p>
+      <p>Today I build: LeadQual.ai (AI voice agents for compliant lead gen), BeChosen and Scout (an AI job agent), AffiliateSchool.ai and the JVC Affiliate Network. I host the Performance Marketer podcast and co-wrote Million Dollar Dads and Million Dollar Identity.</p>
+      <p>Before all that: University of Maryland '99 in finance on a baseball scholarship, and the 1993 USA Junior Olympic team. I work remote or hybrid and travel anywhere.</p>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/ericbeer">LinkedIn</a>
+        <a href="https://www.youtube.com/@ericbeer">YouTube</a>
+        <a href="https://x.com/esb211">X</a>
+        <a href="https://www.instagram.com/ericbeerofficial">Instagram</a>
+        <a href="https://www.tiktok.com/@ericbeer">TikTok</a>
+        <a href="https://www.facebook.com/eric.beer11">Facebook</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <div class="ticket">
+      <h2 id="contact-h">Let's keep the mornings selling.</h2>
+      <p>I can start fast. Send a note or call, and I'll walk you through how I'd run the first week.</p>
+      <div class="cta-row">
+        <a class="btn btn-hot" href="mailto:eric@performancemarketer.io?subject=Bulletproof%20DTC%20Ecommerce%20Growth%20Lead">eric@performancemarketer.io</a>
+        <a class="btn btn-line" href="tel:+16467876282">646-787-6282</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">Made by Eric Beer for the Bulletproof team. Facts cited from public sources.</footer>
+</body>
+</html>

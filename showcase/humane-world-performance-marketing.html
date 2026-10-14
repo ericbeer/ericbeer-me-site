@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Eric Beer × Humane World for Animals · Senior Managing Director, Global Performance Marketing and Media</title>
+<meta name="description" content="Field notes from Eric Beer on donor acquisition at Humane World for Animals: the math behind 40,000 new donors and 11,000 sustainers, and a 90-day plan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,800;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --kraft:#C9A574; --kraft-dark:#A8834F; --kraft-ink:#3B2A14;
+  --paper:#FBF6EA; --paper-2:#F3EBD7;
+  --ink:#263238; --ink-2:#46555C; --ink-3:#5E6B70;
+  --rule:rgba(84,130,186,.22); --margin:#C8473D; --margin-soft:rgba(200,71,61,.55);
+  --leaf:#3A7D44; --leaf-dark:#2C6034;
+  --sticky:#FCE38A; --sticky-2:#F9D9C4; --sticky-3:#D7EBC8;
+  --tape:rgba(236,226,196,.82);
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --hand:"Caveat","Bradley Hand","Segoe Print",cursive;
+  --line:32px;
+  --mx:clamp(44px,8vw,112px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.7;overflow-x:hidden;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+a{color:var(--leaf-dark);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--ink)}
+:focus-visible{outline:3px solid var(--leaf);outline-offset:3px;border-radius:2px}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--serif);line-height:1.15;margin:0;font-weight:700;letter-spacing:-.01em}
+p{margin:0 0 1em}
+.hand{font-family:var(--hand);font-weight:500}
+
+/* ---------- Kraft cover ---------- */
+.cover{background:var(--kraft);color:var(--kraft-ink);position:relative;padding:clamp(28px,5vw,56px) 16px clamp(56px,8vw,96px);
+  background-image:
+    radial-gradient(rgba(59,42,20,.10) 1px,transparent 1.4px),
+    radial-gradient(rgba(255,255,255,.08) 1px,transparent 1.6px);
+  background-size:7px 7px,11px 11px;background-position:0 0,3px 5px}
+.cover::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:18px;
+  background:linear-gradient(180deg,rgba(59,42,20,.18),transparent),var(--paper);
+  -webkit-mask:radial-gradient(9px 9px at 9px 0,transparent 8.5px,#000 9px) 0 0/18px 18px repeat-x;
+          mask:radial-gradient(9px 9px at 9px 0,transparent 8.5px,#000 9px) 0 0/18px 18px repeat-x}
+.cover-top{max-width:1080px;margin:0 auto 28px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:15px}
+.cover-top a{color:var(--kraft-ink)}
+.cover-top .hand{font-size:22px;line-height:1}
+.label{max-width:780px;margin:0 auto;background:#FFFDF6;border:1.5px solid var(--kraft-ink);border-radius:6px;padding:clamp(22px,4vw,40px) clamp(20px,4vw,44px);
+  box-shadow:0 1px 0 rgba(59,42,20,.35),0 10px 24px -14px rgba(59,42,20,.55);position:relative}
+.label::before{content:"";position:absolute;inset:7px;border:1px solid rgba(59,42,20,.35);border-radius:3px;pointer-events:none}
+.label .vol{font-family:var(--hand);font-size:24px;color:var(--margin);margin:0 0 4px;line-height:1.1}
+.lockup{font-size:clamp(30px,5.6vw,58px);font-weight:800;line-height:1.02;letter-spacing:-.02em;color:var(--ink)}
+.lockup .x{font-weight:400;color:var(--kraft-dark);padding:0 .12em}
+.lockup .co{display:block;color:var(--leaf-dark)}
+.role{margin:14px 0 0;font-size:clamp(17px,2vw,20px);font-style:italic;color:var(--ink-2);line-height:1.4}
+.label-foot{margin-top:18px;padding-top:12px;border-top:1px dashed rgba(59,42,20,.45);display:flex;flex-wrap:wrap;gap:6px 22px;font-size:15px;color:var(--ink-2)}
+
+/* ---------- Lined paper ---------- */
+.paper{position:relative;
+  background-color:var(--paper);
+  background-image:
+    repeating-linear-gradient(180deg,transparent 0,transparent calc(var(--line) - 1px),var(--rule) calc(var(--line) - 1px),var(--rule) var(--line));
+  padding:24px 16px 64px calc(var(--mx) + 24px)}
+.paper::before{content:"";position:absolute;top:0;bottom:0;left:calc(var(--mx) - 2px);width:5px;border-left:1px solid var(--margin-soft);border-right:1px solid var(--margin-soft);pointer-events:none}
+.page{max-width:980px;position:relative}
+section{padding:clamp(40px,6vw,72px) 0 0;position:relative}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:22px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(26px,3.4vw,36px)}
+.sec-head .hand{font-size:24px;color:var(--leaf);line-height:1}
+.lede{font-size:clamp(19px,2.2vw,22px);max-width:62ch;color:var(--ink)}
+.margin-note{position:absolute;left:calc(-1 * var(--mx) - 20px);width:calc(var(--mx) - 10px);font-family:var(--hand);font-size:19px;line-height:1.05;color:var(--margin);text-align:right;transform:rotate(-4deg)}
+
+/* ---------- Hero ---------- */
+.hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:start;padding-top:24px}
+.thesis{font-size:clamp(28px,4.2vw,46px);font-weight:700;line-height:1.12;letter-spacing:-.015em;max-width:20ch;margin:8px 0 22px}
+.hero .lede{max-width:52ch}
+.hero-note{font-family:var(--hand);font-size:26px;color:var(--leaf-dark);line-height:1.15;margin-top:6px;transform:rotate(-1.5deg);max-width:26ch}
+.snap{position:relative;background:#fff;padding:12px 12px 44px;box-shadow:0 14px 24px -16px rgba(38,50,56,.55),0 1px 2px rgba(38,50,56,.2);transform:rotate(2.5deg);max-width:320px;justify-self:end;margin-top:12px}
+.snap img{aspect-ratio:1/1;object-fit:cover;width:100%;filter:saturate(.92) contrast(1.02)}
+.snap figcaption{position:absolute;left:0;right:0;bottom:8px;text-align:center;font-family:var(--hand);font-size:24px;color:var(--ink)}
+.tape{position:absolute;width:110px;height:30px;background:var(--tape);box-shadow:0 1px 2px rgba(0,0,0,.08);
+  -webkit-mask:linear-gradient(90deg,transparent 0,#000 4px,#000 calc(100% - 4px),transparent 100%);mask:linear-gradient(90deg,transparent 0,#000 4px,#000 calc(100% - 4px),transparent 100%)}
+.tape.tl{top:-12px;left:-26px;transform:rotate(-38deg)}
+.tape.tr{top:-12px;right:-26px;transform:rotate(36deg)}
+.tape.top{top:-15px;left:50%;margin-left:-55px;transform:rotate(-3deg)}
+
+/* ---------- Observations ---------- */
+.obs{list-style:none;margin:0;padding:0;display:grid;gap:4px;max-width:70ch}
+.obs li{position:relative;padding:10px 0 14px 34px;border-bottom:1px dashed rgba(38,50,56,.18)}
+.obs li::before{content:"";position:absolute;left:4px;top:20px;width:14px;height:14px;border:2px solid var(--leaf);border-radius:50%}
+.obs strong{font-weight:700}
+.src{font-size:15px;color:var(--ink-3);font-style:italic}
+
+/* ---------- Brief + stickies ---------- */
+.brief{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3vw,32px);max-width:960px}
+.brief h3{font-size:20px;margin-bottom:8px;color:var(--leaf-dark)}
+.brief p,.brief li{font-size:17px}
+.brief ul{margin:0;padding-left:18px}
+.stickies{display:flex;flex-wrap:wrap;gap:22px 26px;margin:34px 0 8px;padding:8px 4px}
+.sticky{background:var(--sticky);width:min(200px,42vw);min-height:150px;padding:16px 16px 18px;position:relative;
+  box-shadow:0 12px 14px -12px rgba(38,50,56,.55),inset 0 -18px 22px -18px rgba(120,90,10,.25)}
+.sticky:nth-child(1){transform:rotate(-2.5deg)}
+.sticky:nth-child(2){transform:rotate(1.8deg);background:var(--sticky-3)}
+.sticky:nth-child(3){transform:rotate(-1deg)}
+.sticky:nth-child(4){transform:rotate(2.6deg);background:var(--sticky-2)}
+.sticky .num{display:block;font-size:clamp(34px,4.6vw,44px);font-weight:800;line-height:1;letter-spacing:-.02em;color:var(--ink)}
+.sticky .what{display:block;font-family:var(--hand);font-size:22px;line-height:1.1;margin-top:8px;color:var(--ink)}
+.math{max-width:760px;margin-top:26px;background:#fff;border:1px solid rgba(38,50,56,.16);padding:20px clamp(16px,3vw,28px);position:relative;transform:rotate(-.4deg);box-shadow:0 10px 18px -16px rgba(38,50,56,.6)}
+.math h3{font-size:20px;margin-bottom:8px}
+.math .eq{font-family:var(--hand);font-size:clamp(23px,3vw,28px);line-height:1.3;color:var(--ink);margin:4px 0 12px}
+.math .eq b{color:var(--leaf-dark);font-weight:700}
+.math p{font-size:17px;margin:0}
+
+/* ---------- Field entries ---------- */
+.entries{list-style:none;margin:0;padding:0;counter-reset:entry;max-width:860px}
+.entry{position:relative;counter-increment:entry;padding:22px 0 26px;border-bottom:1px solid rgba(38,50,56,.22)}
+.entry:first-child{border-top:1px solid rgba(38,50,56,.22)}
+.entry .enum{position:absolute;left:calc(-1 * var(--mx) - 24px + 6px);top:20px;width:calc(var(--mx) - 16px);text-align:right;font-family:var(--hand);font-size:30px;font-weight:700;color:var(--margin);line-height:1}
+.entry .enum::before{content:"No. " counter(entry)}
+.entry h3{font-size:clamp(20px,2.4vw,24px);margin-bottom:12px}
+.entry .ask{font-style:italic;color:var(--ink-2);font-size:16px;margin:-6px 0 12px}
+.entry dl{display:grid;grid-template-columns:130px minmax(0,1fr);gap:8px 20px;margin:0}
+.entry dt{font-family:var(--hand);font-size:22px;color:var(--leaf-dark);line-height:1.35}
+.entry dd{margin:0;font-size:17px}
+.scribble{display:inline-block;margin-top:12px;font-family:var(--hand);font-size:21px;color:var(--margin);line-height:1.2;transform:rotate(-1deg)}
+
+/* ---------- 90-day checklist page ---------- */
+.checkpage{background:#fff;max-width:900px;padding:clamp(20px,4vw,40px);position:relative;box-shadow:0 18px 30px -24px rgba(38,50,56,.7),0 1px 2px rgba(38,50,56,.18);transform:rotate(.3deg);
+  background-image:repeating-linear-gradient(180deg,transparent 0,transparent 31px,rgba(58,125,68,.14) 31px,rgba(58,125,68,.14) 32px)}
+.checkpage .tape.top{margin-left:-55px}
+.phases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3vw,34px)}
+.phase h3{font-size:22px;margin-bottom:2px}
+.phase .when{font-family:var(--hand);font-size:22px;color:var(--leaf-dark);margin-bottom:10px;display:block;line-height:1.1}
+.checks{list-style:none;margin:0;padding:0}
+.checks li{position:relative;padding:0 0 12px 32px;font-size:16.5px;line-height:1.55}
+.checks li::before{content:"";position:absolute;left:0;top:4px;width:18px;height:18px;border:2px solid var(--ink);border-radius:3px;background:#fff}
+.checks li.done::after{content:"";position:absolute;left:5px;top:1px;width:9px;height:16px;border:solid var(--leaf);border-width:0 3px 3px 0;transform:rotate(40deg)}
+.checkpage .foot{margin-top:18px;font-family:var(--hand);font-size:22px;color:var(--margin);transform:rotate(-1deg)}
+
+/* ---------- Meet Eric ---------- */
+.meet{display:grid;grid-template-columns:240px minmax(0,1fr);gap:clamp(24px,5vw,56px);align-items:start;max-width:960px}
+.meet .snap{justify-self:start;transform:rotate(-3deg);max-width:240px;margin-top:10px}
+.meet p{max-width:62ch}
+.socials{list-style:none;padding:0;margin:18px 0 0;display:flex;flex-wrap:wrap;gap:10px 12px}
+.socials a{display:inline-block;padding:6px 14px;border:1.5px solid var(--ink);border-radius:999px;text-decoration:none;color:var(--ink);font-size:16px;background:var(--paper)}
+.socials a:hover{background:var(--leaf);border-color:var(--leaf);color:#fff}
+
+/* ---------- Contact ---------- */
+.contact{margin-top:clamp(48px,7vw,80px);max-width:820px;background:var(--kraft);color:var(--kraft-ink);padding:clamp(24px,4vw,40px);border-radius:4px;position:relative;
+  background-image:radial-gradient(rgba(59,42,20,.10) 1px,transparent 1.4px);background-size:7px 7px}
+.contact h2{font-size:clamp(26px,3.6vw,38px);color:var(--ink)}
+.contact p{max-width:56ch;margin-top:12px;color:var(--kraft-ink)}
+.btns{display:flex;flex-wrap:wrap;gap:12px 14px;margin-top:20px}
+.btn{display:inline-block;padding:12px 22px;font-weight:600;font-size:17px;text-decoration:none;border-radius:3px}
+.btn.primary{background:var(--leaf-dark);color:#fff}
+.btn.primary:hover{background:var(--ink);color:#fff}
+.btn.ghost{background:#FFFDF6;color:var(--ink);border:1.5px solid var(--kraft-ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+.contact .hand{font-size:24px;display:block;margin-top:16px;color:var(--kraft-ink)}
+footer{margin-top:40px;font-size:14px;color:var(--ink-3)}
+
+/* ---------- Responsive ---------- */
+@media (max-width:860px){
+  .hero,.meet{grid-template-columns:minmax(0,1fr)}
+  .snap{justify-self:start;max-width:260px}
+  .brief,.phases{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  :root{--mx:26px}
+  body{font-size:17px}
+  .paper{padding:16px 16px 48px calc(var(--mx) + 16px)}
+  .margin-note{position:static;width:auto;text-align:left;transform:none;margin-bottom:6px;display:block}
+  .entry .enum{position:static;width:auto;text-align:left;display:block;margin-bottom:6px;font-size:26px}
+  .entry dl{grid-template-columns:minmax(0,1fr);gap:2px}
+  .entry dd{margin-bottom:10px}
+  .sticky{width:calc(50% - 14px);min-height:130px;padding:12px}
+  .stickies{gap:18px 16px}
+  .tape.tl{left:-14px}.tape.tr{right:-14px}
+  .tape{width:84px}
+  .tape.top{margin-left:-42px}
+  .checkpage{transform:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <div class="cover-top">
+    <span class="hand">Field notes, October 2026</span>
+    <a href="mailto:eric@performancemarketer.io?subject=Humane%20World%20for%20Animals%20Senior%20Managing%20Director%2C%20Global%20Performance%20Marketing%20and%20Media">eric@performancemarketer.io</a>
+  </div>
+  <div class="label">
+    <p class="vol">Notebook for the hiring team</p>
+    <h1 class="lockup">Eric Beer <span class="x">×</span><span class="co">Humane World for Animals</span></h1>
+    <p class="role">Senior Managing Director, Global Performance Marketing and Media</p>
+    <div class="label-foot">
+      <span>Remote, US, Eastern Time hours</span>
+      <span>Posted $115K to $185K</span>
+      <span>Built for Alison Corcoran's team</span>
+    </div>
+  </div>
+</header>
+
+<main class="paper">
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <span class="margin-note" style="top:40px">thesis</span>
+      <p class="thesis">A $13M media budget that returns $4M in year one is a lifetime-value bet. The sustainers are the whole game.</p>
+      <p class="lede">You aren't hiring someone to spend $13M. You're hiring someone to buy 40,000 people who keep giving, and to prove which channels found them. That's direct response with a long tail, and it's the work I've done for 20+ years, always paid on results.</p>
+      <p class="hero-note">Membership math, not media math.</p>
+    </div>
+    <figure class="snap">
+      <span class="tape tl" aria-hidden="true"></span>
+      <span class="tape tr" aria-hidden="true"></span>
+      <img src="https://yt3.googleusercontent.com/Mp7gOPpSMBFdGns7IfiIiY8Phw0AB94Ccs_SbKsMugqn9R9WNxBewG25xtxZJ8ks4znh5FBcOQ=s900" alt="Portrait of Eric Beer" width="296" height="296">
+      <figcaption>Eric Beer</figcaption>
+    </figure>
+  </div>
+
+  <!-- WHAT I SEE -->
+  <section id="see" aria-labelledby="see-h">
+    <div class="sec-head"><h2 id="see-h">What I see at Humane World for Animals</h2><span class="hand">observed</span></div>
+    <ul class="obs">
+      <li><strong>One name, one global brand, since February 2025.</strong> The Humane Society of the United States and Humane Society International unified as Humane World for Animals, working in 50+ countries. A rebrand that young means a lot of donors still search for the old name, and paid search has to meet them there. <span class="src">Source: Humane World press release and The NonProfit Times, Feb 2025.</span></li>
+      <li><strong>A contribution-funded organization at real scale.</strong> Total revenue of about $216.5M in fiscal 2025, roughly $181.4M of it contributions. Individual givers are the engine, so acquisition cost and retention move the whole budget. <span class="src">Source: Form 990 via ProPublica Nonprofit Explorer.</span></li>
+      <li><strong>Every channel at once.</strong> The plan spans search, display, social, DRTV, CTV, podcasts and third-party list buys, plus a global social program across 100+ handles. That's a portfolio to allocate, not a channel to run. <span class="src">Source: the job posting.</span></li>
+      <li><strong>Investigations, rescues and policy wins make the creative.</strong> Factory farming, the fur trade, puppy mills, animal testing and wildlife cruelty give you emotionally true stories, which is exactly what direct-response creative needs to convert cold audiences.</li>
+    </ul>
+  </section>
+
+  <!-- THE BRIEF -->
+  <section id="brief" aria-labelledby="brief-h">
+    <div class="sec-head"><h2 id="brief-h">The brief, as I read it</h2><span class="hand">from the posting</span></div>
+    <div class="brief">
+      <div>
+        <h3>What you're asking for</h3>
+        <p>A leader for paid media and performance: donor acquisition and retention, blended attribution, testing, audience research, a multi-year growth plan across digital, TV and audio, external partners, the global social program and a growing team.</p>
+      </div>
+      <div>
+        <h3>What you're offering</h3>
+        <ul>
+          <li>$115,000 to $185,000 a year, full time</li>
+          <li>Remote in the US, Eastern Time hours as needed</li>
+          <li>A $13M+ budget and a mission worth the work</li>
+        </ul>
+      </div>
+      <div>
+        <h3>The problem to solve</h3>
+        <p>Hit hard acquisition numbers across a dozen channels while proving, in a way Finance and Philanthropy both trust, which dollars actually found donors who stay.</p>
+      </div>
+    </div>
+
+    <div class="stickies" aria-label="Key targets from the posting">
+      <div class="sticky"><span class="num">$13M+</span><span class="what">paid media budget</span></div>
+      <div class="sticky"><span class="num">40K</span><span class="what">new donors</span></div>
+      <div class="sticky"><span class="num">11K</span><span class="what">new sustainers</span></div>
+      <div class="sticky"><span class="num">$4M</span><span class="what">first-year revenue</span></div>
+    </div>
+
+    <div class="math">
+      <span class="tape top" aria-hidden="true"></span>
+      <h3>Back-of-napkin, from the posted numbers</h3>
+      <p class="eq">$13M ÷ 40,000 donors ≈ <b>$325</b> spent per donor<br>$4M ÷ 40,000 donors ≈ <b>$100</b> back per donor in year one</p>
+      <p>If the whole budget went to acquisition (it may not), year one runs about $3 out for every $1 in. That's fine when sustainers stay for years. So the metric I'd manage to is cost per retained sustainer and 24-month value by channel, not cost per first gift.</p>
+    </div>
+  </section>
+
+  <!-- REQUIREMENTS -->
+  <section id="proof" aria-labelledby="proof-h">
+    <div class="sec-head"><h2 id="proof-h">Requirement to proof</h2><span class="hand">field entries</span></div>
+    <ol class="entries">
+      <li class="entry">
+        <span class="enum" aria-hidden="true"></span>
+        <h3>Ten-plus years in digital marketing and media acquisition</h3>
+        <p class="ask">They ask for 10+ years; I bring 20+.</p>
+        <dl>
+          <dt>How I think</dt><dd>Acquisition is a buying decision you make thousands of times a day. Experience is knowing which numbers lie early.</dd>
+          <dt>Proof</dt><dd>Founder and CEO of Universal Marketing Partners from 2008 to about 2022, an 8-figure performance and affiliate business. $100M+ in affiliate commissions generated over my career, always paid on results.</dd>
+        </dl>
+      </li>
+      <li class="entry">
+        <span class="enum" aria-hidden="true"></span>
+        <h3>Advanced direct-response creative and performance drivers</h3>
+        <dl>
+          <dt>How I think</dt><dd>The offer and the first ten seconds decide the CPA. Test the hook, the ask amount and the landing page before you touch bids.</dd>
+          <dt>Proof</dt><dd>Agency of record for RealAge.com (Hearst / Dr. Oz) and Harlequin Book Club. Drove customers for LifeLock, Norton Antivirus and Credit Sesame, all response-driven, all measured to the sale.</dd>
+        </dl>
+      </li>
+      <li class="entry">
+        <span class="enum" aria-hidden="true"></span>
+        <h3>Donor acquisition and retention, including sustainers</h3>
+        <dl>
+          <dt>How I think</dt><dd>A sustainer is a member. You acquire for the monthly commitment, onboard for month two, and judge channels on who's still giving at month twelve.</dd>
+          <dt>Proof</dt><dd>Drove memberships for Disney Book Club and ran acquisition for Harlequin Book Club, both continuity models where retention is the business. Today I run membership tiers at BeChosen / Scout.</dd>
+        </dl>
+        <span class="scribble">Book clubs are sustainer programs with paperbacks.</span>
+      </li>
+      <li class="entry">
+        <span class="enum" aria-hidden="true"></span>
+        <h3>Attribution, segmentation and testing</h3>
+        <dl>
+          <dt>How I think</dt><dd>I'm a math guy: CPC, CPL, CPA, LTV, payback. Blended attribution only earns trust when it holds up against holdouts and the donor file.</dd>
+          <dt>Proof</dt><dd>Scaled a language-learning product from under $10M to over $100M market cap through Facebook arbitrage, which only works with tight unit economics. I run JVC Affiliate Network on Everflow with 280+ affiliates tracked to the conversion.</dd>
+        </dl>
+      </li>
+      <li class="entry">
+        <span class="enum" aria-hidden="true"></span>
+        <h3>Agency and partner management, including list buys</h3>
+        <dl>
+          <dt>How I think</dt><dd>Partners do their best work when they're paid on what you value and see the same numbers you see.</dd>
+          <dt>Proof</dt><dd>Twenty years of affiliate, JV and publisher deals. At LeadQual.ai I buy and sell leads and run TCPA- and consent-compliant lead gen, so list quality, consent and source-level reporting are daily habits.</dd>
+        </dl>
+      </li>
+      <li class="entry">
+        <span class="enum" aria-hidden="true"></span>
+        <h3>Multi-year growth strategy across digital, TV and audio</h3>
+        <dl>
+          <dt>How I think</dt><dd>Plan the budget as a portfolio: proven channels fund the tests, and every new channel gets a kill-or-scale number before launch.</dd>
+          <dt>Proof</dt><dd>I've run paid (through buyers), affiliate, partnerships, publishers, creators and UGC, social, owned email and SMS, and lead gen as one acquisition mix.</dd>
+        </dl>
+        <span class="scribble">Honest note: DRTV and CTV buying isn't my core. I'd lean on your agency for the buy and bring the measurement.</span>
+      </li>
+      <li class="entry">
+        <span class="enum" aria-hidden="true"></span>
+        <h3>Team leadership and cross-functional work</h3>
+        <dl>
+          <dt>How I think</dt><dd>I lead media buyers; I don't replace them. My job is clear targets, fast decisions and a scoreboard everyone, including Finance, believes.</dd>
+          <dt>Proof</dt><dd>Built and led teams from 5 to 10 up to 15 to 20 at Universal Marketing Partners. I've shipped 50+ apps and AI tools, so working closely with data and tech teams is natural.</dd>
+        </dl>
+      </li>
+    </ol>
+  </section>
+
+  <!-- 90 DAY -->
+  <section id="plan" aria-labelledby="plan-h">
+    <div class="sec-head"><h2 id="plan-h">The first 90 days</h2><span class="hand">a checklist page</span></div>
+    <div class="checkpage">
+      <span class="tape top" aria-hidden="true"></span>
+      <div class="phases">
+        <div class="phase">
+          <h3>Days 1 to 30</h3>
+          <span class="when">Listen and get the numbers straight</span>
+          <ul class="checks">
+            <li class="done">Sit with Brand, Digital, Acquisition, Philanthropy, Data Analytics and Finance; write down how each defines a win</li>
+            <li>Rebuild last year's spend by channel against first gifts, sustainers and 12-month value</li>
+            <li>Audit every agency and list partner: what they're paid on and what they report</li>
+            <li>Check paid search on the old "Humane Society" names and the new brand</li>
+            <li>Walk the donation funnel on mobile and log every leak</li>
+          </ul>
+        </div>
+        <div class="phase">
+          <h3>Days 31 to 60</h3>
+          <span class="when">Agree on the scoreboard</span>
+          <ul class="checks">
+            <li>Ship one blended attribution view that Finance signs off on</li>
+            <li>Set a target cost per sustainer and a 24-month value by channel</li>
+            <li>Launch donation-page tests: monthly default, ask ladders, form length</li>
+            <li>Run a geo or audience holdout on one large channel to check incrementality</li>
+            <li>Brief the social team on paid amplification across the 100+ handles</li>
+          </ul>
+        </div>
+        <div class="phase">
+          <h3>Days 61 to 90</h3>
+          <span class="when">Reallocate and plan the years ahead</span>
+          <ul class="checks">
+            <li>Move budget toward channels that produce sustainers who stay</li>
+            <li>Pilot one new partner channel, paid on donor quality, with a kill-or-scale date</li>
+            <li>Restructure agency scopes and fees around the shared scoreboard</li>
+            <li>Present the multi-year growth and retention plan with budget by channel</li>
+            <li>Set up the team: roles, weekly reviews and a testing calendar</li>
+          </ul>
+        </div>
+      </div>
+      <p class="foot">One box is ticked already: I've done my homework.</p>
+    </div>
+  </section>
+
+  <!-- MEET ERIC -->
+  <section id="meet" aria-labelledby="meet-h">
+    <div class="sec-head"><h2 id="meet-h">Meet Eric</h2><span class="hand">about the author</span></div>
+    <div class="meet">
+      <figure class="snap">
+        <span class="tape top" aria-hidden="true"></span>
+        <img src="https://yt3.googleusercontent.com/Mp7gOPpSMBFdGns7IfiIiY8Phw0AB94Ccs_SbKsMugqn9R9WNxBewG25xtxZJ8ks4znh5FBcOQ=s900" alt="Eric Beer" width="216" height="216" loading="lazy">
+        <figcaption>Eric, in person</figcaption>
+      </figure>
+      <div>
+        <p>I'm an entrepreneur and performance marketer with 20+ years of results-based work. I founded and ran Universal Marketing Partners for about 14 years and have generated $100M+ in affiliate commissions. Today I'm building LeadQual.ai, AI voice agents that qualify and route live insurance leads, and BeChosen / Scout, an AI job agent and job platform.</p>
+        <p>I also run AffiliateSchool.ai and JVC Affiliate Network, host the Performance Marketer podcast, and co-authored Million Dollar Dads and Million Dollar Identity. I studied finance at the University of Maryland ('99) on a baseball scholarship and played on the 1993 USA Junior Olympic team. I'm remote-ready and happy to travel anywhere.</p>
+        <ul class="socials">
+          <li><a href="https://www.linkedin.com/in/ericbeer">LinkedIn</a></li>
+          <li><a href="https://www.youtube.com/@ericbeer">YouTube</a></li>
+          <li><a href="https://x.com/esb211">X</a></li>
+          <li><a href="https://www.instagram.com/ericbeerofficial">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@ericbeer">TikTok</a></li>
+          <li><a href="https://www.facebook.com/eric.beer11">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <aside class="contact" id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Let's compare notes on the donor math</h2>
+    <p>Twenty minutes is enough to walk through how I'd find 11,000 sustainers who stay. Email or call, whichever is easier.</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:eric@performancemarketer.io?subject=Humane%20World%20for%20Animals%20Senior%20Managing%20Director%2C%20Global%20Performance%20Marketing%20and%20Media">Email Eric</a>
+      <a class="btn ghost" href="tel:+16467876282">Call 646-787-6282</a>
+    </div>
+    <span class="hand">eric@performancemarketer.io</span>
+  </aside>
+
+  <footer>Prepared by Eric Beer for Humane World for Animals. Figures are from the job posting and public filings; the per-donor math is my estimate.</footer>
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Eric Beer × Kraken · Affiliate Growth Lead, US</title>
+<meta name="description" content="How Eric Beer would build Kraken's US finance creator and affiliate channel for Margin: requirements, proof and a 90-day plan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --ground:#050505;
+  --panel:#0C0C0E;
+  --grid:#2A2A2A;
+  --ink:#F4F4F1;
+  --ink-2:#C4C4C0;
+  --ink-3:#9A9A96;
+  --violet:#8B5CF6;
+  --violet-text:#B49CFB;
+  --violet-deep:#1A1030;
+  --lime:#C6F432;
+  --lime-deep:#1C2408;
+  --on-lime:#050505;
+  --display:"Unbounded","Arial Black",sans-serif;
+  --body:"Space Grotesk",system-ui,sans-serif;
+  --mono:"Space Mono",ui-monospace,Menlo,monospace;
+  --gut:clamp(16px,4vw,56px);
+  --max:1280px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:100% 160px,160px 100%;background-attachment:fixed;background-position:0 0}
+body::before{content:"";position:fixed;inset:0;background:rgba(5,5,5,.86);pointer-events:none;z-index:-1}
+a{color:inherit}
+img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+.mono{font-family:var(--mono)}
+h1,h2,h3{font-family:var(--display);margin:0;overflow-wrap:break-word}
+p{margin:0}
+
+/* top bar */
+.bar{border-bottom:1px solid var(--grid);background:var(--ground);position:relative;z-index:2}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:56px}
+.pair{font-family:var(--mono);font-size:13px;display:flex;align-items:center;gap:10px;white-space:nowrap}
+.pair b{color:var(--lime);font-weight:700}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 10px var(--lime)}
+.bar nav{display:flex;gap:22px;font-family:var(--mono);font-size:13px}
+.bar nav a{text-decoration:none;color:var(--ink-2)}
+.bar nav a:hover{color:var(--lime)}
+@media (max-width:820px){.bar nav{display:none}}
+
+/* hero */
+.hero{padding:clamp(48px,9vw,120px) 0 clamp(36px,6vw,72px);border-bottom:1px solid var(--grid)}
+.hero-meta{font-family:var(--mono);font-size:13px;color:var(--ink-3);display:flex;flex-wrap:wrap;gap:8px 24px;margin-bottom:28px}
+.hero-meta span{color:var(--violet-text)}
+.hero h1{font-weight:900;font-size:clamp(44px,10.4vw,156px);line-height:.92;letter-spacing:-.035em}
+.hero h1 .x{color:var(--violet);font-weight:400;padding:0 .04em}
+.underline{display:block;height:clamp(14px,2vw,26px);width:min(68%,820px);background:var(--lime);margin:clamp(14px,2vw,22px) 0 clamp(26px,4vw,44px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:end}
+.role{font-family:var(--display);font-weight:600;font-size:clamp(20px,2.6vw,32px);line-height:1.15}
+.role small{display:block;font-family:var(--mono);font-weight:400;font-size:13px;color:var(--ink-3);margin-top:10px;letter-spacing:0}
+.thesis{font-size:clamp(18px,1.8vw,22px);line-height:1.45;color:var(--ink-2);max-width:56ch;border-left:2px solid var(--violet);padding-left:20px}
+.thesis strong{color:var(--ink);font-weight:500}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:14px;font-weight:700;text-decoration:none;padding:14px 20px;border:1px solid var(--lime)}
+.btn.buy{background:var(--lime);color:var(--on-lime)}
+.btn.buy:hover{background:#D9FF5C}
+.btn.ghost{color:var(--lime)}
+.btn.ghost:hover{background:var(--lime-deep)}
+@media (max-width:820px){.hero-grid{grid-template-columns:1fr}}
+
+/* ticker */
+.ticker{border-bottom:1px solid var(--grid);background:var(--panel);overflow:hidden;position:relative}
+.ticker::before,.ticker::after{content:"";position:absolute;top:0;bottom:0;width:60px;z-index:1;pointer-events:none}
+.ticker::before{left:0;background:linear-gradient(90deg,var(--panel),transparent)}
+.ticker::after{right:0;background:linear-gradient(-90deg,var(--panel),transparent)}
+.tape{display:flex;width:max-content;animation:tape 60s linear infinite}
+.tape ul{display:flex;list-style:none;margin:0;padding:0}
+.tape li{display:flex;align-items:baseline;gap:10px;padding:16px 28px;border-right:1px solid var(--grid);font-family:var(--mono);font-size:14px;white-space:nowrap}
+.tape .sym{color:var(--ink-3)}
+.tape .val{color:var(--ink);font-weight:700}
+.tape .chg{color:var(--lime)}
+@keyframes tape{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.tape{animation:none}}
+
+/* sections */
+section.blk{padding:clamp(56px,8vw,112px) 0;border-bottom:1px solid var(--grid)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:clamp(20px,4vw,64px);align-items:end;margin-bottom:clamp(32px,5vw,56px)}
+.sec-head h2{font-weight:800;font-size:clamp(30px,4.6vw,64px);line-height:1;letter-spacing:-.02em}
+.sec-head p{color:var(--ink-2);max-width:60ch}
+.code{font-family:var(--mono);font-size:13px;color:var(--violet-text);display:block;margin-bottom:14px}
+@media (max-width:820px){.sec-head{grid-template-columns:1fr}}
+
+/* what I see: market cells */
+.cells{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--grid)}
+.cell{padding:28px 24px;border-right:1px solid var(--grid);background:var(--panel);display:flex;flex-direction:column;gap:14px}
+.cell:last-child{border-right:0}
+.cell .k{font-family:var(--mono);font-size:13px;color:var(--ink-3)}
+.cell .big{font-family:var(--display);font-weight:800;font-size:clamp(28px,3vw,42px);line-height:1;color:var(--lime)}
+.cell.v .big{color:var(--violet-text)}
+.cell h3{font-family:var(--body);font-weight:700;font-size:19px;line-height:1.3}
+.cell p{color:var(--ink-2);font-size:16px}
+@media (max-width:980px){.cells{grid-template-columns:repeat(2,minmax(0,1fr))}.cell:nth-child(2){border-right:0}.cell:nth-child(-n+2){border-bottom:1px solid var(--grid)}}
+@media (max-width:560px){.cells{grid-template-columns:1fr}.cell{border-right:0;border-bottom:1px solid var(--grid)}.cell:last-child{border-bottom:0}}
+.thesis-band{margin-top:40px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:24px;align-items:center;border:1px solid var(--violet);background:var(--violet-deep);padding:28px clamp(20px,3vw,40px)}
+.thesis-band .tag{font-family:var(--mono);font-size:13px;color:var(--ink);background:var(--violet);padding:6px 10px;white-space:nowrap}
+.thesis-band p{font-family:var(--display);font-weight:600;font-size:clamp(19px,2.2vw,28px);line-height:1.3}
+@media (max-width:640px){.thesis-band{grid-template-columns:1fr}.thesis-band .tag{justify-self:start}}
+
+/* brief */
+.brief{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:1px solid var(--grid)}
+.brief>div{padding:28px 24px;border-right:1px solid var(--grid)}
+.brief>div:last-child{border-right:0;background:var(--lime);color:var(--on-lime)}
+.brief h3{font-family:var(--mono);font-weight:700;font-size:14px;margin-bottom:18px;color:var(--violet-text)}
+.brief>div:last-child h3{color:var(--on-lime)}
+.brief ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.brief li{padding-left:18px;position:relative;color:var(--ink-2);font-size:16px}
+.brief li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:2px;background:var(--lime)}
+.brief .price{font-family:var(--display);font-weight:800;font-size:clamp(28px,3vw,40px);color:var(--ink);line-height:1;margin-bottom:14px}
+.brief .problem{font-family:var(--display);font-weight:600;font-size:clamp(20px,2vw,24px);line-height:1.3;margin-bottom:14px}
+.brief>div:last-child p{font-size:16px}
+@media (max-width:900px){.brief{grid-template-columns:1fr}.brief>div{border-right:0;border-bottom:1px solid var(--grid)}.brief>div:last-child{border-bottom:0}}
+
+/* order book */
+.book{border:1px solid var(--grid);background:var(--panel)}
+.book-head,.row{display:grid;grid-template-columns:56px minmax(0,1.1fr) minmax(0,1fr) minmax(0,1.4fr) 112px;gap:0 20px;padding:0 20px}
+.book-head{font-family:var(--mono);font-size:12px;color:var(--ink-3);border-bottom:1px solid var(--grid);padding-top:14px;padding-bottom:14px}
+.row{position:relative;padding-top:24px;padding-bottom:24px;border-bottom:1px solid var(--grid)}
+.row:last-child{border-bottom:0}
+.row::before{content:"";position:absolute;left:0;top:0;bottom:0;width:var(--depth,60%);background:linear-gradient(90deg,rgba(139,92,246,.12),rgba(139,92,246,0));pointer-events:none}
+.row>*{position:relative}
+.row .n{font-family:var(--mono);font-size:13px;color:var(--ink-3);padding-top:3px}
+.row .req{font-weight:700;font-size:17px;line-height:1.35}
+.row .think{color:var(--ink-2);font-size:15.5px}
+.row .proof{font-size:15.5px;color:var(--ink)}
+.lbl{display:none;font-family:var(--mono);font-size:12px;color:var(--violet-text);margin-bottom:4px}
+.status{align-self:start;justify-self:end;font-family:var(--mono);font-size:12px;font-weight:700;padding:5px 10px;border:1px solid currentColor;white-space:nowrap}
+.status.filled{color:var(--on-lime);background:var(--lime);border-color:var(--lime)}
+.status.partial{color:var(--violet-text)}
+.book-note{font-family:var(--mono);font-size:13px;color:var(--ink-3);margin-top:16px;max-width:80ch}
+.book-note b{color:var(--lime);font-weight:700}
+.book-note i{font-style:normal;color:var(--violet-text)}
+@media (max-width:900px){
+  .book-head{display:none}
+  .row{grid-template-columns:minmax(0,1fr) auto;gap:12px 16px}
+  .row .n{grid-column:1;grid-row:1}
+  .row .status{grid-column:2;grid-row:1}
+  .row .req,.row .think,.row .proof{grid-column:1 / -1}
+  .lbl{display:block}
+}
+
+/* candles */
+.chart{border:1px solid var(--grid);background:var(--panel);padding:28px clamp(16px,3vw,32px) 0;position:relative}
+.axis{display:flex;justify-content:space-between;font-family:var(--mono);font-size:12px;color:var(--ink-3);border-bottom:1px solid var(--grid);padding-bottom:12px;margin-bottom:0}
+.candles{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));height:260px;align-items:end;border-bottom:1px solid var(--grid);
+  background:repeating-linear-gradient(0deg,transparent 0 51px,var(--grid) 51px 52px)}
+.c{position:relative;height:100%;display:flex;justify-content:center}
+.c .wick{position:absolute;width:2px;left:calc(50% - 1px);bottom:var(--wl);height:var(--wh);background:currentColor}
+.c .body{position:absolute;width:38%;min-width:22px;left:31%;bottom:var(--bl);height:var(--bh);background:currentColor}
+.c.up{color:var(--lime)}
+.c.vi{color:var(--violet)}
+.c .px{position:absolute;bottom:calc(var(--wl) + var(--wh) + 8px);left:0;right:0;text-align:center;font-family:var(--mono);font-size:12px;color:var(--ink-2)}
+.legs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.leg{padding:28px 20px 32px;border-right:1px solid var(--grid)}
+.leg:last-child{border-right:0}
+.leg .when{font-family:var(--mono);font-size:13px;color:var(--lime);margin-bottom:8px}
+.leg h3{font-weight:800;font-size:clamp(22px,2.4vw,30px);line-height:1.05;margin-bottom:16px}
+.leg ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.leg li{font-size:16px;color:var(--ink-2);padding-left:18px;position:relative}
+.leg li::before{content:"";position:absolute;left:0;top:.55em;width:8px;height:8px;border:1px solid var(--lime)}
+.leg .kpi{margin-top:18px;font-family:var(--mono);font-size:13px;color:var(--ink);border-top:1px solid var(--grid);padding-top:14px}
+.leg .kpi span{color:var(--violet-text)}
+@media (max-width:900px){.legs{grid-template-columns:1fr}.leg{border-right:0;border-bottom:1px solid var(--grid)}.leg:last-child{border-bottom:0}.candles{height:200px}}
+
+/* meet */
+.meet{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.photo{position:relative;border:1px solid var(--grid)}
+.photo img{width:100%;aspect-ratio:1/1;object-fit:cover;filter:grayscale(.15) contrast(1.05)}
+.photo::after{content:"";position:absolute;left:-1px;right:-1px;bottom:-1px;height:12px;background:var(--lime)}
+.meet h2{font-weight:800;font-size:clamp(30px,4vw,54px);line-height:1;letter-spacing:-.02em;margin-bottom:24px}
+.meet p{color:var(--ink-2);max-width:62ch;margin-bottom:16px}
+.meet p strong{color:var(--ink);font-weight:500}
+.socials{display:flex;flex-wrap:wrap;gap:0;margin-top:28px;border:1px solid var(--grid);width:fit-content;max-width:100%}
+.socials a{font-family:var(--mono);font-size:13px;text-decoration:none;padding:12px 16px;border-right:1px solid var(--grid);color:var(--ink)}
+.socials a:last-child{border-right:0}
+.socials a:hover{background:var(--violet);color:#fff}
+@media (max-width:820px){.meet{grid-template-columns:1fr}.photo{max-width:300px}}
+@media (max-width:520px){.socials{display:grid;grid-template-columns:1fr 1fr;width:100%}.socials a{border-bottom:1px solid var(--grid)}.socials a:nth-child(2n){border-right:0}.socials a:nth-last-child(-n+2){border-bottom:0}}
+
+/* contact */
+.contact{padding:clamp(64px,10vw,140px) 0;background:var(--lime);color:var(--on-lime)}
+.contact h2{font-weight:900;font-size:clamp(36px,7.4vw,112px);line-height:.95;letter-spacing:-.03em;max-width:14ch}
+.contact p{font-size:clamp(18px,1.8vw,21px);max-width:56ch;margin:24px 0 32px}
+.contact .btn{border-color:var(--on-lime)}
+.contact .btn.buy{background:var(--on-lime);color:var(--lime)}
+.contact .btn.buy:hover{background:#222}
+.contact .btn.ghost{color:var(--on-lime)}
+.contact .btn.ghost:hover{background:rgba(5,5,5,.08)}
+footer{padding:28px 0;font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <div class="pair"><span class="dot" aria-hidden="true"></span>EB/<b>KRKN</b> <span style="color:var(--ink-3)">US creator desk</span></div>
+    <nav aria-label="Sections">
+      <a href="#market">Kraken</a>
+      <a href="#brief">The brief</a>
+      <a href="#book">Proof</a>
+      <a href="#plan">90 days</a>
+      <a href="#eric">Meet Eric</a>
+      <a href="#talk">Talk</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-meta"><div>Role <span>Affiliate Growth Lead, US</span></div><div>Desk <span>Remote, US</span></div><div>Product <span>Kraken Pro Margin</span></div></div>
+    <h1>Eric Beer <span class="x">×</span><br>Kraken</h1>
+    <span class="underline" aria-hidden="true"></span>
+    <div class="hero-grid">
+      <div class="role">For the Affiliate Growth Lead, US role
+        <small>Finance and investing creators · Margin first</small>
+      </div>
+      <div>
+        <p class="thesis"><strong>Kraken has the funded accounts. Margin needs active traders.</strong> The creators who already teach Americans how to trade are the shortest path between the two, if every deal is priced on funded accounts and every post clears compliance before it ships.</p>
+        <div class="cta-row">
+          <a class="btn buy" href="mailto:eric@performancemarketer.io?subject=Kraken%20Affiliate%20Growth%20Lead%2C%20US">Email Eric</a>
+          <a class="btn ghost" href="#plan">See the 90-day plan</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-label="Eric's numbers">
+  <div class="tape">
+    <ul>
+      <li><span class="sym">AFF.COMMISSIONS</span><span class="val">$100M+</span><span class="chg">career</span></li>
+      <li><span class="sym">YRS.PAID.ON.RESULTS</span><span class="val">20+</span><span class="chg">every channel</span></li>
+      <li><span class="sym">MKT.CAP</span><span class="val">&lt;$10M → $100M+</span><span class="chg">language app, FB arbitrage</span></li>
+      <li><span class="sym">EVERFLOW.AFFILIATES</span><span class="val">280+</span><span class="chg">JVC network</span></li>
+      <li><span class="sym">APPS.SHIPPED</span><span class="val">50+</span><span class="chg">apps and AI tools</span></li>
+      <li><span class="sym">PARTNER.PLAN</span><span class="val">5 levels</span><span class="chg">AffiliateSchool.ai</span></li>
+      <li><span class="sym">UMP.FOUNDED</span><span class="val">2008</span><span class="chg">8-figure business</span></li>
+    </ul>
+    <ul aria-hidden="true">
+      <li><span class="sym">AFF.COMMISSIONS</span><span class="val">$100M+</span><span class="chg">career</span></li>
+      <li><span class="sym">YRS.PAID.ON.RESULTS</span><span class="val">20+</span><span class="chg">every channel</span></li>
+      <li><span class="sym">MKT.CAP</span><span class="val">&lt;$10M → $100M+</span><span class="chg">language app, FB arbitrage</span></li>
+      <li><span class="sym">EVERFLOW.AFFILIATES</span><span class="val">280+</span><span class="chg">JVC network</span></li>
+      <li><span class="sym">APPS.SHIPPED</span><span class="val">50+</span><span class="chg">apps and AI tools</span></li>
+      <li><span class="sym">PARTNER.PLAN</span><span class="val">5 levels</span><span class="chg">AffiliateSchool.ai</span></li>
+      <li><span class="sym">UMP.FOUNDED</span><span class="val">2008</span><span class="chg">8-figure business</span></li>
+    </ul>
+  </div>
+</div>
+
+<section class="blk" id="market">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="code">What I see at Kraken</span><h2>The account base is growing. The volume isn't.</h2></div>
+      <p>Four public facts shape this hire. Figures are from Kraken's own releases and press coverage of Payward's results, by public reports.</p>
+    </div>
+    <div class="cells">
+      <article class="cell">
+        <div class="k">Heritage</div>
+        <div class="big">2011</div>
+        <h3>One of the longest-running US crypto exchanges.</h3>
+        <p>Founded by Jesse Powell, now a multi-asset platform under parent company Payward, with crypto, futures and tokenized products.</p>
+      </article>
+      <article class="cell v">
+        <div class="k">Clients, Q2 2026</div>
+        <div class="big">6.6M</div>
+        <h3>Funded accounts, up 42% year over year.</h3>
+        <p>Over the same quarter, platform volume fell about 18% to roughly $310B, by public reports. More people on the platform, trading less often.</p>
+      </article>
+      <article class="cell">
+        <div class="k">Product, May 2026</div>
+        <div class="big">10x</div>
+        <h3>Spot margin opened to US clients.</h3>
+        <p>CFTC-regulated, long or short, up to 10x, with no accredited-investor requirement, provided through Kraken Derivatives US.</p>
+      </article>
+      <article class="cell v">
+        <div class="k">Model</div>
+        <div class="big">$1.5B</div>
+        <h3>Built for active US traders.</h3>
+        <p>The NinjaTrader acquisition (2025) and the Bitnomial deal (closed May 2026) gave Kraken a regulated US derivatives stack. Revenue follows trading activity, so an engaged trader is worth far more than a new sign-up.</p>
+      </article>
+    </div>
+    <div class="thesis-band">
+      <span class="tag">My thesis</span>
+      <p>Margin is how Kraken turns 6.6M funded accounts into active traders. Creators who teach trading can be the channel, but only if they're paid on funded, trading accounts and not on clicks.</p>
+    </div>
+  </div>
+</section>
+
+<section class="blk" id="brief">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="code">The brief</span><h2>What you asked for. What you're offering. The real job.</h2></div>
+      <p>From the posting for Affiliate Growth Lead, US. You'll measure the role on trading volume, funded accounts, retention, CAC and revenue.</p>
+    </div>
+    <div class="brief">
+      <div>
+        <h3>What you're asking for</h3>
+        <ul>
+          <li>A US creator and affiliate strategy, starting with Margin</li>
+          <li>Deals with trading educators, finance YouTubers, podcasters and newsletter writers</li>
+          <li>CPA, rev-share and hybrid deals tied to funded accounts and trading</li>
+          <li>Tracking, attribution, payouts and partner reporting</li>
+          <li>Disclosure and content review with Legal and Compliance</li>
+          <li>One point of contact with the NORAM Pro KOL team</li>
+          <li>Ending partnerships that don't perform</li>
+        </ul>
+      </div>
+      <div>
+        <h3>What you're offering</h3>
+        <div class="price">$110K–$221K</div>
+        <ul>
+          <li>Remote, anywhere in the US</li>
+          <li>Ownership of a new US channel for a flagship product</li>
+          <li>Cross-functional reach across Growth, Product, Legal and Compliance</li>
+          <li>Benefits aren't listed in the posting</li>
+        </ul>
+      </div>
+      <div>
+        <h3>The problem to solve</h3>
+        <p class="problem">Build a US finance creator channel that sends funded, active Margin traders, not just sign-ups.</p>
+        <p>That means paying on what you value, tracking every partner from click to trading volume, keeping leveraged-product messaging compliant, and cutting partners who don't convert.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blk" id="book">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="code">Requirement → proof</span><h2>Your requirements, filled against my record.</h2></div>
+      <p>Each row is one of your requirements, how I think about it, and what I've actually done. Where I don't have the exact experience you asked for, the row says so and shows the closest proof.</p>
+    </div>
+    <div class="book" role="table" aria-label="Requirements and proof">
+      <div class="book-head" role="row"><span role="columnheader">#</span><span role="columnheader">Your requirement</span><span role="columnheader">How I think</span><span role="columnheader">Proof</span><span role="columnheader" style="text-align:right">Status</span></div>
+
+      <div class="row" role="row" style="--depth:92%">
+        <span class="n mono" role="cell">01</span>
+        <div class="req" role="cell">A record of negotiating CPA, rev-share and hybrid deals</div>
+        <div class="think" role="cell"><span class="lbl">How I think</span>Pay for what you value. If Kraken values funded traders, the CPA triggers on funding and the rev-share follows volume, so the partner wins only when Kraken does.</div>
+        <div class="proof" role="cell"><span class="lbl">Proof</span>Paid on results for 20+ years and $100M+ in affiliate commissions generated across my career. Designed a 5-level partner commission plan for AffiliateSchool.ai.</div>
+        <span class="status filled" role="cell">Filled</span>
+      </div>
+
+      <div class="row" role="row" style="--depth:88%">
+        <span class="n mono" role="cell">02</span>
+        <div class="req" role="cell">Hands-on experience with affiliate networks and tracking platforms</div>
+        <div class="think" role="cell"><span class="lbl">How I think</span>If a partner can't see their numbers, they won't trust the deal. If you can't see them, you can't cut the losers. Tracking comes before outreach.</div>
+        <div class="proof" role="cell"><span class="lbl">Proof</span>Run JVC Affiliate Network on Everflow with 280+ affiliates tracked, including tracking, attribution and payouts.</div>
+        <span class="status filled" role="cell">Filled</span>
+      </div>
+
+      <div class="row" role="row" style="--depth:84%">
+        <span class="n mono" role="cell">03</span>
+        <div class="req" role="cell">Measurable results from creator or affiliate work, in numbers</div>
+        <div class="think" role="cell"><span class="lbl">How I think</span>I'm a math guy. Every partner gets measured on CPC, CPL, CPA, LTV and payback, and judged the same way.</div>
+        <div class="proof" role="cell"><span class="lbl">Proof</span>Scaled a language-learning product from under $10M to over $100M market cap via Facebook arbitrage. Founder & CEO of Universal Marketing Partners, an 8-figure performance and affiliate business.</div>
+        <span class="status filled" role="cell">Filled</span>
+      </div>
+
+      <div class="row" role="row" style="--depth:76%">
+        <span class="n mono" role="cell">04</span>
+        <div class="req" role="cell">US business development and affiliate growth, ideally for an investing product</div>
+        <div class="think" role="cell"><span class="lbl">How I think</span>Financial products sell on trust and clarity. Partners who explain a product well bring in customers who stay.</div>
+        <div class="proof" role="cell"><span class="lbl">Proof</span>Drove customers for Credit Sesame, LifeLock and Norton Antivirus. Agency of record for RealAge.com (Hearst / Dr. Oz) and Harlequin Book Club, and drove memberships for Disney Book Club.</div>
+        <span class="status filled" role="cell">Filled</span>
+      </div>
+
+      <div class="row" role="row" style="--depth:70%">
+        <span class="n mono" role="cell">05</span>
+        <div class="req" role="cell">Familiarity with US financial advertising rules, including FTC endorsement disclosure</div>
+        <div class="think" role="cell"><span class="lbl">How I think</span>Compliance is part of the offer. Approved disclosures, pre-reviewed talking points and a content review process go in before the first creator posts.</div>
+        <div class="proof" role="cell"><span class="lbl">Proof</span>Founder of LeadQual.ai, which runs TCPA- and consent-compliant lead gen for live Medicare and Final Expense insurance leads, a regulated vertical where every claim is checked.</div>
+        <span class="status partial" role="cell">Transferable</span>
+      </div>
+
+      <div class="row" role="row" style="--depth:58%">
+        <span class="n mono" role="cell">06</span>
+        <div class="req" role="cell">An established network in the US finance creator ecosystem</div>
+        <div class="think" role="cell"><span class="lbl">How I think</span>Networks get built one fair deal at a time. Start with 20 creators who already teach trading, then let results and word of mouth bring in the next 200.</div>
+        <div class="proof" role="cell"><span class="lbl">Proof</span>Built the creator-led acquisition program for BeChosen. Host of the Performance Marketer podcast and YouTube @ericbeer. My affiliate and JV relationships are in performance marketing, not yet in finance creators.</div>
+        <span class="status partial" role="cell">Partial</span>
+      </div>
+
+      <div class="row" role="row" style="--depth:48%">
+        <span class="n mono" role="cell">07</span>
+        <div class="req" role="cell">Growing margin, options, futures or other leveraged products</div>
+        <div class="think" role="cell"><span class="lbl">How I think</span>Leveraged products need the right customer, not the most customers. Target experienced traders, educate first, and measure retention and volume, never sign-ups alone.</div>
+        <div class="proof" role="cell"><span class="lbl">Proof</span>I haven't grown a leveraged trading product. The closest proof: high-scrutiny, regulated offers at LeadQual.ai, and consumer finance customers for Credit Sesame, where the right customer mattered more than volume.</div>
+        <span class="status partial" role="cell">Gap · transferable</span>
+      </div>
+    </div>
+    <p class="book-note"><b>Filled</b> means direct experience. <i>Partial</i> and <i>Transferable</i> mean adjacent proof, stated plainly.</p>
+  </div>
+</section>
+
+<section class="blk" id="plan">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="code">30 / 60 / 90</span><h2>The first 90 days, charted.</h2></div>
+      <p>Each candle is a two-week milestone. Lime candles build revenue and volume. Violet candles build the foundation: tracking, compliance and partner fit.</p>
+    </div>
+    <div class="chart">
+      <div class="axis" aria-hidden="true"><span>Day 0</span><span>30</span><span>60</span><span>90</span></div>
+      <div class="candles" role="img" aria-label="Six milestone candles rising from day 0 to day 90: audit and tracking, compliance kit, first 20 creators, first funded traders, scale winners, cut losers and expand.">
+        <div class="c vi" style="--wl:6%;--wh:28%;--bl:10%;--bh:16%"><span class="wick"></span><span class="body"></span><span class="px">Audit</span></div>
+        <div class="c vi" style="--wl:16%;--wh:30%;--bl:20%;--bh:18%"><span class="wick"></span><span class="body"></span><span class="px">Comply</span></div>
+        <div class="c up" style="--wl:24%;--wh:34%;--bl:30%;--bh:20%"><span class="wick"></span><span class="body"></span><span class="px">20 live</span></div>
+        <div class="c up" style="--wl:34%;--wh:36%;--bl:40%;--bh:22%"><span class="wick"></span><span class="body"></span><span class="px">Funded</span></div>
+        <div class="c vi" style="--wl:42%;--wh:32%;--bl:46%;--bh:16%"><span class="wick"></span><span class="body"></span><span class="px">Cut</span></div>
+        <div class="c up" style="--wl:50%;--wh:40%;--bl:56%;--bh:26%"><span class="wick"></span><span class="body"></span><span class="px">Scale</span></div>
+      </div>
+      <div class="legs">
+        <div class="leg">
+          <div class="when">Days 1–30</div>
+          <h3>Set the rails</h3>
+          <ul>
+            <li>Audit current US affiliate deals, tracking and payouts with the NORAM affiliate and Pro KOL teams, and agree one outreach owner per creator</li>
+            <li>Define the deal menu: CPA on funded Margin-eligible accounts, rev-share on volume, hybrid for top educators</li>
+            <li>With Legal and Compliance, ship a creator kit: approved disclosures, leveraged-product risk language and a review process</li>
+            <li>Map 100 US trading educators, finance YouTubers, podcasters and newsletter writers by audience fit</li>
+          </ul>
+          <p class="kpi">Exit: <span>tracking live, kit approved, 100-name map</span></p>
+        </div>
+        <div class="leg">
+          <div class="when">Days 31–60</div>
+          <h3>First 20 creators live</h3>
+          <ul>
+            <li>Sign 20 creators across formats, starting with educators whose audiences already trade actively</li>
+            <li>Launch co-built education content on how margin, liquidation and stops work, before any promo</li>
+            <li>Partner dashboards showing funded accounts, volume and payouts per creator</li>
+            <li>Feed weekly audience and objection insights back to Product</li>
+          </ul>
+          <p class="kpi">Exit: <span>first funded Margin traders by partner, CAC per partner</span></p>
+        </div>
+        <div class="leg">
+          <div class="when">Days 61–90</div>
+          <h3>Scale what trades</h3>
+          <ul>
+            <li>Rank partners on funded accounts, 30-day retention, volume and CAC; renegotiate or end the bottom tier</li>
+            <li>Move top performers to hybrid deals and multi-month content plans</li>
+            <li>Recruit the next wave of emerging and crypto-native creators from what the data says converts</li>
+            <li>Present a 12-month plan beyond Margin to other Kraken products</li>
+          </ul>
+          <p class="kpi">Exit: <span>a channel with known payback and a plan to scale it</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blk" id="eric">
+  <div class="wrap meet">
+    <div class="photo"><img src="https://yt3.googleusercontent.com/Mp7gOPpSMBFdGns7IfiIiY8Phw0AB94Ccs_SbKsMugqn9R9WNxBewG25xtxZJ8ks4znh5FBcOQ=s900" alt="Portrait of Eric Beer" width="900" height="900" loading="lazy"></div>
+    <div>
+      <span class="code">Meet Eric</span>
+      <h2>A partner-channel builder who's always been paid on results.</h2>
+      <p>I'm Eric Beer. I've spent <strong>20+ years as an entrepreneur and performance marketer</strong>, building affiliate, partner, publisher and creator channels for my own companies and for brands like RealAge, Disney Book Club, LifeLock and Credit Sesame. I founded and ran Universal Marketing Partners from 2008, an 8-figure performance and affiliate business, with teams of up to 20.</p>
+      <p>Today I build. <strong>LeadQual.ai</strong> uses AI voice agents to qualify and route live insurance leads under TCPA and consent rules. <strong>BeChosen</strong> and Scout are an AI job agent and job platform with a creator-led acquisition program. I run JVC Affiliate Network on Everflow, teach affiliates through AffiliateSchool.ai, and host the Performance Marketer podcast.</p>
+      <p>I'm a math guy and a strategist who leads teams rather than buying media hands-on. University of Maryland '99 in finance on a baseball scholarship, and a 1993 USA Junior Olympic team member. Remote or hybrid, and happy to travel anywhere.</p>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/ericbeer">LinkedIn</a>
+        <a href="https://www.youtube.com/@ericbeer">YouTube</a>
+        <a href="https://x.com/esb211">X</a>
+        <a href="https://www.instagram.com/ericbeerofficial">Instagram</a>
+        <a href="https://www.tiktok.com/@ericbeer">TikTok</a>
+        <a href="https://www.facebook.com/eric.beer11">Facebook</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="talk">
+  <div class="wrap">
+    <h2>Let's fill this order.</h2>
+    <p>If you want the US creator channel for Margin built on funded traders and clean compliance, let's talk. Email or call me directly.</p>
+    <div class="cta-row">
+      <a class="btn buy" href="mailto:eric@performancemarketer.io?subject=Kraken%20Affiliate%20Growth%20Lead%2C%20US">eric@performancemarketer.io</a>
+      <a class="btn ghost" href="tel:+16467876282">646-787-6282</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap"><span>Eric Beer × Kraken · Affiliate Growth Lead, US</span><span>Kraken figures by public reports; not affiliated with Kraken.</span></div>
+</footer>
+</body>
+</html>

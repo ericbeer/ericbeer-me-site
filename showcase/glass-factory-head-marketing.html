@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Eric Beer × Glass Factory · Head of Marketing</title>
+<meta name="description" content="A Showcase from Eric Beer for the Glass Factory Head of Marketing role.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FFF8F0; --paper:#FBEEE2; --ink:#111; --ink-2:#3a3633; --ink-3:#5c5650;
+  --pink:#FF3E8A; --pink-deep:#C8155E; --blush:#FFD9E7; --rule:#E6D6C8;
+  --serif:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --sans:"Jost","Futura","Century Gothic",Arial,sans-serif;
+  --gut:clamp(16px,4.5vw,56px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-weight:400;font-size:18px;line-height:1.6;overflow-x:hidden;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+p{margin:0 0 1em}
+.page{max-width:1280px;margin:0 auto;padding:0 var(--gut)}
+.folio{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;letter-spacing:.04em;color:var(--ink-3);border-top:1px solid var(--ink);padding:10px 0 0;margin-bottom:clamp(28px,5vw,56px)}
+.folio b{color:var(--ink);font-weight:500}
+
+/* ============ COVER ============ */
+.cover{position:relative;min-height:100vh;padding:clamp(18px,3vw,32px) var(--gut) clamp(24px,4vw,40px);max-width:1280px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto 1fr auto;overflow:hidden}
+.cover-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;font-size:13px;letter-spacing:.06em;color:var(--ink-2)}
+.cover-top .price{font-family:var(--serif);font-style:italic;font-size:15px;letter-spacing:0}
+.masthead{font-family:var(--serif);font-weight:900;color:var(--pink);font-size:min(14.6vw,196px);line-height:.8;letter-spacing:-.045em;margin:8px 0 0;text-align:center;white-space:nowrap;max-width:100%;position:relative;z-index:1}
+.cover-body{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr) minmax(0,1fr);gap:clamp(14px,2.5vw,32px);align-items:center;margin-top:-.08em}
+.cover-photo{grid-column:2;grid-row:1;position:relative;z-index:2;align-self:start}
+.cover-photo .frame{aspect-ratio:4/5;overflow:hidden;background:var(--blush)}
+.cover-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;filter:contrast(1.04) saturate(1.05)}
+.cover-photo .sticker{position:absolute;right:-6%;bottom:12%;width:clamp(96px,11vw,138px);aspect-ratio:1;border-radius:50%;background:var(--pink);color:#fff;display:grid;place-items:center;text-align:center;font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(14px,1.5vw,18px);line-height:1.1;padding:10px;transform:rotate(-10deg);box-shadow:0 0 0 4px var(--cream)}
+.lines{display:flex;flex-direction:column;gap:clamp(18px,2.6vw,34px);z-index:3}
+.lines.left{grid-column:1;grid-row:1;text-align:left}
+.lines.right{grid-column:3;grid-row:1;text-align:right}
+.cl{margin:0}
+.cl .big{display:block;font-family:var(--serif);font-weight:800;font-size:clamp(26px,3.3vw,46px);line-height:.95;letter-spacing:-.02em}
+.cl .big.pink{color:var(--pink)}
+.cl .sub{display:block;margin-top:6px;font-size:clamp(13px,1.15vw,15px);line-height:1.35;color:var(--ink-2)}
+.cl .kicker{display:block;font-family:var(--serif);font-style:italic;font-size:clamp(16px,1.5vw,20px);color:var(--pink-deep);margin-bottom:2px}
+.cover-foot{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:end;margin-top:clamp(18px,3vw,30px);border-top:2px solid var(--ink);padding-top:14px}
+.thesis{font-family:var(--serif);font-size:clamp(22px,2.7vw,36px);line-height:1.1;margin:0;max-width:30ch;letter-spacing:-.01em}
+.thesis i{color:var(--pink-deep)}
+.lockup{font-size:14px;letter-spacing:.04em;margin:0 0 6px;color:var(--ink-2)}
+.lockup strong{font-weight:600;color:var(--ink)}
+.barcode{display:flex;flex-direction:column;align-items:center;gap:4px;background:#fff;padding:8px 10px 6px;border:1px solid var(--ink)}
+.barcode .bars{width:128px;height:54px;background:
+  repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 4px,var(--ink) 4px 5px,transparent 5px 8px,var(--ink) 8px 11px,transparent 11px 12px,var(--ink) 12px 13px,transparent 13px 16px,var(--ink) 16px 17px,transparent 17px 19px,var(--ink) 19px 22px,transparent 22px 23px)}
+.barcode small{font-size:10px;letter-spacing:.18em;font-family:var(--sans)}
+
+/* ============ CONTENTS ============ */
+.contents{background:var(--ink);color:var(--cream);padding:clamp(48px,8vw,104px) 0}
+.contents .folio{border-color:var(--cream);color:#cfc6bd}
+.contents .folio b{color:var(--cream)}
+.contents-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,6vw,96px);align-items:start}
+.contents h2{font-family:var(--serif);font-weight:400;font-style:italic;font-size:clamp(64px,11vw,168px);line-height:.85;margin:0;letter-spacing:-.04em;color:var(--pink)}
+.contents .dek{margin:24px 0 0;font-family:var(--serif);font-size:clamp(20px,2vw,26px);line-height:1.3;max-width:26ch;color:#f3e9df}
+.toc{list-style:none;margin:0;padding:0}
+.toc li{border-top:1px solid #4a4440}
+.toc li:last-child{border-bottom:1px solid #4a4440}
+.toc a{display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;padding:18px 0;text-decoration:none;align-items:baseline}
+.toc a:hover .t{color:var(--pink)}
+.toc .n{font-family:var(--serif);font-weight:800;font-size:34px;line-height:1;color:var(--pink)}
+.toc .t{font-family:var(--serif);font-size:clamp(22px,2.4vw,30px);line-height:1.1;transition:color .2s}
+.toc .d{display:block;font-family:var(--sans);font-size:15px;color:#bfb6ad;margin-top:4px;line-height:1.4}
+
+/* ============ FEATURE ============ */
+section.spread{padding:clamp(56px,9vw,120px) 0}
+.feature-head{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin-bottom:clamp(28px,5vw,56px)}
+.feature-head .dept{font-family:var(--serif);font-style:italic;color:var(--pink-deep);font-size:20px;margin:0}
+.feature-head h2{font-family:var(--serif);font-weight:800;font-size:clamp(44px,7.4vw,108px);line-height:.92;letter-spacing:-.035em;margin:0;max-width:15ch}
+.feature-head .standfirst{font-size:clamp(18px,1.6vw,21px);font-weight:300;max-width:56ch;color:var(--ink-2);margin:6px 0 0}
+.cols{columns:2 320px;column-gap:clamp(28px,4vw,56px);column-rule:1px solid var(--rule)}
+.cols p{break-inside:avoid-column}
+.dropcap::first-letter{font-family:var(--serif);font-weight:900;float:left;font-size:5.4em;line-height:.8;padding:.06em .1em 0 0;color:var(--pink)}
+.cols b{font-weight:600}
+.pull{break-inside:avoid;margin:.4em 0 1.2em;padding:18px 0;border-top:3px solid var(--ink);border-bottom:1px solid var(--ink)}
+.pull p{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(26px,2.6vw,34px);line-height:1.12;margin:0;color:var(--ink)}
+.pull cite{display:block;margin-top:10px;font-style:normal;font-size:14px;color:var(--ink-3)}
+.note{font-size:14px;color:var(--ink-3);margin-top:18px}
+
+/* ============ THE BRIEF ============ */
+.brief{background:var(--pink);color:var(--ink);padding:clamp(56px,9vw,112px) 0}
+.brief .folio{border-color:var(--ink);color:var(--ink)}
+.brief h2{font-family:var(--serif);font-weight:900;font-size:clamp(52px,9vw,140px);line-height:.85;letter-spacing:-.045em;margin:0 0 clamp(28px,5vw,56px);color:var(--cream)}
+.brief-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,40px)}
+.brief-grid article{background:var(--cream);padding:clamp(20px,2.4vw,32px)}
+.brief-grid h3{font-family:var(--serif);font-style:italic;font-weight:600;font-size:26px;margin:0 0 12px;line-height:1.1;color:var(--pink-deep)}
+.brief-grid ul{margin:0;padding-left:1.1em}
+.brief-grid li{margin-bottom:.5em;font-size:16px;line-height:1.45}
+.brief-grid p{font-size:16px;line-height:1.5}
+.brief-grid .problem p:first-of-type{font-family:var(--serif);font-size:22px;line-height:1.25;font-weight:600}
+
+/* ============ INTERVIEW ============ */
+.interview .intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:end;margin-bottom:clamp(32px,5vw,64px)}
+.interview .intro p{margin:0;font-weight:300;font-size:19px;color:var(--ink-2);max-width:48ch}
+.qa{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(28px,4vw,56px)}
+.qa article{border-top:1px solid var(--ink);padding:26px 0 30px}
+.qa .q{font-family:var(--serif);font-weight:700;font-size:clamp(22px,2.1vw,28px);line-height:1.15;margin:0 0 14px}
+.qa .q::before{content:"Q.";color:var(--pink);margin-right:.3em;font-style:italic}
+.qa .a{margin:0 0 12px}
+.qa .a::before{content:"EB.";font-family:var(--serif);font-weight:800;color:var(--ink);margin-right:.4em}
+.qa .proof{font-size:15px;line-height:1.5;color:var(--ink-2);background:var(--paper);padding:12px 14px;border-left:3px solid var(--pink);margin:0}
+.qa .proof b{font-weight:600;color:var(--ink)}
+.qa .honest{border-left-color:var(--ink)}
+
+/* ============ WHAT'S NEXT ============ */
+.next{background:var(--paper);padding:clamp(56px,9vw,112px) 0}
+.next-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,2fr);gap:clamp(28px,5vw,72px)}
+.next h2{font-family:var(--serif);font-weight:400;font-style:italic;font-size:clamp(48px,7vw,104px);line-height:.88;margin:0;letter-spacing:-.035em}
+.next h2 span{display:block;font-style:normal;font-weight:900;color:var(--pink)}
+.next .side{font-size:16px;color:var(--ink-2);margin-top:20px;max-width:30ch}
+.days{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2.4vw,32px)}
+.days article{border-top:6px solid var(--ink);padding-top:16px}
+.days .when{font-family:var(--serif);font-weight:900;font-size:clamp(54px,6vw,84px);line-height:.85;margin:0;color:var(--pink)}
+.days .when small{display:block;font-family:var(--sans);font-weight:500;font-size:14px;color:var(--ink);letter-spacing:.03em;margin-top:6px}
+.days h3{font-family:var(--serif);font-size:24px;line-height:1.1;margin:16px 0 10px;font-weight:700}
+.days ul{margin:0;padding-left:1.05em;font-size:16px;line-height:1.5}
+.days li{margin-bottom:.55em}
+
+/* ============ MEET ERIC ============ */
+.meet-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(28px,5vw,72px);align-items:start}
+.portrait{position:relative}
+.portrait .frame{aspect-ratio:1/1;overflow:hidden;background:var(--blush)}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.portrait figcaption{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--ink-3);margin-top:10px}
+.meet h2{font-family:var(--serif);font-weight:800;font-size:clamp(44px,6.4vw,92px);line-height:.92;letter-spacing:-.035em;margin:0 0 20px}
+.meet .bio p{max-width:58ch}
+.facts{list-style:none;padding:0;margin:24px 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px}
+.facts li{border-top:1px solid var(--rule);padding:10px 0;font-size:15px;line-height:1.4}
+.facts b{display:block;font-family:var(--serif);font-weight:800;font-size:24px;color:var(--pink-deep)}
+.social{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;padding:0;list-style:none}
+.social a{display:inline-block;text-decoration:none;border:1px solid var(--ink);padding:8px 14px;font-size:15px;border-radius:999px}
+.social a:hover{background:var(--ink);color:var(--cream)}
+
+/* ============ BACK COVER / CONTACT ============ */
+.back{background:var(--ink);color:var(--cream);padding:clamp(64px,10vw,128px) 0 clamp(40px,6vw,64px);text-align:center}
+.back .kicker{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--pink);margin:0 0 12px}
+.back h2{font-family:var(--serif);font-weight:900;font-size:clamp(46px,8.4vw,128px);line-height:.88;letter-spacing:-.04em;margin:0 auto 28px;max-width:13ch}
+.back p.lede{max-width:46ch;margin:0 auto 32px;color:#e3d9cf;font-weight:300;font-size:19px}
+.cta-row{display:flex;justify-content:center;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;text-decoration:none;font-weight:500;padding:16px 26px;font-size:17px;border:2px solid var(--pink)}
+.btn.primary{background:var(--pink);color:var(--ink)}
+.btn.primary:hover{background:var(--cream);border-color:var(--cream)}
+.btn.ghost{color:var(--cream)}
+.btn.ghost:hover{background:var(--pink);color:var(--ink)}
+.imprint{margin-top:clamp(48px,7vw,80px);border-top:1px solid #4a4440;padding-top:16px;font-size:13px;color:#a69d94;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.imprint a{color:#e3d9cf}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:900px){
+  .cover{min-height:auto}
+  .cover-body{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .cover-photo{grid-column:1 / -1;grid-row:1;max-width:460px;width:100%;justify-self:center}
+  .lines.left{grid-column:1;grid-row:2}
+  .lines.right{grid-column:2;grid-row:2}
+  .contents-grid,.interview .intro,.next-grid,.meet-grid{grid-template-columns:minmax(0,1fr)}
+  .brief-grid,.days{grid-template-columns:minmax(0,1fr)}
+  .qa{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  .cover-body{grid-template-columns:minmax(0,1fr)}
+  .lines.left,.lines.right{grid-column:1;text-align:left}
+  .lines.right{grid-row:3}
+  .cover-photo .sticker{right:2%}
+  .cover-foot{grid-template-columns:minmax(0,1fr)}
+  .barcode{justify-self:start}
+  .facts{grid-template-columns:minmax(0,1fr)}
+  .toc a{grid-template-columns:44px minmax(0,1fr)}
+  .toc .n{font-size:26px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<header class="cover" aria-label="Cover">
+  <div class="cover-top">
+    <span>The Head of Marketing Issue</span>
+    <span class="price">Prepared for Glass Factory, October 2026</span>
+  </div>
+
+  <h1 class="masthead" aria-label="Eric Beer">ERIC BEER</h1>
+
+  <div class="cover-body">
+    <div class="lines left">
+      <p class="cl"><span class="kicker">Exclusive</span><span class="big pink">How $100M in commissions got made</span><span class="sub">Twenty years paid on results, and the math behind every dollar.</span></p>
+      <p class="cl"><span class="big">Under $10M to $100M+</span><span class="sub">The language-learning brand he scaled on Facebook.</span></p>
+      <p class="cl"><span class="big">Disney. LifeLock. Harlequin.</span><span class="sub">The direct-response years.</span></p>
+    </div>
+
+    <figure class="cover-photo" style="margin:0">
+      <div class="frame"><img src="https://yt3.googleusercontent.com/Mp7gOPpSMBFdGns7IfiIiY8Phw0AB94Ccs_SbKsMugqn9R9WNxBewG25xtxZJ8ks4znh5FBcOQ=s900" alt="Portrait of Eric Beer" width="900" height="900"></div>
+      <span class="sticker" aria-hidden="true">× Glass Factory</span>
+    </figure>
+
+    <div class="lines right">
+      <p class="cl"><span class="kicker">Inside</span><span class="big">The creator machine</span><span class="sub">Recruiting creators to run brand-owned channels.</span></p>
+      <p class="cl"><span class="big pink">50+ apps shipped</span><span class="sub">A builder who uses AI daily, not a deck about it.</span></p>
+      <p class="cl"><span class="big">Your next 90 days</span><span class="sub">One owner for social, video, email, community and paid.</span></p>
+    </div>
+  </div>
+
+  <div class="cover-foot">
+    <div>
+      <p class="lockup"><strong>Eric Beer × Glass Factory</strong>, Head of Marketing</p>
+      <p class="thesis">You already have the audience. What's missing is <i>one system</i> that turns factory stories into brands that build with you.</p>
+    </div>
+    <div class="barcode" aria-hidden="true"><div class="bars"></div><small>6 46787 62820</small></div>
+  </div>
+</header>
+
+<!-- CONTENTS -->
+<section class="contents" aria-labelledby="toc-h">
+  <div class="page">
+    <div class="folio"><span><b>Contents</b></span><span>Page 2</span></div>
+    <div class="contents-grid">
+      <div>
+        <h2 id="toc-h">In this issue</h2>
+        <p class="dek">A marketer who has spent two decades getting paid only when growth showed up, reading your brief closely.</p>
+      </div>
+      <ol class="toc">
+        <li><a href="#see"><span class="n">4</span><span class="t">What I see at Glass Factory<span class="d">The business, the audience and the opening.</span></span></a></li>
+        <li><a href="#brief"><span class="n">8</span><span class="t">The brief<span class="d">What you're asking for, what you're offering, the problem.</span></span></a></li>
+        <li><a href="#interview"><span class="n">10</span><span class="t">The interview<span class="d">Your requirements, answered with proof.</span></span></a></li>
+        <li><a href="#next"><span class="n">16</span><span class="t">What's next<span class="d">A 30/60/90-day plan.</span></span></a></li>
+        <li><a href="#meet"><span class="n">20</span><span class="t">Meet Eric<span class="d">Bio and where to find him.</span></span></a></li>
+        <li><a href="#contact"><span class="n">24</span><span class="t">Get in touch<span class="d">Email or call.</span></span></a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE: WHAT I SEE -->
+<section class="spread" id="see" aria-labelledby="see-h">
+  <div class="page">
+    <div class="folio"><span><b>Feature</b></span><span>Page 4</span></div>
+    <div class="feature-head">
+      <p class="dept">The business</p>
+      <h2 id="see-h">What I see at Glass Factory</h2>
+      <p class="standfirst">A media company and a manufacturing company sharing one bloodstream. That's rare, and it changes what marketing should be.</p>
+    </div>
+    <div class="cols">
+      <p class="dropcap"><b>You turned the factory floor into content.</b> Glass Factory makes products for fashion brands, pairing AI systems with relationships with factories around the world. Will Lasry, a Montreal-based designer and manufacturing specialist, founded it to make manufacturing more transparent, and the company films documentaries inside garment factories around the world. Fashion audiences now treat the making of clothes as entertainment, and you were early to that.</p>
+      <p><b>The audience is already large.</b> By your own posting, Glass Factory reaches 1.5M+ people across YouTube, TikTok, Instagram and its own platform. That content does three jobs at once: it teaches brands, it earns factories' trust, and it makes the supply chain visible.</p>
+      <div class="pull"><p>"Most companies buy an audience and then go looking for a product. You have both. The job is building the bridge between them."</p><cite>Eric Beer</cite></div>
+      <p><b>The product sits right behind the content.</b> By public listings, the platform covers factory discovery and vetting, design-to-production support, and tools brands need on the way: techpack templates, import cost and tariff estimates, trade-show guides and factory profiles. A viewer who watches a factory tour is one click from a brief.</p>
+      <p><b>The model rewards conversion, not just reach.</b> Glass Factory has been around since about 2023 by public reports. Its revenue comes from brands that actually produce. So the scoreboard isn't views. It's viewers who become brands, and brands that place orders. That gap between audience and orders is where I do my best work.</p>
+    </div>
+    <p class="note">Sources: the Glass Factory Head of Marketing posting on Built In NYC, ChinaTalk's episode notes on Will Lasry, and public company listings. Estimates are marked as such.</p>
+  </div>
+</section>
+
+<!-- THE BRIEF -->
+<section class="brief" id="brief" aria-labelledby="brief-h">
+  <div class="page">
+    <div class="folio"><span><b>The brief</b></span><span>Page 8</span></div>
+    <h2 id="brief-h">The brief</h2>
+    <div class="brief-grid">
+      <article>
+        <h3>What you're asking for</h3>
+        <ul>
+          <li>One owner for marketing strategy across social, email, paid, community, launches, resources and brand.</li>
+          <li>Content across Instagram, TikTok, YouTube, X, LinkedIn, Substack, Reddit, email and Discord.</li>
+          <li>The full workflow: idea, brief, production, posting, analysis, plus content calendars.</li>
+          <li>Paid strategy on Meta, TikTok, Google and YouTube.</li>
+          <li>Leading a community manager, editors and contractors, working closely with the founder.</li>
+        </ul>
+      </article>
+      <article>
+        <h3>What you're offering</h3>
+        <ul>
+          <li>Head of Marketing, full time.</li>
+          <li>Remote, hiring in New York; Montreal or New York preferred.</li>
+          <li>Compensation includes an equity component. No salary range is posted.</li>
+          <li>A seat beside the founder at a company with real audience momentum.</li>
+        </ul>
+      </article>
+      <article class="problem">
+        <h3>The problem to solve</h3>
+        <p>A brand built on audience and content needs one person who owns the whole growth engine.</p>
+        <p>Right now social, short-form, email, community and paid can each run on their own. The win is making them one system with one scoreboard: brands that move from watching to manufacturing.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- INTERVIEW -->
+<section class="spread interview" id="interview" aria-labelledby="int-h">
+  <div class="page">
+    <div class="folio"><span><b>The interview</b></span><span>Page 10</span></div>
+    <div class="intro">
+      <div class="feature-head" style="margin:0">
+        <p class="dept">Your requirements, his answers</p>
+        <h2 id="int-h">Six questions for Eric Beer</h2>
+      </div>
+      <p>We put the posting's requirements to him directly. Where he's strong, he shows the receipts. Where the role asks for something he hasn't done, he says so.</p>
+    </div>
+    <div class="qa">
+      <article>
+        <p class="q">Have you grown an audience, yours or someone else's?</p>
+        <p class="a">Both, and I treat it as a distribution asset you can measure. An audience is worth what it does: joins, buys, refers.</p>
+        <p class="proof"><b>Proof:</b> I host the Performance Marketer podcast and the @ericbeer YouTube channel, and run my own social on every major platform. I built the AffiliateSchool.ai Skool community and grew JVC Affiliate Network to 280+ tracked affiliates in its first year.</p>
+      </article>
+      <article>
+        <p class="q">Have you led marketing, content and growth at a startup?</p>
+        <p class="a">That's most of my career. I've been the founder who owns the number, and the operator who builds the team around it.</p>
+        <p class="proof"><b>Proof:</b> Founder and CEO of Universal Marketing Partners from 2008 to about 2022, an 8-figure performance and affiliate business with teams from 5–10 up to 15–20. In 2026 I founded LeadQual.ai and BeChosen / Scout.</p>
+      </article>
+      <article>
+        <p class="q">What's your short-form video strategy?</p>
+        <p class="a">Volume from many voices, a clear hook library, and every post tied to a next step. At Glass Factory the factory is the star, and creators and brand founders can tell its story at a scale one channel can't.</p>
+        <p class="proof"><b>Proof:</b> I designed BeChosen's creator program, which recruits and trains creators to run company-owned social channels on a retainer-plus-results model. Creators and UGC are a channel I run, not one I'm learning.</p>
+      </article>
+      <article>
+        <p class="q">Can you manage creative production across video, static, email and ads?</p>
+        <p class="a">Yes, as the person who sets the brief, the testing plan and the bar. I lead editors and producers; I don't need to be the one in the timeline.</p>
+        <p class="proof honest"><b>Honest note:</b> my production experience is direct-response creative at scale, not fashion editorial. I was agency of record for RealAge.com (Hearst / Dr. Oz) and Harlequin Book Club, and drove memberships for Disney Book Club. Your editors bring the craft; I bring the system that tells them what's working.</p>
+      </article>
+      <article>
+        <p class="q">How do you think about paid social, creative testing and lifecycle email?</p>
+        <p class="a">I'm a math guy. CPC, CPL, CPA, LTV and payback, read together. Paid finds people, email and community keep them, and the content you already make is the cheapest creative pool anyone has.</p>
+        <p class="proof"><b>Proof:</b> I scaled a language-learning product from under $10M to over $100M market cap through Facebook arbitrage, and drove customers for LifeLock, Norton Antivirus and Credit Sesame. I lead media buyers rather than sitting in Ads Manager myself, and I run owned email and SMS across my businesses.</p>
+      </article>
+      <article>
+        <p class="q">The posting lists a long tool stack. Where do you stand?</p>
+        <p class="a">Tools follow the plan. What matters is clean tracking from first view to placed order, so every channel competes on the same scoreboard.</p>
+        <p class="proof"><b>Proof:</b> I've shipped 50+ apps and AI tools and use AI assistants every day. I ran JVC's affiliate tracking on Everflow, and LeadQual.ai routes live leads with consent-compliant tracking. Your stack (Meta, Google, YouTube Studio, Klaviyo, analytics) is familiar ground for my teams.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S NEXT -->
+<section class="next" id="next" aria-labelledby="next-h">
+  <div class="page">
+    <div class="folio"><span><b>Column</b></span><span>Page 16</span></div>
+    <div class="next-grid">
+      <div>
+        <h2 id="next-h">What's <span>next</span></h2>
+        <p class="side">Ninety days to turn a big audience into a growth engine with one scoreboard, built alongside Will and the team.</p>
+      </div>
+      <div class="days">
+        <article>
+          <p class="when">30<small>days</small></p>
+          <h3>Listen, then measure</h3>
+          <ul>
+            <li>Sit with Will, the community manager and the editors. Learn the voice before touching it.</li>
+            <li>Audit every channel, then map the path from view to sign-up to brief to order.</li>
+            <li>Fix tracking so YouTube, TikTok, Instagram, email and Discord report against the same goal.</li>
+            <li>Pick the five content formats that already pull brands into the platform.</li>
+          </ul>
+        </article>
+        <article>
+          <p class="when">60<small>days</small></p>
+          <h3>Build the machine</h3>
+          <ul>
+            <li>Launch one shared calendar and briefing template from idea to post.</li>
+            <li>Start paid tests on Meta and TikTok using cut-downs of your best factory videos.</li>
+            <li>Build lifecycle email that walks new subscribers from curious to briefing.</li>
+            <li>Pilot a creator program: brand founders and fashion creators telling their factory stories.</li>
+          </ul>
+        </article>
+        <article>
+          <p class="when">90<small>days</small></p>
+          <h3>Scale what works</h3>
+          <ul>
+            <li>Put budget behind winning creative, with clear CPA and payback targets.</li>
+            <li>Make community a channel: Discord and Substack programming that feeds the platform.</li>
+            <li>Plan launches and resource drops on a quarterly cadence.</li>
+            <li>Hand Will a one-page monthly report: audience, sign-ups, briefs, orders.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEET ERIC -->
+<section class="spread meet" id="meet" aria-labelledby="meet-h">
+  <div class="page">
+    <div class="folio"><span><b>Profile</b></span><span>Page 20</span></div>
+    <div class="meet-grid">
+      <figure class="portrait" style="margin:0">
+        <div class="frame"><img src="https://yt3.googleusercontent.com/Mp7gOPpSMBFdGns7IfiIiY8Phw0AB94Ccs_SbKsMugqn9R9WNxBewG25xtxZJ8ks4znh5FBcOQ=s900" alt="Eric Beer" width="900" height="900" loading="lazy"></div>
+        <figcaption>Eric Beer, based near New York. Hybrid or remote, happy to travel.</figcaption>
+      </figure>
+      <div class="bio">
+        <h2 id="meet-h">Meet Eric</h2>
+        <p class="dropcap">Eric Beer has spent more than twenty years as an entrepreneur and performance marketer, always paid on results. He has generated $100M+ in affiliate commissions over his career and ran Universal Marketing Partners, an 8-figure performance and affiliate business, from 2008 to about 2022.</p>
+        <p>He's a strategist and builder who leads media buyers, creators and teams across paid, affiliate, partnerships, publishers, social, owned email and SMS. Today he's building LeadQual.ai, BeChosen / Scout and AffiliateSchool.ai. He hosts the Performance Marketer podcast and co-wrote <i>Million Dollar Dads</i> and <i>Million Dollar Identity</i>.</p>
+        <p>Before marketing there was baseball: a scholarship at the University of Maryland (finance, '99) and a spot on the 1993 USA Junior Olympic team, one of 64 players nationally, in a class that included Alex Rodriguez and Scott Rolen.</p>
+        <ul class="facts">
+          <li><b>$100M+</b>affiliate commissions generated</li>
+          <li><b>20+ years</b>paid on results</li>
+          <li><b>50+</b>apps and AI tools shipped</li>
+          <li><b>280+</b>affiliates on JVC Affiliate Network</li>
+        </ul>
+        <ul class="social" aria-label="Eric Beer on social media">
+          <li><a href="https://www.linkedin.com/in/ericbeer">LinkedIn</a></li>
+          <li><a href="https://www.youtube.com/@ericbeer">YouTube</a></li>
+          <li><a href="https://x.com/esb211">X</a></li>
+          <li><a href="https://www.instagram.com/ericbeerofficial">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@ericbeer">TikTok</a></li>
+          <li><a href="https://www.facebook.com/eric.beer11">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BACK COVER -->
+<footer class="back" id="contact" aria-labelledby="contact-h">
+  <div class="page">
+    <p class="kicker">Back cover</p>
+    <h2 id="contact-h">Let's make the next issue together</h2>
+    <p class="lede">If Glass Factory wants one person to own the whole growth engine, I'd like to talk it through with Will and the team.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="mailto:eric@performancemarketer.io?subject=Glass%20Factory%20Head%20of%20Marketing">Email eric@performancemarketer.io</a>
+      <a class="btn ghost" href="tel:+16467876282">Call 646-787-6282</a>
+    </div>
+    <div class="imprint">
+      <span>Eric Beer × Glass Factory, Head of Marketing</span>
+      <span><a href="https://www.builtinnyc.com/job/head-marketing/11299925">View the original posting</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

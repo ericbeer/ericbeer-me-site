@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Eric Beer × Runpod · Affiliate &amp; Creator Marketing Lead</title>
+<meta name="description" content="Eric Beer's Showcase for Runpod's Affiliate & Creator Marketing Lead role: the creator engine, drawn as a working schematic.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Barlow+Condensed:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ground:#123A8C;
+  --ground-deep:#0E2F73;
+  --ink:#FFFFFF;
+  --cyan:#9FD8FF;
+  --cyan-dim:rgba(159,216,255,.55);
+  --line:rgba(255,255,255,.78);
+  --hair:rgba(159,216,255,.35);
+  --orange:#FF8A00;
+  --grid:rgba(255,255,255,.07);
+  --grid-major:rgba(255,255,255,.12);
+  --body:"Barlow",system-ui,sans-serif;
+  --cond:"Barlow Condensed","Barlow",sans-serif;
+  --mono:"Space Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background-color:var(--ground);
+  background-image:
+    linear-gradient(var(--grid-major) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-major) 1px, transparent 1px),
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size:120px 120px,120px 120px,24px 24px,24px 24px;
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:18px;
+  line-height:1.55;
+  overflow-x:hidden;
+}
+a{color:var(--cyan);text-underline-offset:3px}
+a:hover{color:var(--ink)}
+a:focus-visible{outline:2px dashed var(--orange);outline-offset:3px}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:40px 24px 64px}
+
+/* ---------- drawing sheet ---------- */
+.sheet{
+  position:relative;
+  border:1.5px solid var(--line);
+  outline:1px solid var(--hair);
+  outline-offset:6px;
+  margin:0 0 56px;
+  background:rgba(18,58,140,.55);
+}
+.sheet-body{padding:40px 40px 32px}
+.tb{ /* title block */
+  display:grid;
+  grid-template-columns:2.2fr 1fr 1fr 1fr;
+  border-top:1.5px solid var(--line);
+  font-family:var(--mono);
+  font-size:12px;
+  line-height:1.35;
+  color:var(--cyan);
+}
+.tb > div{padding:8px 12px;border-left:1px solid var(--hair)}
+.tb > div:first-child{border-left:0}
+.tb b{display:block;font-weight:700;color:var(--ink);font-size:13px;margin-top:2px}
+.sheet-head{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin:0 0 28px}
+.sheet-no{
+  font-family:var(--mono);font-size:13px;color:var(--ground);background:var(--cyan);
+  padding:3px 8px;letter-spacing:.02em;
+}
+h1,h2,h3{font-family:var(--cond);font-weight:600;line-height:1.02;margin:0;letter-spacing:.005em}
+h2{font-size:clamp(34px,5vw,54px)}
+h3{font-size:26px;font-weight:600}
+.note{font-family:var(--mono);font-size:13px;color:var(--cyan);line-height:1.5}
+p{margin:0 0 14px;max-width:68ch}
+.lede{font-size:21px;line-height:1.5;color:#EAF5FF;max-width:60ch}
+
+/* ---------- dimension line ---------- */
+.dim{
+  display:flex;align-items:center;gap:10px;
+  font-family:var(--mono);font-size:12px;color:var(--cyan);
+  margin:6px 0;
+}
+.dim::before,.dim::after{
+  content:"";flex:1;height:0;border-top:1px solid var(--cyan-dim);
+}
+.dim-wrap{position:relative;padding:0 10px}
+.dim-wrap::before,.dim-wrap::after{
+  content:"";position:absolute;bottom:0;width:0;height:22px;border-left:1px solid var(--cyan-dim);
+}
+.dim-wrap::before{left:0}
+.dim-wrap::after{right:0}
+.dim span{white-space:nowrap}
+.sheet-body > *, .hero .sheet-body > *, .contact .sheet-body > *, .meet > *{min-width:0}
+.arrowL,.arrowR{width:0;height:0;border-top:4px solid transparent;border-bottom:4px solid transparent}
+.arrowL{border-right:7px solid var(--cyan)}
+.arrowR{border-left:7px solid var(--cyan)}
+
+/* ---------- hero ---------- */
+.hero .sheet-body{display:grid;grid-template-columns:1.45fr 1fr;gap:40px;align-items:start;padding-top:48px}
+.hero h1{font-size:clamp(56px,9vw,124px);font-weight:700;line-height:.9;letter-spacing:-.005em}
+.hero h1 .x{color:var(--cyan);font-weight:500;padding:0 .08em}
+.hero .role{font-family:var(--cond);font-size:clamp(24px,3vw,34px);font-weight:500;color:var(--cyan);margin:18px 0 26px}
+.thesis{
+  border-left:3px solid var(--orange);
+  padding:4px 0 4px 18px;
+  font-size:22px;line-height:1.45;max-width:34ch;margin:0;
+}
+.hero-figure{
+  border:1px solid var(--hair);padding:22px 20px 18px;position:relative;
+}
+.hero-figure .cap{position:absolute;top:-10px;left:14px;background:var(--ground);padding:0 8px;font-family:var(--mono);font-size:12px;color:var(--cyan)}
+.bignum{font-family:var(--cond);font-weight:700;font-size:clamp(64px,8vw,96px);line-height:.95;text-align:center;margin:4px 0}
+.bignum.small{font-size:clamp(40px,5vw,56px)}
+.fig-row + .fig-row{margin-top:22px;padding-top:18px;border-top:1px dashed var(--hair)}
+.fig-label{text-align:center;font-family:var(--mono);font-size:12px;color:var(--cyan);margin-top:6px}
+
+/* ---------- survey (what I see) ---------- */
+.survey{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--hair);margin-top:8px}
+.obs{padding:24px 26px;border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);position:relative}
+.obs:nth-child(2n){border-right:0}
+.obs:nth-last-child(-n+2){border-bottom:0}
+.obs .tag{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:30px;height:30px;border:1.5px solid var(--cyan);border-radius:50%;
+  font-family:var(--mono);font-size:12px;color:var(--cyan);margin-bottom:12px;
+}
+.obs h3{margin-bottom:8px}
+.obs p{font-size:17px;margin:0}
+.src{font-family:var(--mono);font-size:11.5px;color:var(--cyan-dim);margin-top:10px;display:block}
+
+/* ---------- brief ---------- */
+.brief-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px}
+.spec-block{border-top:1.5px solid var(--line);padding-top:14px}
+.spec-block h3{font-size:24px;margin-bottom:12px}
+.spec-block ul{margin:0;padding:0;list-style:none}
+.spec-block li{padding:7px 0 7px 18px;position:relative;font-size:16.5px;border-bottom:1px dotted var(--hair)}
+.spec-block li::before{content:"";position:absolute;left:0;top:16px;width:8px;height:1px;background:var(--cyan)}
+.comp{font-family:var(--cond);font-size:44px;font-weight:700;line-height:1;margin:6px 0 2px;text-align:center}
+.problem-box{border:1.5px dashed var(--orange);padding:16px 18px;margin-top:4px}
+.problem-box p{font-size:17px;margin:0 0 10px}
+.problem-box p:last-child{margin:0}
+
+/* ---------- schematic ---------- */
+.schem{margin:8px 0 18px;border:1px solid var(--hair);padding:18px;background:rgba(14,47,115,.45)}
+.schem svg{width:100%;height:auto;display:block}
+.schem .schem-mobile{display:none}
+.legend{display:flex;flex-wrap:wrap;gap:22px;font-family:var(--mono);font-size:12px;color:var(--cyan);margin-top:6px}
+.legend i{display:inline-block;width:26px;height:0;vertical-align:middle;margin-right:8px}
+.l-flow{border-top:1.5px solid #fff}
+.l-money{border-top:2.5px solid var(--orange)}
+.l-data{border-top:1.5px dashed var(--cyan)}
+.schem-notes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:22px}
+.schem-notes div{font-size:16.5px}
+.schem-notes b{font-family:var(--cond);font-size:21px;font-weight:600;display:block;margin-bottom:4px}
+
+/* ---------- requirement callouts ---------- */
+.callouts{display:grid;gap:0;border-top:1.5px solid var(--line)}
+.callout{display:grid;grid-template-columns:220px 1fr 1fr;gap:28px;padding:22px 0;border-bottom:1px solid var(--hair)}
+.callout .req{position:relative;padding-left:40px}
+.callout .req .k{
+  position:absolute;left:0;top:0;width:28px;height:28px;border:1.5px solid var(--ink);
+  transform:rotate(45deg);display:flex;align-items:center;justify-content:center;
+}
+.callout .req .k span{transform:rotate(-45deg);font-family:var(--mono);font-size:11px}
+.callout .req h3{font-size:22px;line-height:1.1}
+.callout .req .ask{font-family:var(--mono);font-size:12px;color:var(--cyan);margin-top:6px}
+.callout .col-h{font-family:var(--mono);font-size:12px;color:var(--cyan);margin-bottom:4px;display:block}
+.callout p{font-size:16.5px;margin:0}
+.callout.gap .req .k{border-color:var(--cyan);border-style:dashed}
+
+/* ---------- build sequence ---------- */
+.seq{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative;margin-top:10px}
+.phase{padding:0 24px 0 0;position:relative}
+.phase + .phase{padding-left:24px;border-left:1px dashed var(--hair)}
+.phase .when{font-family:var(--mono);font-size:12px;color:var(--cyan)}
+.phase h3{font-size:30px;margin:4px 0 14px}
+.phase ol{margin:0;padding:0;list-style:none;counter-reset:s}
+.phase li{counter-increment:s;padding:8px 0 8px 34px;position:relative;font-size:16.5px;border-top:1px dotted var(--hair)}
+.phase li::before{
+  content:counter(s);position:absolute;left:0;top:9px;width:22px;height:22px;
+  border:1px solid var(--cyan);font-family:var(--mono);font-size:11px;color:var(--cyan);
+  display:flex;align-items:center;justify-content:center;
+}
+.phase .gate{margin-top:14px;font-size:15.5px;border:1px solid var(--line);padding:10px 12px}
+.phase .gate b{font-family:var(--mono);font-size:12px;color:var(--cyan);display:block;font-weight:400}
+.seq-ruler{margin:0 0 22px}
+
+/* ---------- meet eric ---------- */
+.meet{display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:start}
+.portrait{border:1.5px solid var(--line);padding:8px;position:relative}
+.portrait img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;filter:grayscale(.15) contrast(1.05)}
+.portrait .note{margin-top:8px;text-align:center}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--hair);margin:20px 0 22px}
+.facts div{padding:14px 16px;border-right:1px solid var(--hair)}
+.facts div:last-child{border-right:0}
+.facts b{font-family:var(--cond);font-size:32px;font-weight:700;display:block;line-height:1}
+.facts span{font-family:var(--mono);font-size:12px;color:var(--cyan)}
+.socials{display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:0;list-style:none}
+.socials a{
+  display:inline-block;border:1px solid var(--cyan);padding:7px 12px;
+  font-family:var(--mono);font-size:13px;text-decoration:none;color:var(--ink);
+}
+.socials a:hover{background:var(--cyan);color:var(--ground)}
+
+/* ---------- contact ---------- */
+.contact .sheet-body{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.contact h2{font-size:clamp(40px,6vw,72px)}
+.cta{
+  display:inline-block;background:var(--orange);color:#1A1200;text-decoration:none;
+  font-family:var(--cond);font-weight:700;font-size:26px;padding:14px 26px;margin:8px 0 14px;
+}
+.cta:hover{background:#FFA033;color:#1A1200}
+.contact-lines{font-family:var(--mono);font-size:15px;line-height:2}
+.contact-lines a{color:var(--ink)}
+.stamp{
+  border:2px solid var(--cyan);padding:18px 20px;font-family:var(--mono);font-size:13px;color:var(--cyan);
+  transform:rotate(-2deg);max-width:340px;justify-self:end;
+}
+.stamp b{display:block;font-family:var(--cond);font-size:30px;color:var(--ink);font-weight:700;margin:4px 0}
+
+footer{font-family:var(--mono);font-size:12px;color:var(--cyan-dim);text-align:center;margin-top:-20px}
+
+/* ---------- responsive ---------- */
+@media (max-width:960px){
+  .hero .sheet-body,.contact .sheet-body{grid-template-columns:1fr}
+  .brief-grid{grid-template-columns:1fr}
+  .callout{grid-template-columns:1fr;gap:12px}
+  .seq{grid-template-columns:1fr}
+  .phase{padding:0 0 24px}
+  .phase + .phase{padding:24px 0;border-left:0;border-top:1px dashed var(--hair)}
+  .schem-notes{grid-template-columns:1fr}
+  .stamp{justify-self:start}
+}
+@media (max-width:720px){
+  body{font-size:17px}
+  .wrap{padding:24px 16px 48px}
+  .sheet{outline-offset:4px;margin-bottom:40px}
+  .sheet-body{padding:26px 18px 22px}
+  .tb{grid-template-columns:1fr 1fr}
+  .tb > div{border-top:1px solid var(--hair)}
+  .tb > div:nth-child(odd){border-left:0}
+  .tb > div:first-child{grid-column:1 / -1;border-top:0}
+  .tb > div:nth-child(2){border-left:0}
+  .tb > div:nth-child(3){border-left:1px solid var(--hair)}
+  .tb > div:nth-child(4){border-left:0;grid-column:1 / -1}
+  .survey{grid-template-columns:1fr}
+  .obs{border-right:0}
+  .obs:nth-last-child(2){border-bottom:1px solid var(--hair)}
+  .meet{grid-template-columns:1fr}
+  .portrait{max-width:240px}
+  .facts{grid-template-columns:1fr}
+  .facts div{border-right:0;border-bottom:1px solid var(--hair)}
+  .facts div:last-child{border-bottom:0}
+  .schem .schem-desktop{display:none}
+  .schem .schem-mobile{display:block}
+  .schem{padding:12px}
+  .thesis{font-size:20px}
+  .dim span{white-space:normal;text-align:center}
+  .hero h1{font-size:52px}
+  .lede{font-size:19px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .flowpath{stroke-dasharray:6 6;animation:flow 1.6s linear infinite}
+  @keyframes flow{to{stroke-dashoffset:-24}}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ================= A-01 HERO ================= -->
+<header class="sheet hero" aria-labelledby="hero-h">
+  <div class="sheet-body">
+    <div>
+      <div class="sheet-head"><span class="sheet-no">A-01</span><span class="note">General arrangement</span></div>
+      <h1 id="hero-h">Eric Beer <span class="x">×</span> Runpod</h1>
+      <p class="role">Affiliate &amp; Creator Marketing Lead</p>
+      <p class="thesis">A million developers already chose Runpod. The next million should arrive through creators they trust, and those creators should be paid on what those developers actually run.</p>
+    </div>
+    <div class="hero-figure" aria-label="Key dimensions">
+      <span class="cap">Fig. 1 · Load on the system</span>
+      <div class="fig-row">
+        <div class="dim-wrap"><div class="dim"><i class="arrowL"></i><span>developers on platform</span><i class="arrowR"></i></div></div>
+        <div class="bignum">1M+</div>
+        <div class="fig-label">per Runpod, 2026</div>
+      </div>
+      <div class="fig-row">
+        <div class="dim-wrap"><div class="dim"><i class="arrowL"></i><span>serverless inference requests</span><i class="arrowR"></i></div></div>
+        <div class="bignum small">20B+</div>
+      </div>
+      <div class="fig-row">
+        <div class="dim-wrap"><div class="dim"><i class="arrowL"></i><span>affiliate commissions I've generated</span><i class="arrowR"></i></div></div>
+        <div class="bignum small">$100M+</div>
+      </div>
+    </div>
+  </div>
+  <div class="tb" role="group" aria-label="Title block">
+    <div>Project<b>Runpod affiliate &amp; creator engine</b></div>
+    <div>Scale<b>Paid on usage</b></div>
+    <div>Drawn by<b>E. Beer</b></div>
+    <div>Date<b>Oct 14, 2026 · Rev 0</b></div>
+  </div>
+</header>
+
+<!-- ================= A-02 WHAT I SEE ================= -->
+<section class="sheet" aria-labelledby="see-h">
+  <div class="sheet-body">
+    <div class="sheet-head"><span class="sheet-no">A-02</span><span class="note">Site survey</span></div>
+    <h2 id="see-h" style="margin-bottom:22px">What I see at Runpod</h2>
+    <div class="survey">
+      <div class="obs">
+        <span class="tag">a</span>
+        <h3>The AI developer cloud</h3>
+        <p>GPU Pods across 31 regions plus Serverless inference, in one dashboard to train, fine-tune, deploy and scale. Customers like Deep Cogito trained a full open model family on it.</p>
+        <span class="src">Runpod blog; SiliconANGLE, June 2026</span>
+      </div>
+      <div class="obs">
+        <span class="tag">b</span>
+        <h3>Usage is the revenue</h3>
+        <p>Billing is pay-as-you-go, and by Runpod's numbers 80% of developers who deploy come back to build more. A referred developer is a stream of spend, so the partner deal should follow the stream.</p>
+        <span class="src">SiliconANGLE, June 2026</span>
+      </div>
+      <div class="obs">
+        <span class="tag">c</span>
+        <h3>Capital to grow, fast</h3>
+        <p>A $100M Series A led by Summit Partners in June 2026, $122M raised in total, at a $1B valuation by public reports. Headcount is around 120 and growing.</p>
+        <span class="src">SiliconANGLE; Runpod job posting</span>
+      </div>
+      <div class="obs">
+        <span class="tag">d</span>
+        <h3>A partner ladder already exists</h3>
+        <p>Credits referrals pay 5% of Serverless and 3% of Pod spend for six months. After 25 paying referrals, partners can move to cash commissions on PartnerStack. The rungs are there; the program needs an owner.</p>
+        <span class="src">docs.runpod.io referral docs</span>
+      </div>
+    </div>
+  </div>
+  <div class="tb" role="group" aria-label="Title block">
+    <div>Sheet<b>Observations from public sources</b></div>
+    <div>Scale<b>Company-wide</b></div>
+    <div>Drawn by<b>E. Beer</b></div>
+    <div>Sheet<b>A-02 of 07</b></div>
+  </div>
+</section>
+
+<!-- ================= A-03 THE BRIEF ================= -->
+<section class="sheet" aria-labelledby="brief-h">
+  <div class="sheet-body">
+    <div class="sheet-head"><span class="sheet-no">A-03</span><span class="note">Specification</span></div>
+    <h2 id="brief-h" style="margin-bottom:26px">The brief</h2>
+    <div class="brief-grid">
+      <div class="spec-block">
+        <h3>What you're asking for</h3>
+        <ul>
+          <li>Own the affiliate program end to end and bring it in-house as the Advertise Purple and FNF agency contracts wind down</li>
+          <li>Move influencer work from sponsorship fees to signups and revenue inside the affiliate program</li>
+          <li>A repeatable creator-sourcing process, with DevRel as a partner</li>
+          <li>Challenges, giveaways, co-branded content and takeovers</li>
+          <li>Employee and executive content systems</li>
+          <li>A reporting cadence on signups, spend and ROI; contracts and payouts</li>
+        </ul>
+      </div>
+      <div class="spec-block">
+        <h3>What you're offering</h3>
+        <div class="dim-wrap"><div class="dim"><i class="arrowL"></i><span>base salary, USD</span><i class="arrowR"></i></div></div>
+        <div class="comp">$115K–$180K</div>
+        <ul style="margin-top:10px">
+          <li>Stock options for every team member</li>
+          <li>Medical, dental and vision</li>
+          <li>Flexible PTO and a $1,200 home office stipend</li>
+          <li>Remote-first, US; reports to the Director of Growth &amp; Demand Gen</li>
+        </ul>
+      </div>
+      <div class="spec-block">
+        <h3>The problem to solve</h3>
+        <div class="problem-box">
+          <p>Two agencies have been running the partner relationships. When they leave, the relationships, the fraud watch and the payout rhythm have to move without a dip.</p>
+          <p>At the same time, creators who were paid a flat fee for impressions need a new deal: paid on the developers they send and what those developers spend. Some will love it. Some will walk. The program has to be built so the best ones earn more than before.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tb" role="group" aria-label="Title block">
+    <div>Sheet<b>Role specification</b></div>
+    <div>Source<b>Runpod posting</b></div>
+    <div>Drawn by<b>E. Beer</b></div>
+    <div>Sheet<b>A-03 of 07</b></div>
+  </div>
+</section>
+
+<!-- ================= A-04 SCHEMATIC ================= -->
+<section class="sheet" aria-labelledby="engine-h">
+  <div class="sheet-body">
+    <div class="sheet-head"><span class="sheet-no">A-04</span><span class="note">System schematic</span></div>
+    <h2 id="engine-h" style="margin-bottom:12px">The engine I'd build</h2>
+    <p class="lede" style="margin-bottom:22px">One program, one tracking spine, one deal logic. Every creator, affiliate and employee feeds the same loop, and the money comes back on usage, not on views.</p>
+
+    <figure class="schem" style="margin-left:0;margin-right:0">
+      <!-- desktop schematic -->
+      <svg class="schem-desktop" viewBox="0 0 1040 430" role="img" aria-labelledby="sv-t sv-d">
+        <title id="sv-t">Affiliate and creator engine schematic</title>
+        <desc id="sv-d">Sources (creators, affiliates, employees and execs) feed tracked links in PartnerStack. Links lead to developer signup, first credit load, then Pods and Serverless usage. Usage-based commission flows back to sources. DevRel feeds sourcing; reporting reads from tracking and usage.</desc>
+        <defs>
+          <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#FFFFFF"/></marker>
+          <marker id="ahc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9FD8FF"/></marker>
+          <marker id="aho" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#FF8A00"/></marker>
+        </defs>
+        <g font-family="Barlow Condensed, sans-serif" fill="#FFFFFF">
+          <!-- sources -->
+          <rect x="20" y="60" width="170" height="54" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+          <text x="105" y="93" text-anchor="middle" font-size="18" font-weight="600">AI / dev creators</text>
+          <rect x="20" y="140" width="170" height="54" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+          <text x="105" y="173" text-anchor="middle" font-size="21" font-weight="600">Affiliates</text>
+          <rect x="20" y="220" width="170" height="54" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+          <text x="105" y="253" text-anchor="middle" font-size="18" font-weight="600">Employees &amp; execs</text>
+          <text x="58" y="48" text-anchor="start" font-family="Space Mono, monospace" font-size="12" fill="#9FD8FF">S1 · sources</text>
+
+          <!-- DevRel -->
+          <rect x="20" y="330" width="170" height="48" fill="none" stroke="#9FD8FF" stroke-width="1.2" stroke-dasharray="5 4"/>
+          <text x="105" y="360" text-anchor="middle" font-size="19" fill="#9FD8FF">DevRel sourcing</text>
+          <path d="M105 330 L105 280" stroke="#9FD8FF" stroke-width="1.2" stroke-dasharray="5 4" fill="none" marker-end="url(#ahc)"/>
+
+          <!-- merge to tracking -->
+          <path d="M190 87 L240 87 L240 160" stroke="#FFFFFF" stroke-width="1.5" fill="none"/>
+          <path d="M190 247 L240 247 L240 174" stroke="#FFFFFF" stroke-width="1.5" fill="none"/>
+          <path class="flowpath" d="M190 167 L282 167" stroke="#FFFFFF" stroke-width="1.5" fill="none" marker-end="url(#ah)"/>
+
+          <!-- tracking -->
+          <rect x="286" y="128" width="170" height="78" fill="#0E2F73" stroke="#FFFFFF" stroke-width="2"/>
+          <text x="371" y="160" text-anchor="middle" font-size="22" font-weight="700">Tracked link</text>
+          <text x="371" y="184" text-anchor="middle" font-family="Space Mono, monospace" font-size="12" fill="#9FD8FF">PartnerStack</text>
+          <text x="371" y="112" text-anchor="middle" font-family="Space Mono, monospace" font-size="12" fill="#9FD8FF">S2 · attribution</text>
+
+          <!-- signup -->
+          <path class="flowpath" d="M456 167 L512 167" stroke="#FFFFFF" stroke-width="1.5" fill="none" marker-end="url(#ah)"/>
+          <rect x="516" y="140" width="130" height="54" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+          <text x="581" y="173" text-anchor="middle" font-size="21" font-weight="600">Signup</text>
+
+          <!-- first load -->
+          <path class="flowpath" d="M646 167 L692 167" stroke="#FFFFFF" stroke-width="1.5" fill="none" marker-end="url(#ah)"/>
+          <rect x="696" y="140" width="130" height="54" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+          <text x="761" y="166" text-anchor="middle" font-size="21" font-weight="600">First load</text>
+          <text x="761" y="185" text-anchor="middle" font-family="Space Mono, monospace" font-size="11" fill="#9FD8FF">$10 min.</text>
+
+          <!-- usage -->
+          <path class="flowpath" d="M826 167 L872 167" stroke="#FFFFFF" stroke-width="1.5" fill="none" marker-end="url(#ah)"/>
+          <rect x="876" y="118" width="144" height="98" fill="#0E2F73" stroke="#FFFFFF" stroke-width="2"/>
+          <text x="948" y="152" text-anchor="middle" font-size="22" font-weight="700">Usage</text>
+          <text x="948" y="176" text-anchor="middle" font-size="17">Pods</text>
+          <text x="948" y="198" text-anchor="middle" font-size="17">Serverless</text>
+          <text x="938" y="106" text-anchor="end" font-family="Space Mono, monospace" font-size="12" fill="#9FD8FF">S3 · revenue</text>
+
+          <!-- repeat loop on usage -->
+          <path d="M1000 216 C 1030 250, 970 262, 948 230" stroke="#FFFFFF" stroke-width="1.2" fill="none" marker-end="url(#ah)"/>
+          <text x="1004" y="268" text-anchor="middle" font-family="Space Mono, monospace" font-size="11" fill="#9FD8FF">returns</text>
+
+          <!-- commission loop (orange) -->
+          <path d="M948 118 L948 22 L40 22 L40 54" stroke="#FF8A00" stroke-width="2.5" fill="none" marker-end="url(#aho)"/>
+          <rect x="330" y="9" width="430" height="26" fill="#0E2F73"/>
+          <text x="545" y="28" text-anchor="middle" font-size="19" font-weight="700" fill="#FF8A00">Commission on usage, back to source</text>
+
+          <!-- reporting -->
+          <rect x="516" y="318" width="310" height="60" fill="none" stroke="#9FD8FF" stroke-width="1.2" stroke-dasharray="5 4"/>
+          <text x="671" y="346" text-anchor="middle" font-size="20" fill="#9FD8FF">Reporting &amp; fraud watch</text>
+          <text x="671" y="367" text-anchor="middle" font-family="Space Mono, monospace" font-size="11" fill="#9FD8FF">CPA · spend per referral · payback</text>
+          <path d="M371 206 L371 348 L512 348" stroke="#9FD8FF" stroke-width="1.2" stroke-dasharray="5 4" fill="none" marker-end="url(#ahc)"/>
+          <path d="M948 216 L948 300 L760 300 L760 314" stroke="#9FD8FF" stroke-width="1.2" stroke-dasharray="5 4" fill="none" marker-end="url(#ahc)"/>
+
+          <!-- dimension line under main flow -->
+          <path d="M286 250 L1020 250" stroke="#9FD8FF" stroke-width="1" opacity=".55"/>
+          <path d="M286 240 L286 260 M1020 240 L1020 260" stroke="#9FD8FF" stroke-width="1" opacity=".55"/>
+          <rect x="560" y="241" width="186" height="18" fill="#0E2F73"/>
+          <text x="653" y="254" text-anchor="middle" font-family="Space Mono, monospace" font-size="11" fill="#9FD8FF">commission window</text>
+        </g>
+      </svg>
+
+      <!-- mobile schematic (vertical) -->
+      <svg class="schem-mobile" viewBox="0 0 340 640" role="img" aria-labelledby="svm-t">
+        <title id="svm-t">Affiliate and creator engine schematic, vertical: sources to tracked link to signup to first load to usage, with commission flowing back to sources</title>
+        <defs>
+          <marker id="mah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#FFFFFF"/></marker>
+          <marker id="maho" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#FF8A00"/></marker>
+          <marker id="mahc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9FD8FF"/></marker>
+        </defs>
+        <g font-family="Barlow Condensed, sans-serif" fill="#FFFFFF" text-anchor="middle">
+          <rect x="60" y="20" width="220" height="74" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+          <text x="170" y="46" font-size="20" font-weight="600">Creators · Affiliates</text>
+          <text x="170" y="70" font-size="18" font-weight="600">Employees &amp; execs</text>
+          <text x="170" y="86" font-size="12" font-family="Space Mono, monospace" fill="#9FD8FF">+ DevRel sourcing</text>
+          <path class="flowpath" d="M170 94 L170 130" stroke="#FFFFFF" stroke-width="1.5" fill="none" marker-end="url(#mah)"/>
+          <rect x="60" y="134" width="220" height="64" fill="#0E2F73" stroke="#FFFFFF" stroke-width="2"/>
+          <text x="170" y="162" font-size="22" font-weight="700">Tracked link</text>
+          <text x="170" y="184" font-size="12" font-family="Space Mono, monospace" fill="#9FD8FF">PartnerStack</text>
+          <path class="flowpath" d="M170 198 L170 234" stroke="#FFFFFF" stroke-width="1.5" fill="none" marker-end="url(#mah)"/>
+          <rect x="60" y="238" width="220" height="50" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+          <text x="170" y="270" font-size="21" font-weight="600">Signup</text>
+          <path class="flowpath" d="M170 288 L170 324" stroke="#FFFFFF" stroke-width="1.5" fill="none" marker-end="url(#mah)"/>
+          <rect x="60" y="328" width="220" height="50" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+          <text x="170" y="360" font-size="21" font-weight="600">First load · $10 min.</text>
+          <path class="flowpath" d="M170 378 L170 414" stroke="#FFFFFF" stroke-width="1.5" fill="none" marker-end="url(#mah)"/>
+          <rect x="60" y="418" width="220" height="70" fill="#0E2F73" stroke="#FFFFFF" stroke-width="2"/>
+          <text x="170" y="448" font-size="22" font-weight="700">Usage</text>
+          <text x="170" y="472" font-size="17">Pods · Serverless</text>
+          <path d="M60 453 L22 453 L22 57 L56 57" stroke="#FF8A00" stroke-width="2.5" fill="none" marker-end="url(#maho)"/>
+          <text x="14" y="255" font-size="16" font-weight="700" fill="#FF8A00" transform="rotate(-90 14 255)">Commission on usage</text>
+          <path d="M170 488 L170 552" stroke="#9FD8FF" stroke-width="1.2" stroke-dasharray="5 4" fill="none" marker-end="url(#mahc)"/>
+          <rect x="40" y="556" width="260" height="60" fill="none" stroke="#9FD8FF" stroke-width="1.2" stroke-dasharray="5 4"/>
+          <text x="170" y="583" font-size="19" fill="#9FD8FF">Reporting &amp; fraud watch</text>
+          <text x="170" y="603" font-size="11" font-family="Space Mono, monospace" fill="#9FD8FF">CPA · spend per referral · payback</text>
+        </g>
+      </svg>
+
+      <figcaption class="legend">
+        <span><i class="l-flow"></i>developer path</span>
+        <span><i class="l-money"></i>money path</span>
+        <span><i class="l-data"></i>data &amp; sourcing</span>
+      </figcaption>
+    </figure>
+
+    <div class="schem-notes">
+      <div><b>S1 · Sources</b>Creators, affiliates and employees are one partner base with tiers, not three separate programs. DevRel spots the builders; the program signs them.</div>
+      <div><b>S2 · Attribution</b>Every link runs through PartnerStack. Fraud rules sit at the link, before any money moves, so payouts stay clean when the agencies hand over.</div>
+      <div><b>S3 · Revenue</b>Pay on spend, not views. A creator whose audience keeps building on Runpod should out-earn any flat sponsorship fee, and that is the pitch to them.</div>
+    </div>
+  </div>
+  <div class="tb" role="group" aria-label="Title block">
+    <div>Sheet<b>Affiliate &amp; creator engine</b></div>
+    <div>Scale<b>Not to scale</b></div>
+    <div>Drawn by<b>E. Beer</b></div>
+    <div>Sheet<b>A-04 of 07</b></div>
+  </div>
+</section>
+
+<!-- ================= A-05 REQUIREMENT → PROOF ================= -->
+<section class="sheet" aria-labelledby="proof-h">
+  <div class="sheet-body">
+    <div class="sheet-head"><span class="sheet-no">A-05</span><span class="note">Spec callouts</span></div>
+    <h2 id="proof-h" style="margin-bottom:26px">Requirement → proof</h2>
+    <div class="callouts">
+      <div class="callout">
+        <div class="req"><span class="k"><span>R1</span></span><h3>End-to-end program ownership</h3><div class="ask">Asked: 4+ years</div></div>
+        <div><span class="col-h">How I think</span><p>Owning a program means owning the partner list, the deal terms, the tracking and the payout date. If any one of those sits with someone else, you don't own it yet.</p></div>
+        <div><span class="col-h">Proof</span><p>20+ years, always paid on results. Founder and CEO of Universal Marketing Partners from 2008 to about 2022, an 8-figure performance and affiliate business. Today I run JVC Affiliate Network on Everflow.</p></div>
+      </div>
+      <div class="callout">
+        <div class="req"><span class="k"><span>R2</span></span><h3>Recruiting and managing affiliates and creators</h3></div>
+        <div><span class="col-h">How I think</span><p>Recruit for audience fit, then make the first payout fast. A partner who gets paid early keeps sending traffic.</p></div>
+        <div><span class="col-h">Proof</span><p>$100M+ in affiliate commissions generated over my career. 280+ affiliates tracked on JVC. At BeChosen I built a creator-led acquisition program that recruits and trains creators.</p></div>
+      </div>
+      <div class="callout">
+        <div class="req"><span class="k"><span>R3</span></span><h3>Commission and incentive design</h3></div>
+        <div><span class="col-h">How I think</span><p>Your ladder runs from credits to cash. I'd test where the rungs sit, how long the window runs for top partners, and bonuses for developers who keep spending, all against payback.</p></div>
+        <div><span class="col-h">Proof</span><p>I designed the 5-level partner commission plan behind AffiliateSchool.ai's 17 digital products, and set CPA and rev-share terms across lead gen at LeadQual.ai.</p></div>
+      </div>
+      <div class="callout gap">
+        <div class="req"><span class="k"><span>R4</span></span><h3>PartnerStack or Awin</h3></div>
+        <div><span class="col-h">How I think</span><p>Every affiliate platform runs on the same parts: tracked links, attribution windows, fraud rules and payout runs. The platform is a tool; the program logic carries over.</p></div>
+        <div><span class="col-h">Proof</span><p>My own network runs on Everflow, not PartnerStack, so I'd be learning its screens, not the craft. 280+ affiliates of tracking, fraud review and payouts already done that way.</p></div>
+      </div>
+      <div class="callout">
+        <div class="req"><span class="k"><span>R5</span></span><h3>Pulling and reading the data yourself</h3></div>
+        <div><span class="col-h">How I think</span><p>I'm a math guy. CPC, CPL, CPA, LTV, payback. For Runpod, the number that matters is spend per referred developer over the commission window, against what we paid.</p></div>
+        <div><span class="col-h">Proof</span><p>Scaled a language-learning product from under $10M to over $100M market cap through Facebook arbitrage, where the margin lives in reading the numbers daily.</p></div>
+      </div>
+      <div class="callout">
+        <div class="req"><span class="k"><span>R6</span></span><h3>Fluency in creator culture</h3></div>
+        <div><span class="col-h">How I think</span><p>Creators can tell when a deal treats them like a billboard. Give them real hooks, like a build challenge or early access, and let them make it theirs.</p></div>
+        <div><span class="col-h">Proof</span><p>I host the Performance Marketer podcast, run YouTube @ericbeer, and co-wrote Million Dollar Dads and Million Dollar Identity. Creators and UGC are channels I run.</p></div>
+      </div>
+      <div class="callout gap">
+        <div class="req"><span class="k"><span>R7</span></span><h3>Developer and AI audiences</h3><div class="ask">Preferred</div></div>
+        <div><span class="col-h">How I think</span><p>Developers ignore hype and respond to proof. The content that works shows the deploy, the cost and the result, and DevRel keeps it accurate.</p></div>
+        <div><span class="col-h">Proof</span><p>I haven't marketed a GPU cloud before. I do build in AI: 50+ apps and AI tools shipped, and LeadQual.ai's AI voice agents qualify and route live insurance leads.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="tb" role="group" aria-label="Title block">
+    <div>Sheet<b>Requirements against proof</b></div>
+    <div>Note<b>Dashed key = honest gap</b></div>
+    <div>Drawn by<b>E. Beer</b></div>
+    <div>Sheet<b>A-05 of 07</b></div>
+  </div>
+</section>
+
+<!-- ================= A-06 BUILD SEQUENCE ================= -->
+<section class="sheet" aria-labelledby="plan-h">
+  <div class="sheet-body">
+    <div class="sheet-head"><span class="sheet-no">A-06</span><span class="note">Build sequence</span></div>
+    <h2 id="plan-h" style="margin-bottom:18px">The first 90 days</h2>
+    <div class="seq-ruler dim-wrap"><div class="dim"><i class="arrowL"></i><span>day 0 to day 90</span><i class="arrowR"></i></div></div>
+    <div class="seq">
+      <div class="phase">
+        <span class="when">Days 1–30</span>
+        <h3>Foundation</h3>
+        <ol>
+          <li>Take over from Advertise Purple and FNF with a partner-by-partner handover list, so no top affiliate goes a payout cycle without a contact.</li>
+          <li>Call the top affiliates and creators myself. Ask what they earn, what they'd need to send more, and what annoys them.</li>
+          <li>Audit PartnerStack: fraud signals, dead links, attribution gaps.</li>
+          <li>Build the weekly report on signups, spend, ROI and spend per referral.</li>
+        </ol>
+        <div class="gate"><b>Gate</b>Program fully in-house, nothing dropped, baseline numbers agreed with the Director of Growth.</div>
+      </div>
+      <div class="phase">
+        <span class="when">Days 31–60</span>
+        <h3>Framing</h3>
+        <ol>
+          <li>Move sponsored creators to performance deals, with a short bridge period where needed so the good ones don't walk.</li>
+          <li>Set up the creator-sourcing pipeline with DevRel: who builds in public on AI, who their audience is, who to sign first.</li>
+          <li>Test commission ladders and incentives against payback.</li>
+          <li>Run the first creator campaign, a build challenge on Serverless.</li>
+        </ol>
+        <div class="gate"><b>Gate</b>Every creator dollar is tied to signups and spend; first test results read out.</div>
+      </div>
+      <div class="phase">
+        <span class="when">Days 61–90</span>
+        <h3>Load and scale</h3>
+        <ol>
+          <li>Launch the employee and executive content system with Product Marketing: simple prompts, a weekly rhythm, amplification.</li>
+          <li>Formalize partner tiers so the best affiliates and creators earn more, faster.</li>
+          <li>Standardize contracts and payouts so the program runs on a calendar, not on memory.</li>
+          <li>Present a two-quarter plan with targets built from the first 60 days of data.</li>
+        </ol>
+        <div class="gate"><b>Gate</b>A program that grows by adding partners, not by adding headcount.</div>
+      </div>
+    </div>
+  </div>
+  <div class="tb" role="group" aria-label="Title block">
+    <div>Sheet<b>30 / 60 / 90 build sequence</b></div>
+    <div>Scale<b>1 col = 30 days</b></div>
+    <div>Drawn by<b>E. Beer</b></div>
+    <div>Sheet<b>A-06 of 07</b></div>
+  </div>
+</section>
+
+<!-- ================= A-07 MEET ERIC ================= -->
+<section class="sheet" aria-labelledby="meet-h">
+  <div class="sheet-body">
+    <div class="sheet-head"><span class="sheet-no">A-07</span><span class="note">Drawn by</span></div>
+    <div class="meet">
+      <div class="portrait">
+        <img src="https://yt3.googleusercontent.com/Mp7gOPpSMBFdGns7IfiIiY8Phw0AB94Ccs_SbKsMugqn9R9WNxBewG25xtxZJ8ks4znh5FBcOQ=s900" alt="Portrait of Eric Beer" width="900" height="900" loading="lazy">
+        <div class="note">Eric Beer</div>
+      </div>
+      <div>
+        <h2 id="meet-h" style="margin-bottom:16px">Meet Eric</h2>
+        <p>I'm an entrepreneur and performance marketer with 20+ years in affiliate, partnerships and creator-led growth, always paid on results. I ran Universal Marketing Partners for about 14 years and built teams of up to 15–20. I've been agency of record for RealAge.com (Hearst / Dr. Oz) and Harlequin Book Club, and drove customers for LifeLock, Norton Antivirus and Credit Sesame.</p>
+        <p>Today I build: LeadQual.ai, BeChosen, AffiliateSchool.ai and JVC Affiliate Network. University of Maryland '99, finance, on a baseball scholarship. Remote suits me, and I'm happy to travel anywhere.</p>
+        <div class="facts">
+          <div><b>$100M+</b><span>affiliate commissions</span></div>
+          <div><b>280+</b><span>affiliates on JVC</span></div>
+          <div><b>50+</b><span>apps and AI tools shipped</span></div>
+        </div>
+        <ul class="socials" aria-label="Eric Beer on social">
+          <li><a href="https://www.linkedin.com/in/ericbeer">LinkedIn</a></li>
+          <li><a href="https://www.youtube.com/@ericbeer">YouTube</a></li>
+          <li><a href="https://x.com/esb211">X</a></li>
+          <li><a href="https://www.instagram.com/ericbeerofficial">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@ericbeer">TikTok</a></li>
+          <li><a href="https://www.facebook.com/eric.beer11">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="tb" role="group" aria-label="Title block">
+    <div>Sheet<b>Designer of record</b></div>
+    <div>Based<b>New York area</b></div>
+    <div>Drawn by<b>E. Beer</b></div>
+    <div>Sheet<b>A-07 of 07</b></div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="sheet contact" aria-labelledby="contact-h">
+  <div class="sheet-body">
+    <div>
+      <h2 id="contact-h" style="margin-bottom:14px">Let's build it</h2>
+      <p class="lede">If this drawing is close to what you have in mind, I'd like 20 minutes to walk through it with you.</p>
+      <a class="cta" href="mailto:eric@performancemarketer.io?subject=Runpod%20Affiliate%20%26%20Creator%20Marketing%20Lead">Email Eric</a>
+      <div class="contact-lines">
+        <a href="mailto:eric@performancemarketer.io?subject=Runpod%20Affiliate%20%26%20Creator%20Marketing%20Lead">eric@performancemarketer.io</a><br>
+        <a href="tel:+16467876282">646-787-6282</a>
+      </div>
+    </div>
+    <div class="stamp">
+      Status
+      <b>Issued for review</b>
+      Runpod · Affiliate &amp; Creator Marketing Lead<br>
+      Rev 0 · Oct 14, 2026
+    </div>
+  </div>
+</section>
+
+<footer>Facts on Runpod are from public sources: Runpod's job posting, blog and docs, and SiliconANGLE (June 2026).</footer>
+</div>
+</body>
+</html>
