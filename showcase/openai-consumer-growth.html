@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Eric Beer × OpenAI · Growth – Digital Marketing (Consumer)</title>
+<meta name="description" content="I&#x27;m a performance operator who scales acquisition on unit economics">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Eric Beer × OpenAI · Growth – Digital Marketing (Consumer)">
+<meta property="og:description" content="I&#x27;m a performance operator who scales acquisition on unit economics">
+<meta property="og:image" content="https://ericbeer.me/assets/eric.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#140f1f;--panel:#1e1730;--text:#f4effc;--soft:#b9aed0;--line:rgba(244,239,252,.13);--accent:#ff6fb1;--ink:#140f1f;--head:'Syne',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;color-scheme:dark}
+
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);-webkit-font-smoothing:antialiased;line-height:1.55}
+a{color:inherit}:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:max(16px,4vw)}
+.lbl{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1,h2,h3{font-family:var(--head);line-height:1.08;margin:0;letter-spacing:-.01em}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:12px;flex-wrap:wrap}
+nav .brand{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px}
+nav .links{display:flex;gap:16px;font-size:14px;color:var(--soft)}nav .links a{text-decoration:none}nav .links a:hover{color:var(--text)}
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(24px,5vw,64px);align-items:center;padding:clamp(32px,7vw,88px) 0 clamp(40px,6vw,72px);border-bottom:1px solid var(--line)}
+.pair{font-family:var(--head);font-size:clamp(20px,2.4vw,26px);color:var(--soft);margin-bottom:14px}.pair em{font-style:normal;color:var(--accent)}
+.hero h1{font-size:clamp(34px,4.4vw,58px)}
+.hero .role{margin:18px 0 0;font-size:clamp(17px,1.6vw,20px);color:var(--soft);max-width:60ch}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:999px;font-weight:700;text-decoration:none;font-size:15px;border:1px solid var(--line)}
+.btn.p{background:var(--accent);color:var(--ink);border-color:var(--accent)}
+.photo{position:relative}.photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:22px;display:block;border:1px solid var(--line)}
+.photo .tag{position:absolute;left:14px;bottom:14px;background:var(--bg);color:var(--text);border:1px solid var(--line);padding:8px 12px;border-radius:12px;font-size:13px}
+.socials{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.socials a{font-size:13px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--soft)}.socials a:hover{color:var(--text);border-color:var(--accent)}
+section{padding:clamp(48px,7vw,88px) 0;border-bottom:1px solid var(--line)}
+.sh{display:grid;grid-template-columns:240px 1fr;gap:32px}.sh h2{font-size:clamp(28px,3.6vw,44px);margin-top:10px}
+.prose p{font-size:clamp(16px,1.4vw,19px);color:var(--soft);margin:0 0 14px;max-width:68ch}.prose p:first-child{color:var(--text)}
+.problem{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:clamp(22px,3vw,36px);font-size:clamp(18px,1.8vw,23px);font-family:var(--head);line-height:1.35;margin-top:28px}
+.asks{display:grid;gap:12px;margin-top:28px}
+.ask{display:grid;grid-template-columns:1fr 1.25fr;gap:24px;padding:20px 22px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}
+.ask .q{font-weight:700;display:flex;gap:12px}.ask .n{color:var(--accent);font-family:var(--head)}.ask .a{color:var(--soft)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
+ul.offers{margin:0;padding:0;list-style:none;display:grid;gap:10px}ul.offers li{padding:14px 16px;border:1px solid var(--line);border-radius:12px;color:var(--soft)}ul.offers li::before{content:"→ ";color:var(--accent);font-weight:700}
+.why{color:var(--soft);font-size:17px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}.stat{padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}.stat b{display:block;font-family:var(--head);font-size:clamp(28px,3.4vw,40px);color:var(--accent)}.stat span{font-size:14px;color:var(--soft)}
+.plan{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}.step{padding:24px;border-radius:16px;border:1px solid var(--line)}.step h3{font-size:22px;margin:10px 0 8px}.step p{margin:0;color:var(--soft)}
+.rares{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}.rare{padding:24px;border-radius:16px;background:var(--panel);border:1px solid var(--line)}.rare h3{font-size:20px;margin-bottom:8px}.rare p{margin:0;color:var(--soft)}
+.note{margin-top:22px;color:var(--soft);font-size:16px;max-width:72ch;border-left:3px solid var(--accent);padding-left:16px}
+.rows{display:grid;gap:0;margin-top:24px}.row{display:grid;grid-template-columns:260px 1fr;gap:20px;padding:14px 0;border-top:1px solid var(--line)}.row span{color:var(--soft)}
+.contact{text-align:left}.contact h2{font-size:clamp(32px,5vw,58px);max-width:18ch}.contact p{color:var(--soft);font-size:18px;max-width:60ch}
+.mail{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:24px}.mail code{font-family:var(--body);font-size:18px;padding:12px 16px;border:1px solid var(--line);border-radius:12px}
+footer{padding:28px 0 40px;color:var(--soft);font-size:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (max-width:860px){.hero{grid-template-columns:1fr}.photo{max-width:340px}.sh{grid-template-columns:1fr;gap:8px}.ask{grid-template-columns:1fr;gap:8px}.cols,.plan,.rares{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.row{grid-template-columns:1fr;gap:4px}nav .links{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><div class="brand">Eric Beer</div><div class="links"><a href="#company">OpenAI</a><a href="#fit">The fit</a><a href="#plan">First 90 days</a><a href="#contact">Contact</a></div></nav>
+<header class="hero">
+ <div>
+  <div class="pair">Eric Beer <em>×</em> OpenAI</div>
+  <h1>I&#x27;m a performance operator who scales acquisition on unit economics</h1>
+  <p class="role"><b>Growth – Digital Marketing (Consumer)</b> · I&#x27;d build a global consumer acquisition program run on cohort quality and LTV/CAC, with affiliate and creator channels built out and AI workflows doing the repetitive work.</p>
+  <div class="cta"><a class="btn p" href="mailto:eric@performancemarketer.io?subject=OpenAI%20%E2%80%94%20Growth – Digital Marketing (Consumer)">Talk with me →</a><a class="btn" href="https://www.linkedin.com/in/ericbeer" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+  <div class="socials"><a href="https://www.linkedin.com/in/ericbeer" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.youtube.com/@ericbeer" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/ericbeerofficial" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@ericbeer" target="_blank" rel="noopener">TikTok</a><a href="https://x.com/esb211" target="_blank" rel="noopener">X</a><a href="https://www.facebook.com/eric.beer11" target="_blank" rel="noopener">Facebook</a></div>
+ </div>
+ <div class="photo"><img src="/assets/eric.jpg" alt="Eric Beer" width="640" height="800"><div class="tag">New York metro · San Francisco · I&#x27;ll relocate or travel as the role requires</div></div>
+</header>
+
+<section id="company"><div class="sh"><div><div class="lbl">01 · OpenAI</div><h2>What I see you building</h2></div>
+<div><div class="prose"><p>OpenAI&#x27;s Growth team drives user and revenue growth across ChatGPT&#x27;s consumer and business segments worldwide, covering the full funnel with performance marketing, in-product optimization, experimentation and creative ops engineering. ChatGPT passed 1 billion weekly users in July 2026, and lower-cost plans like ChatGPT Go are pushing growth in price-sensitive markets such as India.</p><p>This role owns global consumer paid acquisition across Paid Search, Paid Social, Programmatic, Affiliate and emerging channels. The focus is unit economics and cohort quality across languages and markets, with incrementality testing and AI-enabled workflows for creative, targeting, reporting and optimization.</p></div><div class="problem">At ChatGPT&#x27;s scale, the next users come from more markets, more languages and more price points. OpenAI needs paid acquisition that buys quality cohorts profitably across regions, and proves incrementality rather than taking credit for growth that would have happened anyway.</div></div></div></section>
+
+<section id="fit"><div class="sh"><div><div class="lbl">02 · The fit</div><h2>What the role asks for, and my proof</h2></div>
+<div><div class="asks"><div class="ask"><div class="q"><span class="n">01</span>8+ years of consumer growth, acquisition or performance marketing</div><div class="a">I have 20+ years in performance marketing, always paid on results. I drove customers for LifeLock, Norton Antivirus and Credit Sesame, and memberships for Disney Book Club.</div></div><div class="ask"><div class="q"><span class="n">02</span>6+ years of hands-on leadership of Paid Search, Paid Social, Programmatic and Affiliate</div><div class="a">To be straight about it: I lead strategy and economics with media buyers and teams rather than running buys hands-on. I have managed paid, affiliate/JV, owned, creator and social traffic on a performance basis, and I have generated $100M+ in affiliate commissions.</div></div><div class="ask"><div class="q"><span class="n">03</span>Record of scaling consumer paid programs to large budgets and audiences</div><div class="a">I scaled a language-learning product from under $10M to over $100M market cap through Facebook arbitrage, and I built Universal Marketing Partners into an 8-figure performance and affiliate business.</div></div><div class="ask"><div class="q"><span class="n">04</span>Strong analytics: experimentation, attribution, retention, monetization, LTV/CAC</div><div class="a">I&#x27;m a math guy by training and practice: a finance degree from Maryland, and a career run on CPC, CPA, LTV and lead conversion math. At LeadQual.ai I designed the revenue split and broker economics.</div></div><div class="ask"><div class="q"><span class="n">05</span>Substantial international consumer marketing across regions and languages</div><div class="a">To be straight about it: my programs have been mostly US-focused. What I bring is a playbook approach, such as my 3W Framework and the Find, Contact, Activate, Scale method, that is built to be repeated market by market.</div></div><div class="ask"><div class="q"><span class="n">06</span>Comfort with AI-enabled workflows; build them for creative, targeting and reporting</div><div class="a">I have shipped 50+ apps with Claude, Replit and AI agents, and I built Scout as a connector inside ChatGPT. I build the automation myself.</div></div></div></div></div></section>
+
+<section><div class="sh"><div><div class="lbl">03 · The role</div><h2>What it offers, and why I want it</h2></div>
+<div class="cols"><ul class="offers"><li>Global ownership of ChatGPT consumer paid acquisition</li><li>Large international budgets and a product used by over a billion people a week</li><li>Close work with product, engineering, data science, finance, brand and regional teams</li><li>$189K–$265K plus equity</li><li>Based in San Francisco</li></ul><div class="why"><p>I have spent my career buying customers profitably for other people&#x27;s products. Doing it for the most used AI product in the world, across every market, is the hardest and most interesting version of that job.</p></div></div></div></section>
+
+<section><div class="sh"><div><div class="lbl">04 · Proof</div><h2>Twenty years, paid on results</h2></div>
+<div><div class="stats"><div class="stat"><b>$100M+</b><span>Affiliate commissions generated across my career</span></div><div class="stat"><b>8-figure</b><span>Performance and affiliate business built at Universal Marketing Partners</span></div><div class="stat"><b>50+</b><span>Apps shipped, including AI agents in production on Claude</span></div><div class="stat"><b>125+</b><span>Episodes hosted on the Performance Marketer Podcast</span></div></div><p class="note">I'm not a media buyer, and I won't pretend to be one. I work with media buyers, creators and partners to get traffic and distribution. My job is building the engine: the offer, the partner economics, the tracking and the playbook a team can run, all on a performance basis.</p></div></div></section>
+
+<section><div class="sh"><div><div class="lbl">05 · The combination</div><h2>Why this mix is rare</h2></div>
+<div><div class="rares"><div class="rare"><h3>Unit-economics discipline</h3><p>For two decades I have been paid only when the numbers worked. I read every channel through CAC, LTV and cohort quality, and I cut what does not pay back.</p></div><div class="rare"><h3>Affiliate and creator depth</h3><p>I&#x27;ve generated $100M+ in affiliate commissions, run an affiliate network on Everflow, and built creator programs at BeChosen.ai. Affiliate and creator channels are where I&#x27;m strongest, and where many paid teams are thinnest.</p></div><div class="rare"><h3>AI builder</h3><p>I ship AI products and agents myself, including a connector inside ChatGPT, so the AI workflows in this role would be built by someone who knows the product from the inside.</p></div></div></div></div></section>
+
+<section id="plan"><div class="sh"><div><div class="lbl">06 · How I'd start</div><h2>First 90 days</h2></div>
+<div><div class="plan"><div class="step"><div class="lbl">Days 1–30</div><h3>Learn the economics</h3><p>I&#x27;d get fluent in current spend, CAC, payback and cohort quality by channel and market, meet the media buyers, data science and regional leads, and review the incrementality tests already run.</p></div><div class="step"><div class="lbl">Days 31–60</div><h3>Reset the bets</h3><p>I&#x27;d reallocate toward the channels and markets with proven incremental return, define a clear affiliate and creator strategy, and launch a test plan with hypotheses and readouts for each region.</p></div><div class="step"><div class="lbl">Days 61–90</div><h3>Systemize</h3><p>I&#x27;d ship the first AI-enabled workflows for creative variation and reporting, publish an international launch playbook, and set a monthly review of incrementality results that drives budget.</p></div></div></div></div></section>
+
+<section><div class="sh"><div><div class="lbl">07 · Background</div><h2>Where the proof comes from</h2></div>
+<div class="rows"><div class="row"><b>Universal Marketing Partners</b><span>Founder &amp; CEO · 8-figure performance and affiliate business; team of up to 20</span></div><div class="row"><b>LeadQual.ai</b><span>Founder · AI voice-agent lead qualification and warm-transfer routing</span></div><div class="row"><b>BeChosen.ai &amp; Scout</b><span>Founder · AI job agent across 8 ATS platforms, live as a connector in Claude and ChatGPT</span></div><div class="row"><b>Performance Marketer</b><span>Founder · AffiliateSchool.ai (17 products, Skool community), podcast, newsletter, YouTube</span></div><div class="row"><b>JVC Affiliate Network</b><span>Operator · Everflow network, 280+ affiliates tracked</span></div><div class="row"><b>Earlier</b><span>Agency of record for RealAge.com (Hearst / Dr. Oz) and Harlequin Book Club; customers for LifeLock, Norton, Credit Sesame, Disney Book Club</span></div><div class="row"><b>Books</b><span>Co-author, Million Dollar Dads and Million Dollar Identity</span></div><div class="row"><b>University of Maryland</b><span>Finance, 1999 · scholarship baseball, NCAA Division I · 1993 USA Junior Olympic team</span></div></div></div></section>
+
+<section class="contact" id="contact"><div class="lbl">Contact</div><h2>Let&#x27;s talk growth</h2><p>If a performance operator who builds my own AI tooling would help the team, I would welcome a conversation.</p>
+<div class="mail"><code id="em">eric@performancemarketer.io</code><button class="btn" type="button" onclick="navigator.clipboard&&navigator.clipboard.writeText('eric@performancemarketer.io').then(()=>{this.textContent='Copied'})">Copy</button><a class="btn p" href="mailto:eric@performancemarketer.io">Email me</a></div>
+<div class="socials"><a href="https://www.linkedin.com/in/ericbeer" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.youtube.com/@ericbeer" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/ericbeerofficial" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@ericbeer" target="_blank" rel="noopener">TikTok</a><a href="https://x.com/esb211" target="_blank" rel="noopener">X</a><a href="https://www.facebook.com/eric.beer11" target="_blank" rel="noopener">Facebook</a></div></section>
+<footer><span>Eric Beer</span><span>Prepared for OpenAI · Growth – Digital Marketing (Consumer)</span></footer>
+</div>
+</body>
+</html>

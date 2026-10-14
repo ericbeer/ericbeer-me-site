@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Eric Beer × OpenAI · Growth Lead, SMB Ads</title>
+<meta name="description" content="A lifelong advertiser who knows why small businesses spend">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Eric Beer × OpenAI · Growth Lead, SMB Ads">
+<meta property="og:description" content="A lifelong advertiser who knows why small businesses spend">
+<meta property="og:image" content="https://ericbeer.me/assets/eric.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0d12;--panel:#141821;--text:#eef1f7;--soft:#aab3c5;--line:rgba(255,255,255,.12);--accent:#ffb46a;--ink:#0b0d12;--head:'Fraunces',Georgia,serif;--body:'Inter',system-ui,sans-serif;color-scheme:dark}
+
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);-webkit-font-smoothing:antialiased;line-height:1.55}
+a{color:inherit}:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:max(16px,4vw)}
+.lbl{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1,h2,h3{font-family:var(--head);line-height:1.08;margin:0;letter-spacing:-.01em}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:12px;flex-wrap:wrap}
+nav .brand{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px}
+nav .links{display:flex;gap:16px;font-size:14px;color:var(--soft)}nav .links a{text-decoration:none}nav .links a:hover{color:var(--text)}
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(24px,5vw,64px);align-items:center;padding:clamp(32px,7vw,88px) 0 clamp(40px,6vw,72px);border-bottom:1px solid var(--line)}
+.pair{font-family:var(--head);font-size:clamp(20px,2.4vw,26px);color:var(--soft);margin-bottom:14px}.pair em{font-style:normal;color:var(--accent)}
+.hero h1{font-size:clamp(34px,4.4vw,58px)}
+.hero .role{margin:18px 0 0;font-size:clamp(17px,1.6vw,20px);color:var(--soft);max-width:60ch}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:999px;font-weight:700;text-decoration:none;font-size:15px;border:1px solid var(--line)}
+.btn.p{background:var(--accent);color:var(--ink);border-color:var(--accent)}
+.photo{position:relative}.photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:22px;display:block;border:1px solid var(--line)}
+.photo .tag{position:absolute;left:14px;bottom:14px;background:var(--bg);color:var(--text);border:1px solid var(--line);padding:8px 12px;border-radius:12px;font-size:13px}
+.socials{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.socials a{font-size:13px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--soft)}.socials a:hover{color:var(--text);border-color:var(--accent)}
+section{padding:clamp(48px,7vw,88px) 0;border-bottom:1px solid var(--line)}
+.sh{display:grid;grid-template-columns:240px 1fr;gap:32px}.sh h2{font-size:clamp(28px,3.6vw,44px);margin-top:10px}
+.prose p{font-size:clamp(16px,1.4vw,19px);color:var(--soft);margin:0 0 14px;max-width:68ch}.prose p:first-child{color:var(--text)}
+.problem{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:clamp(22px,3vw,36px);font-size:clamp(18px,1.8vw,23px);font-family:var(--head);line-height:1.35;margin-top:28px}
+.asks{display:grid;gap:12px;margin-top:28px}
+.ask{display:grid;grid-template-columns:1fr 1.25fr;gap:24px;padding:20px 22px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}
+.ask .q{font-weight:700;display:flex;gap:12px}.ask .n{color:var(--accent);font-family:var(--head)}.ask .a{color:var(--soft)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
+ul.offers{margin:0;padding:0;list-style:none;display:grid;gap:10px}ul.offers li{padding:14px 16px;border:1px solid var(--line);border-radius:12px;color:var(--soft)}ul.offers li::before{content:"→ ";color:var(--accent);font-weight:700}
+.why{color:var(--soft);font-size:17px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}.stat{padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}.stat b{display:block;font-family:var(--head);font-size:clamp(28px,3.4vw,40px);color:var(--accent)}.stat span{font-size:14px;color:var(--soft)}
+.plan{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}.step{padding:24px;border-radius:16px;border:1px solid var(--line)}.step h3{font-size:22px;margin:10px 0 8px}.step p{margin:0;color:var(--soft)}
+.rares{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}.rare{padding:24px;border-radius:16px;background:var(--panel);border:1px solid var(--line)}.rare h3{font-size:20px;margin-bottom:8px}.rare p{margin:0;color:var(--soft)}
+.note{margin-top:22px;color:var(--soft);font-size:16px;max-width:72ch;border-left:3px solid var(--accent);padding-left:16px}
+.rows{display:grid;gap:0;margin-top:24px}.row{display:grid;grid-template-columns:260px 1fr;gap:20px;padding:14px 0;border-top:1px solid var(--line)}.row span{color:var(--soft)}
+.contact{text-align:left}.contact h2{font-size:clamp(32px,5vw,58px);max-width:18ch}.contact p{color:var(--soft);font-size:18px;max-width:60ch}
+.mail{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:24px}.mail code{font-family:var(--body);font-size:18px;padding:12px 16px;border:1px solid var(--line);border-radius:12px}
+footer{padding:28px 0 40px;color:var(--soft);font-size:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (max-width:860px){.hero{grid-template-columns:1fr}.photo{max-width:340px}.sh{grid-template-columns:1fr;gap:8px}.ask{grid-template-columns:1fr;gap:8px}.cols,.plan,.rares{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.row{grid-template-columns:1fr;gap:4px}nav .links{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><div class="brand">Eric Beer</div><div class="links"><a href="#company">OpenAI</a><a href="#fit">The fit</a><a href="#plan">First 90 days</a><a href="#contact">Contact</a></div></nav>
+<header class="hero">
+ <div>
+  <div class="pair">Eric Beer <em>×</em> OpenAI</div>
+  <h1>A lifelong advertiser who knows why small businesses spend</h1>
+  <p class="role"><b>Growth Lead, SMB Ads</b> · I would build the acquisition and activation system that takes SMB advertisers from first visit to first meaningful spend and back again for repeat spend.</p>
+  <div class="cta"><a class="btn p" href="mailto:eric@performancemarketer.io?subject=OpenAI%20%E2%80%94%20Growth Lead, SMB Ads">Talk with me →</a><a class="btn" href="https://www.linkedin.com/in/ericbeer" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+  <div class="socials"><a href="https://www.linkedin.com/in/ericbeer" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.youtube.com/@ericbeer" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/ericbeerofficial" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@ericbeer" target="_blank" rel="noopener">TikTok</a><a href="https://x.com/esb211" target="_blank" rel="noopener">X</a><a href="https://www.facebook.com/eric.beer11" target="_blank" rel="noopener">Facebook</a></div>
+ </div>
+ <div class="photo"><img src="/assets/eric.jpg" alt="Eric Beer" width="640" height="800"><div class="tag">New York metro · San Francisco · will travel and work on-site</div></div>
+</header>
+
+<section id="company"><div class="sh"><div><div class="lbl">01 · OpenAI</div><h2>What I see you building</h2></div>
+<div><div class="prose"><p>ChatGPT Ads launched in 2026 and reached a reported $1 billion annualized run rate in under 200 days, with tens of thousands of advertisers across more than 40 countries. Ads run in the Free and Go tiers in front of more than a billion weekly users, mostly bought on cost-per-click or outcome-optimized bidding.</p><p>OpenAI opened Ads Manager to self-serve advertisers in May and is expanding it internationally, and small and midsized businesses are already a material share of the business. Building a full self-serve platform means the advertiser funnel itself is now a product to grow.</p><p>This role owns that funnel for SMBs: acquisition across paid, SEO and GEO, social, partnerships, referrals and product-led growth, and activation through sign-up, onboarding, campaign creation and first spend, working closely with Product and Engineering.</p></div><div class="problem">OpenAI has massive audience demand for its ad product but needs a repeatable system that brings small advertisers in, gets them to a first campaign that works, and keeps them spending, at a CAC that pays back.</div></div></div></section>
+
+<section id="fit"><div class="sh"><div><div class="lbl">02 · The fit</div><h2>What the role asks for, and my proof</h2></div>
+<div><div class="asks"><div class="ask"><div class="q"><span class="n">01</span>Measurable ownership of acquisition, activation or revenue in growth or performance marketing</div><div class="a">Twenty-plus years paid on results, $100M+ in affiliate commissions generated, and an 8-figure performance business built as Founder and CEO of Universal Marketing Partners. Customer acquisition for LifeLock, Norton Antivirus and Credit Sesame, and memberships for Disney Book Club.</div></div><div class="ask"><div class="q"><span class="n">02</span>Improve self-serve, high-volume advertiser or SMB funnels</div><div class="a">At LeadQual.ai I led a product redesign that cut navigation from 14 items to 6 and built a 5-step campaign wizard so advertisers and publishers could launch without hand-holding. AllDayLong and RapidDispatch AI sell AI products directly to small businesses.</div></div><div class="ask"><div class="q"><span class="n">03</span>Funnel and cohort analysis, experimentation and business metrics like CAC, payback and LTV</div><div class="a">I am a math guy by training (finance degree) and by trade: CPC, CPA, LTV and lead-buying economics are how I decide every channel. I designed the revenue split and broker economics at LeadQual.ai.</div></div><div class="ask"><div class="q"><span class="n">04</span>Experience growing customers on scaled self-serve platforms like Meta, Google, TikTok</div><div class="a">I have been the customer on those platforms for two decades, working with media buyers across paid, affiliate, social and creator channels, and scaled a language-learning product from under $10M to over $100M market cap through Facebook arbitrage. I know the SMB advertiser&#x27;s fears and math firsthand.</div></div><div class="ask"><div class="q"><span class="n">05</span>AI-native work habits to speed up experimentation, analysis and creative</div><div class="a">I have shipped 50+ apps with Claude, Replit and AI agents and build my own automation. My Scout agent runs as a connector inside ChatGPT and Claude.</div></div><div class="ask"><div class="q"><span class="n">06</span>Explain complex advertising products clearly to small business owners</div><div class="a">I hosted the Performance Marketer Podcast for 125+ episodes, run a YouTube channel and newsletter, and built the AffiliateSchool.ai education ecosystem. Teaching marketers how traffic works is something I have done for years.</div></div></div></div></div></section>
+
+<section><div class="sh"><div><div class="lbl">03 · The role</div><h2>What it offers, and why I want it</h2></div>
+<div class="cols"><ul class="offers"><li>Ownership of SMB advertiser acquisition and activation for one of the fastest-growing ad products in the market</li><li>Close partnership with Product, Engineering and Data Science on onboarding, billing and first-spend experiences</li><li>A say in how the acquisition and activation function scales as the team grows</li><li>$284K to $315K base plus equity, as posted</li><li>San Francisco based</li></ul><div class="why"><p>I have spent my whole career on the advertiser side of the auction, and I know what it takes for a small business to trust a new channel with its first dollars. Helping build the self-serve on-ramp for ChatGPT Ads is the rare chance to shape a major new ad platform from the advertiser&#x27;s point of view.</p></div></div></div></section>
+
+<section><div class="sh"><div><div class="lbl">04 · Proof</div><h2>Twenty years, paid on results</h2></div>
+<div><div class="stats"><div class="stat"><b>$100M+</b><span>Affiliate commissions generated across my career</span></div><div class="stat"><b>8-figure</b><span>Performance and affiliate business built at Universal Marketing Partners</span></div><div class="stat"><b>50+</b><span>Apps shipped, including AI agents in production on Claude</span></div><div class="stat"><b>125+</b><span>Episodes hosted on the Performance Marketer Podcast</span></div></div><p class="note">I'm not a media buyer, and I won't pretend to be one. I work with media buyers, creators and partners to get traffic and distribution. My job is building the engine: the offer, the partner economics, the tracking and the playbook a team can run, all on a performance basis.</p></div></div></section>
+
+<section><div class="sh"><div><div class="lbl">05 · The combination</div><h2>Why this mix is rare</h2></div>
+<div><div class="rares"><div class="rare"><h3>Advertiser&#x27;s-eye math</h3><p>I think in CPA, LTV and payback because that is how I have always been paid. I can diagnose where an SMB drops out of the funnel and what it is worth to fix.</p></div><div class="rare"><h3>Educator for small business</h3><p>Podcast, YouTube, newsletter and courses built to teach marketers how to buy traffic profitably. Advertiser education is a growth lever I have already built.</p></div><div class="rare"><h3>AI builder who ships</h3><p>I prototype landing pages, tools and agents myself, which turns ideas into live tests in days instead of sprints.</p></div></div></div></div></section>
+
+<section id="plan"><div class="sh"><div><div class="lbl">06 · How I'd start</div><h2>First 90 days</h2></div>
+<div><div class="plan"><div class="step"><div class="lbl">Days 1–30</div><h3>Walk the funnel as an advertiser</h3><p>Sign up and launch campaigns as a real SMB would, pull the funnel data from awareness to repeat spend, interview new advertisers, and name the biggest drop-off points with Product and Data Science.</p></div><div class="step"><div class="lbl">Days 31–60</div><h3>Stand up the experiment engine</h3><p>Set the weekly experiment and readout rhythm, launch tests across paid, partnerships, referrals and onboarding, and ship first advertiser education content aimed at getting campaigns to first spend.</p></div><div class="step"><div class="lbl">Days 61–90</div><h3>Scale what pays back</h3><p>Shift budget toward channels with the best CAC and payback, bring in agency or growth-operator help where it speeds execution, and propose the team shape for the next stage.</p></div></div></div></div></section>
+
+<section><div class="sh"><div><div class="lbl">07 · Background</div><h2>Where the proof comes from</h2></div>
+<div class="rows"><div class="row"><b>Universal Marketing Partners</b><span>Founder &amp; CEO · 8-figure performance and affiliate business; team of up to 20</span></div><div class="row"><b>LeadQual.ai</b><span>Founder · AI voice-agent lead qualification and warm-transfer routing</span></div><div class="row"><b>BeChosen.ai &amp; Scout</b><span>Founder · AI job agent across 8 ATS platforms, live as a connector in Claude and ChatGPT</span></div><div class="row"><b>Performance Marketer</b><span>Founder · AffiliateSchool.ai (17 products, Skool community), podcast, newsletter, YouTube</span></div><div class="row"><b>JVC Affiliate Network</b><span>Operator · Everflow network, 280+ affiliates tracked</span></div><div class="row"><b>Earlier</b><span>Agency of record for RealAge.com (Hearst / Dr. Oz) and Harlequin Book Club; customers for LifeLock, Norton, Credit Sesame, Disney Book Club</span></div><div class="row"><b>Books</b><span>Co-author, Million Dollar Dads and Million Dollar Identity</span></div><div class="row"><b>University of Maryland</b><span>Finance, 1999 · scholarship baseball, NCAA Division I · 1993 USA Junior Olympic team</span></div></div></div></section>
+
+<section class="contact" id="contact"><div class="lbl">Contact</div><h2>Let&#x27;s talk SMB advertiser growth</h2><p>I would enjoy comparing notes on how small advertisers decide to spend. I am glad to come to San Francisco for a conversation.</p>
+<div class="mail"><code id="em">eric@performancemarketer.io</code><button class="btn" type="button" onclick="navigator.clipboard&&navigator.clipboard.writeText('eric@performancemarketer.io').then(()=>{this.textContent='Copied'})">Copy</button><a class="btn p" href="mailto:eric@performancemarketer.io">Email me</a></div>
+<div class="socials"><a href="https://www.linkedin.com/in/ericbeer" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.youtube.com/@ericbeer" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/ericbeerofficial" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@ericbeer" target="_blank" rel="noopener">TikTok</a><a href="https://x.com/esb211" target="_blank" rel="noopener">X</a><a href="https://www.facebook.com/eric.beer11" target="_blank" rel="noopener">Facebook</a></div></section>
+<footer><span>Eric Beer</span><span>Prepared for OpenAI · Growth Lead, SMB Ads</span></footer>
+</div>
+</body>
+</html>

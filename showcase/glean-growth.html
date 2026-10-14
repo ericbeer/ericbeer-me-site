@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Eric Beer × Glean · VP, Growth Marketing</title>
+<meta name="description" content="A performance operator to make Glean&#x27;s pipeline predictable">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Eric Beer × Glean · VP, Growth Marketing">
+<meta property="og:description" content="A performance operator to make Glean&#x27;s pipeline predictable">
+<meta property="og:image" content="https://ericbeer.me/assets/eric.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f1e8;--panel:#fffaf2;--text:#1d1a16;--soft:#5f574c;--line:rgba(29,26,22,.14);--accent:#c2410c;--ink:#fffaf2;--head:'Instrument Serif',Georgia,serif;--body:'Inter',system-ui,sans-serif;color-scheme:light dark}
+@media (prefers-color-scheme: dark){:root:not([data-theme=light]){--bg:#17140f;--panel:#211c15;--text:#f3ece0;--soft:#bdb2a1;--line:rgba(243,236,224,.14);--accent:#fb923c;--ink:#17140f}}:root[data-theme=dark]{--bg:#17140f;--panel:#211c15;--text:#f3ece0;--soft:#bdb2a1;--line:rgba(243,236,224,.14);--accent:#fb923c;--ink:#17140f}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);-webkit-font-smoothing:antialiased;line-height:1.55}
+a{color:inherit}:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:max(16px,4vw)}
+.lbl{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1,h2,h3{font-family:var(--head);line-height:1.08;margin:0;letter-spacing:-.01em}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:12px;flex-wrap:wrap}
+nav .brand{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px}
+nav .links{display:flex;gap:16px;font-size:14px;color:var(--soft)}nav .links a{text-decoration:none}nav .links a:hover{color:var(--text)}
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(24px,5vw,64px);align-items:center;padding:clamp(32px,7vw,88px) 0 clamp(40px,6vw,72px);border-bottom:1px solid var(--line)}
+.pair{font-family:var(--head);font-size:clamp(20px,2.4vw,26px);color:var(--soft);margin-bottom:14px}.pair em{font-style:normal;color:var(--accent)}
+.hero h1{font-size:clamp(34px,4.4vw,58px)}
+.hero .role{margin:18px 0 0;font-size:clamp(17px,1.6vw,20px);color:var(--soft);max-width:60ch}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:999px;font-weight:700;text-decoration:none;font-size:15px;border:1px solid var(--line)}
+.btn.p{background:var(--accent);color:var(--ink);border-color:var(--accent)}
+.photo{position:relative}.photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:22px;display:block;border:1px solid var(--line)}
+.photo .tag{position:absolute;left:14px;bottom:14px;background:var(--bg);color:var(--text);border:1px solid var(--line);padding:8px 12px;border-radius:12px;font-size:13px}
+.socials{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.socials a{font-size:13px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--soft)}.socials a:hover{color:var(--text);border-color:var(--accent)}
+section{padding:clamp(48px,7vw,88px) 0;border-bottom:1px solid var(--line)}
+.sh{display:grid;grid-template-columns:240px 1fr;gap:32px}.sh h2{font-size:clamp(28px,3.6vw,44px);margin-top:10px}
+.prose p{font-size:clamp(16px,1.4vw,19px);color:var(--soft);margin:0 0 14px;max-width:68ch}.prose p:first-child{color:var(--text)}
+.problem{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:clamp(22px,3vw,36px);font-size:clamp(18px,1.8vw,23px);font-family:var(--head);line-height:1.35;margin-top:28px}
+.asks{display:grid;gap:12px;margin-top:28px}
+.ask{display:grid;grid-template-columns:1fr 1.25fr;gap:24px;padding:20px 22px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}
+.ask .q{font-weight:700;display:flex;gap:12px}.ask .n{color:var(--accent);font-family:var(--head)}.ask .a{color:var(--soft)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
+ul.offers{margin:0;padding:0;list-style:none;display:grid;gap:10px}ul.offers li{padding:14px 16px;border:1px solid var(--line);border-radius:12px;color:var(--soft)}ul.offers li::before{content:"→ ";color:var(--accent);font-weight:700}
+.why{color:var(--soft);font-size:17px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}.stat{padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}.stat b{display:block;font-family:var(--head);font-size:clamp(28px,3.4vw,40px);color:var(--accent)}.stat span{font-size:14px;color:var(--soft)}
+.plan{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}.step{padding:24px;border-radius:16px;border:1px solid var(--line)}.step h3{font-size:22px;margin:10px 0 8px}.step p{margin:0;color:var(--soft)}
+.rares{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}.rare{padding:24px;border-radius:16px;background:var(--panel);border:1px solid var(--line)}.rare h3{font-size:20px;margin-bottom:8px}.rare p{margin:0;color:var(--soft)}
+.note{margin-top:22px;color:var(--soft);font-size:16px;max-width:72ch;border-left:3px solid var(--accent);padding-left:16px}
+.rows{display:grid;gap:0;margin-top:24px}.row{display:grid;grid-template-columns:260px 1fr;gap:20px;padding:14px 0;border-top:1px solid var(--line)}.row span{color:var(--soft)}
+.contact{text-align:left}.contact h2{font-size:clamp(32px,5vw,58px);max-width:18ch}.contact p{color:var(--soft);font-size:18px;max-width:60ch}
+.mail{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:24px}.mail code{font-family:var(--body);font-size:18px;padding:12px 16px;border:1px solid var(--line);border-radius:12px}
+footer{padding:28px 0 40px;color:var(--soft);font-size:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (max-width:860px){.hero{grid-template-columns:1fr}.photo{max-width:340px}.sh{grid-template-columns:1fr;gap:8px}.ask{grid-template-columns:1fr;gap:8px}.cols,.plan,.rares{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.row{grid-template-columns:1fr;gap:4px}nav .links{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><div class="brand">Eric Beer</div><div class="links"><a href="#company">Glean</a><a href="#fit">The fit</a><a href="#plan">First 90 days</a><a href="#contact">Contact</a></div></nav>
+<header class="hero">
+ <div>
+  <div class="pair">Eric Beer <em>×</em> Glean</div>
+  <h1>A performance operator to make Glean&#x27;s pipeline predictable</h1>
+  <p class="role"><b>VP, Growth Marketing</b> · A growth engine across demand gen, digital, field and partner marketing that ties every investment to pipeline and ARR.</p>
+  <div class="cta"><a class="btn p" href="mailto:eric@performancemarketer.io?subject=Glean%20%E2%80%94%20VP, Growth Marketing">Talk with me →</a><a class="btn" href="https://www.linkedin.com/in/ericbeer" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+  <div class="socials"><a href="https://www.linkedin.com/in/ericbeer" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.youtube.com/@ericbeer" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/ericbeerofficial" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@ericbeer" target="_blank" rel="noopener">TikTok</a><a href="https://x.com/esb211" target="_blank" rel="noopener">X</a><a href="https://www.facebook.com/eric.beer11" target="_blank" rel="noopener">Facebook</a></div>
+ </div>
+ <div class="photo"><img src="/assets/eric.jpg" alt="Eric Beer" width="640" height="800"><div class="tag">New York metro · Mountain View, 4 days in office · open to relocating or commuting</div></div>
+</header>
+
+<section id="company"><div class="sh"><div><div class="lbl">01 · Glean</div><h2>What I see you building</h2></div>
+<div><div class="prose"><p>Glean is the Work AI platform: enterprise search and AI agents grounded in a company&#x27;s own knowledge and permissions. It passed $200M ARR in 2025 after doubling revenue in nine months, and Sacra estimated about $300M ARR in May 2026.</p><p>This VP leads Glean&#x27;s global growth engine, covering demand generation, digital, ABM, field and partner marketing, with accountability for pipeline and ARR across Enterprise, Commercial and Global markets. It sits on the executive go-to-market leadership team.</p><p>The role turns growth targets into plans and budgets, leads a cross-channel team, builds integrated programs, embeds AI into planning, content, personalization and reporting, and runs an operating cadence around pipeline health and forecast accuracy.</p></div><div class="problem">Glean is growing fast and needs a pipeline engine that is predictable and efficient across segments and regions, with investment decisions backed by clear attribution.</div></div></div></section>
+
+<section id="fit"><div class="sh"><div><div class="lbl">02 · The fit</div><h2>What the role asks for, and my proof</h2></div>
+<div><div class="asks"><div class="ask"><div class="q"><span class="n">01</span>Build growth engines that deliver predictable pipeline and revenue</div><div class="a">As Founder &amp; CEO of Universal Marketing Partners I built an 8-figure performance business, and I scaled a language-learning product from under $10M to over $100M market cap through Facebook arbitrage.</div></div><div class="ask"><div class="q"><span class="n">02</span>Forecasting, attribution, funnel optimization and budget planning</div><div class="a">I am a math guy: CPC, CPA, LTV and lead conversion economics. I manage paid, affiliate, owned, creator and social traffic on a performance basis, working with media buyers rather than buying myself.</div></div><div class="ask"><div class="q"><span class="n">03</span>12+ years of B2B SaaS or enterprise marketing leadership</div><div class="a">My honest gap: my 20+ years are mostly consumer and lead-generation performance marketing, not enterprise SaaS. My B2B work includes LeadQual.ai, a lead qualification and routing platform with live campaigns in Medicare, Mortgage Assistance and Final Expense.</div></div><div class="ask"><div class="q"><span class="n">04</span>A proven people leader</div><div class="a">I led teams of 5 to 20 at Universal Marketing Partners and run a remote sales floor for AllDayLong and RapidDispatch AI.</div></div><div class="ask"><div class="q"><span class="n">05</span>Partner and ecosystem marketing</div><div class="a">$100M+ in affiliate commissions and 280+ affiliates tracked at JVC Affiliate Network.</div></div><div class="ask"><div class="q"><span class="n">06</span>Hands-on AI to improve marketing execution and analytics</div><div class="a">I have shipped 50+ apps with AI agents and build my own automation. I am currently completing AI certifications.</div></div></div></div></div></section>
+
+<section><div class="sh"><div><div class="lbl">03 · The role</div><h2>What it offers, and why I want it</h2></div>
+<div class="cols"><ul class="offers"><li>Ownership of Glean&#x27;s global growth engine</li><li>$311K to $355K base plus variable and equity</li><li>A seat on the executive GTM leadership team</li><li>Mountain View, four days in office</li><li>A category-leading Work AI company</li></ul><div class="why"><p>I have built growth engines on performance math my whole career and now build AI agents myself. Leading growth for an enterprise AI platform is the place to combine both.</p></div></div></div></section>
+
+<section><div class="sh"><div><div class="lbl">04 · Proof</div><h2>Twenty years, paid on results</h2></div>
+<div><div class="stats"><div class="stat"><b>$100M+</b><span>Affiliate commissions generated across my career</span></div><div class="stat"><b>8-figure</b><span>Performance and affiliate business built at Universal Marketing Partners</span></div><div class="stat"><b>50+</b><span>Apps shipped, including AI agents in production on Claude</span></div><div class="stat"><b>125+</b><span>Episodes hosted on the Performance Marketer Podcast</span></div></div><p class="note">I'm not a media buyer, and I won't pretend to be one. I work with media buyers, creators and partners to get traffic and distribution. My job is building the engine: the offer, the partner economics, the tracking and the playbook a team can run, all on a performance basis.</p></div></div></section>
+
+<section><div class="sh"><div><div class="lbl">05 · The combination</div><h2>Why this mix is rare</h2></div>
+<div><div class="rares"><div class="rare"><h3>Performance math at the top</h3><p>20+ years of paid-on-results growth, $100M+ in affiliate commissions, and a $10M to $100M+ scale story. Every budget line gets a payback view.</p></div><div class="rare"><h3>Content and thought leadership</h3><p>Podcast host for 125+ episodes, YouTube creator, newsletter publisher and co-author of two books. I know how content builds demand.</p></div><div class="rare"><h3>AI-native operator</h3><p>I build AI agents and apps myself, which helps me embed AI into campaign planning, personalization and reporting in practice.</p></div></div></div></div></section>
+
+<section id="plan"><div class="sh"><div><div class="lbl">06 · How I'd start</div><h2>First 90 days</h2></div>
+<div><div class="plan"><div class="step"><div class="lbl">Days 1–30</div><h3>Diagnose the engine</h3><p>Meet the GTM leaders and team, audit pipeline by segment, channel and region, and review attribution and forecast accuracy.</p></div><div class="step"><div class="lbl">Days 31–60</div><h3>Reallocate and focus</h3><p>Present a plan that moves budget to the best-returning programs, set the pipeline operating cadence, and launch AI-assisted personalization pilots.</p></div><div class="step"><div class="lbl">Days 61–90</div><h3>Make it predictable</h3><p>Report pipeline against forecast, close team gaps, and lock the next-quarter plan with clear investment rules.</p></div></div></div></div></section>
+
+<section><div class="sh"><div><div class="lbl">07 · Background</div><h2>Where the proof comes from</h2></div>
+<div class="rows"><div class="row"><b>Universal Marketing Partners</b><span>Founder &amp; CEO · 8-figure performance and affiliate business; team of up to 20</span></div><div class="row"><b>LeadQual.ai</b><span>Founder · AI voice-agent lead qualification and warm-transfer routing</span></div><div class="row"><b>BeChosen.ai &amp; Scout</b><span>Founder · AI job agent across 8 ATS platforms, live as a connector in Claude and ChatGPT</span></div><div class="row"><b>Performance Marketer</b><span>Founder · AffiliateSchool.ai (17 products, Skool community), podcast, newsletter, YouTube</span></div><div class="row"><b>JVC Affiliate Network</b><span>Operator · Everflow network, 280+ affiliates tracked</span></div><div class="row"><b>Earlier</b><span>Agency of record for RealAge.com (Hearst / Dr. Oz) and Harlequin Book Club; customers for LifeLock, Norton, Credit Sesame, Disney Book Club</span></div><div class="row"><b>Books</b><span>Co-author, Million Dollar Dads and Million Dollar Identity</span></div><div class="row"><b>University of Maryland</b><span>Finance, 1999 · scholarship baseball, NCAA Division I · 1993 USA Junior Olympic team</span></div></div></div></section>
+
+<section class="contact" id="contact"><div class="lbl">Contact</div><h2>Let&#x27;s talk growth at Glean</h2><p>I would welcome a conversation about building a predictable growth engine for Glean. I am based in New York and will work on-site in Mountain View as the role requires.</p>
+<div class="mail"><code id="em">eric@performancemarketer.io</code><button class="btn" type="button" onclick="navigator.clipboard&&navigator.clipboard.writeText('eric@performancemarketer.io').then(()=>{this.textContent='Copied'})">Copy</button><a class="btn p" href="mailto:eric@performancemarketer.io">Email me</a></div>
+<div class="socials"><a href="https://www.linkedin.com/in/ericbeer" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.youtube.com/@ericbeer" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/ericbeerofficial" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@ericbeer" target="_blank" rel="noopener">TikTok</a><a href="https://x.com/esb211" target="_blank" rel="noopener">X</a><a href="https://www.facebook.com/eric.beer11" target="_blank" rel="noopener">Facebook</a></div></section>
+<footer><span>Eric Beer</span><span>Prepared for Glean · VP, Growth Marketing</span></footer>
+</div>
+</body>
+</html>
