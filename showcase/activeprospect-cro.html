@@ -1,155 +1,214 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Eric Beer · Your Buyer, Your CRO</title>
-<meta name="robots" content="noindex">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--night:#04070d;--line:rgba(255,255,255,.13);--line-2:rgba(255,255,255,.22);--cream:#e8d1cb;--ink:#15131b;--text:#f2f5fb;--soft:rgba(224,232,245,.76);--faint:rgba(232,238,250,.42);--glow:#ffb46a;
---body:'Inter',-apple-system,'Helvetica Neue',Arial,sans-serif;--lbl:'Chakra Petch','Inter',sans-serif;color-scheme:dark}
-*{box-sizing:border-box}
-html,body{margin:0;background:var(--night);color:var(--text);font-family:var(--body);-webkit-font-smoothing:antialiased}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--cream);outline-offset:3px}
-.lbl{font-family:var(--lbl);font-weight:700;font-size:11px;letter-spacing:1.3px;text-transform:uppercase}
-.wrap{max-width:1180px;margin:0 auto;padding-inline:max(16px,4vw)}
-.stage{position:relative;min-height:min(100svh,980px);display:flex;flex-direction:column;overflow:hidden;border-bottom:1px solid var(--line);
- background:radial-gradient(ellipse 60% 45% at 50% 78%,rgba(255,180,106,.22),transparent 70%),radial-gradient(ellipse 90% 60% at 50% 120%,rgba(143,182,255,.12),transparent 70%),linear-gradient(#03060c,#0a1226 70%,#04070d)}
-.stage::before{content:"";position:absolute;inset:18px;border:1px solid var(--line);pointer-events:none}
-.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:40px max(32px,4vw) 0;position:relative;z-index:2}
-.mark b{display:block;font-family:var(--lbl);font-size:20px;letter-spacing:4.5px}
-.mark small{display:block;margin-top:4px;color:var(--faint);font-family:var(--lbl);font-size:10px;letter-spacing:1.8px}
-.pills{display:flex;gap:10px}
-.pill{height:40px;display:inline-flex;align-items:center;padding:0 18px;text-decoration:none}
-.pill.glass{background:rgba(255,255,255,.06)}
-.pill.cream{background:var(--cream);color:var(--ink);clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%)}
-.body{flex:1;display:grid;grid-template-columns:220px minmax(0,1fr);gap:24px;align-items:center;padding:32px max(32px,4vw) 40px;position:relative;z-index:2}
-.rail{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
-.rail button{all:unset;cursor:pointer;display:flex;gap:10px;padding:7px 0;color:rgba(232,238,250,.4)}
-.rail button:hover,.rail button[aria-current="true"]{color:#eef2fa}
-.rail button[aria-current="true"] .n{color:var(--glow)}
-.hero{max-width:760px}
-.kicker{color:var(--glow);margin-bottom:16px}
-h1{margin:0;font-weight:800;font-size:clamp(34px,6vw,76px);line-height:1;letter-spacing:.5px;text-transform:uppercase;text-wrap:balance}
-.blurb{margin:20px 0 0;max-width:58ch;font-size:clamp(16px,1.4vw,19px);line-height:1.62;color:var(--soft)}
-.proofline{margin-top:16px;color:rgba(232,238,250,.6)}
-.proofline b{color:var(--cream)}
-.swap{transition:opacity .35s ease,transform .35s ease}
-.out .swap{opacity:0;transform:translateY(8px)}
-.dock{display:flex;justify-content:space-between;gap:12px;padding:16px max(32px,4vw) 34px;color:var(--faint);position:relative;z-index:2;border-top:1px solid var(--line);margin-inline:18px}
-.dock a{color:#dfe5f0;text-decoration:none}
-section.sec{padding-block:clamp(64px,9vw,120px);border-bottom:1px solid var(--line)}
-.eyebrow{display:flex;justify-content:space-between;gap:12px;color:var(--faint);padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:clamp(32px,5vw,56px)}
-.eyebrow .on{color:var(--glow)}
-.big{margin:0;font-weight:800;font-size:clamp(32px,5vw,72px);line-height:1;letter-spacing:-.02em;text-transform:uppercase;text-wrap:balance;max-width:16ch}
-.big em{font-style:normal;color:var(--glow)}
-.lead{margin:24px 0 0;max-width:62ch;font-size:clamp(17px,1.5vw,20px);line-height:1.6;color:var(--soft)}
-.stats{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-block:1px solid var(--line-2)}
-.stats li{padding:24px 20px;border-right:1px solid var(--line);min-width:0}
-.stats li:first-child{padding-left:0}.stats li:last-child{border-right:0}
-.stats .v{display:block;font-weight:800;font-size:clamp(30px,3.6vw,50px);letter-spacing:-.03em;line-height:1}
-.stats .k{display:block;margin-top:10px;color:var(--soft);font-size:15px;line-height:1.45}
-.steps{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.step{padding:26px 24px 28px;border:1px solid var(--line-2);background:rgba(255,255,255,.025);min-width:0}
-.step .lbl{color:var(--glow)}
-.step h3{margin:16px 0 10px;font-size:clamp(24px,2.2vw,30px);font-weight:800;text-transform:uppercase}
-.step p{margin:0;color:var(--soft);font-size:16px;line-height:1.6}
-.role{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,64px)}
-.quote{margin:0;font-weight:700;font-size:clamp(24px,2.8vw,38px);line-height:1.18;border-left:2px solid var(--glow);padding-left:24px}
-.quote span{display:block;margin-top:16px;font-weight:400;font-size:clamp(16px,1.3vw,18px);line-height:1.6;color:var(--soft)}
-dl{margin:0;border-top:1px solid var(--line-2)}
-dl div{padding:14px 0;border-bottom:1px solid var(--line)}
-dt{font-weight:700}dd{margin:4px 0 0;color:var(--soft);font-size:14.5px;line-height:1.5}
-.contact{text-align:center}
-.contact .big{margin-inline:auto}
-.contact .lead{margin-inline:auto}
-.row{margin-top:32px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
-.mail{display:flex;border:1px solid var(--line-2)}
-.mail span{padding:0 18px;display:flex;align-items:center;font-family:var(--lbl);font-weight:600;letter-spacing:.06em;user-select:all}
-.mail button{height:50px;padding:0 20px;border:0;background:var(--cream);color:var(--ink);cursor:pointer}
-.ghost{height:52px;display:inline-flex;align-items:center;padding:0 22px;border:1px solid var(--line-2);text-decoration:none}
-.status{min-height:1.4em;color:var(--faint);margin-top:12px}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-block:20px 30px;color:var(--faint)}
-@media (max-width:860px){.body{grid-template-columns:1fr}.rail{flex-direction:row;overflow-x:auto;gap:18px}.rail button{white-space:nowrap}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stats li{padding-left:0}.steps,.role{grid-template-columns:1fr}.pill.glass{display:none}}
-@media (max-width:520px){.stats{grid-template-columns:1fr}.stats li{border-right:0;border-top:1px solid var(--line)}.dock{flex-direction:column}.mail{width:100%;justify-content:space-between}}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
-</style>
-</head>
-<body>
-<div class="stage">
-  <header class="top">
-    <div class="mark"><b>ERIC BEER</b><small>CRO · LEAD ECONOMICS</small></div>
-    <div class="pills lbl">
-      <a class="pill glass" href="https://www.linkedin.com/in/ericbeer" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="pill cream" href="#contact">Contact</a>
-    </div>
-  </header>
-  <div class="body">
-    <ol class="rail lbl" aria-label="The problems in this role"><li><button type="button"><span class="n">01</span><span>Buyers</span></button></li><li><button type="button"><span class="n">02</span><span>Partners</span></button></li><li><button type="button"><span class="n">03</span><span>Verticals</span></button></li><li><button type="button"><span class="n">04</span><span>Pricing</span></button></li><li><button type="button"><span class="n">05</span><span>Volume</span></button></li><li><button type="button"><span class="n">06</span><span>AI</span></button></li></ol>
-    <div class="hero" id="hero" aria-live="polite">
-      <div class="kicker lbl swap" id="k"></div>
-      <h1 class="swap" id="h"></h1>
-      <p class="blurb swap" id="p"></p>
-      <div class="proofline lbl swap" id="f"></div>
-    </div>
-  </div>
-  <div class="dock lbl"><span>CRO search · ActiveProspect</span><a href="#contact">Talk with me →</a></div>
-</div>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Eric Beer × ActiveProspect · Chief Revenue Officer</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><style>
+:root{color-scheme:light;--ground:#F3F1EC;--ground-2:#E9E6DF;--ink:#111110;--ink-2:#45433F;--ink-3:#5F5C56;--rule:#CFCBC2;--rule-strong:#111110;--signal:#D9531E;--signal-hover:#B04217;--on-signal:#FFFFFF;--warm:#FFD27A;--night-text:#E4E1DA;--night-meta:#C9C5BC;--night-rule:#5A5853;--night-rule-2:#34332F;--night-faint:#ABA79E;--font-display:"Archivo","Helvetica Neue",Arial,sans-serif;--font-body:"Archivo","Helvetica Neue",Arial,sans-serif;--font-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;--gutter:clamp(16px,4vw,48px);--max:1320px;--gap:clamp(12px,2vw,24px)}
+*,*::before,*::after{box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.55;overflow-x:hidden;overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}a{color:inherit}img{max-width:100%;display:block}h1,h2,h3{overflow-wrap:break-word}:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap)}.mono{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.mast{border-bottom:2px solid var(--rule-strong)}.mast .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:18px;padding-bottom:14px;gap:16px;flex-wrap:wrap}.mast .name{font-weight:800;font-size:15px;letter-spacing:-.01em;text-transform:uppercase}.mast nav{display:flex;gap:20px}.mast nav a{text-decoration:none;color:var(--ink-2)}.mast nav a:hover{color:var(--ink)}.social{display:flex;gap:14px;flex-wrap:wrap}.social a{text-decoration:none;color:var(--ink-2)}.social a:hover{color:var(--signal)}
+.label{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-top:1px solid var(--rule-strong);padding-top:12px;margin-bottom:clamp(32px,5vw,64px);color:var(--ink-2)}
+.hero{background:var(--ink);color:var(--ground);padding:clamp(40px,6vw,88px) 0 clamp(48px,7vw,96px);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:auto -10% -40% 40%;height:90%;background:radial-gradient(closest-side,rgba(217,83,30,.45),transparent);pointer-events:none}
+.hero .wrap{position:relative}
+.lockup{display:flex;align-items:center;flex-wrap:wrap;gap:clamp(10px,1.6vw,22px);font-family:var(--font-display);font-weight:800;font-size:clamp(22px,3vw,40px);letter-spacing:-.02em;line-height:1;margin:0 0 clamp(14px,2vw,22px)}
+.lockup .x{color:var(--warm);font-weight:500}
+.lockup .co{color:#fff}
+.role-tag{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--night-rule);padding:8px 12px;color:var(--night-meta);margin:0 0 clamp(28px,4vw,52px)}
+.role-tag i{width:8px;height:8px;border-radius:50%;background:var(--warm);display:inline-block}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) clamp(200px,24vw,320px);gap:clamp(24px,4vw,64px);align-items:center}
+.hero h1{margin:0;font-family:var(--font-display);font-weight:900;font-size:clamp(40px,5.6vw,84px);line-height:.94;letter-spacing:-.04em;max-width:16ch}
+.hero h1 em{font-style:normal;color:var(--warm)}
+.hero-body{margin:clamp(24px,3vw,36px) 0 0;font-size:clamp(18px,1.5vw,21px);line-height:1.5;color:var(--night-text);max-width:52ch;font-weight:500}
+.hero-body b{color:#fff}
+.hero-cta{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+.portrait{position:relative;overflow:hidden;aspect-ratio:1/1;border-radius:50%;border:3px solid var(--warm);background:#1d1c1a}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.08)}
+@media (max-width:760px){.hero-grid{grid-template-columns:1fr}.portrait{width:140px;grid-row:1}}
+.hero-proof{list-style:none;margin:clamp(40px,6vw,72px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gap);border-top:1px solid var(--night-rule)}
+.hero-proof li{padding-top:14px}.hero-proof b{display:block;font-family:var(--font-display);font-weight:800;font-size:clamp(26px,3vw,42px);letter-spacing:-.03em;color:#fff;line-height:1}.hero-proof span{display:block;margin-top:8px;color:var(--night-meta);font-size:14px;line-height:1.4}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 22px;font-family:var(--font-display);font-weight:700;font-size:16px;text-decoration:none;border:2px solid var(--ink);transition:background .15s,color .15s,border-color .15s}
+.btn-signal{background:var(--signal);border-color:var(--signal);color:var(--on-signal)}.btn-signal:hover{background:var(--signal-hover);border-color:var(--signal-hover)}
+.btn-line{background:transparent;color:var(--ink)}.btn-line:hover{background:var(--ink);color:var(--ground)}
+.hero .btn-line{color:#fff;border-color:var(--night-rule)}.hero .btn-line:hover{background:#fff;color:var(--ink);border-color:#fff}
+.btn .arr{font-family:var(--font-mono);font-weight:500}
+.know,.brief,.plan,.fit,.channels,.record{padding:clamp(64px,9vw,120px) 0}
+.know h2,.brief h2,.plan h2,.caps h2,.fit h2,.close h2,.channels h2,.record h2{margin:0 0 clamp(36px,5vw,64px);font-family:var(--font-display);font-weight:800;font-size:clamp(34px,5.6vw,84px);line-height:.95;letter-spacing:-.04em;max-width:18ch}
+.know h2 em,.brief h2 em,.channels h2 em,.close h2 em{font-style:normal;color:var(--signal)}
+.know-grid{row-gap:28px}
+.kn{grid-column:span 6;border-top:2px solid var(--ink);padding-top:14px}
+.kn h3{margin:0 0 10px;font-family:var(--font-display);font-weight:800;font-size:clamp(22px,2.2vw,30px);letter-spacing:-.02em;line-height:1.1}
+.kn p{margin:0;color:var(--ink-2);font-size:17px;max-width:52ch}
+.kn .mono{color:var(--signal);display:block;margin-bottom:8px}
+.thesis{margin-top:clamp(40px,6vw,72px);background:var(--ink);color:var(--ground);padding:clamp(24px,4vw,48px)}
+.thesis p{margin:0;font-family:var(--font-display);font-weight:800;font-size:clamp(24px,3.2vw,44px);line-height:1.08;letter-spacing:-.025em;max-width:28ch}
+.thesis p em{font-style:normal;color:var(--warm)}
+.thesis .mono{color:var(--night-meta);margin-bottom:14px;display:block}
+.brief{border-top:2px solid var(--rule-strong)}
+.brief-cols{row-gap:32px}.bcol{grid-column:span 4;border-top:2px solid var(--ink);padding-top:14px}.bcol h3{margin:0 0 14px;color:var(--ink-2);font-weight:500}.bcol ul{margin:0;padding:0;list-style:none}.bcol li{padding:8px 0;border-bottom:1px solid var(--rule);font-size:16px}
+.bcol.problem{background:var(--ink);color:var(--ground);border-top-color:var(--signal);padding:14px 20px 22px}.bcol.problem h3{color:var(--night-meta)}.bcol.problem p{margin:0;font-family:var(--font-display);font-weight:700;font-size:clamp(21px,2vw,27px);line-height:1.2;letter-spacing:-.015em}.bcol.problem p+p{margin-top:16px;font-weight:500;font-size:17px;line-height:1.5;color:var(--night-text);letter-spacing:0}
+.index{padding:0 0 clamp(64px,9vw,120px)}
+.rows{list-style:none;margin:0;padding:0;border-top:2px solid var(--rule-strong)}.row{border-bottom:1px solid var(--rule-strong)}
+.row summary{list-style:none;cursor:pointer;padding:clamp(22px,3vw,36px) 0;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);align-items:baseline}.row summary::-webkit-details-marker{display:none}
+.row-n{grid-column:1/span 2;font-family:var(--font-display);font-weight:800;font-size:clamp(44px,6vw,96px);line-height:.85;letter-spacing:-.05em;color:var(--signal);font-variant-numeric:tabular-nums}
+.row-p{grid-column:3/span 9;font-family:var(--font-display);font-weight:700;font-size:clamp(24px,3.2vw,46px);line-height:1.04;letter-spacing:-.03em;max-width:26ch}
+.row-x{grid-column:12/span 1;justify-self:end;align-self:center;width:44px;height:44px;border:2px solid var(--ink);position:relative;transition:background .15s}
+.row-x::before,.row-x::after{content:"";position:absolute;left:50%;top:50%;width:16px;height:2px;background:var(--ink);transform:translate(-50%,-50%)}.row-x::after{transform:translate(-50%,-50%) rotate(90deg)}
+.row[open] .row-x{background:var(--ink)}.row[open] .row-x::before,.row[open] .row-x::after{background:var(--ground)}.row[open] .row-x::after{transform:translate(-50%,-50%) rotate(0deg)}
+.row summary:hover .row-p{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px}
+.panel{padding:0 0 clamp(28px,4vw,48px)}.panel .grid{row-gap:24px}.cell{border-top:1px solid var(--rule);padding-top:14px}.cell-think{grid-column:3/span 4}.cell-proof{grid-column:7/span 6;background:var(--ground-2);border-top:2px solid var(--ink);padding:14px 20px 20px}
+.cell h3{margin:0 0 12px;color:var(--ink-2);font-weight:500}.cell-think p{margin:0;font-family:var(--font-display);font-weight:600;font-size:clamp(20px,1.8vw,25px);line-height:1.25;letter-spacing:-.015em}.cell-proof p{margin:0;font-size:17px;line-height:1.55}
+.index-note{margin-top:16px;color:var(--ink-3)}
+.about{padding:clamp(64px,9vw,120px) 0;background:var(--ink);color:var(--ground)}.about .label{border-top-color:var(--ground);color:var(--night-meta)}
+.about h2{margin:0 0 clamp(24px,4vw,40px);font-family:var(--font-display);font-weight:800;font-size:clamp(34px,5.6vw,84px);line-height:.95;letter-spacing:-.04em;max-width:18ch}
+.about-top{align-items:start;row-gap:28px}.about-photo{grid-column:1/span 4;aspect-ratio:1/1;border-radius:50%;overflow:hidden;border:2px solid var(--ground)}.about-photo img{width:100%;height:100%;object-fit:cover;transform:scale(1.08)}
+.about-copy{grid-column:6/span 7}.about-copy p{margin:0 0 16px;font-size:clamp(18px,1.5vw,21px);color:var(--night-text)}
+.stats{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gap);border-top:1px solid var(--night-rule)}.stats li{padding-top:12px}.stats b{display:block;font-family:var(--font-display);font-weight:800;font-size:clamp(26px,3vw,40px);color:var(--ground);letter-spacing:-.03em}.stats span{color:var(--night-meta);font-size:13px}
+.vids-h{margin:clamp(48px,7vw,88px) 0 18px;color:var(--night-meta)}.vids{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px var(--gap)}
+.vids a{display:block;text-decoration:none;color:var(--ground)}.vids .th{position:relative;aspect-ratio:16/9;overflow:hidden;background:#222;border:1px solid var(--night-rule)}.vids .th img{width:100%;height:100%;object-fit:cover}
+.vids .th::after{content:"▶";position:absolute;left:12px;bottom:12px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:var(--signal);color:#fff;font-size:16px}
+.vids b{display:block;margin-top:12px;font-family:var(--font-display);font-weight:700;font-size:19px;line-height:1.2;letter-spacing:-.01em}.vids span{display:block;margin-top:6px;color:var(--night-meta);font-size:15px}.vids a:hover b{color:var(--warm)}
+.reads{list-style:none;margin:clamp(40px,6vw,64px) 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 var(--gap);border-top:1px solid var(--night-rule)}.reads li{border-bottom:1px solid var(--night-rule-2);padding:16px 0}.reads b{display:block;font-family:var(--font-display);font-weight:700;font-size:20px}.reads span{color:var(--night-meta);font-size:15px}
+.channels{border-top:2px solid var(--rule-strong)}
+.ch-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 var(--gap);border-top:2px solid var(--ink)}.ch-grid li{border-bottom:1px solid var(--ink);padding:18px 0}
+.ch-grid .o{display:block;color:var(--signal);margin-bottom:6px}.ch-grid b{display:block;font-family:var(--font-display);font-weight:800;font-size:clamp(22px,2.4vw,32px);letter-spacing:-.02em;line-height:1.05}.ch-grid span.d{display:block;margin-top:6px;color:var(--ink-2);font-size:15px}
+.math{margin-top:clamp(36px,5vw,64px);background:var(--ink);color:var(--ground);padding:clamp(20px,3vw,36px)}.math .mono{color:var(--night-meta)}
+.eq{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:14px 0 12px;font-family:var(--font-display);font-weight:800;font-size:clamp(20px,2.6vw,36px);letter-spacing:-.02em}.eq i{font-style:normal;color:var(--warm);font-weight:500}.math p{margin:0;color:var(--night-text);max-width:62ch}
+.record{border-top:2px solid var(--rule-strong)}
+.rec-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 var(--gap);border-top:2px solid var(--ink)}.rec-list li{border-bottom:1px solid var(--ink);padding:16px 0;display:flex;gap:16px;align-items:baseline}.rec-list b{font-family:var(--font-display);font-weight:800;font-size:clamp(20px,2vw,26px);letter-spacing:-.02em;min-width:9ch}.rec-list span{color:var(--ink-2);font-size:16px}
+.plan{border-top:2px solid var(--rule-strong)}.steps{row-gap:32px}.step{grid-column:span 4;border-top:2px solid var(--ink);padding-top:14px}
+.step .d{color:var(--signal);font-family:var(--font-display);font-weight:800;font-size:clamp(28px,3vw,40px);letter-spacing:-.03em;line-height:1;margin:0 0 6px}.step h3{margin:0 0 14px;font-family:var(--font-display);font-weight:700;font-size:22px;letter-spacing:-.02em}.step ul{margin:0;padding:0;list-style:none}.step li{padding:8px 0;border-bottom:1px solid var(--rule);font-size:16px}
+.plan-note{margin-top:20px;color:var(--ink-3)}
+.fit{border-top:2px solid var(--rule-strong)}.fit-list{list-style:none;margin:0;padding:0;border-top:2px solid var(--rule-strong)}.fit-list li{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);padding:clamp(18px,2.4vw,28px) 0;border-bottom:1px solid var(--rule-strong);align-items:baseline}.fit-list .i{grid-column:1/span 2;color:var(--ink-3)}.fit-list .t{grid-column:3/span 10;font-family:var(--font-display);font-weight:700;font-size:clamp(22px,2.6vw,36px);line-height:1.1;letter-spacing:-.02em}
+.who{padding:clamp(56px,8vw,96px) 0;background:var(--ground-2);border-top:2px solid var(--rule-strong)}.who h2{margin:0 0 clamp(28px,4vw,48px);font-family:var(--font-display);font-weight:800;font-size:clamp(32px,5vw,64px);line-height:.95;letter-spacing:-.04em}
+.contact-card{list-style:none;margin:0 0 clamp(28px,4vw,48px);padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 var(--gap);border-top:2px solid var(--ink)}.contact-card li{border-bottom:1px solid var(--ink);padding:16px 0;display:flex;justify-content:space-between;gap:12px}.contact-card a{font-family:var(--font-display);font-weight:700;font-size:20px;text-decoration:none}.contact-card span{color:var(--ink-2)}
+.links{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--gap)}.links li{border-bottom:1px solid var(--ink)}.links a{display:flex;justify-content:space-between;gap:12px;padding:18px 0;text-decoration:none;font-family:var(--font-display);font-weight:700;font-size:20px;letter-spacing:-.01em}.links a span{font-family:var(--font-mono);font-size:12px;font-weight:400;color:var(--ink-2);letter-spacing:.04em;align-self:center}.links a:hover{color:var(--signal)}
+.close{padding:clamp(72px,10vw,140px) 0 clamp(56px,8vw,96px);border-top:2px solid var(--rule-strong)}.close h2{font-size:clamp(42px,8vw,120px);max-width:14ch;line-height:.92}.close-body{grid-column:1/span 6;margin:0;font-size:clamp(18px,1.6vw,22px);font-weight:500;max-width:42ch}.close-cta{grid-column:8/span 5;display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end;align-self:end}
+footer{border-top:1px solid var(--rule)}footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:18px;padding-bottom:28px;color:var(--ink-2)}footer a{color:var(--ink);text-underline-offset:3px}
+@media (prefers-reduced-motion:no-preference){@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}@keyframes drop{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}.rv{animation:rise .7s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--d,0ms)}.row[open] .panel{animation:drop .35s ease both}}
+@media (max-width:960px){.hero-proof{grid-template-columns:repeat(2,minmax(0,1fr))}.kn,.bcol,.step{grid-column:1/-1}.close-cta{grid-column:1/-1;justify-content:flex-start;margin-top:28px}.close-body{grid-column:1/-1}.cell-think,.cell-proof{grid-column:3/-1}.about-photo{grid-column:1/span 5}.about-copy{grid-column:1/-1}.vids{grid-template-columns:repeat(2,minmax(0,1fr))}.reads{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.links{grid-template-columns:repeat(2,minmax(0,1fr))}.ch-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.rec-list{grid-template-columns:1fr}}
+@media (max-width:640px){body{font-size:16px}.mast nav{display:none}.btn{width:100%;justify-content:space-between}.hero-proof{grid-template-columns:1fr 1fr}.row summary{grid-template-columns:minmax(0,1fr) 44px;row-gap:10px}.row-n{grid-column:1;grid-row:1;font-size:44px}.row-x{grid-column:2;grid-row:1}.row-p{grid-column:1/-1;grid-row:2;font-size:26px}.panel .grid{display:block}.cell+.cell{margin-top:24px}.cell-proof{padding:14px 16px 18px}.fit-list li{grid-template-columns:40px minmax(0,1fr)}.fit-list .i{grid-column:1}.fit-list .t{grid-column:2}.links,.ch-grid,.contact-card,.vids{grid-template-columns:1fr}.about-photo{width:60%}.rec-list li{display:block}.rec-list b{display:block;margin-bottom:4px}}
+</style></head><body>
+<header class="mast"><div class="wrap"><div class="name">Eric Beer</div><nav class="mono" aria-label="Sections"><a href="#know">01 ActiveProspect</a><a href="#brief">02 Brief</a><a href="#proof">03 Proof</a><a href="#about">Meet Eric</a><a href="#plan">04 90 days</a><a href="#contact">05 Talk</a></nav><div class="social mono" aria-label="Social profiles"><a href="https://www.linkedin.com/in/ericbeer" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.youtube.com/@ericbeer" target="_blank" rel="noopener">YouTube</a><a href="https://x.com/esb211" target="_blank" rel="noopener">X</a><a href="https://www.instagram.com/ericbeerofficial" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@ericbeer" target="_blank" rel="noopener">TikTok</a><a href="https://www.facebook.com/eric.beer11" target="_blank" rel="noopener">Facebook</a></div></div></header>
 <main>
-  <section class="sec"><div class="wrap">
-    <div class="eyebrow lbl"><span>Proof</span><span class="on">Lead gen · Consent · Partners</span></div>
-    <h2 class="big">Twenty years on the <em>buyer's side</em> of lead gen.</h2>
-    <p class="lead">I&#x27;ve spent my career building the acquisition engines, partner programs and lead businesses that run on platforms like TrustedForm and LeadConduit.</p>
-    <ul class="stats"><li><span class="v">$100M+</span><span class="k">Affiliate commissions generated across my career</span></li><li><span class="v">8-figure</span><span class="k">Performance and affiliate business built at Universal Marketing Partners</span></li><li><span class="v">280+</span><span class="k">Affiliates tracked on the JVC Affiliate Network</span></li><li><span class="v">300–400K</span><span class="k">Records a day in a LeadQual.ai routing plan</span></li></ul>
-  </div></section>
-  <section class="sec"><div class="wrap">
-    <div class="eyebrow lbl"><span>How I'd start</span><span class="on">First 90 days</span></div>
-    <h2 class="big">Learn the book. <em>Package the platform.</em> Then scale.</h2>
-    <ol class="steps"><li class="step"><span class="lbl">Step 1 · Listen</span><h3>Learn</h3><p>Ride along with sales and customer success. Talk to the top accounts in insurance and lending about why they buy, expand and churn.</p></li><li class="step"><span class="lbl">Step 2 · Package</span><h3>Bundle</h3><p>Build vertical packages that cross-sell TrustedForm, LeadConduit and identity data, and pilot a partner and rev-share channel.</p></li><li class="step"><span class="lbl">Step 3 · Scale</span><h3>Forecast</h3><p>Set the forecast and pipeline discipline, evolve pricing with the data, and hire around what is working.</p></li></ol>
-  </div></section>
-  <section class="sec"><div class="wrap">
-    <div class="eyebrow lbl"><span>The role I play</span><span class="on">Background</span></div>
-    <div class="role">
-      <p class="quote">I&#x27;m not a media buyer, and I won&#x27;t pretend to be one.<span>I work with media buyers and their teams to get traffic and distribution. My job is building the engine: the offer, the partner economics, the tracking and the playbook a team can run, all on a performance basis.</span></p>
-      <dl>
-        <div><dt>Universal Marketing Partners</dt><dd>Founder &amp; CEO · 8-figure performance and affiliate business</dd></div>
-        <div><dt>LeadQual.ai</dt><dd>Founder · AI lead qualification and routing; Medicare, Mortgage Assistance, Final Expense</dd></div>
-        <div><dt>BeChosen.ai &amp; Scout</dt><dd>Founder · AI job platform across 8 ATS platforms; product strategy and pricing</dd></div>
-        <div><dt>Performance Marketer</dt><dd>Founder · AffiliateSchool.ai, newsletter, podcast (125+ episodes, 2019–2023)</dd></div>
-        <div><dt>JVC Affiliate Network</dt><dd>Operator · Everflow, 280+ affiliates tracked</dd></div>
-        <div><dt>University of Maryland</dt><dd>Finance, 1999 · scholarship baseball, NCAA Division I</dd></div>
-      </dl>
-    </div>
-  </div></section>
-  <section class="sec contact" id="contact"><div class="wrap">
-    <div class="eyebrow lbl"><span>Contact</span><span class="on">New York metro · Remote</span></div>
-    <h2 class="big">Let's talk about <em>$250M.</em></h2>
-    <p class="lead">If ActiveProspect is moving from $110M toward $250M, I&#x27;d like to show you what your customers see from the other side of the platform.</p>
-    <div class="row">
-      <div class="mail"><span id="em">eric@performancemarketer.io</span><button type="button" class="lbl" id="cp">Copy</button></div>
-      <a class="ghost lbl" href="https://www.linkedin.com/in/ericbeer" target="_blank" rel="noopener">LinkedIn ↗</a>
-    </div>
-    <p class="status lbl" id="st" role="status"></p>
-  </div></section>
+<section class="hero" aria-labelledby="hero-h"><div class="wrap">
+<div class="hero-grid">
+<div class="hero-main">
+<p class="lockup rv"><span>Eric Beer</span><span class="x" aria-hidden="true">×</span><span class="co">ActiveProspect</span></p>
+<p class="role-tag mono rv" style="--d:60ms"><i aria-hidden="true"></i>For the Chief Revenue Officer role</p>
+<h1 id="hero-h" class="rv" style="--d:120ms">Your buyers are performance marketers. <em>I've been one for 20 years, and I built TrustedForm into my own legal suite.</em></h1>
+<p class="hero-body rv" style="--d:200ms">Going from $110M to $250M+ means selling consent, identity and lead performance as one story to two very different buyers. I know the first buyer from the inside: <b>publishers, lead buyers and affiliate networks who live on margin, compliance and speed.</b></p>
+<div class="hero-cta rv" style="--d:300ms"><a class="btn btn-signal" href="mailto:eric@performancemarketer.io?subject=ActiveProspect%20Chief%20Revenue%20Officer">Let's talk <span class="arr" aria-hidden="true">→</span></a><a class="btn btn-line" href="#plan">See my 90-day plan <span class="arr" aria-hidden="true">↓</span></a></div>
+</div>
+<div class="portrait rv" style="--d:260ms" role="img" aria-label="Eric Beer"><img src="https://yt3.googleusercontent.com/Mp7gOPpSMBFdGns7IfiIiY8Phw0AB94Ccs_SbKsMugqn9R9WNxBewG25xtxZJ8ks4znh5FBcOQ=s900" alt=""></div>
+</div>
+<ul class="hero-proof rv" style="--d:360ms"><li><b>$100M+</b><span>affiliate commissions generated across my career</span></li><li><b>300–400K</b><span>records a day: LeadQual pipeline design</span></li><li><b>280+</b><span>affiliates tracked on one network</span></li><li><b>20+ yrs</b><span>always paid on results</span></li></ul>
+</div></section>
+
+<section id="know" class="know" aria-labelledby="know-h"><div class="wrap">
+<div class="label mono"><span>01 / What I see at ActiveProspect</span><span>04</span></div>
+<h2 id="know-h">I know your business, <em>because I'm your customer.</em></h2>
+<div class="grid know-grid">
+<div class="kn"><span class="mono">The platform</span><h3>Consent, compliance and lead orchestration for performance marketers.</h3><p>ActiveProspect makes consent-based marketing a channel brands and publishers can trust. In lead gen, that's not a feature. It's permission to operate.</p></div>
+<div class="kn"><span class="mono">The customer</span><h3>Publishers, lead buyers and brands in insurance, lending and financial services.</h3><p>That's my world. I run AI-qualified lead campaigns in Medicare, Mortgage Assistance and Final Expense, and I built my partner agreements around TCPA/CCPA and TrustedForm.</p></div>
+<div class="kn"><span class="mono">The expansion</span><h3>InfutorData adds identity, enrichment and an enterprise data buyer.</h3><p>Two motions now: high-velocity, partner-driven performance sales and longer enterprise data deals. The job is one story, two playbooks, one forecast.</p></div>
+<div class="kn"><span class="mono">The model</span><h3>Subscription, usage and data monetization, past $100M ARR.</h3><p>Pricing that grows with customer volume, cross-sell between consent and identity, and partners who sell for you. That's how $110M becomes $250M.</p></div>
+</div>
+<div class="thesis"><span class="mono">My thesis for ActiveProspect</span><p>The fastest path to $250M isn't a bigger sales team. It's <em>making every lead-gen partner a reseller of trust</em>, and cross-selling identity into every account that already relies on consent.</p></div>
+</div></section>
+
+<section id="brief" class="brief" aria-labelledby="brief-h"><div class="wrap">
+<div class="label mono"><span>02 / The brief</span><span>03</span></div>
+<h2 id="brief-h">What you asked for. What you're offering. <em>The real job.</em></h2>
+<div class="grid brief-cols">
+<div class="bcol"><h3 class="mono">What you're asking for</h3><ul><li>Own sales, customer success and partnerships</li><li>Scale from $110M to $250M+ ARR</li><li>Forecastable pipeline across two GTM motions</li><li>Pricing across subscription, usage and data</li><li>Partnership engine: referrals, rev share, channel, marketplaces</li><li>Commercial integration of InfutorData and cross-sell</li><li>Board-level forecasting; build a high-performing revenue team</li></ul></div>
+<div class="bcol"><h3 class="mono">What you're offering</h3><ul><li>Chief Revenue Officer, reporting to the CEO</li><li>Two platforms: ActiveProspect and InfutorData</li><li>United States (remote per job boards)</li><li>Backed by Five Elms Capital</li><li>Comp not posted</li></ul></div>
+<div class="bcol problem"><h3 class="mono">The problem to solve</h3><p>Grow from $110M to $250M+ ARR by selling consent and identity together.</p><p>That means a partner-led engine for performance marketers, a disciplined enterprise motion for data buyers, pricing that scales with usage, and a cross-sell story that makes the two platforms one.</p></div>
+</div></div></section>
+
+<section id="proof" class="index" aria-label="Requirement and proof"><div class="wrap">
+<div class="label mono"><span>03 / Your requirement → my proof</span><span>07</span></div>
+<ol class="rows">
+<li><details class="row" open><summary><span class="row-n" aria-hidden="true">01</span><span class="row-p">"Selling to marketers and regulated industries: insurance, lending, financial services."</span><span class="row-x" aria-hidden="true"></span></summary><div class="panel"><div class="grid"><div class="cell cell-think"><h3 class="mono">How I think</h3><p>I don't need to learn your buyer. I am your buyer.</p></div><div class="cell cell-proof"><h3 class="mono">Proof</h3><p>LeadQual.ai runs live campaigns in Medicare, Mortgage Assistance and Final Expense. Drove customers for LifeLock, Norton Antivirus and Credit Sesame.</p></div></div></div></details></li>
+<li><details class="row"><summary><span class="row-n" aria-hidden="true">02</span><span class="row-p">"Lead generation, AdTech and MarTech depth."</span><span class="row-x" aria-hidden="true"></span></summary><div class="panel"><div class="grid"><div class="cell cell-think"><h3 class="mono">How I think</h3><p>Lead gen runs on three things: volume, quality and proof of consent. Your platform touches all three.</p></div><div class="cell cell-proof"><h3 class="mono">Proof</h3><p>20+ years in performance and affiliate marketing. $100M+ in affiliate commissions generated. Founder &amp; CEO of Universal Marketing Partners, an 8-figure performance and affiliate business.</p></div></div></div></details></li>
+<li><details class="row"><summary><span class="row-n" aria-hidden="true">03</span><span class="row-p">"Build partnership-led revenue: referrals, revenue sharing, channel."</span><span class="row-x" aria-hidden="true"></span></summary><div class="panel"><div class="grid"><div class="cell cell-think"><h3 class="mono">How I think</h3><p>Partners sell what makes them money. Pay them on results and make them look good to their clients.</p></div><div class="cell cell-proof"><h3 class="mono">Proof</h3><p>Run the JVC Affiliate Network on Everflow with 280+ affiliates tracked. Designed LeadQual.ai's revenue split and broker economics, and a 5-level partner commission structure for AffiliateSchool.ai.</p></div></div></div></details></li>
+<li><details class="row"><summary><span class="row-n" aria-hidden="true">04</span><span class="row-p">"Translate data into customer value."</span><span class="row-x" aria-hidden="true"></span></summary><div class="panel"><div class="grid"><div class="cell cell-think"><h3 class="mono">How I think</h3><p>Consent and identity data are worth what they save a buyer in fraud, returns and legal risk. Sell that number.</p></div><div class="cell cell-proof"><h3 class="mono">Proof</h3><p>Built LeadQual.ai's partner legal suite with TCPA/CCPA, TrustedForm and PEWC protections, and negotiated counter-redlines with partners including SHIFT44.</p></div></div></div></details></li>
+<li><details class="row"><summary><span class="row-n" aria-hidden="true">05</span><span class="row-p">"Evolve pricing: subscription, usage, data monetization."</span><span class="row-x" aria-hidden="true"></span></summary><div class="panel"><div class="grid"><div class="cell cell-think"><h3 class="mono">How I think</h3><p>Price should grow with the customer's volume, so success is shared.</p></div><div class="cell cell-proof"><h3 class="mono">Proof</h3><p>Defined product strategy and pricing for BeChosen's Scout membership and All-Access tiers. Designed LeadQual.ai's publisher-to-advertiser revenue model.</p></div></div></div></details></li>
+<li><details class="row"><summary><span class="row-n" aria-hidden="true">06</span><span class="row-p">"High-velocity sales into a partner ecosystem."</span><span class="row-x" aria-hidden="true"></span></summary><div class="panel"><div class="grid"><div class="cell cell-think"><h3 class="mono">How I think</h3><p>Velocity comes from playbooks a team can run, not heroics.</p></div><div class="cell cell-proof"><h3 class="mono">Proof</h3><p>Built affiliate-manager playbooks and outreach systems for JVC, a 200+ company outreach list across 11 verticals for LeadQual.ai, and a remote PhoneBurner sales floor for my AI answering products.</p></div></div></div></details></li>
+<li><details class="row"><summary><span class="row-n" aria-hidden="true">07</span><span class="row-p">"Operational discipline at scale."</span><span class="row-x" aria-hidden="true"></span></summary><div class="panel"><div class="grid"><div class="cell cell-think"><h3 class="mono">How I think</h3><p>If it can't be forecast, it can't be managed.</p></div><div class="cell cell-proof"><h3 class="mono">Proof</h3><p>Architected a phased plan for a client processing 300–400K records a day (BullMQ queuing, DID rotation, Numeracle caller reputation). I'm a math guy: CPL, CPA, LTV and payback.</p></div></div></div></details></li>
+</ol>
+<p class="index-note mono">Tap any row to see how I think about it and the proof</p>
+</div></section>
+
+<section id="about" class="about" aria-labelledby="about-h"><div class="wrap">
+<div class="label mono"><span>Meet Eric</span><span>Watch · Read · Follow</span></div>
+<h2 id="about-h">You want someone who knows your buyer. Here's my seat at their table.</h2>
+<div class="grid about-top"><div class="about-photo"><img src="https://yt3.googleusercontent.com/Mp7gOPpSMBFdGns7IfiIiY8Phw0AB94Ccs_SbKsMugqn9R9WNxBewG25xtxZJ8ks4znh5FBcOQ=s900" alt="Eric Beer"></div>
+<div class="about-copy"><p>I'm Eric Beer. For 20+ years I've been on the buying and selling side of performance marketing: publishers, affiliates, lead buyers and brands, always paid on results.</p><p>Today I run LeadQual.ai, an AI voice-qualification and live-transfer platform in Medicare, mortgage and final expense, with a legal suite built around consent and TrustedForm. ActiveProspect's customers are my peers.</p><p>Former scholarship baseball player at the University of Maryland and a 1993 USA Junior Olympic team pick. I still compete like it.</p>
+<ul class="stats"><li><b>$100M+</b><span>affiliate commissions</span></li><li><b>418</b><span>YouTube videos</span></li><li><b>125+</b><span>podcast episodes</span></li><li><b>50+</b><span>apps and AI tools shipped</span></li></ul></div></div>
+<p class="vids-h mono">Watch: picked for this role</p>
+<ul class="vids">
+<li><a href="https://www.youtube.com/watch?v=mZylyMpUMwU" target="_blank" rel="noopener"><div class="th"><img src="https://i.ytimg.com/vi/mZylyMpUMwU/hqdefault.jpg" alt="" loading="lazy"></div><b>I Made $1,000,000+ With Affiliate Marketing. This Is How.</b><span>How partner economics build a business.</span></a></li>
+<li><a href="https://www.youtube.com/watch?v=YznrKM1CG_o" target="_blank" rel="noopener"><div class="th"><img src="https://i.ytimg.com/vi/YznrKM1CG_o/hqdefault.jpg" alt="" loading="lazy"></div><b>Eric Beer's Performance Marketing Secrets</b><span>How I think about traffic, leads and scale.</span></a></li>
+<li><a href="https://www.youtube.com/watch?v=_w8tQOuhcig" target="_blank" rel="noopener"><div class="th"><img src="https://i.ytimg.com/vi/_w8tQOuhcig/hqdefault.jpg" alt="" loading="lazy"></div><b>7-Step Instagram DM Outreach Framework</b><span>Outbound that opens partner conversations.</span></a></li>
+<li><a href="https://www.youtube.com/watch?v=0Anbdzbx8Vs" target="_blank" rel="noopener"><div class="th"><img src="https://i.ytimg.com/vi/0Anbdzbx8Vs/hqdefault.jpg" alt="" loading="lazy"></div><b>Get Traffic From Publishers Profitably</b><span>Publisher traffic, bought profitably.</span></a></li>
+<li><a href="https://www.youtube.com/watch?v=qnkcIMuuRKw" target="_blank" rel="noopener"><div class="th"><img src="https://i.ytimg.com/vi/qnkcIMuuRKw/hqdefault.jpg" alt="" loading="lazy"></div><b>Where Lead Gen Pros Win: Affiliate Summit West 2025</b><span>Where your customers gather: Affiliate Summit.</span></a></li>
+<li><a href="https://www.youtube.com/watch?v=-r5ng_6WZVc" target="_blank" rel="noopener"><div class="th"><img src="https://i.ytimg.com/vi/-r5ng_6WZVc/hqdefault.jpg" alt="" loading="lazy"></div><b>A Day in the Life of the King of Arbitrage</b><span>How I work, unfiltered.</span></a></li>
+</ul>
+<ul class="reads"><li><b>Million Dollar Dads</b><span>Co-author</span></li><li><b>Million Dollar Identity</b><span>Co-author</span></li><li><a href="https://www.youtube.com/@ericbeer" target="_blank" rel="noopener" style="text-decoration:none;color:inherit"><b>YouTube: @ericbeer ↗</b><span>Performance marketing, partners and growth</span></a></li></ul>
+</div></section>
+
+<section id="channels" class="channels" aria-labelledby="ch-h"><div class="wrap">
+<div class="label mono"><span>How I'd grow ActiveProspect revenue</span><span>06</span></div>
+<h2 id="ch-h">Two motions. One story. <em>Trust that compounds into revenue.</em></h2>
+<ul class="ch-grid">
+<li><span class="o mono">01</span><b>Partner &amp; channel</b><span class="d">Networks, agencies and platforms that resell or refer, on revenue share</span></li>
+<li><span class="o mono">02</span><b>High-velocity sales</b><span class="d">Playbook-driven sales to publishers and lead buyers</span></li>
+<li><span class="o mono">03</span><b>Enterprise data</b><span class="d">Disciplined, forecastable deals for InfutorData buyers</span></li>
+<li><span class="o mono">04</span><b>Cross-sell</b><span class="d">Identity and enrichment into every consent account, and back</span></li>
+<li><span class="o mono">05</span><b>Marketplace integrations</b><span class="d">Show up inside the tools lead-gen teams already use</span></li>
+<li><span class="o mono">06</span><b>Industry presence</b><span class="d">Where performance marketers gather: events, podcasts, communities</span></li>
+</ul>
+<div class="math"><p class="mono">How I'd measure it</p><div class="eq">Pipeline <i>→</i> Win rate <i>→</i> New ARR <i>→</i> Expansion <i>→</i> Net retention</div><p>One forecast across both motions, with partner-sourced, direct and cross-sell revenue tracked separately. Investment moves to the motion with the best payback.</p></div>
+</div></section>
+
+<section class="record" aria-labelledby="rec-h"><div class="wrap">
+<div class="label mono"><span>Track record</span><span>20+ years</span></div>
+<h2 id="rec-h">Brands I've driven customers for.</h2>
+<ul class="rec-list"><li><b>RealAge</b><span>Agency of record for RealAge.com (Hearst / Dr. Oz)</span></li><li><b>Harlequin</b><span>Agency of record for Harlequin Book Club</span></li><li><b>Disney</b><span>Drove memberships for Disney Book Club</span></li><li><b>LifeLock</b><span>Drove customers for LifeLock, Norton Antivirus and Credit Sesame</span></li><li><b>10x+</b><span>Scaled a language-learning product from under $10M to $100M+ market cap</span></li><li><b>$100M+</b><span>In affiliate commissions generated across my career</span></li><li><b>8 figures</b><span>Built Universal Marketing Partners, a performance and affiliate business</span></li><li><b>Today</b><span>Founder of LeadQual.ai and BeChosen, both AI-native</span></li></ul>
+</div></section>
+
+<section id="plan" class="plan" aria-labelledby="plan-h"><div class="wrap">
+<div class="label mono"><span>04 / What I'd do</span><span>90 days</span></div>
+<h2 id="plan-h">The first 90 days.</h2>
+<div class="grid steps">
+<div class="step"><p class="d">Days 1–30</p><h3>Listen</h3><ul><li>Ride along with sales and success on both platforms</li><li>Customer calls: why they buy, expand and churn</li><li>Pipeline, win-rate and forecast audit</li><li>Map current partners and integration gaps</li></ul></div>
+<div class="step"><p class="d">Days 31–60</p><h3>Align</h3><ul><li>One positioning across consent, identity and lead performance</li><li>Separate playbooks for velocity and enterprise</li><li>Partner program with revenue share and clear tiers</li><li>Cross-sell plays for the top accounts</li></ul></div>
+<div class="step"><p class="d">Days 61–90</p><h3>Scale</h3><ul><li>Board-ready forecast and revenue plan</li><li>Pricing moves on usage and data monetization</li><li>Hiring plan for the revenue team</li><li>Integration roadmap with product for marketplaces</li></ul></div>
+</div>
+<p class="plan-note mono">A plan, not a result: it gets sharpened in the first conversations with your team.</p>
+</div></section>
+
+<section class="fit" aria-labelledby="fit-h"><div class="wrap">
+<div class="label mono"><span>Why me</span><span>04</span></div>
+<h2 id="fit-h">Why I'm the right hire for this seat.</h2>
+<ul class="fit-list">
+<li><span class="i mono">A</span><span class="t">Your customers are my peers. I've been one for 20 years.</span></li>
+<li><span class="i mono">B</span><span class="t">I've built partner programs that generated $100M+ in commissions.</span></li>
+<li><span class="i mono">C</span><span class="t">I've built compliance and consent into my own lead business.</span></li>
+<li><span class="i mono">D</span><span class="t">I'm a math guy. Forecasts and payback are how I run a team.</span></li>
+</ul>
+</div></section>
+
+<section id="who" class="who" aria-labelledby="who-h"><div class="wrap">
+<div class="label mono"><span>Who I am</span><span>Follow along</span></div>
+<h2 id="who-h">Reach me. Follow me.</h2>
+<ul class="contact-card"><li><a href="mailto:eric@performancemarketer.io">eric@performancemarketer.io</a><span>Email</span></li><li><a href="tel:+16467876282">646-787-6282</a><span>Phone</span></li><li><a href="https://www.linkedin.com/in/ericbeer" target="_blank" rel="noopener">linkedin.com/in/ericbeer</a><span>LinkedIn</span></li><li><a href="https://www.youtube.com/@ericbeer" target="_blank" rel="noopener">youtube.com/@ericbeer</a><span>YouTube</span></li></ul>
+<ul class="links"><li><a href="https://www.linkedin.com/in/ericbeer" target="_blank" rel="noopener">LinkedIn <span>/in/ericbeer ↗</span></a></li><li><a href="https://www.youtube.com/@ericbeer" target="_blank" rel="noopener">YouTube <span>@ericbeer ↗</span></a></li><li><a href="https://x.com/esb211" target="_blank" rel="noopener">X <span>@esb211 ↗</span></a></li><li><a href="https://www.instagram.com/ericbeerofficial" target="_blank" rel="noopener">Instagram <span>@ericbeerofficial ↗</span></a></li><li><a href="https://www.tiktok.com/@ericbeer" target="_blank" rel="noopener">TikTok <span>@ericbeer ↗</span></a></li><li><a href="https://www.facebook.com/eric.beer11" target="_blank" rel="noopener">Facebook <span>/eric.beer11 ↗</span></a></li></ul>
+</div></section>
+
+<section id="contact" class="close" aria-labelledby="close-h"><div class="wrap">
+<div class="label mono"><span>05 / Let's talk</span><span>Eric Beer × ActiveProspect</span></div>
+<h2 id="close-h">Let's make consent-based marketing <em>the channel everyone trusts.</em></h2>
+<div class="grid"><p class="close-body">I'm looking for a seat where I own revenue and answer for the number. Remote works, and I'm happy to travel wherever your customers gather. Twenty minutes is enough to see if we fit.</p>
+<div class="close-cta"><a class="btn btn-signal" href="mailto:eric@performancemarketer.io?subject=ActiveProspect%20Chief%20Revenue%20Officer">Let's talk <span class="arr" aria-hidden="true">→</span></a><a class="btn btn-line" href="https://www.linkedin.com/in/ericbeer" target="_blank" rel="noopener">LinkedIn <span class="arr" aria-hidden="true">↗</span></a></div></div>
+</div></section>
 </main>
-<footer><div class="wrap lbl"><span>Eric Beer</span><span>Prepared for ActiveProspect</span></div></footer>
-<script>
-(function(){
-var CH=[{"k": "Problem 01 · Know the buyer", "h": "I build on your platform", "p": "I built LeadQual.ai's consent-first lead qualification and routing, with TrustedForm, TCPA/CCPA and PEWC protections written into every publisher and advertiser agreement. I know what a lead buyer needs to renew.", "f": "<b>TrustedForm · TCPA · CCPA · PEWC</b>"}, {"k": "Problem 02 · Partner and rev-share revenue", "h": "Channels that compound", "p": "Partner programs are products: recruit, onboard, pay fairly, track every source. I run an affiliate network on Everflow and designed a 5-level partner commission structure.", "f": "<b>$100M+</b> in affiliate commissions generated across my career"}, {"k": "Problem 03 · Insurance and lending", "h": "Your verticals are my home turf", "p": "I run live Medicare, Mortgage Assistance and Final Expense campaigns, and built a 200+ company outreach list across 11 verticals. These are the buyers ActiveProspect sells to.", "f": "<b>200+</b> companies · <b>11</b> verticals"}, {"k": "Problem 04 · Pricing that evolves", "h": "Price to the value delivered", "p": "I designed LeadQual.ai's revenue split and broker economics, and set product strategy and pricing for Scout's membership tiers. Pricing is a growth lever, not an afterthought.", "f": "<b>Revenue split · broker economics · tiered pricing</b>"}, {"k": "Problem 05 · Scale and data", "h": "Built for high volume", "p": "I architected a phased plan for a client processing 300–400K records a day with queuing, DID rotation and caller-reputation management. Cross-sell from data enrichment needs that kind of plumbing.", "f": "<b>300–400K</b> records a day · LeadQual.ai routing plan"}, {"k": "Problem 06 · Where leads move next", "h": "AI where the money moves", "p": "Qualifying, routing and matching are moving to AI. I have two AI platforms with live products and have shipped 50+ apps across lead gen, recruiting tech and traffic tools.", "f": "<b>50+</b> apps shipped · <b>2</b> AI platforms live"}];
-var hero=document.getElementById('hero'),btns=[].slice.call(document.querySelectorAll('.rail button')),cur=-1,t;
-function show(i,instant){if(i===cur)return;cur=i;btns.forEach(function(b,j){b.setAttribute('aria-current',j===i?'true':'false')});
- var c=CH[i];function put(){document.getElementById('k').textContent=c.k;document.getElementById('h').textContent=c.h;document.getElementById('p').textContent=c.p;document.getElementById('f').innerHTML=c.f;hero.classList.remove('out')}
- if(instant){put();return}hero.classList.add('out');clearTimeout(t);t=setTimeout(put,300)}
-btns.forEach(function(b,j){b.addEventListener('click',function(){show(j)})});
-show(0,true);
-var cp=document.getElementById('cp'),st=document.getElementById('st'),em=document.getElementById('em');
-cp.addEventListener('click',function(){function fail(){var r=document.createRange();r.selectNodeContents(em);var s=getSelection();s.removeAllRanges();s.addRange(r);st.textContent='Selected. Press Ctrl+C or Cmd+C'}
- try{navigator.clipboard.writeText(em.textContent).then(function(){st.textContent='Email copied'},fail)}catch(e){fail()}});
-})();
-</script>
-</body>
-</html>
+<footer><div class="wrap mono"><span>Eric Beer · Prepared for ActiveProspect</span><span><a href="mailto:eric@performancemarketer.io">eric@performancemarketer.io</a> · <a href="https://www.linkedin.com/in/ericbeer" target="_blank" rel="noopener">LinkedIn</a></span></div></footer>
+</body></html>
